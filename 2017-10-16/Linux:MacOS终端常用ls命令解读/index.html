@@ -85,18 +85,18 @@
 
 
 
-<meta name="description" content="lsls是(Linux,MacOS)等常用终端中，常用的命令；具体的使用可以ls –help 逐一查看体验（本文只解读其中某部分）ll或 ls -lll是 ls -l 命令的缩写，有些系统不支持ll缩写命令ll查看目录下文件的详细信息：[root@localhost test]# ls -l /etc/sudoers -----rwxrwx. 1 root root 4002 Mar  1  2">
+<meta name="description" content="ls ls是(Linux,MacOS)等常用终端中，常用的命令； 具体的使用可以ls –help 逐一查看体验（本文只解读其中某部分）">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux&#x2F;MacOS终端常用ls命令解读">
 <meta property="og:url" content="http://hadronw.com/2017-10-16/Linux:MacOS终端常用ls命令解读/index.html">
 <meta property="og:site_name" content="hadronw&#39;s Blog">
-<meta property="og:description" content="lsls是(Linux,MacOS)等常用终端中，常用的命令；具体的使用可以ls –help 逐一查看体验（本文只解读其中某部分）ll或 ls -lll是 ls -l 命令的缩写，有些系统不支持ll缩写命令ll查看目录下文件的详细信息：[root@localhost test]# ls -l /etc/sudoers -----rwxrwx. 1 root root 4002 Mar  1  2">
+<meta property="og:description" content="ls ls是(Linux,MacOS)等常用终端中，常用的命令； 具体的使用可以ls –help 逐一查看体验（本文只解读其中某部分）">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-10-20T04:13:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux&#x2F;MacOS终端常用ls命令解读">
-<meta name="twitter:description" content="lsls是(Linux,MacOS)等常用终端中，常用的命令；具体的使用可以ls –help 逐一查看体验（本文只解读其中某部分）ll或 ls -lll是 ls -l 命令的缩写，有些系统不支持ll缩写命令ll查看目录下文件的详细信息：[root@localhost test]# ls -l /etc/sudoers -----rwxrwx. 1 root root 4002 Mar  1  2">
+<meta name="twitter:description" content="ls ls是(Linux,MacOS)等常用终端中，常用的命令； 具体的使用可以ls –help 逐一查看体验（本文只解读其中某部分）">
 
 
 
@@ -393,15 +393,29 @@
       
 
       
-        <h1 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h1><hr><p>ls是(Linux,MacOS)等常用终端中，常用的命令；</p><p>具体的使用可以ls –help 逐一查看体验（本文只解读其中某部分）<br><br></p><h2 id="ll或-ls-l"><a href="#ll或-ls-l" class="headerlink" title="ll或 ls -l"></a>ll或 ls -l</h2><hr><p>ll是 ls -l 命令的缩写，有些系统不支持ll缩写命令</p><p>ll查看目录下文件的详细信息：</p><pre><code>[root@localhost test]# ls -l /etc/sudoers
+        <h1 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h1><hr>
+<p>ls是(Linux,MacOS)等常用终端中，常用的命令；</p>
+<p>具体的使用可以ls –help 逐一查看体验（本文只解读其中某部分）<br><br><a id="more"></a></p>
+<h2 id="ll或-ls-l"><a href="#ll或-ls-l" class="headerlink" title="ll或 ls -l"></a>ll或 ls -l</h2><hr>
+<p>ll是 ls -l 命令的缩写，有些系统不支持ll缩写命令</p>
+<p>ll查看目录下文件的详细信息：</p>
+<pre><code>[root@localhost test]# ls -l /etc/sudoers
 -----rwxrwx. 1 root root 4002 Mar  1  2012 /etc/sudoers   
-</code></pre><p>案例：</p><pre><code>   1       2    3       4       5       6      7
+</code></pre><p>案例：</p>
+<pre><code>   1       2    3       4       5       6      7
 文件属性 文件数 拥有者 所属的group 文件大小 建档日期 文件名
 drwxr-xr-x   4 root  root   136 Oct 10 10:45 code
-</code></pre><h3 id="第一个栏位"><a href="#第一个栏位" class="headerlink" title="第一个栏位"></a>第一个栏位</h3><hr><p>表示文件的属性：Linux的文件基本上分为三个属性：可读（r），可写（w），可执行（x）</p><p>案例：</p><pre><code>   1       2    3       4       5       6      7
+</code></pre><h3 id="第一个栏位"><a href="#第一个栏位" class="headerlink" title="第一个栏位"></a>第一个栏位</h3><hr>
+<p>表示文件的属性：Linux的文件基本上分为三个属性：可读（r），可写（w），可执行（x）</p>
+<p>案例：</p>
+<pre><code>   1       2    3       4       5       6      7
 文件属性 文件数 拥有者 所属的group 文件大小 建档日期 文件名
 drwxr-xr-x   4 root  root   136 Oct 10 10:45 code
-</code></pre><p>如案例中第一档<strong>drwxr-xr-x</strong></p><p>这里有十个格子（具体程序实现时，实际上是十个bit位），第一个字符为单独含义，后9个字符，每3个为一组:<strong>rwx</strong>、<strong>r-x</strong>、<strong>r-x</strong>。</p><p>分别指示此文件的读、写、执行权限，对应的权限身份为：owner、group、others</p><p>注：因为Linux是多用户多任务系统，所以一个文件可能同时被许多人使用，所以我们一定要设好每个文件的权限</p><h4 id="第一个字符的含义："><a href="#第一个字符的含义：" class="headerlink" title="第一个字符的含义："></a>第一个字符的含义：</h4><pre><code>”-”,普通文件.
+</code></pre><p>如案例中第一档<strong>drwxr-xr-x</strong></p>
+<p>这里有十个格子（具体程序实现时，实际上是十个bit位），第一个字符为单独含义，后9个字符，每3个为一组:<strong>rwx</strong>、<strong>r-x</strong>、<strong>r-x</strong>。</p>
+<p>分别指示此文件的读、写、执行权限，对应的权限身份为：owner、group、others</p>
+<p>注：因为Linux是多用户多任务系统，所以一个文件可能同时被许多人使用，所以我们一定要设好每个文件的权限</p>
+<h4 id="第一个字符的含义："><a href="#第一个字符的含义：" class="headerlink" title="第一个字符的含义："></a>第一个字符的含义：</h4><pre><code>”-”,普通文件.
 
 ”d”目录,字母”d”,是dirtectory(目录)的缩写
 
@@ -410,34 +424,71 @@ drwxr-xr-x   4 root  root   136 Oct 10 10:45 code
 “b”块设备文件。
 
 “c”字符设备文件
-</code></pre><p>此处<strong>drwxr-xr-x</strong>的<code>d</code>表明是一个目录</p><h4 id="第一组：owner"><a href="#第一组：owner" class="headerlink" title="第一组：owner"></a>第一组：owner</h4><hr><p>案例：</p><pre><code>   1       2    3       4       5       6      7
+</code></pre><p>此处<strong>drwxr-xr-x</strong>的<code>d</code>表明是一个目录</p>
+<h4 id="第一组：owner"><a href="#第一组：owner" class="headerlink" title="第一组：owner"></a>第一组：owner</h4><hr>
+<p>案例：</p>
+<pre><code>   1       2    3       4       5       6      7
 文件属性 文件数 拥有者 所属的group 文件大小 建档日期 文件名
 drwxr-xr-x   4 root  root   136 Oct 10 10:45 code
-</code></pre><p>以 <strong>drwxr-xr-x</strong> 为例子</p><p>对应的字符：<code>rwx</code> 表示使用者自己可读，可写，可执行</p><h4 id="第二组：group"><a href="#第二组：group" class="headerlink" title="第二组：group"></a>第二组：group</h4><hr><p>案例：</p><pre><code>   1       2    3       4       5       6      7
+</code></pre><p>以 <strong>drwxr-xr-x</strong> 为例子</p>
+<p>对应的字符：<code>rwx</code> 表示使用者自己可读，可写，可执行</p>
+<h4 id="第二组：group"><a href="#第二组：group" class="headerlink" title="第二组：group"></a>第二组：group</h4><hr>
+<p>案例：</p>
+<pre><code>   1       2    3       4       5       6      7
 文件属性 文件数 拥有者 所属的group 文件大小 建档日期 文件名
 drwxr-xr-x   4 root  root   136 Oct 10 10:45 code
-</code></pre><p>以 <strong>drwxr-xr-x</strong> 为例子</p><p>对应的字符：<code>r-x</code> 表示同一群组可读，不可写，可执行</p><h4 id="第三组：others"><a href="#第三组：others" class="headerlink" title="第三组：others"></a>第三组：others</h4><hr><p>案例：</p><pre><code>   1       2    3       4       5       6      7
+</code></pre><p>以 <strong>drwxr-xr-x</strong> 为例子</p>
+<p>对应的字符：<code>r-x</code> 表示同一群组可读，不可写，可执行</p>
+<h4 id="第三组：others"><a href="#第三组：others" class="headerlink" title="第三组：others"></a>第三组：others</h4><hr>
+<p>案例：</p>
+<pre><code>   1       2    3       4       5       6      7
 文件属性 文件数 拥有者 所属的group 文件大小 建档日期 文件名
 drwxr-xr-x   4 root  root   136 Oct 10 10:45 code
-</code></pre><p>以 <strong>drwxr-xr-x</strong> 为例子</p><p>对应的字符：<code>r-x</code> 表示其他用户可读，不可写，可执行</p><p>注：另外，有一些程序属性的执行部分不是X,而是S,这表示执行这个程序的使用者，临时可以有和拥有者一样权力的身份来执行该程序。一般出现在系统管理之类的指令或程序，让使用者执行时，拥有root身份。</p><h3 id="第二个栏位"><a href="#第二个栏位" class="headerlink" title="第二个栏位"></a>第二个栏位</h3><hr><p>案例：</p><pre><code>   1       2    3       4       5       6      7
+</code></pre><p>以 <strong>drwxr-xr-x</strong> 为例子</p>
+<p>对应的字符：<code>r-x</code> 表示其他用户可读，不可写，可执行</p>
+<p>注：另外，有一些程序属性的执行部分不是X,而是S,这表示执行这个程序的使用者，临时可以有和拥有者一样权力的身份来执行该程序。一般出现在系统管理之类的指令或程序，让使用者执行时，拥有root身份。</p>
+<h3 id="第二个栏位"><a href="#第二个栏位" class="headerlink" title="第二个栏位"></a>第二个栏位</h3><hr>
+<p>案例：</p>
+<pre><code>   1       2    3       4       5       6      7
 文件属性 文件数 拥有者 所属的group 文件大小 建档日期 文件名
 drwxr-xr-x   4 root  root   136 Oct 10 10:45 code
-</code></pre><p>表示文件个数。如果是文件的话，那这个数目自然是1了，如果是目录的话，那它的数目就是该目录中的文件个</p><h3 id="第三个栏位"><a href="#第三个栏位" class="headerlink" title="第三个栏位"></a>第三个栏位</h3><hr><p>案例：</p><pre><code>   1       2    3       4       5       6      7
+</code></pre><p>表示文件个数。如果是文件的话，那这个数目自然是1了，如果是目录的话，那它的数目就是该目录中的文件个</p>
+<h3 id="第三个栏位"><a href="#第三个栏位" class="headerlink" title="第三个栏位"></a>第三个栏位</h3><hr>
+<p>案例：</p>
+<pre><code>   1       2    3       4       5       6      7
 文件属性 文件数 拥有者 所属的group 文件大小 建档日期 文件名
 drwxr-xr-x   4 root  root   136 Oct 10 10:45 code
-</code></pre><p>表示该文件或目录的拥有者。若使用者目前处于自己的Home,那这一栏大概都是它的账号名称</p><h3 id="第四个栏位"><a href="#第四个栏位" class="headerlink" title="第四个栏位"></a>第四个栏位</h3><hr><p>案例：</p><pre><code>   1       2    3       4       5       6      7
+</code></pre><p>表示该文件或目录的拥有者。若使用者目前处于自己的Home,那这一栏大概都是它的账号名称</p>
+<h3 id="第四个栏位"><a href="#第四个栏位" class="headerlink" title="第四个栏位"></a>第四个栏位</h3><hr>
+<p>案例：</p>
+<pre><code>   1       2    3       4       5       6      7
 文件属性 文件数 拥有者 所属的group 文件大小 建档日期 文件名
 drwxr-xr-x   4 root  root   136 Oct 10 10:45 code
-</code></pre><p>表示所属的组（group）。每一个使用者都可以拥有一个以上的组，不过大部分的使用者应该都只属于一个组，只有当系统管理员希望给予某使用者特殊权限时，才可能会给他另一个组</p><h3 id="第五个栏位"><a href="#第五个栏位" class="headerlink" title="第五个栏位"></a>第五个栏位</h3><hr><p>案例：</p><pre><code>   1       2    3       4       5       6      7
+</code></pre><p>表示所属的组（group）。每一个使用者都可以拥有一个以上的组，不过大部分的使用者应该都只属于一个组，只有当系统管理员希望给予某使用者特殊权限时，才可能会给他另一个组</p>
+<h3 id="第五个栏位"><a href="#第五个栏位" class="headerlink" title="第五个栏位"></a>第五个栏位</h3><hr>
+<p>案例：</p>
+<pre><code>   1       2    3       4       5       6      7
 文件属性 文件数 拥有者 所属的group 文件大小 建档日期 文件名
 drwxr-xr-x   4 root  root   136 Oct 10 10:45 code
-</code></pre><p>表示文件大小。文件大小用byte来表示，而空目录一般都是1024byte，当然可以用其它参数使文件显示的单位不同，如使用ls –k就是用kb莱显示一个文件的大小单位，不过一般我们还是以byte为主。　　</p><h3 id="第六个栏位"><a href="#第六个栏位" class="headerlink" title="第六个栏位"></a>第六个栏位</h3><hr><p>案例：</p><pre><code>   1       2    3       4       5       6      7
+</code></pre><p>表示文件大小。文件大小用byte来表示，而空目录一般都是1024byte，当然可以用其它参数使文件显示的单位不同，如使用ls –k就是用kb莱显示一个文件的大小单位，不过一般我们还是以byte为主。　　</p>
+<h3 id="第六个栏位"><a href="#第六个栏位" class="headerlink" title="第六个栏位"></a>第六个栏位</h3><hr>
+<p>案例：</p>
+<pre><code>   1       2    3       4       5       6      7
 文件属性 文件数 拥有者 所属的group 文件大小 建档日期 文件名
 drwxr-xr-x   4 root  root   136 Oct 10 10:45 code
-</code></pre><p>表示最后一次修改时间。以“月，日，时间”的格式表示，如Oct 10 10:45表示10月10日10:45分。</p><h3 id="第七个栏位"><a href="#第七个栏位" class="headerlink" title="第七个栏位"></a>第七个栏位</h3><hr><p>案例：</p><pre><code>   1       2    3       4       5       6      7
+</code></pre><p>表示最后一次修改时间。以“月，日，时间”的格式表示，如Oct 10 10:45表示10月10日10:45分。</p>
+<h3 id="第七个栏位"><a href="#第七个栏位" class="headerlink" title="第七个栏位"></a>第七个栏位</h3><hr>
+<p>案例：</p>
+<pre><code>   1       2    3       4       5       6      7
 文件属性 文件数 拥有者 所属的group 文件大小 建档日期 文件名
 drwxr-xr-x   4 root  root   136 Oct 10 10:45 code
-</code></pre><p>表示文件名。我们可以用ls –a显示隐藏的文件名。</p><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><hr><p>查看目录下所有文件信息，包含着隐藏文件</p><p>ls的使用方式还有许多，具体ls –help查看文档，欢迎交流</p><hr><p>参考链接：<br>linux ls和 ll 命令 <a href="http://blog.csdn.net/cgzhello1/article/details/7839534" target="_blank" rel="noopener">http://blog.csdn.net/cgzhello1/article/details/7839534</a></p>
+</code></pre><p>表示文件名。我们可以用ls –a显示隐藏的文件名。</p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><hr>
+<p>查看目录下所有文件信息，包含着隐藏文件</p>
+<p>ls的使用方式还有许多，具体ls –help查看文档，欢迎交流</p>
+<hr>
+<p>参考链接：<br>linux ls和 ll 命令 <a href="http://blog.csdn.net/cgzhello1/article/details/7839534" target="_blank" rel="noopener">http://blog.csdn.net/cgzhello1/article/details/7839534</a></p>
+
       
     </div>
     
@@ -577,9 +628,11 @@ drwxr-xr-x   4 root  root   136 Oct 10 10:45 code
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count"></span>
+  <span>
+  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+  </span>
   
 </div>
-
 
 
 

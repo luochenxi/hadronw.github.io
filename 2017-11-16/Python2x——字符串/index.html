@@ -85,18 +85,18 @@
 
 
 
-<meta name="description" content="Python目前的主要区别Python2与Python3，Python3有许多的优化，改版，有许多的语法使用方式与Python2有所区别。Python2x是指Python2.xx的版本，Python3则是指Python3.xx版本什么是字符串？字符串就是一个个字符串成一串，也就是单个的连在一起，经常看到的如下：123单引号的—— &apos;abc&apos; , &apos;hello world&apos;双引号的——  &quot;abc&quot;">
+<meta name="description" content="Python目前的主要区别Python2与Python3，Python3有许多的优化，改版，有许多的语法使用方式与Python2有所区别。Python2x是指Python2.xx的版本，Python3则是指Python3.xx版本">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python2x——字符串">
 <meta property="og:url" content="http://hadronw.com/2017-11-16/Python2x——字符串/index.html">
 <meta property="og:site_name" content="hadronw&#39;s Blog">
-<meta property="og:description" content="Python目前的主要区别Python2与Python3，Python3有许多的优化，改版，有许多的语法使用方式与Python2有所区别。Python2x是指Python2.xx的版本，Python3则是指Python3.xx版本什么是字符串？字符串就是一个个字符串成一串，也就是单个的连在一起，经常看到的如下：123单引号的—— &apos;abc&apos; , &apos;hello world&apos;双引号的——  &quot;abc&quot;">
+<meta property="og:description" content="Python目前的主要区别Python2与Python3，Python3有许多的优化，改版，有许多的语法使用方式与Python2有所区别。Python2x是指Python2.xx的版本，Python3则是指Python3.xx版本">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-01-24T05:55:10.931Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python2x——字符串">
-<meta name="twitter:description" content="Python目前的主要区别Python2与Python3，Python3有许多的优化，改版，有许多的语法使用方式与Python2有所区别。Python2x是指Python2.xx的版本，Python3则是指Python3.xx版本什么是字符串？字符串就是一个个字符串成一串，也就是单个的连在一起，经常看到的如下：123单引号的—— &apos;abc&apos; , &apos;hello world&apos;双引号的——  &quot;abc&quot;">
+<meta name="twitter:description" content="Python目前的主要区别Python2与Python3，Python3有许多的优化，改版，有许多的语法使用方式与Python2有所区别。Python2x是指Python2.xx的版本，Python3则是指Python3.xx版本">
 
 
 
@@ -393,7 +393,12 @@
       
 
       
-        <blockquote><p>Python目前的主要区别Python2与Python3，Python3有许多的优化，改版，有许多的语法使用方式与Python2有所区别。Python2x是指Python2.xx的版本，Python3则是指Python3.xx版本<br></p></blockquote><h2 id="什么是字符串？"><a href="#什么是字符串？" class="headerlink" title="什么是字符串？"></a>什么是字符串？</h2><hr><p>字符串就是一个个字符串成一串，也就是单个的连在一起，经常看到的如下：</p><figure class="highlight sml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">单引号的—— <span class="symbol">'abc'</span> , <span class="symbol">'hello</span> world'</span><br><span class="line"></span><br><span class="line">双引号的——  <span class="string">"abc"</span> , <span class="string">"hello world"</span></span><br></pre></td></tr></table></figure>
+        <blockquote>
+<p>Python目前的主要区别Python2与Python3，Python3有许多的优化，改版，有许多的语法使用方式与Python2有所区别。Python2x是指Python2.xx的版本，Python3则是指Python3.xx版本<br><a id="more"></a></p>
+</blockquote>
+<h2 id="什么是字符串？"><a href="#什么是字符串？" class="headerlink" title="什么是字符串？"></a>什么是字符串？</h2><hr>
+<p>字符串就是一个个字符串成一串，也就是单个的连在一起，经常看到的如下：</p>
+<figure class="highlight sml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">单引号的—— <span class="symbol">'abc'</span> , <span class="symbol">'hello</span> world'</span><br><span class="line"></span><br><span class="line">双引号的——  <span class="string">"abc"</span> , <span class="string">"hello world"</span></span><br></pre></td></tr></table></figure>
 <p>Python中的一般使用：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; <span class="built_in">print</span> <span class="string">'hello python'</span></span></span><br><span class="line">hello python</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; <span class="built_in">print</span> <span class="string">"hello python"</span></span></span><br><span class="line">hello python</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt;</span></span><br></pre></td></tr></table></figure>
 <p>也可以嵌套使用：</p>
@@ -409,6 +414,7 @@
 <h2 id="其他类型转为字符串"><a href="#其他类型转为字符串" class="headerlink" title="其他类型转为字符串"></a>其他类型转为字符串</h2><p>最简单的一种就是用斜引号引用</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;</span>&gt; print <span class="string">"No"</span>+<span class="string">`1`</span></span><br><span class="line">No1</span><br></pre></td></tr></table></figure>
 <p>作为数字的1是不能和字符串相加的，因为两个类型不一样，同理类型不一样的时候是需要先统一类型再做处理的(整型/浮点型数据不在此类)。</p>
+
       
     </div>
     
@@ -548,9 +554,11 @@
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count"></span>
+  <span>
+  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+  </span>
   
 </div>
-
 
 
 

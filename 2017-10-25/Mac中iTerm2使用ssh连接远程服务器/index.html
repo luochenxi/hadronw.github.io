@@ -85,19 +85,19 @@
 
 
 
-<meta name="description" content="有许多专门用于连接远程服务器的软件，其中使用的却是ssh，那在iTerm2中是否可以直接使用呢？如何使用呢？sshssh是什么？这篇文章清晰的介绍了ssh，以及常用的命令：SSH原理与运用（一）：远程登录——阮一峰 http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.htmlssh常用命令ssh常用的命令：$ ssh user@host">
+<meta name="description" content="有许多专门用于连接远程服务器的软件，其中使用的却是ssh，那在iTerm2中是否可以直接使用呢？如何使用呢？  ssh ssh是什么？这篇文章清晰的介绍了ssh，以及常用的命令：SSH原理与运用（一）：远程登录——阮一峰 http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html">
 <meta name="keywords" content="iTerm2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac中iTerm2使用ssh连接远程服务器">
 <meta property="og:url" content="http://hadronw.com/2017-10-25/Mac中iTerm2使用ssh连接远程服务器/index.html">
 <meta property="og:site_name" content="hadronw&#39;s Blog">
-<meta property="og:description" content="有许多专门用于连接远程服务器的软件，其中使用的却是ssh，那在iTerm2中是否可以直接使用呢？如何使用呢？sshssh是什么？这篇文章清晰的介绍了ssh，以及常用的命令：SSH原理与运用（一）：远程登录——阮一峰 http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.htmlssh常用命令ssh常用的命令：$ ssh user@host">
+<meta property="og:description" content="有许多专门用于连接远程服务器的软件，其中使用的却是ssh，那在iTerm2中是否可以直接使用呢？如何使用呢？  ssh ssh是什么？这篇文章清晰的介绍了ssh，以及常用的命令：SSH原理与运用（一）：远程登录——阮一峰 http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://hadronw.com/2017-10-25/Mac中iTerm2使用ssh连接远程服务器/00.jpg">
 <meta property="og:updated_time" content="2017-10-26T04:00:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac中iTerm2使用ssh连接远程服务器">
-<meta name="twitter:description" content="有许多专门用于连接远程服务器的软件，其中使用的却是ssh，那在iTerm2中是否可以直接使用呢？如何使用呢？sshssh是什么？这篇文章清晰的介绍了ssh，以及常用的命令：SSH原理与运用（一）：远程登录——阮一峰 http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.htmlssh常用命令ssh常用的命令：$ ssh user@host">
+<meta name="twitter:description" content="有许多专门用于连接远程服务器的软件，其中使用的却是ssh，那在iTerm2中是否可以直接使用呢？如何使用呢？  ssh ssh是什么？这篇文章清晰的介绍了ssh，以及常用的命令：SSH原理与运用（一）：远程登录——阮一峰 http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html">
 <meta name="twitter:image" content="http://hadronw.com/2017-10-25/Mac中iTerm2使用ssh连接远程服务器/00.jpg">
 
 
@@ -395,11 +395,21 @@
       
 
       
-        <blockquote><p>有许多专门用于连接远程服务器的软件，其中使用的却是ssh，那在iTerm2中是否可以直接使用呢？如何使用呢？</p></blockquote><h2 id="ssh"><a href="#ssh" class="headerlink" title="ssh"></a>ssh</h2><hr><h3 id="ssh是什么？"><a href="#ssh是什么？" class="headerlink" title="ssh是什么？"></a>ssh是什么？</h3><p>这篇文章清晰的介绍了ssh，以及常用的命令：SSH原理与运用（一）：远程登录——阮一峰 <a href="http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html</a></p><h3 id="ssh常用命令"><a href="#ssh常用命令" class="headerlink" title="ssh常用命令"></a>ssh常用命令</h3><p>ssh常用的命令：</p><pre><code>$ ssh user@host
+        <blockquote>
+<p>有许多专门用于连接远程服务器的软件，其中使用的却是ssh，那在iTerm2中是否可以直接使用呢？如何使用呢？</p>
+</blockquote>
+<h2 id="ssh"><a href="#ssh" class="headerlink" title="ssh"></a>ssh</h2><hr>
+<h3 id="ssh是什么？"><a href="#ssh是什么？" class="headerlink" title="ssh是什么？"></a>ssh是什么？</h3><p>这篇文章清晰的介绍了ssh，以及常用的命令：SSH原理与运用（一）：远程登录——阮一峰 <a href="http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html</a></p>
+<a id="more"></a>
+<h3 id="ssh常用命令"><a href="#ssh常用命令" class="headerlink" title="ssh常用命令"></a>ssh常用命令</h3><p>ssh常用的命令：</p>
+<pre><code>$ ssh user@host
 详细如下
 $ ssh -p 22 user@host
-</code></pre><p>-p后面带的是端口号，一般默认的是22，后面是用户名@主机ip；</p><h3 id="尝试ssh连接"><a href="#尝试ssh连接" class="headerlink" title="尝试ssh连接"></a>尝试ssh连接</h3><p>打开Terminal或者iTerm2，输入：</p><pre><code>$ ssh user@host
-</code></pre><p>会出现以下内容：</p><figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"> $ ssh user@host</span><br><span class="line"></span><br><span class="line">The authenticity <span class="keyword">of</span> host <span class="comment">'host (xxx.xxx.xxx.xxx)' can't be established.</span></span><br><span class="line"></span><br><span class="line">RSA <span class="keyword">key</span> fingerprint <span class="keyword">is</span> <span class="number">98</span>:<span class="number">2</span>e:d7:e0:de:<span class="number">9</span>f:ac:<span class="number">67</span>:<span class="number">28</span>:c2:<span class="number">42</span>:<span class="number">2</span>d:<span class="number">37</span>:<span class="number">16</span>:<span class="number">58</span>:<span class="number">4</span>d.</span><br><span class="line">　　</span><br><span class="line">Are you sure you want <span class="keyword">to</span> <span class="keyword">continue</span> connecting (yes/no)? yes</span><br><span class="line"></span><br><span class="line">Warning: Permanently added <span class="comment">'host,xxx.xxx.xxx.xxx' (RSA) to the list of known hosts.</span></span><br><span class="line"></span><br><span class="line">Password: (enter password)</span><br><span class="line"></span><br><span class="line">Last login: Wed Oct <span class="number">25</span> <span class="number">18</span>:<span class="number">48</span>:<span class="number">48</span> <span class="number">2017</span> <span class="keyword">from</span> xxx.xxx.xxx.xxx</span><br><span class="line"></span><br><span class="line">Welcome <span class="keyword">to</span> Elastic Compute Service</span><br><span class="line"></span><br><span class="line">[root@<span class="number">4e00</span>u53f7 ~]<span class="meta">#</span></span><br></pre></td></tr></table></figure>
+</code></pre><p>-p后面带的是端口号，一般默认的是22，后面是用户名@主机ip；</p>
+<h3 id="尝试ssh连接"><a href="#尝试ssh连接" class="headerlink" title="尝试ssh连接"></a>尝试ssh连接</h3><p>打开Terminal或者iTerm2，输入：</p>
+<pre><code>$ ssh user@host
+</code></pre><p>会出现以下内容：</p>
+<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"> $ ssh user@host</span><br><span class="line"></span><br><span class="line">The authenticity <span class="keyword">of</span> host <span class="comment">'host (xxx.xxx.xxx.xxx)' can't be established.</span></span><br><span class="line"></span><br><span class="line">RSA <span class="keyword">key</span> fingerprint <span class="keyword">is</span> <span class="number">98</span>:<span class="number">2</span>e:d7:e0:de:<span class="number">9</span>f:ac:<span class="number">67</span>:<span class="number">28</span>:c2:<span class="number">42</span>:<span class="number">2</span>d:<span class="number">37</span>:<span class="number">16</span>:<span class="number">58</span>:<span class="number">4</span>d.</span><br><span class="line">　　</span><br><span class="line">Are you sure you want <span class="keyword">to</span> <span class="keyword">continue</span> connecting (yes/no)? yes</span><br><span class="line"></span><br><span class="line">Warning: Permanently added <span class="comment">'host,xxx.xxx.xxx.xxx' (RSA) to the list of known hosts.</span></span><br><span class="line"></span><br><span class="line">Password: (enter password)</span><br><span class="line"></span><br><span class="line">Last login: Wed Oct <span class="number">25</span> <span class="number">18</span>:<span class="number">48</span>:<span class="number">48</span> <span class="number">2017</span> <span class="keyword">from</span> xxx.xxx.xxx.xxx</span><br><span class="line"></span><br><span class="line">Welcome <span class="keyword">to</span> Elastic Compute Service</span><br><span class="line"></span><br><span class="line">[root@<span class="number">4e00</span>u53f7 ~]<span class="meta">#</span></span><br></pre></td></tr></table></figure>
 <p>以上就是完整的示范了，那问题来了，每次连接都需要填写密码岂不是很麻烦？如果需要连接管理多个远程呢？</p>
 <h2 id="sshpass让iterm2保存登陆信息，无需再输入密码连接远程"><a href="#sshpass让iterm2保存登陆信息，无需再输入密码连接远程" class="headerlink" title="sshpass让iterm2保存登陆信息，无需再输入密码连接远程"></a>sshpass让iterm2保存登陆信息，无需再输入密码连接远程</h2><hr>
 <h3 id="iTerm2安装sshpass"><a href="#iTerm2安装sshpass" class="headerlink" title="iTerm2安装sshpass"></a>iTerm2安装sshpass</h3><p>使用brew安装sshpass 工具：</p>
@@ -426,6 +436,7 @@ Command:选择command并在后方输入
 <hr>
 <p>参考文章：<br>SSH原理与运用（一）：远程登录 <a href="http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html</a></p>
 <p>ssh用法及命令 <a href="http://blog.csdn.net/pipisorry/article/details/52269785" target="_blank" rel="noopener">http://blog.csdn.net/pipisorry/article/details/52269785</a></p>
+
       
     </div>
     
@@ -565,9 +576,11 @@ Command:选择command并在后方输入
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count"></span>
+  <span>
+  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+  </span>
   
 </div>
-
 
 
 

@@ -85,19 +85,19 @@
 
 
 
-<meta name="description" content="最近使用hexo时，总提示配置警告，追踪排查发现是node引起的错误。查看配置文件，替换配置文件，或者重新安装一下node，最后重装解决了问题。那么问题是怎么引起的呢？本文记录一下过程。问题起因重装过程Homebrew升级包情况Mac中Homebrew是一个很好用的软件包管理工具，通过它可以简化软件安装、管理的过程。一些关于brew介绍可点击查看在搭建博客初期，由于hexo需要依赖git、node">
+<meta name="description" content="最近使用hexo时，总提示配置警告，追踪排查发现是node引起的错误。查看配置文件，替换配置文件，或者重新安装一下node，最后重装解决了问题。那么问题是怎么引起的呢？本文记录一下过程。  问题起因 重装过程">
 <meta name="keywords" content="Mac">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac中安装nvm">
 <meta property="og:url" content="http://hadronw.com/2018-01-23/Mac中安装nvm/index.html">
 <meta property="og:site_name" content="hadronw&#39;s Blog">
-<meta property="og:description" content="最近使用hexo时，总提示配置警告，追踪排查发现是node引起的错误。查看配置文件，替换配置文件，或者重新安装一下node，最后重装解决了问题。那么问题是怎么引起的呢？本文记录一下过程。问题起因重装过程Homebrew升级包情况Mac中Homebrew是一个很好用的软件包管理工具，通过它可以简化软件安装、管理的过程。一些关于brew介绍可点击查看在搭建博客初期，由于hexo需要依赖git、node">
+<meta property="og:description" content="最近使用hexo时，总提示配置警告，追踪排查发现是node引起的错误。查看配置文件，替换配置文件，或者重新安装一下node，最后重装解决了问题。那么问题是怎么引起的呢？本文记录一下过程。  问题起因 重装过程">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://hadronw.com/2018-01-23/Mac中安装nvm/001.jpg">
 <meta property="og:updated_time" content="2018-01-23T13:01:29.879Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac中安装nvm">
-<meta name="twitter:description" content="最近使用hexo时，总提示配置警告，追踪排查发现是node引起的错误。查看配置文件，替换配置文件，或者重新安装一下node，最后重装解决了问题。那么问题是怎么引起的呢？本文记录一下过程。问题起因重装过程Homebrew升级包情况Mac中Homebrew是一个很好用的软件包管理工具，通过它可以简化软件安装、管理的过程。一些关于brew介绍可点击查看在搭建博客初期，由于hexo需要依赖git、node">
+<meta name="twitter:description" content="最近使用hexo时，总提示配置警告，追踪排查发现是node引起的错误。查看配置文件，替换配置文件，或者重新安装一下node，最后重装解决了问题。那么问题是怎么引起的呢？本文记录一下过程。  问题起因 重装过程">
 <meta name="twitter:image" content="http://hadronw.com/2018-01-23/Mac中安装nvm/001.jpg">
 
 
@@ -395,7 +395,20 @@
       
 
       
-        <p>最近使用hexo时，总提示配置警告，追踪排查发现是node引起的错误。查看配置文件，替换配置文件，或者重新安装一下node，最后重装解决了问题。那么问题是怎么引起的呢？本文记录一下过程。</p><ul><li>问题起因</li><li>重装过程</li></ul><h2 id="Homebrew升级包情况"><a href="#Homebrew升级包情况" class="headerlink" title="Homebrew升级包情况"></a>Homebrew升级包情况</h2><hr><p>Mac中Homebrew是一个很好用的软件包管理工具，通过它可以简化软件安装、管理的过程。<a href="http://hadronw.com/2017/06/14/Mac%E7%9A%84%E4%B8%80%E4%BA%9B%E9%85%8D%E7%BD%AE%E4%B9%8Biterm2%E7%AF%87/">一些关于brew介绍可点击查看</a>在搭建博客初期，由于hexo需要依赖git、node等依赖环境。本着方便的想法，于是使用brew安装了node。</p><p>在平时的使用中，经常会使用brew update更新软件。多次的更新过程下（其中也有node的升级），与hexo 产生了不兼容的过程。【hexo之前安装了一个最新版的，后面也没有再更新升级了】</p><p>由此可见，使用的项目需要及时维护，特别是在使用开发版/测试版软件时。软件更新后应及时检查相关项目，看看是否兼容，是否正常使用。在确定自己没有太多的时间解决使用出现的问题时，因该优先使用稳定版软件，使用稳定版软件会减少许多不必要的问题。</p><h2 id="重新安装node"><a href="#重新安装node" class="headerlink" title="重新安装node"></a>重新安装node</h2><hr><p>node的版本管理工具有n、nvm；本文使用nvm安装node。吸取之前用homebrew直接安装管理node的教训，这次的思路是，先用homebrew安装nvm，再使用nvm安装管理node。</p><h3 id="homebrew安装nvm（无法实现）"><a href="#homebrew安装nvm（无法实现）" class="headerlink" title="homebrew安装nvm（无法实现）"></a>homebrew安装nvm（无法实现）</h3><p>在使用homebrew安装好nvm后，却在使用过程中出现了</p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm is <span class="keyword">not</span> compatible with the npm<span class="built_in"> config </span><span class="string">"prefix"</span> option: currently <span class="builtin-name">set</span> <span class="keyword">to</span> <span class="string">"/Users/fabian/.nvm/versions/node/v9.4.0"</span> <span class="builtin-name">Run</span> `nvm use --delete-prefix v9.4.0` <span class="keyword">to</span> unset it.</span><br></pre></td></tr></table></figure>
+        <p>最近使用hexo时，总提示配置警告，追踪排查发现是node引起的错误。查看配置文件，替换配置文件，或者重新安装一下node，最后重装解决了问题。那么问题是怎么引起的呢？本文记录一下过程。</p>
+<ul>
+<li>问题起因</li>
+<li>重装过程</li>
+</ul>
+<a id="more"></a>
+<h2 id="Homebrew升级包情况"><a href="#Homebrew升级包情况" class="headerlink" title="Homebrew升级包情况"></a>Homebrew升级包情况</h2><hr>
+<p>Mac中Homebrew是一个很好用的软件包管理工具，通过它可以简化软件安装、管理的过程。<a href="http://hadronw.com/2017/06/14/Mac%E7%9A%84%E4%B8%80%E4%BA%9B%E9%85%8D%E7%BD%AE%E4%B9%8Biterm2%E7%AF%87/">一些关于brew介绍可点击查看</a>在搭建博客初期，由于hexo需要依赖git、node等依赖环境。本着方便的想法，于是使用brew安装了node。</p>
+<p>在平时的使用中，经常会使用brew update更新软件。多次的更新过程下（其中也有node的升级），与hexo 产生了不兼容的过程。【hexo之前安装了一个最新版的，后面也没有再更新升级了】</p>
+<p>由此可见，使用的项目需要及时维护，特别是在使用开发版/测试版软件时。软件更新后应及时检查相关项目，看看是否兼容，是否正常使用。在确定自己没有太多的时间解决使用出现的问题时，因该优先使用稳定版软件，使用稳定版软件会减少许多不必要的问题。</p>
+<h2 id="重新安装node"><a href="#重新安装node" class="headerlink" title="重新安装node"></a>重新安装node</h2><hr>
+<p>node的版本管理工具有n、nvm；本文使用nvm安装node。吸取之前用homebrew直接安装管理node的教训，这次的思路是，先用homebrew安装nvm，再使用nvm安装管理node。</p>
+<h3 id="homebrew安装nvm（无法实现）"><a href="#homebrew安装nvm（无法实现）" class="headerlink" title="homebrew安装nvm（无法实现）"></a>homebrew安装nvm（无法实现）</h3><p>在使用homebrew安装好nvm后，却在使用过程中出现了</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm is <span class="keyword">not</span> compatible with the npm<span class="built_in"> config </span><span class="string">"prefix"</span> option: currently <span class="builtin-name">set</span> <span class="keyword">to</span> <span class="string">"/Users/fabian/.nvm/versions/node/v9.4.0"</span> <span class="builtin-name">Run</span> `nvm use --delete-prefix v9.4.0` <span class="keyword">to</span> unset it.</span><br></pre></td></tr></table></figure>
 <p>根据提示解决问题，配置环境变量。再使用发现还是出现以上问题，在查找过程中发现nvm的<a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">官方文档</a>说明中如下所示：</p>
 <img src="/2018-01-23/Mac中安装nvm/001.jpg">
 <p>那么只能重新安装了</p>
@@ -413,6 +426,7 @@
 <figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-<span class="keyword">cli</span></span><br></pre></td></tr></table></figure>
 <p>相关主题，如<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">next主题官网</a></p>
 <p>hexo的使用配置可以看官方文档，文中如有不足之处欢迎指出。</p>
+
       
     </div>
     
@@ -548,9 +562,11 @@
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count"></span>
+  <span>
+  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+  </span>
   
 </div>
-
 
 
 

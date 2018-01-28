@@ -85,18 +85,18 @@
 
 
 
-<meta name="description" content="Mac OS 自带有Python 2.X版本，由于Python3.X版本有很大改动，与之前版本许多方法并不是相同的使用方式，因此会需要在电脑中安装不同的Python版本Python的版本有许多，这里介绍一个pyenv，通过它来安装管理，切换Python版本安装pyenv通用方法Linux/MacOS通用：1git clone https://github.com/yyuu/pyenv.git ~/">
+<meta name="description" content="Mac OS 自带有Python 2.X版本，由于Python3.X版本有很大改动，与之前版本许多方法并不是相同的使用方式，因此会需要在电脑中安装不同的Python版本">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac&#x2F;Linux安装Python多版本管理器Pyenv">
 <meta property="og:url" content="http://hadronw.com/2017-09-09/Mac:Linux安装Python多版本管理器Pyenv/index.html">
 <meta property="og:site_name" content="hadronw&#39;s Blog">
-<meta property="og:description" content="Mac OS 自带有Python 2.X版本，由于Python3.X版本有很大改动，与之前版本许多方法并不是相同的使用方式，因此会需要在电脑中安装不同的Python版本Python的版本有许多，这里介绍一个pyenv，通过它来安装管理，切换Python版本安装pyenv通用方法Linux/MacOS通用：1git clone https://github.com/yyuu/pyenv.git ~/">
+<meta property="og:description" content="Mac OS 自带有Python 2.X版本，由于Python3.X版本有很大改动，与之前版本许多方法并不是相同的使用方式，因此会需要在电脑中安装不同的Python版本">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-12-14T12:26:51.879Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac&#x2F;Linux安装Python多版本管理器Pyenv">
-<meta name="twitter:description" content="Mac OS 自带有Python 2.X版本，由于Python3.X版本有很大改动，与之前版本许多方法并不是相同的使用方式，因此会需要在电脑中安装不同的Python版本Python的版本有许多，这里介绍一个pyenv，通过它来安装管理，切换Python版本安装pyenv通用方法Linux/MacOS通用：1git clone https://github.com/yyuu/pyenv.git ~/">
+<meta name="twitter:description" content="Mac OS 自带有Python 2.X版本，由于Python3.X版本有很大改动，与之前版本许多方法并不是相同的使用方式，因此会需要在电脑中安装不同的Python版本">
 
 
 
@@ -393,7 +393,13 @@
       
 
       
-        <blockquote><p>Mac OS 自带有Python 2.X版本，由于Python3.X版本有很大改动，与之前版本许多方法并不是相同的使用方式，因此会需要在电脑中安装不同的Python版本</p></blockquote><p>Python的版本有许多，这里介绍一个pyenv，通过它来安装管理，切换Python版本</p><h2 id="安装pyenv"><a href="#安装pyenv" class="headerlink" title="安装pyenv"></a>安装pyenv</h2><p>通用方法Linux/MacOS通用：</p><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">https</span>://github.com/yyuu/pyenv.git ~/.pyenv</span><br></pre></td></tr></table></figure>
+        <blockquote>
+<p>Mac OS 自带有Python 2.X版本，由于Python3.X版本有很大改动，与之前版本许多方法并不是相同的使用方式，因此会需要在电脑中安装不同的Python版本</p>
+</blockquote>
+<a id="more"></a>
+<p>Python的版本有许多，这里介绍一个pyenv，通过它来安装管理，切换Python版本</p>
+<h2 id="安装pyenv"><a href="#安装pyenv" class="headerlink" title="安装pyenv"></a>安装pyenv</h2><p>通用方法Linux/MacOS通用：</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">https</span>://github.com/yyuu/pyenv.git ~/.pyenv</span><br></pre></td></tr></table></figure>
 <p>Mac 中安装brew软件管理的可以通过brew安装</p>
 <p>此处介绍通过homebrew安装pyenv，没有安装<a href="https://hadronw.github.io/2017/06/14/Mac%E7%9A%84%E4%B8%80%E4%BA%9B%E9%85%8D%E7%BD%AE%E4%B9%8Biterm2%E7%AF%87/" target="_blank" rel="noopener">homebrew</a>可以点击看安装介绍。也可以查看<a href="https://github.com/pyenv/pyenv#homebrew-on-mac-os-x" target="_blank" rel="noopener">pyenv</a>github原本说明，</p>
 <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span><span class="keyword">install </span>pyenv</span><br></pre></td></tr></table></figure>
@@ -426,6 +432,7 @@ pyenv rehash   # 记得一定要rehash
 <p><a href="https://my.oschina.net/damienchen/blog/852006" target="_blank" rel="noopener">https://my.oschina.net/damienchen/blog/852006</a></p>
 <p><a href="https://github.com/pyenv/pyenv#homebrew-on-mac-os-x" target="_blank" rel="noopener">https://github.com/pyenv/pyenv#homebrew-on-mac-os-x</a></p>
 <p><a href="http://lovekaiyuan.iteye.com/blog/2214417" target="_blank" rel="noopener">http://lovekaiyuan.iteye.com/blog/2214417</a></p>
+
       
     </div>
     
@@ -565,9 +572,11 @@ pyenv rehash   # 记得一定要rehash
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count"></span>
+  <span>
+  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+  </span>
   
 </div>
-
 
 
 

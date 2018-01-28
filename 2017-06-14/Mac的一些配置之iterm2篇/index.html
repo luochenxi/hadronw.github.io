@@ -85,18 +85,18 @@
 
 
 
-<meta name="description" content="iterm2简单的配置本篇主要介绍iterm2的一些配置，以及搭配homebrew的使用homebrew是一款自由及开放源代码的软件包管理系统，用以简化Mac OS X系统上的软件安装过程安装homebrew打开terminal(终端),输入以下命令安装 homebrew1/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.co">
+<meta name="description" content="iterm2简单的配置本篇主要介绍iterm2的一些配置，以及搭配homebrew的使用 homebrew是一款自由及开放源代码的软件包管理系统，用以简化Mac OS X系统上的软件安装过程 安装homebrew">
 <meta name="keywords" content="Mac">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac的一些配置之iterm2篇">
 <meta property="og:url" content="http://hadronw.com/2017-06-14/Mac的一些配置之iterm2篇/index.html">
 <meta property="og:site_name" content="hadronw&#39;s Blog">
-<meta property="og:description" content="iterm2简单的配置本篇主要介绍iterm2的一些配置，以及搭配homebrew的使用homebrew是一款自由及开放源代码的软件包管理系统，用以简化Mac OS X系统上的软件安装过程安装homebrew打开terminal(终端),输入以下命令安装 homebrew1/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.co">
+<meta property="og:description" content="iterm2简单的配置本篇主要介绍iterm2的一些配置，以及搭配homebrew的使用 homebrew是一款自由及开放源代码的软件包管理系统，用以简化Mac OS X系统上的软件安装过程 安装homebrew">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-07-22T15:00:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac的一些配置之iterm2篇">
-<meta name="twitter:description" content="iterm2简单的配置本篇主要介绍iterm2的一些配置，以及搭配homebrew的使用homebrew是一款自由及开放源代码的软件包管理系统，用以简化Mac OS X系统上的软件安装过程安装homebrew打开terminal(终端),输入以下命令安装 homebrew1/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.co">
+<meta name="twitter:description" content="iterm2简单的配置本篇主要介绍iterm2的一些配置，以及搭配homebrew的使用 homebrew是一款自由及开放源代码的软件包管理系统，用以简化Mac OS X系统上的软件安装过程 安装homebrew">
 
 
 
@@ -393,7 +393,11 @@
       
 
       
-        <h2 id="iterm2简单的配置"><a href="#iterm2简单的配置" class="headerlink" title="iterm2简单的配置"></a>iterm2简单的配置</h2><p>本篇主要介绍iterm2的一些配置，以及搭配homebrew的使用</p><h3 id="homebrew"><a href="#homebrew" class="headerlink" title="homebrew"></a>homebrew</h3><p>是一款自由及开放源代码的软件包管理系统，用以简化Mac OS X系统上的软件安装过程</p><h4 id="安装homebrew"><a href="#安装homebrew" class="headerlink" title="安装homebrew"></a>安装homebrew</h4><p>打开terminal(终端),输入以下命令安装 homebrew</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/usr/</span>bin<span class="regexp">/ruby -e "$(curl -fsSL https:/</span><span class="regexp">/raw.githubusercontent.com/</span>Homebrew<span class="regexp">/install/m</span>aster<span class="regexp">/install)"</span></span><br></pre></td></tr></table></figure>
+        <h2 id="iterm2简单的配置"><a href="#iterm2简单的配置" class="headerlink" title="iterm2简单的配置"></a>iterm2简单的配置</h2><p>本篇主要介绍iterm2的一些配置，以及搭配homebrew的使用</p>
+<h3 id="homebrew"><a href="#homebrew" class="headerlink" title="homebrew"></a>homebrew</h3><p>是一款自由及开放源代码的软件包管理系统，用以简化Mac OS X系统上的软件安装过程</p>
+<h4 id="安装homebrew"><a href="#安装homebrew" class="headerlink" title="安装homebrew"></a>安装homebrew</h4><a id="more"></a>
+<p>打开terminal(终端),输入以下命令安装 homebrew</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/usr/</span>bin<span class="regexp">/ruby -e "$(curl -fsSL https:/</span><span class="regexp">/raw.githubusercontent.com/</span>Homebrew<span class="regexp">/install/m</span>aster<span class="regexp">/install)"</span></span><br></pre></td></tr></table></figure>
 <h4 id="卸载homebrew"><a href="#卸载homebrew" class="headerlink" title="卸载homebrew"></a>卸载homebrew</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/<span class="keyword">install</span>/<span class="keyword">master</span>/<span class="keyword">uninstall</span>)<span class="string">"</span></span><br></pre></td></tr></table></figure>
 <h4 id="安装homebrew－cask"><a href="#安装homebrew－cask" class="headerlink" title="安装homebrew－cask"></a>安装homebrew－cask</h4><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span>install caskroom/cask/<span class="keyword">brew-cask</span></span><br><span class="line"><span class="keyword">brew </span>update &amp;&amp; <span class="keyword">brew </span>upgrade <span class="keyword">brew-cask </span>&amp;&amp; <span class="keyword">brew </span> cleanup // 更新</span><br></pre></td></tr></table></figure>
 <h4 id="使用homebrew／homebrew－cask安装软件"><a href="#使用homebrew／homebrew－cask安装软件" class="headerlink" title="使用homebrew／homebrew－cask安装软件"></a>使用homebrew／homebrew－cask安装软件</h4><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span>cask install google-chrome // 安装 Google 浏览器</span><br><span class="line"><span class="keyword">brew </span>cask/ install 软件名</span><br><span class="line">安装前可以先查看一下是否有该软件</span><br><span class="line"><span class="keyword">brew </span>cask <span class="meta">info</span> 软件名</span><br><span class="line"><span class="keyword">brew </span>cask uninstall 软件名 卸载</span><br></pre></td></tr></table></figure>
@@ -414,6 +418,7 @@
 <p>删除node文件，完全卸载node和npm</p>
 <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">方法<span class="number">1</span>:</span><br><span class="line">sudo rm -rf /usr/local/&#123;lib/<span class="keyword">node</span><span class="title">&#123;,/.npm</span>,_modules&#125;,bin,share/man&#125;/&#123;npm*,<span class="keyword">node</span><span class="title">*,man1</span>/<span class="keyword">node</span><span class="title">*&#125;</span></span><br><span class="line"><span class="title"></span></span><br><span class="line"><span class="title">方法2</span>:</span><br><span class="line">sudo rm -rf /usr/local/bin/npm /usr/local/share/man/man1/<span class="keyword">node</span><span class="title">* /usr</span>/local/lib/dtrace/<span class="keyword">node</span>.<span class="title">d</span> ~/.npm ~/.node-gyp /opt/local/bin/<span class="keyword">node</span> <span class="title">opt</span>/local/include/<span class="keyword">node</span> <span class="title">/opt</span>/local/lib/node_modules</span><br><span class="line"></span><br><span class="line">方法<span class="number">2</span>:</span><br><span class="line"><span class="number">1</span>.在/usr/local/lib目录下，删除任何与<span class="keyword">node</span><span class="title">和 node_modules</span>有关的目录；</span><br><span class="line"><span class="number">2</span>.在/usr/local/include 目录下，删除任何与<span class="keyword">node</span> <span class="title">和 node_modules</span>有关的目录；</span><br><span class="line"><span class="number">3</span>.如果你是通过**brew install <span class="keyword">node</span><span class="title">**安装的node</span>，则在终端执行**brew uninstall <span class="keyword">node</span><span class="title">** ，并在home</span>目录下查找 **local** 或**lib** 或 **include**文件夹，删除任何与**<span class="keyword">node</span><span class="title">** 和 **node_modules</span>**有关的目录；</span><br><span class="line"><span class="number">4</span>.在**/usr/local/bin**目录下，删除任何与 **<span class="keyword">node</span><span class="title">** 执行文件；</span></span><br><span class="line"><span class="title">5</span>.最后下载 **nvm** ，跟随它的介绍安装<span class="keyword">node</span><span class="title">。当然，你也可以通过**npm</span>**来安装最新版本的<span class="keyword">Node</span><span class="title">。</span></span><br></pre></td></tr></table></figure>
 <p>卸载后再参照上面步骤安装npm、node</p>
+
       
     </div>
     
@@ -553,9 +558,11 @@
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count"></span>
+  <span>
+  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+  </span>
   
 </div>
-
 
 
 

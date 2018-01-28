@@ -85,18 +85,18 @@
 
 
 
-<meta name="description" content="博客搭建有一段时间，还没有申请自己的域名。于是申请、绑定，操作，本文记录一下操作的过程。注：搭建好后发现所有的浏览记录全部清空，访问量/访问人数从0开始。后面的同学搭建好博客后一定要记得绑定好域名。步骤：申请域名添加网址解析绑定博客申请域名申请网址阿里云万网—阿里云旗下品牌如下图所示：选择自己的喜欢，输入域名查找【如：test】选好之后则进入购买流程，具体操作看页面提示信息【注：看看是个人需求还是">
+<meta name="description" content="博客搭建有一段时间，还没有申请自己的域名。于是申请、绑定，操作，本文记录一下操作的过程。">
 <meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo博客绑定域名">
 <meta property="og:url" content="http://hadronw.com/2018-01-22/hexo博客绑定域名/index.html">
 <meta property="og:site_name" content="hadronw&#39;s Blog">
-<meta property="og:description" content="博客搭建有一段时间，还没有申请自己的域名。于是申请、绑定，操作，本文记录一下操作的过程。注：搭建好后发现所有的浏览记录全部清空，访问量/访问人数从0开始。后面的同学搭建好博客后一定要记得绑定好域名。步骤：申请域名添加网址解析绑定博客申请域名申请网址阿里云万网—阿里云旗下品牌如下图所示：选择自己的喜欢，输入域名查找【如：test】选好之后则进入购买流程，具体操作看页面提示信息【注：看看是个人需求还是">
+<meta property="og:description" content="博客搭建有一段时间，还没有申请自己的域名。于是申请、绑定，操作，本文记录一下操作的过程。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-01-23T09:48:53.781Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo博客绑定域名">
-<meta name="twitter:description" content="博客搭建有一段时间，还没有申请自己的域名。于是申请、绑定，操作，本文记录一下操作的过程。注：搭建好后发现所有的浏览记录全部清空，访问量/访问人数从0开始。后面的同学搭建好博客后一定要记得绑定好域名。步骤：申请域名添加网址解析绑定博客申请域名申请网址阿里云万网—阿里云旗下品牌如下图所示：选择自己的喜欢，输入域名查找【如：test】选好之后则进入购买流程，具体操作看页面提示信息【注：看看是个人需求还是">
+<meta name="twitter:description" content="博客搭建有一段时间，还没有申请自己的域名。于是申请、绑定，操作，本文记录一下操作的过程。">
 
 
 
@@ -393,7 +393,44 @@
       
 
       
-        <blockquote><p>博客搭建有一段时间，还没有申请自己的域名。于是申请、绑定，操作，本文记录一下操作的过程。</p></blockquote><p>注：搭建好后发现所有的浏览记录全部清空，访问量/访问人数从0开始。后面的同学搭建好博客后一定要记得绑定好域名。</p><p>步骤：</p><ul><li>申请域名</li><li>添加网址解析</li><li>绑定博客</li></ul><h2 id="申请域名"><a href="#申请域名" class="headerlink" title="申请域名"></a>申请域名</h2><hr><p>申请网址阿里云<a href="https://wanwang.aliyun.com/domain?spm=5176.10695662.1996646101.searchclickresult.c8346fllJNcX" target="_blank" rel="noopener">万网—阿里云旗下品牌</a></p><p>如下图所示：</p><p>选择自己的喜欢，输入域名查找【如：test】</p><p>选好之后则进入购买流程，具体操作看页面提示信息【注：看看是个人需求还是企业需求，选好之后会需要提交身份信息，需要验证。我购买时页尾有优惠信息，可根据提示获取优惠】</p><h2 id="添加网址解析"><a href="#添加网址解析" class="headerlink" title="添加网址解析"></a>添加网址解析</h2><hr><p>进入个人中心控制台，域名管理可看到购买域名列表，参考如下图：</p><p>进入解析页面，添加解析，如下图所示</p><p>可直接使用新手引导，如下图所示</p><p>至此网址解析搭建完毕，还可以继续优化，此处不涉及。</p><h2 id="绑定博客"><a href="#绑定博客" class="headerlink" title="绑定博客"></a>绑定博客</h2><hr><p>为啥还要绑定博客，添加域名网址解析时那个不算是与博客绑定吗？还需要继续配置，下面的才是重点</p><p>打开本地blog目录，进入source中。在source中创建一个CNAME文件，在文件中写入申请的域名。假设申请的为：testa.com域名 ，则在CNAME文件中填写testa.com，不需要填写其他的。</p><p>位置如下图：</p><p>创建成功后，提交到github中同步，<strong>重点！！！</strong></p><p>进入博客仓库setting选项中，找到Custom domain查看域名是否与自己配置的统一，不符合的需要修改成统一的。</p><p>至此，域名绑定完成，接着浏览器中输入自己的域名验证一下。</p><p>好了搭建完毕，欢迎交流学习。</p>
+        <blockquote>
+<p>博客搭建有一段时间，还没有申请自己的域名。于是申请、绑定，操作，本文记录一下操作的过程。</p>
+</blockquote>
+<a id="more"></a>
+<p>注：搭建好后发现所有的浏览记录全部清空，访问量/访问人数从0开始。后面的同学搭建好博客后一定要记得绑定好域名。</p>
+<p>步骤：</p>
+<ul>
+<li>申请域名</li>
+<li>添加网址解析</li>
+<li>绑定博客</li>
+</ul>
+<h2 id="申请域名"><a href="#申请域名" class="headerlink" title="申请域名"></a>申请域名</h2><hr>
+<p>申请网址阿里云<a href="https://wanwang.aliyun.com/domain?spm=5176.10695662.1996646101.searchclickresult.c8346fllJNcX" target="_blank" rel="noopener">万网—阿里云旗下品牌</a></p>
+<p>如下图所示：</p>
+
+<p>选择自己的喜欢，输入域名查找【如：test】</p>
+
+<p>选好之后则进入购买流程，具体操作看页面提示信息【注：看看是个人需求还是企业需求，选好之后会需要提交身份信息，需要验证。我购买时页尾有优惠信息，可根据提示获取优惠】</p>
+<h2 id="添加网址解析"><a href="#添加网址解析" class="headerlink" title="添加网址解析"></a>添加网址解析</h2><hr>
+<p>进入个人中心控制台，域名管理可看到购买域名列表，参考如下图：</p>
+
+<p>进入解析页面，添加解析，如下图所示</p>
+
+<p>可直接使用新手引导，如下图所示</p>
+
+<p>至此网址解析搭建完毕，还可以继续优化，此处不涉及。</p>
+<h2 id="绑定博客"><a href="#绑定博客" class="headerlink" title="绑定博客"></a>绑定博客</h2><hr>
+<p>为啥还要绑定博客，添加域名网址解析时那个不算是与博客绑定吗？还需要继续配置，下面的才是重点</p>
+<p>打开本地blog目录，进入source中。在source中创建一个CNAME文件，在文件中写入申请的域名。假设申请的为：testa.com域名 ，则在CNAME文件中填写testa.com，不需要填写其他的。</p>
+<p>位置如下图：</p>
+
+<p>创建成功后，提交到github中同步，<strong>重点！！！</strong></p>
+<p>进入博客仓库setting选项中，找到Custom domain查看域名是否与自己配置的统一，不符合的需要修改成统一的。</p>
+
+
+<p>至此，域名绑定完成，接着浏览器中输入自己的域名验证一下。</p>
+<p>好了搭建完毕，欢迎交流学习。</p>
+
       
     </div>
     
@@ -533,9 +570,11 @@
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count"></span>
+  <span>
+  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+  </span>
   
 </div>
-
 
 
 

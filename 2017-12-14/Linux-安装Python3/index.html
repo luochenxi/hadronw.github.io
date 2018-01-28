@@ -85,18 +85,18 @@
 
 
 
-<meta name="description" content="Linux自带Python2.x版本，Python3的安装方法有多种，本文介绍安装包安装安装开发依赖123yum -y groupinstall developmentyum -y install zlib-devel  下载Python3安装包123456789wget https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tgztar zxv">
+<meta name="description" content="Linux自带Python2.x版本，Python3的安装方法有多种，本文介绍安装包安装  安装开发依赖123yum -y groupinstall developmentyum -y install zlib-devel">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux 安装Python3">
 <meta property="og:url" content="http://hadronw.com/2017-12-14/Linux-安装Python3/index.html">
 <meta property="og:site_name" content="hadronw&#39;s Blog">
-<meta property="og:description" content="Linux自带Python2.x版本，Python3的安装方法有多种，本文介绍安装包安装安装开发依赖123yum -y groupinstall developmentyum -y install zlib-devel  下载Python3安装包123456789wget https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tgztar zxv">
+<meta property="og:description" content="Linux自带Python2.x版本，Python3的安装方法有多种，本文介绍安装包安装  安装开发依赖123yum -y groupinstall developmentyum -y install zlib-devel">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-12-14T12:48:57.211Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 安装Python3">
-<meta name="twitter:description" content="Linux自带Python2.x版本，Python3的安装方法有多种，本文介绍安装包安装安装开发依赖123yum -y groupinstall developmentyum -y install zlib-devel  下载Python3安装包123456789wget https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tgztar zxv">
+<meta name="twitter:description" content="Linux自带Python2.x版本，Python3的安装方法有多种，本文介绍安装包安装  安装开发依赖123yum -y groupinstall developmentyum -y install zlib-devel">
 
 
 
@@ -393,8 +393,11 @@
       
 
       
-        <blockquote><p>Linux自带Python2.x版本，Python3的安装方法有多种，本文介绍安装包安装</p></blockquote><h2 id="安装开发依赖"><a href="#安装开发依赖" class="headerlink" title="安装开发依赖"></a>安装开发依赖</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum -y groupinstall development</span><br><span class="line"></span><br><span class="line">yum -y <span class="keyword">install</span> zlib-devel</span><br></pre></td></tr></table></figure>
-
+        <blockquote>
+<p>Linux自带Python2.x版本，Python3的安装方法有多种，本文介绍安装包安装</p>
+</blockquote>
+<h2 id="安装开发依赖"><a href="#安装开发依赖" class="headerlink" title="安装开发依赖"></a>安装开发依赖</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum -y groupinstall development</span><br><span class="line"></span><br><span class="line">yum -y <span class="keyword">install</span> zlib-devel</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h2 id="下载Python3安装包"><a href="#下载Python3安装包" class="headerlink" title="下载Python3安装包"></a>下载Python3安装包</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">wget http<span class="variable">s:</span>//www.<span class="keyword">python</span>.org/ftp/<span class="keyword">python</span>/<span class="number">3.6</span>.<span class="number">3</span>/Python-<span class="number">3.6</span>.<span class="number">3</span>.tgz</span><br><span class="line"></span><br><span class="line">tar zxvf Python-<span class="number">3.6</span>.<span class="number">3</span>.tgz</span><br><span class="line"></span><br><span class="line"><span class="keyword">cd</span> Python-<span class="number">3.6</span>.<span class="number">3</span></span><br><span class="line"></span><br><span class="line">./configure</span><br><span class="line"></span><br><span class="line"><span class="keyword">make</span> &amp;&amp; <span class="keyword">make</span> install</span><br></pre></td></tr></table></figure>
 <p>跑完之后，查看python3安装位置</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">which python3</span><br><span class="line"></span><br><span class="line">显示如下：</span><br><span class="line">[root@ ~]<span class="comment"># which python3</span></span><br><span class="line"><span class="regexp">/usr/</span>local<span class="regexp">/bin/</span>python3</span><br></pre></td></tr></table></figure>
@@ -406,6 +409,7 @@
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">python3</span><br><span class="line">Python 3.6.3 (default, Dec 14 2017, 19:33:57)</span><br><span class="line">[GCC 4.4.7 20120313 (Red Hat 4.4.7-18)] on linux</span><br><span class="line">Type <span class="string">"help"</span>, <span class="string">"copyright"</span>, <span class="string">"credits"</span> <span class="keyword">or</span> <span class="string">"license"</span> <span class="keyword">for</span> more information.</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
 <p>输入exit()，退出python3程序</p>
 <p>使用python3则运行python3命令，使用python2则运行python</p>
+
       
     </div>
     
@@ -545,9 +549,11 @@
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count"></span>
+  <span>
+  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+  </span>
   
 </div>
-
 
 
 

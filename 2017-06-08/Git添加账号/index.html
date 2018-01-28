@@ -85,18 +85,18 @@
 
 
 
-<meta name="description" content="Git添加账号测试SSH是否连接打开Terminal1ssh -T git@github.com 以下反馈则表示账号连接成功，可以直接使用。如果是其它的则需要在你的git添加SSH key 12Hi username! You&apos;ve successfully authenticated, but GitHub does notprovide shell access. 先查看电脑是否存在SSH k">
+<meta name="description" content="Git添加账号测试SSH是否连接打开Terminal 1ssh -T git@github.com 以下反馈则表示账号连接成功，可以直接使用。如果是其它的则需要在你的git添加SSH key">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git添加账号">
 <meta property="og:url" content="http://hadronw.com/2017-06-08/Git添加账号/index.html">
 <meta property="og:site_name" content="hadronw&#39;s Blog">
-<meta property="og:description" content="Git添加账号测试SSH是否连接打开Terminal1ssh -T git@github.com 以下反馈则表示账号连接成功，可以直接使用。如果是其它的则需要在你的git添加SSH key 12Hi username! You&apos;ve successfully authenticated, but GitHub does notprovide shell access. 先查看电脑是否存在SSH k">
+<meta property="og:description" content="Git添加账号测试SSH是否连接打开Terminal 1ssh -T git@github.com 以下反馈则表示账号连接成功，可以直接使用。如果是其它的则需要在你的git添加SSH key">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-06-08T11:52:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git添加账号">
-<meta name="twitter:description" content="Git添加账号测试SSH是否连接打开Terminal1ssh -T git@github.com 以下反馈则表示账号连接成功，可以直接使用。如果是其它的则需要在你的git添加SSH key 12Hi username! You&apos;ve successfully authenticated, but GitHub does notprovide shell access. 先查看电脑是否存在SSH k">
+<meta name="twitter:description" content="Git添加账号测试SSH是否连接打开Terminal 1ssh -T git@github.com 以下反馈则表示账号连接成功，可以直接使用。如果是其它的则需要在你的git添加SSH key">
 
 
 
@@ -393,11 +393,12 @@
       
 
       
-        <h2 id="Git添加账号"><a href="#Git添加账号" class="headerlink" title="Git添加账号"></a>Git添加账号</h2><h3 id="测试SSH是否连接"><a href="#测试SSH是否连接" class="headerlink" title="测试SSH是否连接"></a>测试SSH是否连接</h3><p>打开Terminal</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ssh</span> <span class="selector-tag">-T</span> <span class="selector-tag">git</span>@<span class="keyword">github</span>.<span class="keyword">com</span></span><br></pre></td></tr></table></figure>
-<p>以下反馈则表示账号连接成功，可以直接使用。如果是其它的则需要在你的git添加SSH key<br></p>
+        <h2 id="Git添加账号"><a href="#Git添加账号" class="headerlink" title="Git添加账号"></a>Git添加账号</h2><h3 id="测试SSH是否连接"><a href="#测试SSH是否连接" class="headerlink" title="测试SSH是否连接"></a>测试SSH是否连接</h3><p>打开Terminal</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ssh</span> <span class="selector-tag">-T</span> <span class="selector-tag">git</span>@<span class="keyword">github</span>.<span class="keyword">com</span></span><br></pre></td></tr></table></figure>
+<p>以下反馈则表示账号连接成功，可以直接使用。如果是其它的则需要在你的git添加SSH key<br><a id="more"></a></p>
 <figure class="highlight irpf90"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hi username<span class="comment">! You've successfully authenticated, but GitHub does not</span></span><br><span class="line"><span class="keyword">provide</span> shell <span class="keyword">access</span>.</span><br></pre></td></tr></table></figure>
 <h3 id="先查看电脑是否存在SSH-key"><a href="#先查看电脑是否存在SSH-key" class="headerlink" title="先查看电脑是否存在SSH key"></a>先查看电脑是否存在SSH key</h3><blockquote>
-<p>有则直接在您的GitHub账号中添加，没有则现在您的电脑中先创建再添加<br>检查电脑中是否存在SSH keys<br></p><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ls</span> -al ~<span class="string">/.ssh</span></span><br></pre></td></tr></table></figure><p></p>
+<p>有则直接在您的GitHub账号中添加，没有则现在您的电脑中先创建再添加<br>检查电脑中是否存在SSH keys<br><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ls</span> -al ~<span class="string">/.ssh</span></span><br></pre></td></tr></table></figure></p>
 </blockquote>
 <p>如果存在，则会显示id_dsa.pub、id_dsa等相关显示；不存在则需要先创建SSH keys</p>
 <h3 id="创建SSH-key"><a href="#创建SSH-key" class="headerlink" title="创建SSH key"></a>创建SSH key</h3><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"your_email@youremail.com"</span> </span><br><span class="line">注：your_email@youremail.com 请注意替换您自己的GitHub 账号</span><br></pre></td></tr></table></figure>
@@ -413,6 +414,7 @@
 <h3 id="在你的GitHub中添加SSH-key验证"><a href="#在你的GitHub中添加SSH-key验证" class="headerlink" title="在你的GitHub中添加SSH key验证"></a>在你的GitHub中添加SSH key验证</h3><p>先打开您生成的id_dsa.pub，拷贝SSH值。可以直接找到.ssh文件夹打开拷贝，也可以选择用命令</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pbcopy &lt; ~<span class="regexp">/.ssh/i</span>d_rsa.pub</span><br></pre></td></tr></table></figure>
 <p>再登录你的Github账号，在<strong>Settings－&gt;SSH and GPG keys-&gt;</strong>选项中添加<br>按照提示讲拷贝的SSH添入其中，提交后会有输入密码的确认，之后会有提示。<br>如果提示添加成功，可以测试一下是否可以理解，参照“测试SSH是否与您的账号连接”</p>
+
       
     </div>
     
@@ -552,9 +554,11 @@
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count"></span>
+  <span>
+  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+  </span>
   
 </div>
-
 
 
 

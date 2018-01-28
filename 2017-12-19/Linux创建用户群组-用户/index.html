@@ -85,18 +85,18 @@
 
 
 
-<meta name="description" content="创建用户群组添加用户群组1234567[root ~]# groupadd 选项 用户组    常用的选项有：    -g GID 指定新用户组的组标识号（GID）    -o 一般与-g选项同时使用，表示新用户组的GID可以与系统已有用户组的GID相同如：[root ~]# groupadd group1 --创建群组group1,选项可以不指定  查看用户群组1234[root ~]# cat">
+<meta name="description" content="创建用户群组添加用户群组1234567[root ~]# groupadd 选项 用户组    常用的选项有：    -g GID 指定新用户组的组标识号（GID）    -o 一般与-g选项同时使用，表示新用户组的GID可以与系统已有用户组的GID相同如：[root ~]# groupadd group1 --创建群组group1,选项可以不指定">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux创建用户群组,用户">
 <meta property="og:url" content="http://hadronw.com/2017-12-19/Linux创建用户群组-用户/index.html">
 <meta property="og:site_name" content="hadronw&#39;s Blog">
-<meta property="og:description" content="创建用户群组添加用户群组1234567[root ~]# groupadd 选项 用户组    常用的选项有：    -g GID 指定新用户组的组标识号（GID）    -o 一般与-g选项同时使用，表示新用户组的GID可以与系统已有用户组的GID相同如：[root ~]# groupadd group1 --创建群组group1,选项可以不指定  查看用户群组1234[root ~]# cat">
+<meta property="og:description" content="创建用户群组添加用户群组1234567[root ~]# groupadd 选项 用户组    常用的选项有：    -g GID 指定新用户组的组标识号（GID）    -o 一般与-g选项同时使用，表示新用户组的GID可以与系统已有用户组的GID相同如：[root ~]# groupadd group1 --创建群组group1,选项可以不指定">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-12-19T06:05:14.746Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux创建用户群组,用户">
-<meta name="twitter:description" content="创建用户群组添加用户群组1234567[root ~]# groupadd 选项 用户组    常用的选项有：    -g GID 指定新用户组的组标识号（GID）    -o 一般与-g选项同时使用，表示新用户组的GID可以与系统已有用户组的GID相同如：[root ~]# groupadd group1 --创建群组group1,选项可以不指定  查看用户群组1234[root ~]# cat">
+<meta name="twitter:description" content="创建用户群组添加用户群组1234567[root ~]# groupadd 选项 用户组    常用的选项有：    -g GID 指定新用户组的组标识号（GID）    -o 一般与-g选项同时使用，表示新用户组的GID可以与系统已有用户组的GID相同如：[root ~]# groupadd group1 --创建群组group1,选项可以不指定">
 
 
 
@@ -394,7 +394,7 @@
 
       
         <h2 id="创建用户群组"><a href="#创建用户群组" class="headerlink" title="创建用户群组"></a>创建用户群组</h2><h3 id="添加用户群组"><a href="#添加用户群组" class="headerlink" title="添加用户群组"></a>添加用户群组</h3><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[<span class="meta">root ~</span>]<span class="meta"># groupadd 选项 用户组    </span></span><br><span class="line">常用的选项有：</span><br><span class="line">    -g GID 指定新用户组的组标识号（GID）</span><br><span class="line">    -o 一般与-g选项同时使用，表示新用户组的GID可以与系统已有用户组的GID相同</span><br><span class="line"></span><br><span class="line">如：</span><br><span class="line">[<span class="meta">root ~</span>]<span class="meta"># groupadd group1 --创建群组group1,选项可以不指定</span></span><br></pre></td></tr></table></figure>
-
+<a id="more"></a>
 <h3 id="查看用户群组"><a href="#查看用户群组" class="headerlink" title="查看用户群组"></a>查看用户群组</h3><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root ~]# <span class="keyword">cat</span> /etc/<span class="built_in">group</span></span><br><span class="line"></span><br><span class="line">或：</span><br><span class="line">[root ~]# <span class="keyword">cat</span> /etc/passwd |awk -F [:] '&#123;<span class="keyword">print</span> <span class="variable">$4&#125;</span>' |<span class="keyword">sort</span>|uniq | getent group |awk -F [:] '&#123;<span class="keyword">print</span> <span class="variable">$1&#125;</span>'</span><br></pre></td></tr></table></figure>
 <h3 id="修改用户群组"><a href="#修改用户群组" class="headerlink" title="修改用户群组"></a>修改用户群组</h3><figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root ~]# groupmod 选项 用户组</span><br><span class="line"></span><br><span class="line">常用的选项有：</span><br><span class="line">-<span class="ruby">g GID 为用户组指定新的组标识号。</span></span><br><span class="line"><span class="ruby">-o 与-g选项同时使用，用户组的新GID可以与系统已有用户组的GID相同。</span></span><br><span class="line"><span class="ruby">-n新用户组 将用户组的名字改为新名字</span></span><br><span class="line"><span class="ruby"></span></span><br><span class="line"><span class="ruby">如：</span></span><br><span class="line"><span class="ruby">[root ~]<span class="comment"># groupmod -n group1 group2 --将group1改为group2</span></span></span><br></pre></td></tr></table></figure>
 <h3 id="删除用户群组"><a href="#删除用户群组" class="headerlink" title="删除用户群组"></a>删除用户群组</h3><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">groupdel 用户组</span><br><span class="line">如：</span><br><span class="line">[<span class="meta">root ~</span>]<span class="meta"># groupdel group1</span></span><br></pre></td></tr></table></figure>
@@ -403,6 +403,7 @@
 <h3 id="修改用户"><a href="#修改用户" class="headerlink" title="修改用户"></a>修改用户</h3><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">usermod 选项 用户名</span><br><span class="line"></span><br><span class="line">选项的意义与创建用户的选项一致</span><br><span class="line"></span><br><span class="line">[<span class="meta">root ~</span>]<span class="meta"># usermod -g group2 user1 --将user1的群组改为group2</span></span><br></pre></td></tr></table></figure>
 <h3 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h3><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">userdel 选项 用户名</span><br><span class="line"></span><br><span class="line">[<span class="meta">root ~</span>]<span class="meta"># userdel -r user1 ---常用的选项是 -r，它的作用是把用户的主目录一起删除</span></span><br></pre></td></tr></table></figure>
 <h3 id="passwd"><a href="#passwd" class="headerlink" title="passwd"></a>passwd</h3><figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">passwd 选项 用户名</span><br><span class="line"></span><br><span class="line">可使用的选项：</span><br><span class="line"></span><br><span class="line">-<span class="ruby">l 锁定口令，即禁用账号。</span></span><br><span class="line"><span class="ruby">-u 口令解锁。</span></span><br><span class="line"><span class="ruby">-d 使账号无口令。</span></span><br><span class="line"><span class="ruby">-f 强迫用户下次登录时修改口令</span></span><br><span class="line"><span class="ruby"></span></span><br><span class="line"><span class="ruby">[user1 ~] passwd    ---修改当前用户user1的密码</span></span><br><span class="line"><span class="ruby"></span></span><br><span class="line"><span class="ruby"> [root ~]<span class="comment"># passwd xxx ---修改任意用户的密码</span></span></span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -542,9 +543,11 @@
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count"></span>
+  <span>
+  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+  </span>
   
 </div>
-
 
 
 

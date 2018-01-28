@@ -85,18 +85,18 @@
 
 
 
-<meta name="description" content="摘要SELECT 是您每次要从数据库查询信息时使用的子句。WHERE 是一个流行的命令，可以根据您指定的条件过滤查询的结果。LIKE并且BETWEEN是可以在一个WHERE子句中使用的特殊操作符AND并且OR是可以用于WHERE在两个或多个条件下过滤查询的特殊操作符。ORDER BY 允许您以升序或降序对查询的结果进行排序。LIMIT允许您指定查询将返回的最大行数。这对于具有数千甚至数百万行的大型">
+<meta name="description" content="摘要 SELECT 是您每次要从数据库查询信息时使用的子句。 WHERE 是一个流行的命令，可以根据您指定的条件过滤查询的结果。 LIKE并且BETWEEN是可以在一个WHERE子句中使用的特殊操作符 AND并且OR是可以用于WHERE在两个或多个条件下过滤查询的特殊操作符。 ORDER BY 允许您以升序或降序对查询的结果进行排序。 LIMIT允许您指定查询将返回的最大行数。这对于具有数千甚至数">
 <meta name="keywords" content="SQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQL常用命令(2)">
 <meta property="og:url" content="http://hadronw.com/2017-06-06/SQL常用命令-2/index.html">
 <meta property="og:site_name" content="hadronw&#39;s Blog">
-<meta property="og:description" content="摘要SELECT 是您每次要从数据库查询信息时使用的子句。WHERE 是一个流行的命令，可以根据您指定的条件过滤查询的结果。LIKE并且BETWEEN是可以在一个WHERE子句中使用的特殊操作符AND并且OR是可以用于WHERE在两个或多个条件下过滤查询的特殊操作符。ORDER BY 允许您以升序或降序对查询的结果进行排序。LIMIT允许您指定查询将返回的最大行数。这对于具有数千甚至数百万行的大型">
+<meta property="og:description" content="摘要 SELECT 是您每次要从数据库查询信息时使用的子句。 WHERE 是一个流行的命令，可以根据您指定的条件过滤查询的结果。 LIKE并且BETWEEN是可以在一个WHERE子句中使用的特殊操作符 AND并且OR是可以用于WHERE在两个或多个条件下过滤查询的特殊操作符。 ORDER BY 允许您以升序或降序对查询的结果进行排序。 LIMIT允许您指定查询将返回的最大行数。这对于具有数千甚至数">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-06-06T11:47:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL常用命令(2)">
-<meta name="twitter:description" content="摘要SELECT 是您每次要从数据库查询信息时使用的子句。WHERE 是一个流行的命令，可以根据您指定的条件过滤查询的结果。LIKE并且BETWEEN是可以在一个WHERE子句中使用的特殊操作符AND并且OR是可以用于WHERE在两个或多个条件下过滤查询的特殊操作符。ORDER BY 允许您以升序或降序对查询的结果进行排序。LIMIT允许您指定查询将返回的最大行数。这对于具有数千甚至数百万行的大型">
+<meta name="twitter:description" content="摘要 SELECT 是您每次要从数据库查询信息时使用的子句。 WHERE 是一个流行的命令，可以根据您指定的条件过滤查询的结果。 LIKE并且BETWEEN是可以在一个WHERE子句中使用的特殊操作符 AND并且OR是可以用于WHERE在两个或多个条件下过滤查询的特殊操作符。 ORDER BY 允许您以升序或降序对查询的结果进行排序。 LIMIT允许您指定查询将返回的最大行数。这对于具有数千甚至数">
 
 
 
@@ -393,7 +393,16 @@
       
 
       
-        <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><ul><li>SELECT 是您每次要从数据库查询信息时使用的子句。</li><li>WHERE 是一个流行的命令，可以根据您指定的条件过滤查询的结果。</li><li>LIKE并且BETWEEN是可以在一个WHERE子句中使用的特殊操作符</li><li>AND并且OR是可以用于WHERE在两个或多个条件下过滤查询的特殊操作符。</li><li>ORDER BY 允许您以升序或降序对查询的结果进行排序。</li><li>LIMIT允许您指定查询将返回的最大行数。这对于具有数千甚至数百万行的大型表格尤其重要。</li></ul><h2 id="在表格中添加新列"><a href="#在表格中添加新列" class="headerlink" title="在表格中添加新列"></a>在表格中添加新列</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> celebs <span class="keyword">ADD</span> COLUME twitter_handle <span class="built_in">text</span>;</span><br></pre></td></tr></table></figure>
+        <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><ul>
+<li>SELECT 是您每次要从数据库查询信息时使用的子句。</li>
+<li>WHERE 是一个流行的命令，可以根据您指定的条件过滤查询的结果。</li>
+<li>LIKE并且BETWEEN是可以在一个WHERE子句中使用的特殊操作符</li>
+<li>AND并且OR是可以用于WHERE在两个或多个条件下过滤查询的特殊操作符。</li>
+<li>ORDER BY 允许您以升序或降序对查询的结果进行排序。</li>
+<li>LIMIT允许您指定查询将返回的最大行数。这对于具有数千甚至数百万行的大型表格尤其重要。</li>
+</ul>
+<h2 id="在表格中添加新列"><a href="#在表格中添加新列" class="headerlink" title="在表格中添加新列"></a>在表格中添加新列</h2><a id="more"></a>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> celebs <span class="keyword">ADD</span> COLUME twitter_handle <span class="built_in">text</span>;</span><br></pre></td></tr></table></figure>
 <p>该ALTER TABLE语句向表中添加了一个新列。当您要向表中添加列时，可以使用此命令。</p>
 <ol>
 <li>ALTER TABLE是一个允许您进行指定更改的子句。</li>
@@ -426,7 +435,7 @@
 <h3 id="查询-LIKE"><a href="#查询-LIKE" class="headerlink" title="查询(LIKE)"></a>查询(LIKE)</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> movies HERE <span class="keyword">name</span> <span class="keyword">LIKE</span> <span class="string">'Se_en'</span>;</span><br></pre></td></tr></table></figure>
 <p>LIKE当你想比较类似的值时，可以是一个有用的操作符。在这里，我们正在比较两部名称相同但拼写不一的电影。</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1. </span>LIKE是与WHERE子句一起使用的特殊操作符，用于搜索列中的特定模式。</span><br><span class="line"><span class="bullet">2. </span>name LIKE Se_en是评估name特定模式的列的条件。</span><br><span class="line"><span class="bullet">3. </span>Se<span class="emphasis">_en表示具有通配符的模式。这种_</span>方式可以在这里替代任何个人的角色，而不会破坏模式。名称Seven和Se7en两者匹配这种模式。</span><br></pre></td></tr></table></figure>
-<h3 id="查询"><a href="#查询" class="headerlink" title="查询(%)"></a>查询(%)</h3><p>%是可以使用的另一个通配符LIKE<br></p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> movies <span class="keyword">WHERE</span> <span class="keyword">name</span> <span class="keyword">LIKE</span> <span class="string">'A%'</span>;</span><br></pre></td></tr></table></figure><p></p>
+<h3 id="查询"><a href="#查询" class="headerlink" title="查询(%)"></a>查询(%)</h3><p>%是可以使用的另一个通配符LIKE<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> movies <span class="keyword">WHERE</span> <span class="keyword">name</span> <span class="keyword">LIKE</span> <span class="string">'A%'</span>;</span><br></pre></td></tr></table></figure></p>
 <p>% 是一个通配符，在该模式中匹配零个或多个缺失的字母。<br>A% 匹配所有电影，其名称以“A”开头<br>%a 匹配以“a”结尾的所有电影<br>%a% 匹配所有中间包含‘a’的电影</p>
 <h3 id="查询-BETWEEN"><a href="#查询-BETWEEN" class="headerlink" title="查询(BETWEEN)"></a>查询(BETWEEN)</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> movies <span class="keyword">WHERE</span> <span class="keyword">name</span> <span class="keyword">BETWEEN</span> <span class="string">'A'</span><span class="keyword">and</span> <span class="string">'J'</span>;</span><br></pre></td></tr></table></figure>
 <p>此语句将结果集过滤到仅包含以name“A”字母开头但不包括“J”的s的电影。</p>
@@ -467,6 +476,7 @@
 <h3 id="查询-LIMIT"><a href="#查询-LIMIT" class="headerlink" title="查询(LIMIT)"></a>查询(LIMIT)</h3><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> movies <span class="keyword">ORDER</span> <span class="keyword">BY</span> imdb_rating <span class="keyword">DESC</span> <span class="keyword">LIMIT</span> <span class="number">3</span>;</span><br></pre></td></tr></table></figure>
 <p>有时甚至过滤的结果可以在大数据库中返回数千行。在这些情况下，重要的是将结果集中的行数加起来。</p>
 <p>LIMIT是一个允许您指定结果集将具有的最大行数的子句。在这里，我们指定结果集不能有三行以上。</p>
+
       
     </div>
     
@@ -602,9 +612,11 @@
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count"></span>
+  <span>
+  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+  </span>
   
 </div>
-
 
 
 

@@ -85,13 +85,13 @@
 
 
 
-<meta name="description" content="本篇中主要内容是Alfred软件的一些配置：自定义web搜索，更改默认搜索，一些WorkflowsAlfred号称Mac中的效率神器，可根据自己喜好深度自定义一般配置首页打开preferences-&amp;gt;General页面中Alfred Hotkey设置使用快捷键where are you 选择你的地区，在使用自带搜索时会搜索到相对应的地区信息外观Clipboard（剪切板）设置按键，设置保持时">
+<meta name="description" content="本篇中主要内容是Alfred软件的一些配置：自定义web搜索，更改默认搜索，一些Workflows  Alfred号称Mac中的效率神器，可根据自己喜好深度自定义 一般配置">
 <meta name="keywords" content="Mac">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac的一些配置之Alfred篇">
 <meta property="og:url" content="http://hadronw.com/2017-06-16/Mac的一些配置之Alfred篇/index.html">
 <meta property="og:site_name" content="hadronw&#39;s Blog">
-<meta property="og:description" content="本篇中主要内容是Alfred软件的一些配置：自定义web搜索，更改默认搜索，一些WorkflowsAlfred号称Mac中的效率神器，可根据自己喜好深度自定义一般配置首页打开preferences-&amp;gt;General页面中Alfred Hotkey设置使用快捷键where are you 选择你的地区，在使用自带搜索时会搜索到相对应的地区信息外观Clipboard（剪切板）设置按键，设置保持时">
+<meta property="og:description" content="本篇中主要内容是Alfred软件的一些配置：自定义web搜索，更改默认搜索，一些Workflows  Alfred号称Mac中的效率神器，可根据自己喜好深度自定义 一般配置">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://hadronw.com/2017-06-16/Mac的一些配置之Alfred篇/alfred6.png">
 <meta property="og:image" content="http://hadronw.com/2017-06-16/Mac的一些配置之Alfred篇/alfred5.png">
@@ -106,7 +106,7 @@
 <meta property="og:updated_time" content="2017-07-25T05:18:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac的一些配置之Alfred篇">
-<meta name="twitter:description" content="本篇中主要内容是Alfred软件的一些配置：自定义web搜索，更改默认搜索，一些WorkflowsAlfred号称Mac中的效率神器，可根据自己喜好深度自定义一般配置首页打开preferences-&amp;gt;General页面中Alfred Hotkey设置使用快捷键where are you 选择你的地区，在使用自带搜索时会搜索到相对应的地区信息外观Clipboard（剪切板）设置按键，设置保持时">
+<meta name="twitter:description" content="本篇中主要内容是Alfred软件的一些配置：自定义web搜索，更改默认搜索，一些Workflows  Alfred号称Mac中的效率神器，可根据自己喜好深度自定义 一般配置">
 <meta name="twitter:image" content="http://hadronw.com/2017-06-16/Mac的一些配置之Alfred篇/alfred6.png">
 
 
@@ -404,7 +404,24 @@
       
 
       
-        <blockquote><p>本篇中主要内容是Alfred软件的一些配置：自定义web搜索，更改默认搜索，一些Workflows</p></blockquote><p>Alfred号称Mac中的效率神器，可根据自己喜好深度自定义</p><h2 id="一般配置"><a href="#一般配置" class="headerlink" title="一般配置"></a>一般配置</h2><h3 id="首页"><a href="#首页" class="headerlink" title="首页"></a>首页</h3><p>打开preferences-&gt;General页面中<br>Alfred Hotkey设置使用快捷键<br>where are you 选择你的地区，在使用自带搜索时会搜索到相对应的地区信息</p><p><img src="alfred6.png" alt=""></p><h3 id="外观"><a href="#外观" class="headerlink" title="外观"></a>外观</h3><p><img src="alfred5.png" alt=""></p><h3 id="Clipboard（剪切板）"><a href="#Clipboard（剪切板）" class="headerlink" title="Clipboard（剪切板）"></a>Clipboard（剪切板）</h3><p>设置按键，设置保持时效</p><p><img src="alfred7.png" alt=""></p><h2 id="自定义web搜索"><a href="#自定义web搜索" class="headerlink" title="自定义web搜索"></a>自定义web搜索</h2><blockquote><p>添加自己常用的网站搜索如github、京东、天猫、知乎等</p></blockquote><p>进入到preferences-&gt;Features－&gt;Web Search</p><p><img src="alfred9.png" alt=""></p><p><img src="alfred8.png" alt=""></p><p>常用的有：</p><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">百度：</span><br><span class="line">http<span class="variable">s:</span>//www.baidu.<span class="keyword">com</span>/s?ie=utf-<span class="number">8</span>&amp;<span class="keyword">f</span>=<span class="number">8</span>&amp;wd=&#123;query&#125;</span><br><span class="line"></span><br><span class="line">简书：</span><br><span class="line">http://www.jianshu.<span class="keyword">com</span>/<span class="built_in">search</span>?utf8=%E2%<span class="number">9</span>C%<span class="number">93</span>&amp;q=&#123;query&#125;</span><br><span class="line"></span><br><span class="line">京东：</span><br><span class="line">http://<span class="built_in">search</span>.jd.<span class="keyword">com</span>/Search?keyword=&#123;query&#125;&amp;enc=utf-<span class="number">8</span></span><br><span class="line"></span><br><span class="line">微信文章：</span><br><span class="line">http://weixin.sogou.<span class="keyword">com</span>/weixin?<span class="built_in">type</span>=<span class="number">2</span>&amp;query=&#123;query&#125;</span><br><span class="line"></span><br><span class="line">stackoverflow：</span><br><span class="line">http://www.stackoverflow.<span class="keyword">com</span>/<span class="built_in">search</span>?q=&#123;query&#125;</span><br><span class="line"></span><br><span class="line">github：</span><br><span class="line">http<span class="variable">s:</span>//github.<span class="keyword">com</span>/<span class="built_in">search</span>?utf8=%E2%<span class="number">9</span>C%<span class="number">93</span>&amp;q=&#123;query&#125;</span><br><span class="line"></span><br><span class="line">maven：</span><br><span class="line">http://mvnrepository.<span class="keyword">com</span>/<span class="built_in">search</span>?q=&#123;query&#125;</span><br></pre></td></tr></table></figure>
+        <blockquote>
+<p>本篇中主要内容是Alfred软件的一些配置：自定义web搜索，更改默认搜索，一些Workflows</p>
+</blockquote>
+<p>Alfred号称Mac中的效率神器，可根据自己喜好深度自定义</p>
+<h2 id="一般配置"><a href="#一般配置" class="headerlink" title="一般配置"></a>一般配置</h2><a id="more"></a>
+<h3 id="首页"><a href="#首页" class="headerlink" title="首页"></a>首页</h3><p>打开preferences-&gt;General页面中<br>Alfred Hotkey设置使用快捷键<br>where are you 选择你的地区，在使用自带搜索时会搜索到相对应的地区信息</p>
+<p><img src="alfred6.png" alt=""></p>
+<h3 id="外观"><a href="#外观" class="headerlink" title="外观"></a>外观</h3><p><img src="alfred5.png" alt=""></p>
+<h3 id="Clipboard（剪切板）"><a href="#Clipboard（剪切板）" class="headerlink" title="Clipboard（剪切板）"></a>Clipboard（剪切板）</h3><p>设置按键，设置保持时效</p>
+<p><img src="alfred7.png" alt=""></p>
+<h2 id="自定义web搜索"><a href="#自定义web搜索" class="headerlink" title="自定义web搜索"></a>自定义web搜索</h2><blockquote>
+<p>添加自己常用的网站搜索如github、京东、天猫、知乎等</p>
+</blockquote>
+<p>进入到preferences-&gt;Features－&gt;Web Search</p>
+<p><img src="alfred9.png" alt=""></p>
+<p><img src="alfred8.png" alt=""></p>
+<p>常用的有：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">百度：</span><br><span class="line">http<span class="variable">s:</span>//www.baidu.<span class="keyword">com</span>/s?ie=utf-<span class="number">8</span>&amp;<span class="keyword">f</span>=<span class="number">8</span>&amp;wd=&#123;query&#125;</span><br><span class="line"></span><br><span class="line">简书：</span><br><span class="line">http://www.jianshu.<span class="keyword">com</span>/<span class="built_in">search</span>?utf8=%E2%<span class="number">9</span>C%<span class="number">93</span>&amp;q=&#123;query&#125;</span><br><span class="line"></span><br><span class="line">京东：</span><br><span class="line">http://<span class="built_in">search</span>.jd.<span class="keyword">com</span>/Search?keyword=&#123;query&#125;&amp;enc=utf-<span class="number">8</span></span><br><span class="line"></span><br><span class="line">微信文章：</span><br><span class="line">http://weixin.sogou.<span class="keyword">com</span>/weixin?<span class="built_in">type</span>=<span class="number">2</span>&amp;query=&#123;query&#125;</span><br><span class="line"></span><br><span class="line">stackoverflow：</span><br><span class="line">http://www.stackoverflow.<span class="keyword">com</span>/<span class="built_in">search</span>?q=&#123;query&#125;</span><br><span class="line"></span><br><span class="line">github：</span><br><span class="line">http<span class="variable">s:</span>//github.<span class="keyword">com</span>/<span class="built_in">search</span>?utf8=%E2%<span class="number">9</span>C%<span class="number">93</span>&amp;q=&#123;query&#125;</span><br><span class="line"></span><br><span class="line">maven：</span><br><span class="line">http://mvnrepository.<span class="keyword">com</span>/<span class="built_in">search</span>?q=&#123;query&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="Workflows"><a href="#Workflows" class="headerlink" title="Workflows"></a>Workflows</h2><p>自己用的，一个<a href="https://github.com/search?utf8=%E2%9C%93&amp;q=youdao+alfred&amp;type=" target="_blank" rel="noopener">有道</a>，一个是终端相关<br><img src="alfred4.png" alt=""><br>其他的有知乎上的推荐：<br><a href="http://www.jianshu.com/p/0e78168da7ab" target="_blank" rel="noopener">Mac效率神器Alfred以及常用Workflow</a></p>
 <p><a href="https://www.zhihu.com/question/24272545" target="_blank" rel="noopener">有哪些经典且好玩的Alfred workflow?</a></p>
 <p><a href="https://www.zhihu.com/question/20656680" target="_blank" rel="noopener">借助 Alfred 2 的 Workflows 功能可以做哪些好玩的事情？</a></p>
@@ -414,6 +431,7 @@
 <h3 id="词典"><a href="#词典" class="headerlink" title="词典"></a>词典</h3><p><img src="alfred1.png" alt=""></p>
 <h3 id="词典-1"><a href="#词典-1" class="headerlink" title="词典"></a>词典</h3><p><img src="alfred0.png" alt=""></p>
 <p>还有许多的功能等你去发现，欢迎交流</p>
+
       
     </div>
     
@@ -553,9 +571,11 @@
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count"></span>
+  <span>
+  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+  </span>
   
 </div>
-
 
 
 

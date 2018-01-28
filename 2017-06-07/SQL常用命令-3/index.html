@@ -394,7 +394,7 @@
 
       
         <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">聚合函数将多个行组合在一起以形成更有意义的信息的单个值。</span><br><span class="line">COUNT以列的名称作为参数，并计算值不为的行数NULL。</span><br><span class="line">GROUP BY 是一个用于聚合函数的子句，用于组合一个或多个列的数据。</span><br><span class="line"><span class="function"><span class="title">SUM</span><span class="params">()</span></span> 将列名称作为参数，并返回该列中所有值的总和。</span><br><span class="line"><span class="function"><span class="title">MAX</span><span class="params">()</span></span> 将列名作为参数，并返回该列中的最大值。</span><br><span class="line"><span class="function"><span class="title">MIN</span><span class="params">()</span></span> 将列名作为参数，并返回该列中的最小值。</span><br><span class="line"><span class="function"><span class="title">AVG</span><span class="params">()</span></span> 以列名称作为参数，并返回该列的平均值。</span><br><span class="line"><span class="function"><span class="title">ROUND</span><span class="params">()</span></span>需要两个参数，列名和小数位数来舍入该列中的值。</span><br></pre></td></tr></table></figure>
-<h2 id="高级查询"><a href="#高级查询" class="headerlink" title="高级查询"></a>高级查询</h2>
+<h2 id="高级查询"><a href="#高级查询" class="headerlink" title="高级查询"></a>高级查询</h2><a id="more"></a>
 <h3 id="查询-COUNT"><a href="#查询-COUNT" class="headerlink" title="查询(COUNT)"></a>查询(COUNT)</h3><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">COUNT</span>(*) <span class="keyword">FROM</span> fake_apps;</span><br></pre></td></tr></table></figure>
 <p>COUNT()是将列的名称作为参数的函数，并计算列不是的行数NULL。在这里，我们想计算每一行，所以我们*作为一个参数传递。</p>
 <h3 id="查询-GROUP-BY"><a href="#查询-GROUP-BY" class="headerlink" title="查询(GROUP BY)"></a>查询(GROUP BY)</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT price, COUNT(*) <span class="keyword">FROM</span> fake_apps<span class="built_in"> GROUP </span>BY price;</span><br></pre></td></tr></table></figure>
@@ -414,6 +414,7 @@
 <h3 id="查询-ROUND"><a href="#查询-ROUND" class="headerlink" title="查询(ROUND)"></a>查询(ROUND)</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ELECT price, ROUND(AVG(downloads), 2) <span class="keyword">FROM</span> fake_apps</span><br><span class="line">GROUP BY price;</span><br></pre></td></tr></table></figure>
 <p>默认情况下，SQL尝试尽可能精确地进行舍入。我们可以使用该ROUND()功能使结果集更容易阅读。</p>
 <p>ROUND()是一个使用列名称和整数作为参数的函数。它将列中的值舍入为整数指定的小数位数。在这里，我们传递列AVG(downloads)和2作为参数。SQL首先计算每个价格的平均值，然后将结果舍入到结果集中的两位小数。</p>
+
       
     </div>
     
@@ -553,9 +554,11 @@
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count"></span>
+  <span>
+  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+  </span>
   
 </div>
-
 
 
 

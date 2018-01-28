@@ -85,13 +85,13 @@
 
 
 
-<meta name="description" content="win10 中安装VMware虚拟机时遇到的问题Microsoft Runtime DLL问题在安装VMware时出现Microsoft Runtime DLL提示信息，导致无法安装。在寻找解决方案的时候，网上有几种情况：">
+<meta name="description" content="win10 中安装VMware虚拟机时遇到的问题  Microsoft Runtime DLL问题在安装VMware时出现Microsoft Runtime DLL提示信息，导致无法安装。在寻找解决方案的时候，网上有几种情况：">
 <meta name="keywords" content="win">
 <meta property="og:type" content="article">
 <meta property="og:title" content="win10安装VMmare">
 <meta property="og:url" content="http://hadronw.com/2017-10-13/win10安装VMmare/index.html">
 <meta property="og:site_name" content="hadronw&#39;s Blog">
-<meta property="og:description" content="win10 中安装VMware虚拟机时遇到的问题Microsoft Runtime DLL问题在安装VMware时出现Microsoft Runtime DLL提示信息，导致无法安装。在寻找解决方案的时候，网上有几种情况：">
+<meta property="og:description" content="win10 中安装VMware虚拟机时遇到的问题  Microsoft Runtime DLL问题在安装VMware时出现Microsoft Runtime DLL提示信息，导致无法安装。在寻找解决方案的时候，网上有几种情况：">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://hadronw.com/2017-10-13/win10安装VMmare/img00.jpg">
 <meta property="og:image" content="http://hadronw.com/2017-10-13/win10安装VMmare/img01.jpg">
@@ -101,7 +101,7 @@
 <meta property="og:updated_time" content="2017-10-13T13:44:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="win10安装VMmare">
-<meta name="twitter:description" content="win10 中安装VMware虚拟机时遇到的问题Microsoft Runtime DLL问题在安装VMware时出现Microsoft Runtime DLL提示信息，导致无法安装。在寻找解决方案的时候，网上有几种情况：">
+<meta name="twitter:description" content="win10 中安装VMware虚拟机时遇到的问题  Microsoft Runtime DLL问题在安装VMware时出现Microsoft Runtime DLL提示信息，导致无法安装。在寻找解决方案的时候，网上有几种情况：">
 <meta name="twitter:image" content="http://hadronw.com/2017-10-13/win10安装VMmare/img00.jpg">
 
 
@@ -399,14 +399,41 @@
       
 
       
-        <blockquote><p>win10 中安装VMware虚拟机时遇到的问题</p></blockquote><h2 id="Microsoft-Runtime-DLL问题"><a href="#Microsoft-Runtime-DLL问题" class="headerlink" title="Microsoft Runtime DLL问题"></a>Microsoft Runtime DLL问题</h2><p>在安装VMware时出现Microsoft Runtime DLL提示信息，导致无法安装。在寻找解决方案的时候，网上有几种情况：<br><a id="more"></a><br>1、权限原因导致，未能用管理员权限运行／权限不足————提升用户权限，以管理权限运行<br>2、电脑缺少依赖工具包————安装所需工具包<br>3、系统注册表中出了问题————清理注册表<br>4、服务中Windows install 服务相关问题————开启相关服务<br>5、其它解决方式——另辟蹊径————实际解决问题方式</p><h3 id="权限问题"><a href="#权限问题" class="headerlink" title="权限问题"></a>权限问题</h3><p>win10系统中，系统默认的Admin用户是禁止的，需要解禁。步骤如下：</p><p>先进入计算机管理页面</p><img src="/2017-10-13/win10安装VMmare/img00.jpg" title="图片00"> <img src="/2017-10-13/win10安装VMmare/img01.jpg" title="图片01"> <img src="/2017-10-13/win10安装VMmare/img02.jpg" title="图片02"> <img src="/2017-10-13/win10安装VMmare/img03.jpg" title="图片03"><p>注：如果计算机管理页面没有本地用户的选项，则说明系统需要升级。从普通家庭版升级到专业版或者企业版，网上搜索“win10从家庭版升级到专业版”即可</p><p>解决权限问题后，发现并不能解决问题；继续尝试问题2、3、4处理方式：</p><p><a href="https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=2078258" target="_blank" rel="noopener">官方论坛信息</a>注册表相关问题</p><p><a href="https://tieba.baidu.com/p/4236344841" target="_blank" rel="noopener">缺少依赖包Visual C++ Redistributable-贴吧的说明</a> 下载地址<a href="https://www.microsoft.com/zh-cn/download/details.aspx?id=48145" target="_blank" rel="noopener">Visual C++ Redistributable</a></p><h3 id="最终解决方案"><a href="#最终解决方案" class="headerlink" title="最终解决方案"></a>最终解决方案</h3><p>在安装VMware出现Microsoft Runtime DLL的问题时不用点击关闭程序，win+R 输入 %temp% 回车。</p><p>然后会出现一个窗口，里面有许多列表，找到一个~setup结尾的文件夹，打开进去，里面会有如下几个文件：</p><pre><code>vcredist_x64
+        <blockquote>
+<p>win10 中安装VMware虚拟机时遇到的问题</p>
+</blockquote>
+<h2 id="Microsoft-Runtime-DLL问题"><a href="#Microsoft-Runtime-DLL问题" class="headerlink" title="Microsoft Runtime DLL问题"></a>Microsoft Runtime DLL问题</h2><p>在安装VMware时出现Microsoft Runtime DLL提示信息，导致无法安装。在寻找解决方案的时候，网上有几种情况：<br><a id="more"></a><br>    1、权限原因导致，未能用管理员权限运行／权限不足————提升用户权限，以管理权限运行<br>    2、电脑缺少依赖工具包————安装所需工具包<br>    3、系统注册表中出了问题————清理注册表<br>    4、服务中Windows install 服务相关问题————开启相关服务<br>    5、其它解决方式——另辟蹊径————实际解决问题方式</p>
+<h3 id="权限问题"><a href="#权限问题" class="headerlink" title="权限问题"></a>权限问题</h3><p>win10系统中，系统默认的Admin用户是禁止的，需要解禁。步骤如下：</p>
+<p>先进入计算机管理页面</p>
+<img src="/2017-10-13/win10安装VMmare/img00.jpg" title="图片00">
+<img src="/2017-10-13/win10安装VMmare/img01.jpg" title="图片01">
+<img src="/2017-10-13/win10安装VMmare/img02.jpg" title="图片02">
+<img src="/2017-10-13/win10安装VMmare/img03.jpg" title="图片03">
+<p>注：如果计算机管理页面没有本地用户的选项，则说明系统需要升级。从普通家庭版升级到专业版或者企业版，网上搜索“win10从家庭版升级到专业版”即可</p>
+<p>解决权限问题后，发现并不能解决问题；继续尝试问题2、3、4处理方式：</p>
+<p><a href="https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=2078258" target="_blank" rel="noopener">官方论坛信息</a>注册表相关问题</p>
+<p><a href="https://tieba.baidu.com/p/4236344841" target="_blank" rel="noopener">缺少依赖包Visual C++ Redistributable-贴吧的说明</a> 下载地址<a href="https://www.microsoft.com/zh-cn/download/details.aspx?id=48145" target="_blank" rel="noopener">Visual C++ Redistributable</a></p>
+<h3 id="最终解决方案"><a href="#最终解决方案" class="headerlink" title="最终解决方案"></a>最终解决方案</h3><p>在安装VMware出现Microsoft Runtime DLL的问题时不用点击关闭程序，win+R 输入 %temp% 回车。</p>
+<p>然后会出现一个窗口，里面有许多列表，找到一个~setup结尾的文件夹，打开进去，里面会有如下几个文件：</p>
+<pre><code>vcredist_x64
 vcredist_x86
 VMwareWorkstation
-</code></pre><p>将这三个文件拷贝到桌面或者其它地方，再点VMwareWorkstation即可正常安装。</p><p>安装完成后可能会出现有注册码确无法注册的情况，它提示权限不足，或者不是管理员等提示信息。</p><h2 id="VMmare激活权限问题"><a href="#VMmare激活权限问题" class="headerlink" title="VMmare激活权限问题"></a>VMmare激活权限问题</h2><p>安装VMmare成功后，可能会出现激活的问题，解决方案：</p><p>VMmare右键——程序位置如下图：</p><img src="/2017-10-13/win10安装VMmare/img04.jpg" title="图片04"><p>再进入到x64文件夹下面，复制这个路径：</p><pre><code>C:\Program Files (x86)\VMware\VMware Workstation\x64
-</code></pre><p>再以管理员权限运行cmd，可在这个目录下找到：</p><pre><code>C:\Windows\System32
-</code></pre><p>找到cmd.exe右键以管理员身份运行：</p><pre><code>cd C:\Program Files (x86)\VMware\VMware Workstation\x64
-</code></pre><p>再运行：</p><pre><code>vmware-vmx.exe --new-sn xxxx-xxxx-xxxx-xxxx
-</code></pre><p>后面的xxxx-xxxx 是指激活码，可购买或自行去寻找</p><p>以上是我安装VMmare遇到的问题，以及解决方案，欢迎交流学习</p>
+</code></pre><p>将这三个文件拷贝到桌面或者其它地方，再点VMwareWorkstation即可正常安装。</p>
+<p>安装完成后可能会出现有注册码确无法注册的情况，它提示权限不足，或者不是管理员等提示信息。</p>
+<h2 id="VMmare激活权限问题"><a href="#VMmare激活权限问题" class="headerlink" title="VMmare激活权限问题"></a>VMmare激活权限问题</h2><p>安装VMmare成功后，可能会出现激活的问题，解决方案：</p>
+<p>VMmare右键——程序位置如下图：</p>
+<img src="/2017-10-13/win10安装VMmare/img04.jpg" title="图片04">
+<p>再进入到x64文件夹下面，复制这个路径：</p>
+<pre><code>C:\Program Files (x86)\VMware\VMware Workstation\x64
+</code></pre><p>再以管理员权限运行cmd，可在这个目录下找到：</p>
+<pre><code>C:\Windows\System32
+</code></pre><p>找到cmd.exe右键以管理员身份运行：</p>
+<pre><code>cd C:\Program Files (x86)\VMware\VMware Workstation\x64
+</code></pre><p>再运行：</p>
+<pre><code>vmware-vmx.exe --new-sn xxxx-xxxx-xxxx-xxxx
+</code></pre><p>后面的xxxx-xxxx 是指激活码，可购买或自行去寻找</p>
+<p>以上是我安装VMmare遇到的问题，以及解决方案，欢迎交流学习</p>
+
       
     </div>
     
@@ -546,9 +573,11 @@ VMwareWorkstation
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count"></span>
+  <span>
+  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+  </span>
   
 </div>
-
 
 
 

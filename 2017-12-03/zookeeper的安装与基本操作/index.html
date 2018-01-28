@@ -85,18 +85,18 @@
 
 
 
-<meta name="description" content="单机配置与集群配置检测状态的区别.集群配置的检测一定要所有的节点都启动了zookeeper程序，再运行zkServer.sh status才是会正确，否则会出现连接异常的提醒，无法检测状态单机与集群配置zookeeper注：单机配置zookeeper，zoo.cfg中不需要配置server.id=host:port1:port2首先下载好zookeeper软件包(官网)，并解压打开zookeepe">
+<meta name="description" content="单机配置与集群配置检测状态的区别.集群配置的检测一定要所有的节点都启动了zookeeper程序，再运行zkServer.sh status才是会正确，否则会出现连接异常的提醒，无法检测状态  单机与集群配置zookeeper">
 <meta name="keywords" content="zookeeper">
 <meta property="og:type" content="article">
 <meta property="og:title" content="zookeeper的安装与基本操作">
 <meta property="og:url" content="http://hadronw.com/2017-12-03/zookeeper的安装与基本操作/index.html">
 <meta property="og:site_name" content="hadronw&#39;s Blog">
-<meta property="og:description" content="单机配置与集群配置检测状态的区别.集群配置的检测一定要所有的节点都启动了zookeeper程序，再运行zkServer.sh status才是会正确，否则会出现连接异常的提醒，无法检测状态单机与集群配置zookeeper注：单机配置zookeeper，zoo.cfg中不需要配置server.id=host:port1:port2首先下载好zookeeper软件包(官网)，并解压打开zookeepe">
+<meta property="og:description" content="单机配置与集群配置检测状态的区别.集群配置的检测一定要所有的节点都启动了zookeeper程序，再运行zkServer.sh status才是会正确，否则会出现连接异常的提醒，无法检测状态  单机与集群配置zookeeper">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-12-03T15:46:10.117Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="zookeeper的安装与基本操作">
-<meta name="twitter:description" content="单机配置与集群配置检测状态的区别.集群配置的检测一定要所有的节点都启动了zookeeper程序，再运行zkServer.sh status才是会正确，否则会出现连接异常的提醒，无法检测状态单机与集群配置zookeeper注：单机配置zookeeper，zoo.cfg中不需要配置server.id=host:port1:port2首先下载好zookeeper软件包(官网)，并解压打开zookeepe">
+<meta name="twitter:description" content="单机配置与集群配置检测状态的区别.集群配置的检测一定要所有的节点都启动了zookeeper程序，再运行zkServer.sh status才是会正确，否则会出现连接异常的提醒，无法检测状态  单机与集群配置zookeeper">
 
 
 
@@ -393,7 +393,18 @@
       
 
       
-        <blockquote><p>单机配置与集群配置检测状态的区别.集群配置的检测一定要所有的节点都启动了zookeeper程序，再运行zkServer.sh status才是会正确，否则会出现连接异常的提醒，无法检测状态</p></blockquote><h2 id="单机与集群配置zookeeper"><a href="#单机与集群配置zookeeper" class="headerlink" title="单机与集群配置zookeeper"></a>单机与集群配置zookeeper</h2><hr><p>注：单机配置zookeeper，zoo.cfg中不需要配置server.id=host:port1:port2</p><p>首先下载好<a href="http://zookeeper.apache.org/" target="_blank" rel="noopener">zookeeper软件包(官网)</a>，并解压</p><p>打开zookeeper.x.x文件夹</p><p>1、在根目录下创建logs，data文件夹</p><p>2、进入conf目录下，可以看到有一个zoo_simple.cfg文件，拷贝复制为一个zoo.cfg</p><p>3、配置zoo.cfg文件</p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">ticketTime</span>=2000</span><br><span class="line"><span class="attribute">clientPort</span>=2181</span><br><span class="line"><span class="attribute">initLimit</span>=10</span><br><span class="line"><span class="attribute">syncLimit</span>=5</span><br><span class="line"><span class="attribute">dataDir</span>=/xxx/xxx/app/zookeeper-3.4.5/data</span><br><span class="line"><span class="attribute">dataLogDir</span>=/xxx/xxx/app/zookeeper-3.4.5/logs</span><br><span class="line"></span><br><span class="line">server.<span class="attribute">1</span>=master:2888:3888</span><br><span class="line">server.<span class="attribute">2</span>=master:2888:3888</span><br><span class="line">server.<span class="attribute">3</span>=master:2888:3888</span><br></pre></td></tr></table></figure>
+        <blockquote>
+<p>单机配置与集群配置检测状态的区别.集群配置的检测一定要所有的节点都启动了zookeeper程序，再运行zkServer.sh status才是会正确，否则会出现连接异常的提醒，无法检测状态</p>
+</blockquote>
+<h2 id="单机与集群配置zookeeper"><a href="#单机与集群配置zookeeper" class="headerlink" title="单机与集群配置zookeeper"></a>单机与集群配置zookeeper</h2><hr>
+<a id="more"></a>
+<p>注：单机配置zookeeper，zoo.cfg中不需要配置server.id=host:port1:port2 </p>
+<p>首先下载好<a href="http://zookeeper.apache.org/" target="_blank" rel="noopener">zookeeper软件包(官网)</a>，并解压</p>
+<p>打开zookeeper.x.x文件夹</p>
+<p>1、在根目录下创建logs，data文件夹</p>
+<p>2、进入conf目录下，可以看到有一个zoo_simple.cfg文件，拷贝复制为一个zoo.cfg</p>
+<p>3、配置zoo.cfg文件</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">ticketTime</span>=2000</span><br><span class="line"><span class="attribute">clientPort</span>=2181</span><br><span class="line"><span class="attribute">initLimit</span>=10</span><br><span class="line"><span class="attribute">syncLimit</span>=5</span><br><span class="line"><span class="attribute">dataDir</span>=/xxx/xxx/app/zookeeper-3.4.5/data</span><br><span class="line"><span class="attribute">dataLogDir</span>=/xxx/xxx/app/zookeeper-3.4.5/logs</span><br><span class="line"></span><br><span class="line">server.<span class="attribute">1</span>=master:2888:3888</span><br><span class="line">server.<span class="attribute">2</span>=master:2888:3888</span><br><span class="line">server.<span class="attribute">3</span>=master:2888:3888</span><br></pre></td></tr></table></figure>
 <p>上文为添加，修改的配置.说明如下：</p>
 <figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">initLimit </span><br><span class="line">ZooKeeper集群模式下包含多个zk进程，其中一个进程为leader，余下的进程follower。 </span><br><span class="line">当follower最初与leader建立连接时，它们之间会传输相当多的数据，尤其是follower的数据落后leader</span><br><span class="line">很多。initLimit配置follower与leader之间建立连接后进行同步的最长时间。</span><br><span class="line"></span><br><span class="line">syncLimit </span><br><span class="line">配置follower和leader之间发送消息，请求和应答的最大时间长度。</span><br><span class="line"></span><br><span class="line">tickTime </span><br><span class="line">tickTime则是上述两个超时配置的基本单位，例如对于initLimit，其配置值为<span class="number">5</span>，说明其超时时间为</span><br><span class="line"><span class="number">2000</span>ms * <span class="number">5</span> = <span class="number">10</span>秒。</span><br><span class="line"></span><br><span class="line">server.<span class="built_in">id</span>=host:port1:port2 </span><br><span class="line">其中<span class="built_in">id</span>为一个数字，表示zk进程的<span class="built_in">id</span>，这个<span class="built_in">id</span>也是dataDir目录下myid文件的内容。 </span><br><span class="line">host是该zk进程所在的IP地址，port1表示follower和leader交换消息所使用的端口，port2表示选举</span><br><span class="line">leader所使用的端口。</span><br><span class="line"></span><br><span class="line">dataDir </span><br><span class="line">其配置的含义跟单机模式下的含义类似，不同的是集群模式下还有一个myid文件。myid文件的内容只有一行，</span><br><span class="line">且内容只能为<span class="number">1</span> - <span class="number">255</span>之间的数字，这个数字亦即上面介绍server.<span class="built_in">id</span>中的<span class="built_in">id</span>，表示zk进程的<span class="built_in">id</span>。</span><br><span class="line"></span><br><span class="line">dataLogDir</span><br><span class="line">配置<span class="built_in">log</span>日志存放的目录</span><br></pre></td></tr></table></figure>
 <p>进入dataDir配置目录</p>
@@ -412,6 +423,7 @@
 <p>连接成功后，terminal会变成：</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">WatchedEvent <span class="string">state:</span>SyncConnected <span class="string">type:</span>None <span class="string">path:</span><span class="literal">null</span></span><br><span class="line">[<span class="string">zk:</span><span class="string">master:</span><span class="number">2181</span>,<span class="string">slave1:</span><span class="number">2181</span>,<span class="string">slave2:</span><span class="number">2181</span>(CONNECTED) <span class="number">0</span>]</span><br></pre></td></tr></table></figure>
 <p>至此，zookeeper配置运行成功</p>
+
       
     </div>
     
@@ -551,9 +563,11 @@
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count"></span>
+  <span>
+  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+  </span>
   
 </div>
-
 
 
 

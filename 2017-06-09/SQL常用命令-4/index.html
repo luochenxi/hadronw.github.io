@@ -85,18 +85,18 @@
 
 
 
-<meta name="description" content="SQL常用的命令(查询－多表)先创建两个表albums(artist_id,name)artist_id是外键,专辑表、artists(id,name,year)id是主键，艺术家表一个外键是包含其它表的数据库中的主键列。我们使用外键和主键来连接两个不同表中的行。一个表的外键保存另一个表的主键的值。与主键不同，外键不需要是唯一的，可以是NULL。">
+<meta name="description" content="SQL常用的命令(查询－多表)先创建两个表albums(artist_id,name)artist_id是外键,专辑表、artists(id,name,year)id是主键，艺术家表  一个外键是包含其它表的数据库中的主键列。我们使用外键和主键来连接两个不同表中的行。一个表的外键保存另一个表的主键的值。与主键不同，外键不需要是唯一的，可以是NULL。">
 <meta name="keywords" content="SQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQL常用命令(4)">
 <meta property="og:url" content="http://hadronw.com/2017-06-09/SQL常用命令-4/index.html">
 <meta property="og:site_name" content="hadronw&#39;s Blog">
-<meta property="og:description" content="SQL常用的命令(查询－多表)先创建两个表albums(artist_id,name)artist_id是外键,专辑表、artists(id,name,year)id是主键，艺术家表一个外键是包含其它表的数据库中的主键列。我们使用外键和主键来连接两个不同表中的行。一个表的外键保存另一个表的主键的值。与主键不同，外键不需要是唯一的，可以是NULL。">
+<meta property="og:description" content="SQL常用的命令(查询－多表)先创建两个表albums(artist_id,name)artist_id是外键,专辑表、artists(id,name,year)id是主键，艺术家表  一个外键是包含其它表的数据库中的主键列。我们使用外键和主键来连接两个不同表中的行。一个表的外键保存另一个表的主键的值。与主键不同，外键不需要是唯一的，可以是NULL。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-06-09T13:19:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL常用命令(4)">
-<meta name="twitter:description" content="SQL常用的命令(查询－多表)先创建两个表albums(artist_id,name)artist_id是外键,专辑表、artists(id,name,year)id是主键，艺术家表一个外键是包含其它表的数据库中的主键列。我们使用外键和主键来连接两个不同表中的行。一个表的外键保存另一个表的主键的值。与主键不同，外键不需要是唯一的，可以是NULL。">
+<meta name="twitter:description" content="SQL常用的命令(查询－多表)先创建两个表albums(artist_id,name)artist_id是外键,专辑表、artists(id,name,year)id是主键，艺术家表  一个外键是包含其它表的数据库中的主键列。我们使用外键和主键来连接两个不同表中的行。一个表的外键保存另一个表的主键的值。与主键不同，外键不需要是唯一的，可以是NULL。">
 
 
 
@@ -393,7 +393,12 @@
       
 
       
-        <h2 id="SQL常用的命令-查询－多表"><a href="#SQL常用的命令-查询－多表" class="headerlink" title="SQL常用的命令(查询－多表)"></a>SQL常用的命令(查询－多表)</h2><p>先创建两个表albums(artist_id,name)<code>artist_id是外键,专辑表</code>、artists(id,name,year)<code>id是主键，艺术家表</code></p><blockquote><p>一个外键是包含其它表的数据库中的主键列。我们使用外键和主键来连接两个不同表中的行。一个表的外键保存另一个表的主键的值。与主键不同，外键不需要是唯一的，可以是NULL。</p></blockquote><a id="more"></a><h2 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> albums <span class="keyword">WHERE</span> artist_id = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> artists <span class="keyword">WHERE</span> <span class="keyword">id</span> = <span class="number">3</span>;</span><br></pre></td></tr></table></figure>
+        <h2 id="SQL常用的命令-查询－多表"><a href="#SQL常用的命令-查询－多表" class="headerlink" title="SQL常用的命令(查询－多表)"></a>SQL常用的命令(查询－多表)</h2><p>先创建两个表albums(artist_id,name)<code>artist_id是外键,专辑表</code>、artists(id,name,year)<code>id是主键，艺术家表</code></p>
+<blockquote>
+<p>一个外键是包含其它表的数据库中的主键列。我们使用外键和主键来连接两个不同表中的行。一个表的外键保存另一个表的主键的值。与主键不同，外键不需要是唯一的，可以是NULL。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> albums <span class="keyword">WHERE</span> artist_id = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> artists <span class="keyword">WHERE</span> <span class="keyword">id</span> = <span class="number">3</span>;</span><br></pre></td></tr></table></figure>
 <p>这里artist_id是albums表中的外键。我们可以看到迈克尔·杰克逊id在artists表中有3个。迈克尔·杰克逊的所有专辑也在表中的artist_id列中有3张albums。</p>
 <p>这是SQL在两个表之间链接数据的方式。在关系之间artists表和albums表是id艺术家的价值。</p>
 <h2 id="查询-1"><a href="#查询-1" class="headerlink" title="查询"></a>查询</h2><figure class="highlight sqf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">SELECT</span> albums.<span class="built_in">name</span>, albums.year, artists.<span class="built_in">name</span> <span class="keyword">FROM</span> albums, artists;</span><br></pre></td></tr></table></figure>
@@ -405,6 +410,7 @@
 <h2 id="查询-LEFT-JOIN"><a href="#查询-LEFT-JOIN" class="headerlink" title="查询(LEFT JOIN)"></a>查询(LEFT JOIN)</h2><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> albums <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> artists <span class="keyword">ON</span> albums.artist_id = artists.id;</span><br></pre></td></tr></table></figure>
 <p>外连接也可以组合来自两个或多个表的行，但与内部连接不同，它们不需要满足连接条件。相反，左侧表格中的每一行都会返回到结果集中，如果不符合连接条件，则使用NULL值来从右侧表格中填入列。</p>
 <p>左表仅仅是语句中出现的第一个表。在这里，左边的表是albums。同样，右表是出现的第二个表。在这里，artists是正确的表。</p>
+
       
     </div>
     
@@ -544,9 +550,11 @@
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count"></span>
+  <span>
+  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+  </span>
   
 </div>
-
 
 
 

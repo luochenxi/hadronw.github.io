@@ -85,18 +85,18 @@
 
 
 
-<meta name="description" content="pip是什么？pip(软件包管理系统)，著名的Python包管理工具，python安装包的工具有easy_install, setuptools, pip，distribute等。常用的有pip、easy_install。123注：distribute是setuptools的替代品，是对标准库disutils模块的增强，我们知道disutils主要是用来更加容易的打包和分发包，特别是对其他的包有依">
+<meta name="description" content="pip是什么？pip(软件包管理系统)，著名的Python包管理工具，python安装包的工具有easy_install, setuptools, pip，distribute等。常用的有pip、easy_install。">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac安装pip">
 <meta property="og:url" content="http://hadronw.com/2017-09-09/Mac安装pip/index.html">
 <meta property="og:site_name" content="hadronw&#39;s Blog">
-<meta property="og:description" content="pip是什么？pip(软件包管理系统)，著名的Python包管理工具，python安装包的工具有easy_install, setuptools, pip，distribute等。常用的有pip、easy_install。123注：distribute是setuptools的替代品，是对标准库disutils模块的增强，我们知道disutils主要是用来更加容易的打包和分发包，特别是对其他的包有依">
+<meta property="og:description" content="pip是什么？pip(软件包管理系统)，著名的Python包管理工具，python安装包的工具有easy_install, setuptools, pip，distribute等。常用的有pip、easy_install。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-09-09T14:26:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac安装pip">
-<meta name="twitter:description" content="pip是什么？pip(软件包管理系统)，著名的Python包管理工具，python安装包的工具有easy_install, setuptools, pip，distribute等。常用的有pip、easy_install。123注：distribute是setuptools的替代品，是对标准库disutils模块的增强，我们知道disutils主要是用来更加容易的打包和分发包，特别是对其他的包有依">
+<meta name="twitter:description" content="pip是什么？pip(软件包管理系统)，著名的Python包管理工具，python安装包的工具有easy_install, setuptools, pip，distribute等。常用的有pip、easy_install。">
 
 
 
@@ -393,7 +393,9 @@
       
 
       
-        <h2 id="pip是什么？"><a href="#pip是什么？" class="headerlink" title="pip是什么？"></a>pip是什么？</h2><p>pip(软件包管理系统)，著名的Python包管理工具，python安装包的工具有easy_install, setuptools, pip，distribute等。常用的有pip、easy_install。</p><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">注：<span class="keyword">distribute是setuptools的替代品，是对标准库disutils模块的增强，我们知道disutils主要是用来更</span></span><br><span class="line"><span class="keyword">加容易的打包和分发包，特别是对其他的包有依赖的包。distribute被创建是因为Setuptools包不再维护了。</span></span><br><span class="line"><span class="keyword">而pip是easy_install的替代品。</span></span><br></pre></td></tr></table></figure>
+        <h2 id="pip是什么？"><a href="#pip是什么？" class="headerlink" title="pip是什么？"></a>pip是什么？</h2><p>pip(软件包管理系统)，著名的Python包管理工具，python安装包的工具有easy_install, setuptools, pip，distribute等。常用的有pip、easy_install。 </p>
+<a id="more"></a>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">注：<span class="keyword">distribute是setuptools的替代品，是对标准库disutils模块的增强，我们知道disutils主要是用来更</span></span><br><span class="line"><span class="keyword">加容易的打包和分发包，特别是对其他的包有依赖的包。distribute被创建是因为Setuptools包不再维护了。</span></span><br><span class="line"><span class="keyword">而pip是easy_install的替代品。</span></span><br></pre></td></tr></table></figure>
 <h2 id="安装pip"><a href="#安装pip" class="headerlink" title="安装pip"></a>安装pip</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">安装：</span><br><span class="line"></span><br><span class="line">sudo easy_install pip</span><br><span class="line"></span><br><span class="line">卸载：</span><br><span class="line"></span><br><span class="line">sudo pip <span class="keyword">uninstall</span> pip</span><br></pre></td></tr></table></figure>
 <h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>国外的源比较慢，这里推荐两个国内的源：</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#pip豆瓣源安装</span><br><span class="line"></span><br><span class="line">pip install -<span class="selector-tag">i</span> http:<span class="comment">//pypi.douban.com/simple/ --trusted-host pypi.douban.com nltk</span></span><br><span class="line"></span><br><span class="line"><span class="selector-id">#pip</span> 阿里云源安装</span><br><span class="line"></span><br><span class="line">pip install -<span class="selector-tag">i</span> http:<span class="comment">//mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com nltk</span></span><br></pre></td></tr></table></figure>
@@ -557,9 +559,11 @@ http://www.mamicode.com/info-detail-1312227.html
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count"></span>
+  <span>
+  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+  </span>
   
 </div>
-
 
 
 

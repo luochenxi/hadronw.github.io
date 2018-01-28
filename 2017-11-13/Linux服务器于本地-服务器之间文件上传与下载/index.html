@@ -85,18 +85,18 @@
 
 
 
-<meta name="description" content="Terminal连接服务器一般连接服务器用到的命令ssh，打开terminal1ssh -p端口号 username@服务器ip 一般默认的端口为22，也可以简写成： 1ssh -p username@服务器ip 注意：此处的p是小写 Terminal上传文件到服务器需要用到的命令是scp 123456789scp -P端口号 本地文件路径 username@服务器ip:目的路径注意P要大写，一般">
+<meta name="description" content="Terminal连接服务器一般连接服务器用到的命令ssh，打开terminal">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux服务器于本地&#x2F;服务器之间文件上传与下载">
 <meta property="og:url" content="http://hadronw.com/2017-11-13/Linux服务器于本地-服务器之间文件上传与下载/index.html">
 <meta property="og:site_name" content="hadronw&#39;s Blog">
-<meta property="og:description" content="Terminal连接服务器一般连接服务器用到的命令ssh，打开terminal1ssh -p端口号 username@服务器ip 一般默认的端口为22，也可以简写成： 1ssh -p username@服务器ip 注意：此处的p是小写 Terminal上传文件到服务器需要用到的命令是scp 123456789scp -P端口号 本地文件路径 username@服务器ip:目的路径注意P要大写，一般">
+<meta property="og:description" content="Terminal连接服务器一般连接服务器用到的命令ssh，打开terminal">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-11-13T03:56:29.615Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux服务器于本地&#x2F;服务器之间文件上传与下载">
-<meta name="twitter:description" content="Terminal连接服务器一般连接服务器用到的命令ssh，打开terminal1ssh -p端口号 username@服务器ip 一般默认的端口为22，也可以简写成： 1ssh -p username@服务器ip 注意：此处的p是小写 Terminal上传文件到服务器需要用到的命令是scp 123456789scp -P端口号 本地文件路径 username@服务器ip:目的路径注意P要大写，一般">
+<meta name="twitter:description" content="Terminal连接服务器一般连接服务器用到的命令ssh，打开terminal">
 
 
 
@@ -393,7 +393,7 @@
       
 
       
-        <h2 id="Terminal连接服务器"><a href="#Terminal连接服务器" class="headerlink" title="Terminal连接服务器"></a>Terminal连接服务器</h2><p>一般连接服务器用到的命令<code>ssh</code>，打开terminal<br><br></p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ssh</span> <span class="selector-tag">-p</span>端口号 <span class="selector-tag">username</span>@服务器<span class="keyword">ip</span></span><br></pre></td></tr></table></figure><p></p>
+        <h2 id="Terminal连接服务器"><a href="#Terminal连接服务器" class="headerlink" title="Terminal连接服务器"></a>Terminal连接服务器</h2><p>一般连接服务器用到的命令<code>ssh</code>，打开terminal<br><a id="more"></a><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ssh</span> <span class="selector-tag">-p</span>端口号 <span class="selector-tag">username</span>@服务器<span class="keyword">ip</span></span><br></pre></td></tr></table></figure></p>
 <p>一般默认的端口为22，也可以简写成：</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -<span class="selector-tag">p</span> username@服务器ip</span><br></pre></td></tr></table></figure>
 <p>注意：此处的p是小写</p>
@@ -402,6 +402,7 @@
 <p>注：上传文件是在没有连接服务器的窗口中运行，不要在本地连接好服务器之后的窗口运行，否则会提示本地文件目录无法找到</p>
 <h2 id="Terminal从服务器中下载文件"><a href="#Terminal从服务器中下载文件" class="headerlink" title="Terminal从服务器中下载文件"></a>Terminal从服务器中下载文件</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">scp -P端口号 username@ip:路径 本地路径(P 需要大些)</span><br><span class="line"></span><br><span class="line">也可以</span><br><span class="line"></span><br><span class="line">scp -rp 本地文件路径 username@服务器ip:目的路径</span><br><span class="line"></span><br><span class="line">如：</span><br><span class="line">[test@admin ~]  scp -P22 /Users/test/test-bin<span class="selector-class">.tar</span><span class="selector-class">.gz</span> root@xxx<span class="selector-class">.xxx</span><span class="selector-class">.xxx</span><span class="selector-class">.xxx</span>:/usr/local</span><br></pre></td></tr></table></figure>
 <h2 id="服务器之间传输文件"><a href="#服务器之间传输文件" class="headerlink" title="服务器之间传输文件"></a>服务器之间传输文件</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">scp -rp 本地服务器文件路径  目标服务器ip:目标路径</span><br><span class="line"></span><br><span class="line">如：</span><br><span class="line"></span><br><span class="line">scp -rp /Users/test/test-bin<span class="selector-class">.tar</span><span class="selector-class">.gz</span> root@xxx<span class="selector-class">.xxx</span><span class="selector-class">.xxx</span><span class="selector-class">.xxx</span>:/usr/local</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -541,9 +542,11 @@
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count"></span>
+  <span>
+  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+  </span>
   
 </div>
-
 
 
 

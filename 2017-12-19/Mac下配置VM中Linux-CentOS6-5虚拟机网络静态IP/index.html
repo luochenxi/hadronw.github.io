@@ -85,13 +85,13 @@
 
 
 
-<meta name="description" content="在CentOS中，每次开机其IP都是动态变化的；为了方便的使用shell，故对CentOS虚拟机配置静态IP。本文讲述的是在Mac端的VM虚拟机，Windows下虚拟机配置是一样的，差别在于虚拟机的网络查看、配置不一样首先查看VM虚拟机可以配置IP的数字范围1cat /Library/Preferences/VMware\ Fusion/vmnet8/dhcpd.conf 滑动到最后，如下图所示">
+<meta name="description" content="在CentOS中，每次开机其IP都是动态变化的；为了方便的使用shell，故对CentOS虚拟机配置静态IP。本文讲述的是在Mac端的VM虚拟机，Windows下虚拟机配置是一样的，差别在于虚拟机的网络查看、配置不一样  首先查看VM虚拟机可以配置IP的数字范围">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac下配置VM中Linux-CentOS6.5虚拟机网络静态IP">
 <meta property="og:url" content="http://hadronw.com/2017-12-19/Mac下配置VM中Linux-CentOS6-5虚拟机网络静态IP/index.html">
 <meta property="og:site_name" content="hadronw&#39;s Blog">
-<meta property="og:description" content="在CentOS中，每次开机其IP都是动态变化的；为了方便的使用shell，故对CentOS虚拟机配置静态IP。本文讲述的是在Mac端的VM虚拟机，Windows下虚拟机配置是一样的，差别在于虚拟机的网络查看、配置不一样首先查看VM虚拟机可以配置IP的数字范围1cat /Library/Preferences/VMware\ Fusion/vmnet8/dhcpd.conf 滑动到最后，如下图所示">
+<meta property="og:description" content="在CentOS中，每次开机其IP都是动态变化的；为了方便的使用shell，故对CentOS虚拟机配置静态IP。本文讲述的是在Mac端的VM虚拟机，Windows下虚拟机配置是一样的，差别在于虚拟机的网络查看、配置不一样  首先查看VM虚拟机可以配置IP的数字范围">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://hadronw.com/2017-12-19/Mac下配置VM中Linux-CentOS6-5虚拟机网络静态IP/00.jpg">
 <meta property="og:image" content="http://hadronw.com/2017-12-19/Mac下配置VM中Linux-CentOS6-5虚拟机网络静态IP/01.jpg">
@@ -100,7 +100,7 @@
 <meta property="og:updated_time" content="2017-12-20T02:23:39.478Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac下配置VM中Linux-CentOS6.5虚拟机网络静态IP">
-<meta name="twitter:description" content="在CentOS中，每次开机其IP都是动态变化的；为了方便的使用shell，故对CentOS虚拟机配置静态IP。本文讲述的是在Mac端的VM虚拟机，Windows下虚拟机配置是一样的，差别在于虚拟机的网络查看、配置不一样首先查看VM虚拟机可以配置IP的数字范围1cat /Library/Preferences/VMware\ Fusion/vmnet8/dhcpd.conf 滑动到最后，如下图所示">
+<meta name="twitter:description" content="在CentOS中，每次开机其IP都是动态变化的；为了方便的使用shell，故对CentOS虚拟机配置静态IP。本文讲述的是在Mac端的VM虚拟机，Windows下虚拟机配置是一样的，差别在于虚拟机的网络查看、配置不一样  首先查看VM虚拟机可以配置IP的数字范围">
 <meta name="twitter:image" content="http://hadronw.com/2017-12-19/Mac下配置VM中Linux-CentOS6-5虚拟机网络静态IP/00.jpg">
 
 
@@ -398,7 +398,11 @@
       
 
       
-        <blockquote><p>在CentOS中，每次开机其IP都是动态变化的；为了方便的使用shell，故对CentOS虚拟机配置静态IP。本文讲述的是在Mac端的VM虚拟机，Windows下虚拟机配置是一样的，差别在于虚拟机的网络查看、配置不一样</p></blockquote><h2 id="首先查看VM虚拟机可以配置IP的数字范围"><a href="#首先查看VM虚拟机可以配置IP的数字范围" class="headerlink" title="首先查看VM虚拟机可以配置IP的数字范围"></a>首先查看VM虚拟机可以配置IP的数字范围</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat <span class="regexp">/Library/</span>Preferences<span class="regexp">/VMware\ Fusion/</span>vmnet8<span class="regexp">/dhcpd.conf</span></span><br></pre></td></tr></table></figure>
+        <blockquote>
+<p>在CentOS中，每次开机其IP都是动态变化的；为了方便的使用shell，故对CentOS虚拟机配置静态IP。本文讲述的是在Mac端的VM虚拟机，Windows下虚拟机配置是一样的，差别在于虚拟机的网络查看、配置不一样</p>
+</blockquote>
+<h2 id="首先查看VM虚拟机可以配置IP的数字范围"><a href="#首先查看VM虚拟机可以配置IP的数字范围" class="headerlink" title="首先查看VM虚拟机可以配置IP的数字范围"></a>首先查看VM虚拟机可以配置IP的数字范围</h2><a id="more"></a>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat <span class="regexp">/Library/</span>Preferences<span class="regexp">/VMware\ Fusion/</span>vmnet8<span class="regexp">/dhcpd.conf</span></span><br></pre></td></tr></table></figure>
 <p>滑动到最后，如下图所示</p>
 <p><img src="/2017-12-19/Mac下配置VM中Linux-CentOS6-5虚拟机网络静态IP/00.jpg" title="示例"></p>
 <p>通常静态IP配置的范围为xxx.xxx.xxx.128–xxx.xxx.xxx.254；每次CentOS开机时动态IP变动的范围也是在这区间。</p>
@@ -425,6 +429,7 @@
 <p>先将虚拟机关机，然后再选择虚拟机创建完整克隆。创建成功后多个同样配置的虚拟机便创建成功。比起重新安装要迅速许多。</p>
 <p>需要注意的是，克隆的虚拟机中网络配置的数值可能会一样【比如：DEFROUTE、HWADDR】。</p>
 <p>DEFROUTE的值可以自行设置，HWADDR需要的MAC值可再虚拟机关闭的时候，选择虚拟机设置——网络适配器——高级选项 MAC旁有一个生成，可重新生成新的MAC值；生成之后再将数值填入到HWADDR即可。</p>
+
       
     </div>
     
@@ -564,9 +569,11 @@
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count"></span>
+  <span>
+  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+  </span>
   
 </div>
-
 
 
 

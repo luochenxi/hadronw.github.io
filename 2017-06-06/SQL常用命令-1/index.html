@@ -85,18 +85,18 @@
 
 
 
-<meta name="description" content="SQL常用的命令记录下来方便复习、回忆，很多的东西许久不用就会慢慢的遗忘掉SQL操作的类型就几种归纳起来就四个字：增、删、改、查增：添加数据，关键词insert删：删除数据，关键词delete改：修改数据，关键词update查：查询数据，关键词select注：通SQL命令的关键字都是大写，这里方便阅读都小写创建表格首先的命令是创建一个表格：1CREATE TABLE celebs(id  INTE">
+<meta name="description" content="SQL常用的命令记录下来方便复习、回忆，很多的东西许久不用就会慢慢的遗忘掉 SQL操作的类型就几种归纳起来就四个字：增、删、改、查  增：添加数据，关键词insert 删：删除数据，关键词delete 改：修改数据，关键词update 查：查询数据，关键词select  注：通SQL命令的关键字都是大写，这里方便阅读都小写 创建表格首先的命令是创建一个表格： 1CREATE TABLE celeb">
 <meta name="keywords" content="SQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQL常用命令(1)">
 <meta property="og:url" content="http://hadronw.com/2017-06-06/SQL常用命令-1/index.html">
 <meta property="og:site_name" content="hadronw&#39;s Blog">
-<meta property="og:description" content="SQL常用的命令记录下来方便复习、回忆，很多的东西许久不用就会慢慢的遗忘掉SQL操作的类型就几种归纳起来就四个字：增、删、改、查增：添加数据，关键词insert删：删除数据，关键词delete改：修改数据，关键词update查：查询数据，关键词select注：通SQL命令的关键字都是大写，这里方便阅读都小写创建表格首先的命令是创建一个表格：1CREATE TABLE celebs(id  INTE">
+<meta property="og:description" content="SQL常用的命令记录下来方便复习、回忆，很多的东西许久不用就会慢慢的遗忘掉 SQL操作的类型就几种归纳起来就四个字：增、删、改、查  增：添加数据，关键词insert 删：删除数据，关键词delete 改：修改数据，关键词update 查：查询数据，关键词select  注：通SQL命令的关键字都是大写，这里方便阅读都小写 创建表格首先的命令是创建一个表格： 1CREATE TABLE celeb">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-06-06T09:32:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL常用命令(1)">
-<meta name="twitter:description" content="SQL常用的命令记录下来方便复习、回忆，很多的东西许久不用就会慢慢的遗忘掉SQL操作的类型就几种归纳起来就四个字：增、删、改、查增：添加数据，关键词insert删：删除数据，关键词delete改：修改数据，关键词update查：查询数据，关键词select注：通SQL命令的关键字都是大写，这里方便阅读都小写创建表格首先的命令是创建一个表格：1CREATE TABLE celebs(id  INTE">
+<meta name="twitter:description" content="SQL常用的命令记录下来方便复习、回忆，很多的东西许久不用就会慢慢的遗忘掉 SQL操作的类型就几种归纳起来就四个字：增、删、改、查  增：添加数据，关键词insert 删：删除数据，关键词delete 改：修改数据，关键词update 查：查询数据，关键词select  注：通SQL命令的关键字都是大写，这里方便阅读都小写 创建表格首先的命令是创建一个表格： 1CREATE TABLE celeb">
 
 
 
@@ -393,7 +393,17 @@
       
 
       
-        <h2 id="SQL常用的命令"><a href="#SQL常用的命令" class="headerlink" title="SQL常用的命令"></a>SQL常用的命令</h2><p><code>记录下来方便复习、回忆，很多的东西许久不用就会慢慢的遗忘掉</code></p><p>SQL操作的类型就几种归纳起来就四个字：增、删、改、查</p><ul><li>增：添加数据，关键词<code>insert</code></li><li>删：删除数据，关键词<code>delete</code></li><li>改：修改数据，关键词<code>update</code></li><li>查：查询数据，关键词<code>select</code></li></ul><p><code>注：通SQL命令的关键字都是大写，这里方便阅读都小写</code></p><h3 id="创建表格"><a href="#创建表格" class="headerlink" title="创建表格"></a>创建表格</h3><p>首先的命令是创建一个表格：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> celebs(<span class="keyword">id</span>  <span class="built_in">INTEGER</span>,<span class="keyword">name</span> <span class="built_in">TEXT</span>,age <span class="built_in">INTEGER</span>);</span><br></pre></td></tr></table></figure>
+        <h2 id="SQL常用的命令"><a href="#SQL常用的命令" class="headerlink" title="SQL常用的命令"></a>SQL常用的命令</h2><p><code>记录下来方便复习、回忆，很多的东西许久不用就会慢慢的遗忘掉</code></p>
+<p>SQL操作的类型就几种归纳起来就四个字：增、删、改、查</p>
+<ul>
+<li>增：添加数据，关键词<code>insert</code></li>
+<li>删：删除数据，关键词<code>delete</code></li>
+<li>改：修改数据，关键词<code>update</code></li>
+<li>查：查询数据，关键词<code>select</code></li>
+</ul>
+<p><code>注：通SQL命令的关键字都是大写，这里方便阅读都小写</code></p>
+<h3 id="创建表格"><a href="#创建表格" class="headerlink" title="创建表格"></a>创建表格</h3><p>首先的命令是创建一个表格：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> celebs(<span class="keyword">id</span>  <span class="built_in">INTEGER</span>,<span class="keyword">name</span> <span class="built_in">TEXT</span>,age <span class="built_in">INTEGER</span>);</span><br></pre></td></tr></table></figure>
 <p>创建一个名人的数据表格，它有着三个字段id，姓名，年龄；其中integer，text是字段类型（integer表示的是数字，text表示是文字）</p>
 <a id="more"></a>
 <h3 id="添加数据"><a href="#添加数据" class="headerlink" title="添加数据"></a>添加数据</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> celebs(<span class="keyword">id</span>,<span class="keyword">name</span>,age) <span class="keyword">values</span>(<span class="number">1</span>,<span class="string">'Justin Bieber'</span>,<span class="number">21</span>);</span><br></pre></td></tr></table></figure>
@@ -424,6 +434,7 @@
 <h3 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> celebs <span class="keyword">WHERE</span> <span class="keyword">id</span>=<span class="number">1</span>;</span><br></pre></td></tr></table></figure>
 <p>该DELETE FROM语句从表中删除一行或多行。您可以在要删除现有记录时使用该语句。</p>
 <p>DELETE FROM 是一个允许您从表中删除行的子句。<br>celebs 是我们要删除行的表的名称。<br>WHERE是一个允许您选择要删除哪些行的子句。这里我们要删除id列中数值为1的那一行。</p>
+
       
     </div>
     
@@ -563,9 +574,11 @@
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count"></span>
+  <span>
+  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+  </span>
   
 </div>
-
 
 
 
