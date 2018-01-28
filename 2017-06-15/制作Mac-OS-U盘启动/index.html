@@ -1,4 +1,401 @@
-<!DOCTYPE html><html class="theme-next muse use-motion" lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="theme-color" content="#222"><link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="google-site-verification" content="google2004b8a1407fe45b.html"><link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"><link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css"><link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4"><link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222"><meta name="keywords" content="Mac,"><meta name="description" content="制作Mac OS U盘启动Mac中有时候系统更新会觉得没有自己以前的系统好用，此时不妨试着自己重新安装系统，降级系统；如果你之前有对系统备份，那就不需要重新安装。如果没有，哪只能重新安装系统首先下载你所想的历史版本系统通常经过AppStore更新的，会在已购列表中找到记录；找到以后可以直接下载，再到应用程序中栏目去寻找。如果没有则需要到网上搜索。通过命令刻录U盘请使用大于4G的U盘，或者移动硬盘的"><meta name="keywords" content="Mac"><meta property="og:type" content="article"><meta property="og:title" content="Mac制作系统安装U盘"><meta property="og:url" content="http://hadronw.com/2017-06-15/制作Mac-OS-U盘启动/index.html"><meta property="og:site_name" content="hadronw&#39;s Blog"><meta property="og:description" content="制作Mac OS U盘启动Mac中有时候系统更新会觉得没有自己以前的系统好用，此时不妨试着自己重新安装系统，降级系统；如果你之前有对系统备份，那就不需要重新安装。如果没有，哪只能重新安装系统首先下载你所想的历史版本系统通常经过AppStore更新的，会在已购列表中找到记录；找到以后可以直接下载，再到应用程序中栏目去寻找。如果没有则需要到网上搜索。通过命令刻录U盘请使用大于4G的U盘，或者移动硬盘的"><meta property="og:locale" content="zh-Hans"><meta property="og:image" content="http://hadronw.com/2017-06-15/制作Mac-OS-U盘启动/macu.png"><meta property="og:updated_time" content="2017-08-14T17:09:11.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Mac制作系统安装U盘"><meta name="twitter:description" content="制作Mac OS U盘启动Mac中有时候系统更新会觉得没有自己以前的系统好用，此时不妨试着自己重新安装系统，降级系统；如果你之前有对系统备份，那就不需要重新安装。如果没有，哪只能重新安装系统首先下载你所想的历史版本系统通常经过AppStore更新的，会在已购列表中找到记录；找到以后可以直接下载，再到应用程序中栏目去寻找。如果没有则需要到网上搜索。通过命令刻录U盘请使用大于4G的U盘，或者移动硬盘的"><meta name="twitter:image" content="http://hadronw.com/2017-06-15/制作Mac-OS-U盘启动/macu.png"><script type="text/javascript" id="hexo.configurations">var NexT=window.NexT||{},CONFIG={root:"/",scheme:"Muse",version:"5.1.4",sidebar:{position:"left",display:"remove",offset:12,b2t:!0,scrollpercent:!0,onmobile:!0},fancybox:!0,tabs:!0,motion:{enable:!0,async:!1,transition:{post_block:"fadeIn",post_header:"slideDownIn",post_body:"slideDownIn",coll_header:"slideLeftIn",sidebar:"slideUpIn"}},duoshuo:{userId:"0",author:"博主"},algolia:{applicationID:"",apiKey:"",indexName:"",hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}}}</script><link rel="canonical" href="http://hadronw.com/2017-06-15/制作Mac-OS-U盘启动/"><title>Mac制作系统安装U盘 | hadronw's Blog</title><script>!function(e,a,t,n,g,c,o){e.GoogleAnalyticsObject=g,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),o=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",o.parentNode.insertBefore(c,o)}(window,document,"script",0,"ga"),ga("create","UA-113179601-1","auto"),ga("send","pageview")</script><script type="text/javascript">var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="https://hm.baidu.com/hm.js?80d9b9996150c7cdf8ba27fb6575a66f";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script></head><body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans"><div class="container sidebar-position-left page-post-detail"><div class="headband"></div><header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="site-brand-wrapper"><div class="site-meta"><div class="custom-logo-site-title"><a href="/" class="brand" rel="start"><span class="logo-line-before"><i></i></span> <span class="site-title">hadronw's Blog</span> <span class="logo-line-after"><i></i></span></a></div><h1 class="site-subtitle" itemprop="description"></h1></div><div class="site-nav-toggle"><button><span class="btn-bar"></span> <span class="btn-bar"></span> <span class="btn-bar"></span></button></div></div><nav class="site-nav"><ul id="menu" class="menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i><br>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i><br>分类</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i><br>关于</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i><br>归档</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i><br>标签</a></li></ul></nav></div></header><main id="main" class="main"><div class="main-inner"><div class="content-wrap"><div id="content" class="content"><div id="posts" class="posts-expand"><article class="post post-type-normal" itemscope itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="http://hadronw.com/2017-06-15/制作Mac-OS-U盘启动/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="hadronw"><meta itemprop="description" content=""><meta itemprop="image" content="/images/avatar.gif"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="hadronw's Blog"></span><header class="post-header"><h2 class="post-title" itemprop="name headline">Mac制作系统安装U盘</h2><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i> </span><span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-15T17:09:57+08:00">2017-06-15 </time></span><span class="post-category"><span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="fa fa-folder-o"></i> </span><span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Mac/" itemprop="url" rel="index"><span itemprop="name">Mac</span> </a></span></span><span class="post-comments-count"><span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="fa fa-comment-o"></i> </span><a href="/2017-06-15/制作Mac-OS-U盘启动/#comments" itemprop="discussionUrl"><span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017-06-15/制作Mac-OS-U盘启动/" itemprop="commentCount"></span> </a></span><span class="post-meta-divider">|</span> <span class="page-pv"><i class="fa fa-file-o"></i> <span class="busuanzi-value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body han-init-context" itemprop="articleBody"><h2 id="制作Mac-OS-U盘启动"><a href="#制作Mac-OS-U盘启动" class="headerlink" title="制作Mac OS U盘启动"></a>制作Mac OS U盘启动</h2><p>Mac中有时候系统更新会觉得没有自己以前的系统好用，此时不妨试着自己重新安装系统，降级系统；如果你之前有对系统备份，那就不需要重新安装。如果没有，哪只能重新安装系统</p><h3 id="首先下载你所想的历史版本系统"><a href="#首先下载你所想的历史版本系统" class="headerlink" title="首先下载你所想的历史版本系统"></a>首先下载你所想的历史版本系统</h3><blockquote><p>通常经过AppStore更新的，会在已购列表中找到记录；找到以后可以直接下载，再到应用程序中栏目去寻找。如果没有则需要到网上搜索。</p></blockquote><h3 id="通过命令刻录U盘"><a href="#通过命令刻录U盘" class="headerlink" title="通过命令刻录U盘"></a>通过命令刻录U盘</h3><blockquote><p>请使用大于4G的U盘，或者移动硬盘的分区。</p></blockquote><p>打开你的终端输入以下命令：[ —volume /Volumes/MacOS (MacOS 是你的移动硬盘名字)]</p><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /Applications/Install<span class="string">\</span> OS<span class="string">\</span> X<span class="string">\</span> El<span class="string">\</span> Capitan.app/Contents/Resources/createinstallmedia --volume /Volumes/MacOS --applicationpath /Applications/Install<span class="string">\</span> OS<span class="string">\</span> X<span class="string">\</span> El<span class="string">\</span> Capitan.app</span><br></pre></td></tr></table></figure>
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="google2004b8a1407fe45b.html" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Mac," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="制作Mac OS U盘启动Mac中有时候系统更新会觉得没有自己以前的系统好用，此时不妨试着自己重新安装系统，降级系统；如果你之前有对系统备份，那就不需要重新安装。如果没有，哪只能重新安装系统首先下载你所想的历史版本系统通常经过AppStore更新的，会在已购列表中找到记录；找到以后可以直接下载，再到应用程序中栏目去寻找。如果没有则需要到网上搜索。通过命令刻录U盘请使用大于4G的U盘，或者移动硬盘的">
+<meta name="keywords" content="Mac">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac制作系统安装U盘">
+<meta property="og:url" content="http://hadronw.com/2017-06-15/制作Mac-OS-U盘启动/index.html">
+<meta property="og:site_name" content="hadronw&#39;s Blog">
+<meta property="og:description" content="制作Mac OS U盘启动Mac中有时候系统更新会觉得没有自己以前的系统好用，此时不妨试着自己重新安装系统，降级系统；如果你之前有对系统备份，那就不需要重新安装。如果没有，哪只能重新安装系统首先下载你所想的历史版本系统通常经过AppStore更新的，会在已购列表中找到记录；找到以后可以直接下载，再到应用程序中栏目去寻找。如果没有则需要到网上搜索。通过命令刻录U盘请使用大于4G的U盘，或者移动硬盘的">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://hadronw.com/2017-06-15/制作Mac-OS-U盘启动/macu.png">
+<meta property="og:updated_time" content="2017-08-14T17:09:11.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mac制作系统安装U盘">
+<meta name="twitter:description" content="制作Mac OS U盘启动Mac中有时候系统更新会觉得没有自己以前的系统好用，此时不妨试着自己重新安装系统，降级系统；如果你之前有对系统备份，那就不需要重新安装。如果没有，哪只能重新安装系统首先下载你所想的历史版本系统通常经过AppStore更新的，会在已购列表中找到记录；找到以后可以直接下载，再到应用程序中栏目去寻找。如果没有则需要到网上搜索。通过命令刻录U盘请使用大于4G的U盘，或者移动硬盘的">
+<meta name="twitter:image" content="http://hadronw.com/2017-06-15/制作Mac-OS-U盘启动/macu.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"remove","offset":12,"b2t":true,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://hadronw.com/2017-06-15/制作Mac-OS-U盘启动/"/>
+
+
+
+
+
+  <title>Mac制作系统安装U盘 | hadronw's Blog</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-113179601-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?80d9b9996150c7cdf8ba27fb6575a66f";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">hadronw's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hadronw.com/2017-06-15/制作Mac-OS-U盘启动/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hadronw">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hadronw's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Mac制作系统安装U盘</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-15T17:09:57+08:00">
+                2017-06-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Mac/" itemprop="url" rel="index">
+                    <span itemprop="name">Mac</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017-06-15/制作Mac-OS-U盘启动/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017-06-15/制作Mac-OS-U盘启动/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="制作Mac-OS-U盘启动"><a href="#制作Mac-OS-U盘启动" class="headerlink" title="制作Mac OS U盘启动"></a>制作Mac OS U盘启动</h2><p>Mac中有时候系统更新会觉得没有自己以前的系统好用，此时不妨试着自己重新安装系统，降级系统；如果你之前有对系统备份，那就不需要重新安装。如果没有，哪只能重新安装系统</p><h3 id="首先下载你所想的历史版本系统"><a href="#首先下载你所想的历史版本系统" class="headerlink" title="首先下载你所想的历史版本系统"></a>首先下载你所想的历史版本系统</h3><blockquote><p>通常经过AppStore更新的，会在已购列表中找到记录；找到以后可以直接下载，再到应用程序中栏目去寻找。如果没有则需要到网上搜索。</p></blockquote><h3 id="通过命令刻录U盘"><a href="#通过命令刻录U盘" class="headerlink" title="通过命令刻录U盘"></a>通过命令刻录U盘</h3><blockquote><p>请使用大于4G的U盘，或者移动硬盘的分区。</p></blockquote><p>打开你的终端输入以下命令：[ —volume /Volumes/MacOS (MacOS 是你的移动硬盘名字)]</p><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /Applications/Install<span class="string">\</span> OS<span class="string">\</span> X<span class="string">\</span> El<span class="string">\</span> Capitan.app/Contents/Resources/createinstallmedia --volume /Volumes/MacOS --applicationpath /Applications/Install<span class="string">\</span> OS<span class="string">\</span> X<span class="string">\</span> El<span class="string">\</span> Capitan.app</span><br></pre></td></tr></table></figure>
 <p><img src="macu.png" alt="success"></p>
 <p>如提示如上图，则说明刻录成功</p>
 <h3 id="安装系统"><a href="#安装系统" class="headerlink" title="安装系统"></a>安装系统</h3><p>从U盘启动系统</p>
@@ -160,9 +557,7 @@
 
 
 
-<span>
-#Hosted by <a href="https://pages.coding.me" style="font-weight:700">Coding Pages</a>
-</span>
+
 
         
 <div class="busuanzi-count">
@@ -210,7 +605,11 @@
 
   
 
-<script type="text/javascript">"[object Function]"!==Object.prototype.toString.call(window.Promise)&&(window.Promise=null)</script>
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
 
 
 
@@ -299,7 +698,17 @@
     
 
     
-      <script type="text/javascript">var disqus_config=function(){this.page.url="http://hadronw.com/2017-06-15/制作Mac-OS-U盘启动/",this.page.identifier="2017-06-15/制作Mac-OS-U盘启动/",this.page.title="Mac制作系统安装U盘"},d=document,s=d.createElement("script");s.src="https://authenticated.disqus.com/embed.js",s.setAttribute("data-timestamp",""+ +new Date),(d.head||d.body).appendChild(s)</script>
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://hadronw.com/2017-06-15/制作Mac-OS-U盘启动/';
+          this.page.identifier = '2017-06-15/制作Mac-OS-U盘启动/';
+          this.page.title = 'Mac制作系统安装U盘';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://authenticated.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
@@ -321,7 +730,17 @@
 
 
   
-    <script type="text/javascript">!function(){var t,e,n,a,c="cyt3cnyFD",o="99d2a1f8b71a69a0b0a074f25c6bfb7b";if((window.innerWidth||document.documentElement.clientWidth)<960)window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id='+c+"&conf="+o+'"><\/script>');else{t="https://changyan.sohu.com/upload/changyan.js",e=function(){window.changyan.api.config({appid:c,conf:o})},n=document.getElementsByTagName("head")[0]||document.head||document.documentElement,(a=document.createElement("script")).setAttribute("type","text/javascript"),a.setAttribute("charset","UTF-8"),a.setAttribute("src",t),"function"==typeof e&&(window.attachEvent?a.onreadystatechange=function(){var t=a.readyState;"loaded"!==t&&"complete"!==t||(a.onreadystatechange=null,e())}:a.onload=e),n.appendChild(a)}}()</script>
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cyt3cnyFD';
+      var conf = '99d2a1f8b71a69a0b0a074f25c6bfb7b';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
     <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
   
 
@@ -344,7 +763,20 @@
   
 
   
-<script>!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
 
 
   
@@ -356,7 +788,34 @@
   
   <script src="/lib/needsharebutton/needsharebutton.js"></script>
 
-  <script>pbOptions={},pbOptions.iconStyle="box",pbOptions.boxForm="horizontal",pbOptions.position="bottomCenter",pbOptions.networks="Weibo,Wechat,Douban,QQZone,Twitter,Facebook",new needShareButton("#needsharebutton-postbottom",pbOptions),flOptions={},flOptions.iconStyle="box",flOptions.boxForm="horizontal",flOptions.position="middleRight",flOptions.networks="Weibo,Wechat,Douban,QQZone,Twitter,Facebook",new needShareButton("#needsharebutton-float",flOptions)</script>
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+          flOptions.iconStyle = "box";
+      
+          flOptions.boxForm = "horizontal";
+      
+          flOptions.position = "middleRight";
+      
+          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
 
   
 
@@ -374,4 +833,20 @@
 
 
 </body>
-<script>!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script></html>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+</html>
