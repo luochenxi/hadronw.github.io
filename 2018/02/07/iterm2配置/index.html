@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="hadronw&#39;s Blog">
 <meta property="og:description" content="iterm2简单的配置本篇主要介绍iterm2的一些配置，以及搭配homebrew的使用 homebrew是一款自由及开放源代码的软件包管理系统，用以简化Mac OS X系统上的软件安装过程">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-07T08:16:00.547Z">
+<meta property="og:updated_time" content="2018-02-08T12:32:51.192Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iterm2配置">
 <meta name="twitter:description" content="iterm2简单的配置本篇主要介绍iterm2的一些配置，以及搭配homebrew的使用 homebrew是一款自由及开放源代码的软件包管理系统，用以简化Mac OS X系统上的软件安装过程">
@@ -428,9 +428,12 @@
 <p>基本的一些配置都有了，往后可根据自己喜好再行探索增加设置</p>
 </blockquote>
 <p>配置完成后，记得刷新环境变量<code>source ~/.zshrc</code></p>
-<h3 id="更新zsh的环境"><a href="#更新zsh的环境" class="headerlink" title="更新zsh的环境"></a>更新zsh的环境</h3><p>oh-my-zsh 安装默认不会假装系统shell中配置的环境，在使用过程中可能会发现之前配置好的软件环境无法使用。原因是zsh 中未加载系统中的配置的环境文件,如下所示：</p>
+<h3 id="Mac中的环境变量在zsh中无效的问题"><a href="#Mac中的环境变量在zsh中无效的问题" class="headerlink" title="Mac中的环境变量在zsh中无效的问题"></a>Mac中的环境变量在zsh中无效的问题</h3><p>oh-my-zsh 安装默认不会假装系统shell中配置的环境，在使用过程中可能会发现之前配置好的软件环境无法使用。原因是zsh 中未加载系统中的配置的环境文件,如下所示：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> If you come from bash you might have to change your <span class="variable">$PATH</span>.</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">export</span> PATH=<span class="variable">$HOME</span>/bin:/usr/<span class="built_in">local</span>/bin:<span class="variable">$PATH</span></span></span><br></pre></td></tr></table></figure>
 <p>.zshrc 配置文件中，默认是关闭掉的，将注释#删除即可，删除后再刷新一下.zshrc或者重启一下iterm2即可</p>
+<p>即使解除掉注释还是可能会发生无效的，解决办法就是引用一下Mac中配置环境变量的配置文件，如过是在<code>~/.bash_profile</code> 配置的</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在.zshrc 文末尾添加</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure>
+<p>刷新.zshrc 即可</p>
 
       
     </div>
