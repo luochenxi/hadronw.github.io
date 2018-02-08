@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -108,7 +108,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Mist',
     version: '5.1.4',
     sidebar: {"position":"left","display":"remove","offset":12,"b2t":true,"scrollpercent":true,"onmobile":true},
     fancybox: true,
@@ -424,7 +424,7 @@
 <p>将<code>_config.yml</code>文件中的配置项<code>post_asset_folder</code>设为true后，执行命令<code>$ hexo new test</code>，在source/_posts中会生成文章test.md和同名文件夹test。将图片资源放在test中，文章就可以使用相对路径引用图片资源了。</p>
 <h2 id="使用图片"><a href="#使用图片" class="headerlink" title="使用图片"></a>使用图片</h2><p>hexo <a href="https://hexo.io/zh-cn/docs/asset-folders.html#文章资源文件夹" target="_blank" rel="noopener">资源文件介绍</a></p>
 <h3 id="markdown的引用方式"><a href="#markdown的引用方式" class="headerlink" title="markdown的引用方式"></a>markdown的引用方式</h3><p><code>![](image.jpg)</code></p>
-<p><img src="image.jpg" alt=""></p>
+<p><img src="/2017/06/19/hexo使用图片/image.jpg" alt=""></p>
 <p>markdown的引用方式，图片只能在文章中显示，但无法在首页中正常显示</p>
 <h3 id="标签插件语法"><a href="#标签插件语法" class="headerlink" title="标签插件语法"></a>标签插件语法</h3><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="symbol">%</span> asset_img <span class="built_in">image</span>.jpg This <span class="built_in">is</span> an <span class="built_in">image</span> <span class="symbol">%</span>&#125;</span><br></pre></td></tr></table></figure>
 <img src="/2017/06/19/hexo使用图片/image.jpg" title="This is an image">
@@ -432,7 +432,7 @@
 <p>还有其他标签：</p>
 <figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">asset_path</span> slug %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">asset_img</span> slug [title] %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">asset_link</span> slug [title] %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure>
 <h3 id="HTML语法"><a href="#HTML语法" class="headerlink" title="HTML语法"></a>HTML语法</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img <span class="attribute">src</span>=<span class="string">"/image.jpg"</span> <span class="attribute">width</span>=50% <span class="attribute">height</span>=50% <span class="attribute">align</span>=center/&gt;</span><br></pre></td></tr></table></figure>
-<p><img src="image.jpg" width="50%" height="50%" align="center/"></p>
+<p><img src="/2017/06/19/hexo使用图片/image.jpg" width="50%" height="50%" align="center/"></p>
 <hr>
 <p>参考文章：</p>
 <p><a href="http://www.tuicool.com/articles/umEBVfI" target="_blank" rel="noopener">在hexo中无痛使用本地图片</a></p>
