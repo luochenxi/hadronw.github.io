@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="google2004b8a1407fe45b.html" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/mylog.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/mylog.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/mylog.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="SQL," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="摘要 SELECT 是您每次要从数据库查询信息时使用的子句。 WHERE 是一个流行的命令，可以根据您指定的条件过滤查询的结果。 LIKE并且BETWEEN是可以在一个WHERE子句中使用的特殊操作符 AND并且OR是可以用于WHERE在两个或多个条件下过滤查询的特殊操作符。 ORDER BY 允许您以升序或降序对查询的结果进行排序。 LIMIT允许您指定查询将返回的最大行数。这对于具有数千甚至数">
+<meta name="keywords" content="SQL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SQL常用命令(2)">
+<meta property="og:url" content="http://hadronw.com/2017/06-06/SQL常用命令-2/index.html">
+<meta property="og:site_name" content="hadronw&#39;s Blog">
+<meta property="og:description" content="摘要 SELECT 是您每次要从数据库查询信息时使用的子句。 WHERE 是一个流行的命令，可以根据您指定的条件过滤查询的结果。 LIKE并且BETWEEN是可以在一个WHERE子句中使用的特殊操作符 AND并且OR是可以用于WHERE在两个或多个条件下过滤查询的特殊操作符。 ORDER BY 允许您以升序或降序对查询的结果进行排序。 LIMIT允许您指定查询将返回的最大行数。这对于具有数千甚至数">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-06-06T11:47:42.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SQL常用命令(2)">
+<meta name="twitter:description" content="摘要 SELECT 是您每次要从数据库查询信息时使用的子句。 WHERE 是一个流行的命令，可以根据您指定的条件过滤查询的结果。 LIKE并且BETWEEN是可以在一个WHERE子句中使用的特殊操作符 AND并且OR是可以用于WHERE在两个或多个条件下过滤查询的特殊操作符。 ORDER BY 允许您以升序或降序对查询的结果进行排序。 LIMIT允许您指定查询将返回的最大行数。这对于具有数千甚至数">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"remove","offset":12,"b2t":true,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://hadronw.com/2017/06-06/SQL常用命令-2/"/>
+
+
+
+
+
+  <title>SQL常用命令(2) | hadronw's Blog</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-113179601-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?80d9b9996150c7cdf8ba27fb6575a66f";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">hadronw's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<meta name="sogou_site_verification" content="30h62eUCDR"/>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hadronw.com/2017/06-06/SQL常用命令-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hadronw">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hadronw's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">SQL常用命令(2)</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-06T15:33:50+08:00">
+                2017-06-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/SQL/" itemprop="url" rel="index">
+                    <span itemprop="name">SQL</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/06-06/SQL常用命令-2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/06-06/SQL常用命令-2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><ul>
+<li>SELECT 是您每次要从数据库查询信息时使用的子句。</li>
+<li>WHERE 是一个流行的命令，可以根据您指定的条件过滤查询的结果。</li>
+<li>LIKE并且BETWEEN是可以在一个WHERE子句中使用的特殊操作符</li>
+<li>AND并且OR是可以用于WHERE在两个或多个条件下过滤查询的特殊操作符。</li>
+<li>ORDER BY 允许您以升序或降序对查询的结果进行排序。</li>
+<li>LIMIT允许您指定查询将返回的最大行数。这对于具有数千甚至数百万行的大型表格尤其重要。</li>
+</ul>
+<h2 id="在表格中添加新列"><a href="#在表格中添加新列" class="headerlink" title="在表格中添加新列"></a>在表格中添加新列</h2><a id="more"></a>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> celebs <span class="keyword">ADD</span> COLUME twitter_handle <span class="built_in">text</span>;</span><br></pre></td></tr></table></figure>
+<p>该ALTER TABLE语句向表中添加了一个新列。当您要向表中添加列时，可以使用此命令。</p>
+<ol>
+<li>ALTER TABLE是一个允许您进行指定更改的子句。</li>
+<li>celebs是正在更改的表的名称。</li>
+<li>ADD COLUMN是一个允许您向表添加新列的子句。</li>
+</ol>
+<p>twitter_handle 是要添加的新列的名称<br>TEXT 是新列的数据类型</p>
+<h2 id="高级查询"><a href="#高级查询" class="headerlink" title="高级查询"></a>高级查询</h2><h3 id="查询-DISTINCT"><a href="#查询-DISTINCT" class="headerlink" title="查询(DISTINCT)"></a>查询(DISTINCT)</h3><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> genre <span class="keyword">FROM</span> movies;</span><br></pre></td></tr></table></figure>
+<p>SELECT DISTINCT用于返回结果集中的唯一值。它会滤除所有重复的值。在这里，结果集列出了movies表中的每个类型一次。</p>
+<ol>
+<li><p>SELECT DISTINCT指定该语句将是一个返回指定列中唯一值的查询</p>
+</li>
+<li><p>genre是要在结果集中显示的列的名称。</p>
+</li>
+<li><p>FROM movies表示要查询的表名。</p>
+</li>
+</ol>
+<h3 id="过滤查询"><a href="#过滤查询" class="headerlink" title="过滤查询"></a>过滤查询</h3><p>过滤查询的结果是SQL中的一个重要技能。在数据被过滤之后，电影可以看到不同的可能类型更容易，而不是扫描表中的每一行</p>
+<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> movies <span class="keyword">WHERE</span> imdb_rating &gt; <span class="number">8</span>;</span><br></pre></td></tr></table></figure>
+<p>此语句将结果集过滤到仅包含IMDb等级大于8的电影。它如何工作？</p>
+<ol>
+<li><p>WHERE是一个子句，表示您要过滤结果集以仅包含以下条件为真的行。</p>
+</li>
+<li><p>imdb_rating &gt; 8是过滤结果集的条件。这里，只有列中值大于8的imdb_rating行才会返回到结果集中。</p>
+</li>
+<li><p>运算符创建一个可以被评估为true或false的条件。与该WHERE子句一起使用的常用运算符是：</p>
+</li>
+</ol>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">= 等于</span></span><br><span class="line">!= 不等于</span><br><span class="line">&gt; 大于</span><br><span class="line">&lt; 少于</span><br><span class="line">&gt;= 大于或等于</span><br><span class="line">&lt;= 小于或等于</span><br></pre></td></tr></table></figure>
+<h3 id="查询-LIKE"><a href="#查询-LIKE" class="headerlink" title="查询(LIKE)"></a>查询(LIKE)</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> movies HERE <span class="keyword">name</span> <span class="keyword">LIKE</span> <span class="string">'Se_en'</span>;</span><br></pre></td></tr></table></figure>
+<p>LIKE当你想比较类似的值时，可以是一个有用的操作符。在这里，我们正在比较两部名称相同但拼写不一的电影。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1. </span>LIKE是与WHERE子句一起使用的特殊操作符，用于搜索列中的特定模式。</span><br><span class="line"><span class="bullet">2. </span>name LIKE Se_en是评估name特定模式的列的条件。</span><br><span class="line"><span class="bullet">3. </span>Se<span class="emphasis">_en表示具有通配符的模式。这种_</span>方式可以在这里替代任何个人的角色，而不会破坏模式。名称Seven和Se7en两者匹配这种模式。</span><br></pre></td></tr></table></figure>
+<h3 id="查询"><a href="#查询" class="headerlink" title="查询(%)"></a>查询(%)</h3><p>%是可以使用的另一个通配符LIKE<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> movies <span class="keyword">WHERE</span> <span class="keyword">name</span> <span class="keyword">LIKE</span> <span class="string">'A%'</span>;</span><br></pre></td></tr></table></figure></p>
+<p>% 是一个通配符，在该模式中匹配零个或多个缺失的字母。<br>A% 匹配所有电影，其名称以“A”开头<br>%a 匹配以“a”结尾的所有电影<br>%a% 匹配所有中间包含‘a’的电影</p>
+<h3 id="查询-BETWEEN"><a href="#查询-BETWEEN" class="headerlink" title="查询(BETWEEN)"></a>查询(BETWEEN)</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> movies <span class="keyword">WHERE</span> <span class="keyword">name</span> <span class="keyword">BETWEEN</span> <span class="string">'A'</span><span class="keyword">and</span> <span class="string">'J'</span>;</span><br></pre></td></tr></table></figure>
+<p>此语句将结果集过滤到仅包含以name“A”字母开头但不包括“J”的s的电影。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> movies <span class="keyword">WHERE</span> <span class="keyword">year</span> <span class="keyword">BETWEEN</span> <span class="number">1990</span> <span class="keyword">AND</span> <span class="number">2000</span>;</span><br></pre></td></tr></table></figure>
+<p>在这个陈述中，BETWEEN运营商被用来过滤结果集，只包括year1990年至2000年之间的电影。</p>
+<h3 id="查询-AND"><a href="#查询-AND" class="headerlink" title="查询(AND)"></a>查询(AND)</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> movies <span class="keyword">WHERE</span> <span class="keyword">year</span> <span class="keyword">BETWEEN</span> <span class="number">1990</span> <span class="keyword">and</span> <span class="number">2000</span> <span class="keyword">AND</span> genre = <span class="string">'comedy'</span>;</span><br></pre></td></tr></table></figure>
+<p>有时你想在一个WHERE子句中组合多个条件，使结果集更加具体和有用。这样做的一个方法是使用AND操作符。</p>
+<ol>
+<li><p>year BETWEEN 1990 and 2000是该WHERE条款的第一个条件。</p>
+</li>
+<li><p>AND genre = ‘comedy’是该WHERE条款中的第二个条件。</p>
+</li>
+<li><p>AND是组合两个条件的运算符。对于要包含在结果集中的行，两个条件都必须为true。在这里，我们使用AND操作员只返回1990年至2000年期间也是喜剧的电影。</p>
+</li>
+</ol>
+<h3 id="查询-OR"><a href="#查询-OR" class="headerlink" title="查询(OR)"></a>查询(OR)</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> movies <span class="keyword">WHERE</span> genre = <span class="string">'comedy'</span> <span class="keyword">OR</span> <span class="keyword">year</span> &lt; <span class="number">1980</span>;</span><br></pre></td></tr></table></figure>
+<p>该OR运营商还可以使用一个以上条件的组合中的WHERE条款。所述OR操作者将分别评估每个条件，并且如果任何一个条件都为真，则该行被添加到结果集。</p>
+<ol>
+<li><p>WHERE genre = ‘comedy’是该WHERE条款的第一个条件。</p>
+</li>
+<li><p>OR year &lt; 1980是该WHERE条款中的第二个条件。</p>
+</li>
+<li><p>OR是将结果集过滤到仅包含条件为真的行的操作符。在这里，我们回来有一种喜剧类型的电影或1980年以前发行的电影。</p>
+</li>
+</ol>
+<h3 id="查询-ORDER-BY-DESC-ASC"><a href="#查询-ORDER-BY-DESC-ASC" class="headerlink" title="查询(ORDER BY, DESC, ASC)"></a>查询(ORDER BY, DESC, ASC)</h3><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> movies <span class="keyword">ORDER</span> <span class="keyword">BY</span> imdb_rating <span class="keyword">DESC</span>;</span><br></pre></td></tr></table></figure>
+<p>您可以使用查询结果排序ORDER BY。对结果进行排序通常会使数据更有用和更易于分析。</p>
+<ol>
+<li><p>ORDER BY是一个子句，表示您想按字母顺序或数字排列特定列的结果集。</p>
+</li>
+<li><p>imdb_rating是要排序的列的名称。</p>
+</li>
+<li><p>DESC是SQL中的一个关键字，用于ORDER BY按照降序（从高到低或ZA）排序结果。在这里，它按照IMDb评级将所有电影从最高到最低。</p>
+</li>
+</ol>
+<p>也可以按升序对结果进行排序。ASC是SQL中的一个关键字，用于ORDER BY按升序排列结果（从低到高或AZ）。</p>
+<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> movies <span class="keyword">ORDER</span> <span class="keyword">BY</span> imdb_rating <span class="keyword">ASC</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="查询-LIMIT"><a href="#查询-LIMIT" class="headerlink" title="查询(LIMIT)"></a>查询(LIMIT)</h3><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> movies <span class="keyword">ORDER</span> <span class="keyword">BY</span> imdb_rating <span class="keyword">DESC</span> <span class="keyword">LIMIT</span> <span class="number">3</span>;</span><br></pre></td></tr></table></figure>
+<p>有时甚至过滤的结果可以在大数据库中返回数千行。在这些情况下，重要的是将结果集中的行数加起来。</p>
+<p>LIMIT是一个允许您指定结果集将具有的最大行数的子句。在这里，我们指定结果集不能有三行以上。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    hadronw
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://hadronw.com/2017/06-06/SQL常用命令-2/" title="SQL常用命令(2)">http://hadronw.com/2017/06-06/SQL常用命令-2/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://hadronw.com" rel="external nofollow" target="_blank"></a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/SQL/" rel="tag"># SQL</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06-06/SQL常用命令-1/" rel="prev" title="SQL常用命令(1)">
+                SQL常用命令(1) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">hadronw</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">
+  Hosted by
+  <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
+</div>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://authenticated.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://hadronw.com/2017/06-06/SQL常用命令-2/';
+          this.page.identifier = '2017/06-06/SQL常用命令-2/';
+          this.page.title = 'SQL常用命令(2)';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://authenticated.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cyt3cnyFD';
+      var conf = '99d2a1f8b71a69a0b0a074f25c6bfb7b';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+          flOptions.iconStyle = "box";
+      
+          flOptions.boxForm = "horizontal";
+      
+          flOptions.position = "middleRight";
+      
+          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
+  
+
+  
+  
+
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/exturl.js?v=5.1.4"></script>
+
+
+</body>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+</html>
