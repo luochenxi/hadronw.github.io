@@ -74,7 +74,7 @@
 
 
 
-  <meta name="keywords" content="Python," />
+  <meta name="keywords" content="Linux," />
 
 
 
@@ -85,18 +85,18 @@
 
 
 
-<meta name="description" content="Mac OS 自带有Python 2.X版本，由于Python3.X版本有很大改动，与之前版本许多方法并不是相同的使用方式，因此会需要在电脑中安装不同的Python版本">
-<meta name="keywords" content="Python">
+<meta name="description" content="Cent OS 6与CentOS7许多命令有些区别 设置hostname 查看主机名相关的设置:">
+<meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac&#x2F;Linux安装Python多版本管理器Pyenv">
-<meta property="og:url" content="http://hadronw.com/2017/09-09/Mac:Linux安装Python多版本管理器Pyenv/index.html">
+<meta property="og:title" content="CentOS 7设置hostname，关闭防火墙">
+<meta property="og:url" content="http://hadronw.com/2018/03-13/CentOS-7设置hostname，关闭防火墙/index.html">
 <meta property="og:site_name" content="hadronw&#39;s Blog">
-<meta property="og:description" content="Mac OS 自带有Python 2.X版本，由于Python3.X版本有很大改动，与之前版本许多方法并不是相同的使用方式，因此会需要在电脑中安装不同的Python版本">
+<meta property="og:description" content="Cent OS 6与CentOS7许多命令有些区别 设置hostname 查看主机名相关的设置:">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-14T12:26:51.879Z">
+<meta property="og:updated_time" content="2018-03-13T12:22:19.224Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac&#x2F;Linux安装Python多版本管理器Pyenv">
-<meta name="twitter:description" content="Mac OS 自带有Python 2.X版本，由于Python3.X版本有很大改动，与之前版本许多方法并不是相同的使用方式，因此会需要在电脑中安装不同的Python版本">
+<meta name="twitter:title" content="CentOS 7设置hostname，关闭防火墙">
+<meta name="twitter:description" content="Cent OS 6与CentOS7许多命令有些区别 设置hostname 查看主机名相关的设置:">
 
 
 
@@ -126,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://hadronw.com/2017/09-09/Mac:Linux安装Python多版本管理器Pyenv/"/>
+  <link rel="canonical" href="http://hadronw.com/2018/03-13/CentOS-7设置hostname，关闭防火墙/"/>
 
 
 
 
 
-  <title>Mac/Linux安装Python多版本管理器Pyenv | hadronw's Blog</title>
+  <title>CentOS 7设置hostname，关闭防火墙 | hadronw's Blog</title>
   
 
 
@@ -305,7 +305,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://hadronw.com/2017/09-09/Mac:Linux安装Python多版本管理器Pyenv/">
+    <link itemprop="mainEntityOfPage" href="http://hadronw.com/2018/03-13/CentOS-7设置hostname，关闭防火墙/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="hadronw">
@@ -322,7 +322,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Mac/Linux安装Python多版本管理器Pyenv</h2>
+          <h2 class="post-title" itemprop="name headline">CentOS 7设置hostname，关闭防火墙</h2>
         
 
         <div class="post-meta">
@@ -334,8 +334,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-09T21:53:52+08:00">
-                2017-09-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-13T19:27:45+08:00">
+                2018-03-13
               </time>
             
 
@@ -357,8 +357,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
                   </a>
                 </span>
 
@@ -375,9 +375,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/09-09/Mac:Linux安装Python多版本管理器Pyenv/#comments" itemprop="discussionUrl">
+                <a href="/2018/03-13/CentOS-7设置hostname，关闭防火墙/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/09-09/Mac:Linux安装Python多版本管理器Pyenv/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/03-13/CentOS-7设置hostname，关闭防火墙/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -410,45 +410,31 @@
       
 
       
-        <blockquote>
-<p>Mac OS 自带有Python 2.X版本，由于Python3.X版本有很大改动，与之前版本许多方法并不是相同的使用方式，因此会需要在电脑中安装不同的Python版本</p>
-</blockquote>
-<a id="more"></a>
-<p>Python的版本有许多，这里介绍一个pyenv，通过它来安装管理，切换Python版本</p>
-<h2 id="安装pyenv"><a href="#安装pyenv" class="headerlink" title="安装pyenv"></a>安装pyenv</h2><p>通用方法Linux/MacOS通用：</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">https</span>://github.com/yyuu/pyenv.git ~/.pyenv</span><br></pre></td></tr></table></figure>
-<p>Mac 中安装brew软件管理的可以通过brew安装</p>
-<p>此处介绍通过homebrew安装pyenv，没有安装<a href="https://hadronw.github.io/2017/06/14/Mac%E7%9A%84%E4%B8%80%E4%BA%9B%E9%85%8D%E7%BD%AE%E4%B9%8Biterm2%E7%AF%87/" target="_blank" rel="noopener">homebrew</a>可以点击看安装介绍。也可以查看<a href="https://github.com/pyenv/pyenv#homebrew-on-mac-os-x" target="_blank" rel="noopener">pyenv</a>github原本说明，</p>
-<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span><span class="keyword">install </span>pyenv</span><br></pre></td></tr></table></figure>
-<p>此时pyenv就安装好了，接下来是需要配置一下环境</p>
-<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><figure class="highlight julia"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">方式一：打开.bash_profile文件，在该文件中手动添加</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> PYENV_ROOT=<span class="string">"<span class="variable">$HOME</span>/.pyenv"</span></span><br><span class="line"><span class="keyword">export</span> PATH=<span class="string">"<span class="variable">$PYENV_ROOT</span>/bin:<span class="variable">$PATH</span>"</span></span><br><span class="line"></span><br><span class="line">方式二：直接通过命令</span><br><span class="line">$ echo '<span class="keyword">export</span> PYENV_ROOT=<span class="string">"<span class="variable">$HOME</span>/.pyenv"</span>' &gt;&gt; ~/.bash_profile</span><br><span class="line">$ echo '<span class="keyword">export</span> PATH=<span class="string">"<span class="variable">$PYENV_ROOT</span>/bin:<span class="variable">$PATH</span>"</span>' &gt;&gt; ~/.bash_profile</span><br></pre></td></tr></table></figure>
-<p>接下来再配置一下Python版本切换中环境变量的相关</p>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">方式一：打开<span class="string">.bash_profile</span>文件，在该文件中末尾手动添加</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">command</span> -v pyenv 1&gt;<span class="string">/dev/null</span> 2&gt;&amp;1; then</span><br><span class="line">  eval <span class="string">"$(pyenv init -)"</span></span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">方式二：命令</span><br><span class="line"></span><br><span class="line">$ <span class="keyword">echo</span> -e '<span class="keyword">if</span> <span class="keyword">command</span> -v pyenv 1&gt;<span class="string">/dev/null</span> 2&gt;&amp;1; then\n  eval <span class="string">"$(pyenv init -)"</span>\nfi' &gt;&gt; ~<span class="string">/.bash_profile</span></span><br></pre></td></tr></table></figure>
-<p>添加之后切记刷新一下环境变量，命令方式：</p>
-<pre><code>source ~/.bash_profile
-</code></pre><p><a href="https://hadronw.github.io/2017/06/17/Mac%E4%B8%AD%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" target="_blank" rel="noopener">Mac环境变量相关</a>可点击查看</p>
-<h2 id="使用pyenv"><a href="#使用pyenv" class="headerlink" title="使用pyenv"></a>使用pyenv</h2><p>pyenv命令介绍，</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">commands    列出所有pyenv可用的命令</span><br><span class="line"><span class="keyword">local</span>       设置或显示本地应用程序特定的Python版本</span><br><span class="line"><span class="keyword">global</span>      设置或显示系统全局的Python版本</span><br><span class="line"><span class="keyword">shell</span>       设置或显示<span class="keyword">shell</span>外壳的Python版本</span><br><span class="line">install     使用python-build安装指定Python版本</span><br><span class="line">uninstall   卸载已经安装的Python</span><br><span class="line">rehash      刷新 pyenv shims (安装之后运行这个)</span><br><span class="line"><span class="keyword">version</span>     查看当前使用的版本</span><br><span class="line">versions    列出已经安装的Python版本，当前激活版本用*号标注</span><br><span class="line"><span class="keyword">which</span>       显示的完整路径的可执行文件</span><br><span class="line">whence      列出包含给定的可执行所有的Python版本</span><br></pre></td></tr></table></figure>
-<p>建议：</p>
-<pre><code>系统全局用系统默认的Python比较好，不建议直接对其操作
-pyenv global system(不建议使用系统自带的Python版本开发或测试)
-</code></pre><p>查看Python可用版本：</p>
-<pre><code>pyenv install -l 列举版本较多，需要仔细浏览
-</code></pre><p>安装Python：</p>
-<pre><code>pyenv install xx.xx.xx (pyenv install 3.4.3)
-pyenv rehash   # 记得一定要rehash
-</code></pre><p>切换Python版本：</p>
-<pre><code>pyenv local xx.xx.xx（3.4.3）
-</code></pre><p>临时设定Python版本，退出后失效：</p>
-<pre><code>pyenv shell xx.xx.xx（3.4.3）
-</code></pre><p>取消某版本切换：</p>
-<pre><code>pyenv local xx.xx.xx（3.4.3） --unset
-</code></pre><p>优先级关系：shell——local——global</p>
-<p>参考文章：</p>
-<p><a href="https://www.cnhzz.com/pyenv_virtualenv_virtaulenvwrapper/" target="_blank" rel="noopener">https://www.cnhzz.com/pyenv_virtualenv_virtaulenvwrapper/</a></p>
-<p><a href="https://my.oschina.net/damienchen/blog/852006" target="_blank" rel="noopener">https://my.oschina.net/damienchen/blog/852006</a></p>
-<p><a href="https://github.com/pyenv/pyenv#homebrew-on-mac-os-x" target="_blank" rel="noopener">https://github.com/pyenv/pyenv#homebrew-on-mac-os-x</a></p>
-<p><a href="http://lovekaiyuan.iteye.com/blog/2214417" target="_blank" rel="noopener">http://lovekaiyuan.iteye.com/blog/2214417</a></p>
+        <p>Cent OS 6与CentOS7许多命令有些区别</p>
+<h2 id="设置hostname"><a href="#设置hostname" class="headerlink" title="设置hostname"></a>设置hostname</h2><hr>
+<h3 id="查看主机名相关的设置"><a href="#查看主机名相关的设置" class="headerlink" title="查看主机名相关的设置:"></a>查看主机名相关的设置:</h3><a id="more"></a>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">[root@test]#</span> <span class="string">hostnamectl</span></span><br><span class="line">   <span class="string">Static</span> <span class="attr">hostname:</span> <span class="string">a0</span></span><br><span class="line">         <span class="string">Icon</span> <span class="attr">name:</span> <span class="string">computer-vm</span></span><br><span class="line"><span class="attr">           Chassis:</span> <span class="string">vm</span></span><br><span class="line">        <span class="string">Machine</span> <span class="attr">ID:</span> <span class="number">01</span><span class="string">def7c99eb943af9f28735310ffc0f9</span></span><br><span class="line">           <span class="string">Boot</span> <span class="attr">ID:</span> <span class="string">b9e7b57216764c13a9a3bac5a3fc7284</span></span><br><span class="line"><span class="attr">    Virtualization:</span> <span class="string">vmware</span>   </span><br><span class="line">  <span class="string">Operating</span> <span class="attr">System:</span> <span class="string">CentOS</span> <span class="string">Linux</span> <span class="number">7</span> <span class="string">(Core)</span></span><br><span class="line">       <span class="string">CPE</span> <span class="string">OS</span> <span class="attr">Name:</span> <span class="attr">cpe:/o:centos:centos:7</span></span><br><span class="line"><span class="attr">            Kernel:</span> <span class="string">Linux</span> <span class="number">3.10</span><span class="number">.0</span><span class="bullet">-693.</span><span class="string">el7.x86_64</span></span><br><span class="line"><span class="attr">      Architecture:</span> <span class="string">x86-64</span></span><br></pre></td></tr></table></figure>
+<p>在CentOS中有对主机名有三种定义：static[静态]、transient[瞬间]、pretty[灵活]</p>
+<p>static：主机名也称为内核主机名，是系统在启动时从/etc/hostname自动初始化的主机名</p>
+<p>transient：主机名是在系统运行时临时分配的主机名，例如，通过DHCP或mDNS服务器分配</p>
+<p>注：静态主机名和瞬态主机名都遵从互联网域名同样的字符限制规则</p>
+<p>pretty：主机名则允许使用自由形式（包括特殊/空白字符）的主机名，以展示给终端用户</p>
+<h3 id="查看hostname"><a href="#查看hostname" class="headerlink" title="查看hostname"></a>查看hostname</h3><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@test]# hostnamectl --static   # 查看静态主机名</span><br><span class="line">test</span><br><span class="line"></span><br><span class="line">[root@test]# hostnamectl --pretty   # 查看灵活主机名</span><br><span class="line">test</span><br><span class="line"></span><br><span class="line">[root@test]# hostnamectl --transient # 查看瞬间主机名</span><br><span class="line">test</span><br></pre></td></tr></table></figure>
+<h3 id="同时修改所有主机名"><a href="#同时修改所有主机名" class="headerlink" title="同时修改所有主机名"></a>同时修改所有主机名</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">[root@test]#</span><span class="bash"> hostnamectl <span class="built_in">set</span>-hostname test1</span></span><br><span class="line"></span><br><span class="line">查看主机名</span><br><span class="line"><span class="meta">[root@test]#</span><span class="bash"> hostnamectl --pretty   <span class="comment"># 查看灵活主机名</span></span></span><br><span class="line">test1</span><br><span class="line"></span><br><span class="line"><span class="meta">[root@test]#</span><span class="bash"> hostnamectl --transient <span class="comment"># 查看瞬间主机名</span></span></span><br><span class="line">test1</span><br></pre></td></tr></table></figure>
+<h3 id="修改特定主机名"><a href="#修改特定主机名" class="headerlink" title="修改特定主机名"></a>修改特定主机名</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">[root@test]#</span><span class="bash"> hostnamectl --static <span class="built_in">set</span>-hostname test2 <span class="comment">#将static改为pretty、transient即修改特定的主机名</span></span></span><br></pre></td></tr></table></figure>
+<p><strong>注：上文的修改并不会立刻出现变化，需要注销用户重新登陆或者重启机器</strong></p>
+<h2 id="防火墙相关"><a href="#防火墙相关" class="headerlink" title="防火墙相关"></a>防火墙相关</h2><hr>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">[root@test]#</span><span class="bash"> systemctl stop firewalld.service <span class="comment">#停止firewall</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">[root@test]#</span><span class="bash"> systemctl <span class="built_in">disable</span> firewalld.service <span class="comment">#禁止firewall开机启动</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">[root@test]#</span><span class="bash">  systemctl restart iptables.service <span class="comment">#重启防火墙使配置生效</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">[root@test]#</span><span class="bash">  systemctl <span class="built_in">enable</span> iptables.service <span class="comment">#设置防火墙开机启动</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="关闭SELinux"><a href="#关闭SELinux" class="headerlink" title="关闭SELinux"></a>关闭SELinux</h2><hr>
+<p>SELinux(Secure Enhanced Linux)安全增强的Linux是由美国国家安全局NSA针对计算机基础结构安全开发的一个全新的Linux安全策略机制。就是管理Linux的安全机制。</p>
+<p>大多数情况SELinux都是关闭的。多数情况是没有专门的运维，或者运维懒；另一个方面就是管理设置麻烦。</p>
+<p>对于非商业性质使用来说，选择关闭是最为便捷的选择，否则许多软件使用会出现安全机制问题。</p>
+<h3 id="查看SELinux状态"><a href="#查看SELinux状态" class="headerlink" title="查看SELinux状态"></a>查看SELinux状态</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@test]# sestatus</span><br><span class="line">SELinux status:                 enabled</span><br><span class="line">SELinuxfs mount:                /sys/fs/selinux</span><br><span class="line">SELinux root directory:         /etc/selinux</span><br><span class="line">Loaded<span class="built_in"> policy </span>name:             targeted</span><br><span class="line">Current mode:                   enforcing</span><br><span class="line">Mode <span class="keyword">from</span><span class="built_in"> config </span>file:          enforcing</span><br><span class="line">Policy MLS status:              enabled</span><br><span class="line">Policy deny_unknown status:     allowed</span><br><span class="line">Max kernel<span class="built_in"> policy </span>version:      28</span><br></pre></td></tr></table></figure>
+<h3 id="修改-etc-sysconfig-selinux并关闭"><a href="#修改-etc-sysconfig-selinux并关闭" class="headerlink" title="修改/etc/sysconfig/selinux并关闭"></a>修改/etc/sysconfig/selinux并关闭</h3><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="section">[root@test]</span><span class="comment"># vi /etc/sysconfig/selinux </span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 编辑/etc/sysconfig/selinux 文件,将文件中的SELINUX=enforcing改为</span></span><br><span class="line"><span class="attr">SELINUX</span>=disabled 修改后保存退出</span><br><span class="line"></span><br><span class="line"><span class="section">[root@test]</span><span class="comment"># setenforce 0</span></span><br></pre></td></tr></table></figure>
+<p><strong>注：修改文档后需要重启机器才能生效</strong> </p>
+<p>重启之后，可再次查看selinux状态，</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root<span class="symbol">@test]</span><span class="meta"># sestatus</span></span><br><span class="line">SELinux status:                 disabled</span><br></pre></td></tr></table></figure>
+<p>出现以上则selinux关闭成功。</p>
 
       
     </div>
@@ -469,7 +455,7 @@ pyenv rehash   # 记得一定要rehash
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://hadronw.com/2017/09-09/Mac:Linux安装Python多版本管理器Pyenv/" title="Mac/Linux安装Python多版本管理器Pyenv">http://hadronw.com/2017/09-09/Mac:Linux安装Python多版本管理器Pyenv/</a>
+    <a href="http://hadronw.com/2018/03-13/CentOS-7设置hostname，关闭防火墙/" title="CentOS 7设置hostname，关闭防火墙">http://hadronw.com/2018/03-13/CentOS-7设置hostname，关闭防火墙/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -484,7 +470,7 @@ pyenv rehash   # 记得一定要rehash
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag"># Python</a>
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
           
         </div>
       
@@ -512,8 +498,8 @@ pyenv rehash   # 记得一定要rehash
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09-09/Mac安装pip/" rel="next" title="Mac安装pip">
-                <i class="fa fa-chevron-left"></i> Mac安装pip
+              <a href="/2018/02-08/Anaconda的安装与使用/" rel="next" title="Anaconda的安装与使用">
+                <i class="fa fa-chevron-left"></i> Anaconda的安装与使用
               </a>
             
           </div>
@@ -521,10 +507,6 @@ pyenv rehash   # 记得一定要rehash
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/10-13/win10安装VMmare/" rel="prev" title="win10安装VMmare">
-                win10安装VMmare <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -688,7 +670,7 @@ pyenv rehash   # 记得一定要rehash
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装pyenv"><span class="nav-number">1.</span> <span class="nav-text">安装pyenv</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置环境变量"><span class="nav-number">2.</span> <span class="nav-text">配置环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用pyenv"><span class="nav-number">3.</span> <span class="nav-text">使用pyenv</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#设置hostname"><span class="nav-number">1.</span> <span class="nav-text">设置hostname</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看主机名相关的设置"><span class="nav-number">1.1.</span> <span class="nav-text">查看主机名相关的设置:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看hostname"><span class="nav-number">1.2.</span> <span class="nav-text">查看hostname</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#同时修改所有主机名"><span class="nav-number">1.3.</span> <span class="nav-text">同时修改所有主机名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改特定主机名"><span class="nav-number">1.4.</span> <span class="nav-text">修改特定主机名</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#防火墙相关"><span class="nav-number">2.</span> <span class="nav-text">防火墙相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关闭SELinux"><span class="nav-number">3.</span> <span class="nav-text">关闭SELinux</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看SELinux状态"><span class="nav-number">3.1.</span> <span class="nav-text">查看SELinux状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改-etc-sysconfig-selinux并关闭"><span class="nav-number">3.2.</span> <span class="nav-text">修改/etc/sysconfig/selinux并关闭</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -886,9 +868,9 @@ pyenv rehash   # 记得一定要rehash
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://hadronw.com/2017/09-09/Mac:Linux安装Python多版本管理器Pyenv/';
-          this.page.identifier = '2017/09-09/Mac:Linux安装Python多版本管理器Pyenv/';
-          this.page.title = 'Mac/Linux安装Python多版本管理器Pyenv';
+          this.page.url = 'http://hadronw.com/2018/03-13/CentOS-7设置hostname，关闭防火墙/';
+          this.page.identifier = '2018/03-13/CentOS-7设置hostname，关闭防火墙/';
+          this.page.title = 'CentOS 7设置hostname，关闭防火墙';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://authenticated.disqus.com/embed.js';
