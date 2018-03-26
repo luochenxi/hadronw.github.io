@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="google2004b8a1407fe45b.html" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/mylog.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/mylog.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/mylog.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Linux," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Ambari 是什么 Ambari跟Hadoop等开源软件一样，也是Apache Software Foundation 中的一个项目，">
+<meta name="keywords" content="Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CentOS-7-安装Ambari-环境准备">
+<meta property="og:url" content="http://hadronw.com/2018/03-25/CentOS-7-安装Ambari-环境准备/index.html">
+<meta property="og:site_name" content="hadronw&#39;s Blog">
+<meta property="og:description" content="Ambari 是什么 Ambari跟Hadoop等开源软件一样，也是Apache Software Foundation 中的一个项目，">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-03-26T06:58:07.512Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CentOS-7-安装Ambari-环境准备">
+<meta name="twitter:description" content="Ambari 是什么 Ambari跟Hadoop等开源软件一样，也是Apache Software Foundation 中的一个项目，">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":true,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://hadronw.com/2018/03-25/CentOS-7-安装Ambari-环境准备/"/>
+
+
+
+
+
+  <title>CentOS-7-安装Ambari-环境准备 | hadronw's Blog</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-113179601-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?80d9b9996150c7cdf8ba27fb6575a66f";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">hadronw's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<meta name="sogou_site_verification" content="30h62eUCDR"/>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hadronw.com/2018/03-25/CentOS-7-安装Ambari-环境准备/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hadronw">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mylog.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hadronw's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">CentOS-7-安装Ambari-环境准备</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-25T23:51:15+08:00">
+                2018-03-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/03-25/CentOS-7-安装Ambari-环境准备/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/03-25/CentOS-7-安装Ambari-环境准备/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Ambari-是什么"><a href="#Ambari-是什么" class="headerlink" title="Ambari 是什么"></a>Ambari 是什么</h2><hr>
+<p>Ambari跟Hadoop等开源软件一样，也是Apache Software Foundation 中的一个项目，<a id="more"></a> 并且是顶级项目。就Ambari的作用来说，就是创建、管理、监视 Hadoop 的集群，但是这里的Hadoop是广义，指的是Hadoop整个生态圈（例如 Hive，Hbase，Sqoop，Zookeeper 等），而并不仅是特指 Hadoop。用一句话来说，Ambari 就是为了让 Hadoop以及相关的大数据软件更容易使用的一个工具。</p>
+<p>说到这里，大家就应该明白什么人最需要 Ambari了。那些苦苦花费好几天去安装、调试 Hadoop 的初学者是最能体会到 Ambari 的方便之处的。而且，Ambari 现在所支持的平台组件也越来越多，例如流行的 Spark，Storm 等计算框架，以及资源调度平台 YARN 等，我们都能轻松地通过 Ambari 来进行部署。</p>
+<p>Ambari 自身也是一个分布式架构的软件，主要由两部分组成：Ambari Server 和 Ambari Agent。简单来说，用户通过 Ambari Server 通知 Ambari Agent 安装对应的软件；Agent 会定时地发送各个机器每个软件模块的状态给 Ambari Server，最终这些状态信息会呈现在 Ambari 的 GUI，方便用户了解到集群的各种状态，并进行相应的维护。</p>
+<p>目前网上能找到两个发行版：一个是Apache的Ambari，另一个是Hortonworks的，两者区别不大</p>
+<ul>
+<li>Apache的<a href="https://ambari.apache.org/" target="_blank" rel="noopener">Ambari官网</a></li>
+<li>Hortonworks的<a href="https://zh.hortonworks.com/apache/ambari/" target="_blank" rel="noopener">Ambari中文官网</a>，<a href="https://hortonworks.com/apache/ambari/" target="_blank" rel="noopener">Ambari官网</a></li>
+</ul>
+<h2 id="安装前的准备"><a href="#安装前的准备" class="headerlink" title="安装前的准备"></a>安装前的准备</h2><p>大于3台的服务器(虚拟机中的亦可)——最好Linux系统。<br>如：a0，a1，a2，a0为主节点，a1、a2为从节点。主节点的机器配置最好高一些。</p>
+<p>本文假设准备好了3台服务器，都为新安装的CentOS 7系统。</p>
+<p>前期准备：（每个节点机器都需要配置）</p>
+<ul>
+<li>每个节点上配置jdk</li>
+<li>设置主机名</li>
+<li>相互添加IP地址映射，优化DNS</li>
+<li>节点间SSH的无密码登录</li>
+<li>设置网络静态IP（虚拟机中设置是为了防止每次开机ip出现动态变化）</li>
+<li>同步时间NTP</li>
+<li>关闭防火墙、selinux</li>
+<li>关闭transparent_hugepage</li>
+<li>Python版本要大于或等于2.6（CentOS 7内置版本2.7）</li>
+<li>设置最大打开文件数ulimit</li>
+<li>配置umask</li>
+<li>主节点安装mysql/mariadb</li>
+</ul>
+<h3 id="每个节点上配置jdk"><a href="#每个节点上配置jdk" class="headerlink" title="每个节点上配置jdk"></a>每个节点上配置jdk</h3><p>下载好jdk包，解压到服务器中/xxx/xxx 目录，解压后配置好环境变量</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/profile</span><br><span class="line"></span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">JAVA_HOME</span>=/xxx/xxx/xxx</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">PATH</span>=<span class="variable">$JAVA_HOME</span>/bin:$PATH</span><br><span class="line"></span><br><span class="line">保存退出，</span><br><span class="line"></span><br><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+<h3 id="设置主机名，关闭防火墙-关闭SELinux"><a href="#设置主机名，关闭防火墙-关闭SELinux" class="headerlink" title="设置主机名，关闭防火墙,关闭SELinux"></a>设置主机名，关闭防火墙,关闭SELinux</h3><p><a href="https://hadronw.github.io/2018/03-13/CentOS-7%E8%AE%BE%E7%BD%AEhostname%EF%BC%8C%E5%85%B3%E9%97%AD%E9%98%B2%E7%81%AB%E5%A2%99/" target="_blank" rel="noopener">CentOS 7设置hostname</a></p>
+<h3 id="相互添加IP地址映射，优化DNS，节点间SSH的无密码登录"><a href="#相互添加IP地址映射，优化DNS，节点间SSH的无密码登录" class="headerlink" title="相互添加IP地址映射，优化DNS，节点间SSH的无密码登录"></a>相互添加IP地址映射，优化DNS，节点间SSH的无密码登录</h3><p><a href="https://hadronw.github.io/2017/12-20/%E5%A4%9A%E4%B8%AALinux%E8%99%9A%E6%8B%9F%E6%9C%BASSH%E5%85%8D%E5%AF%86%E7%A0%81%E9%80%9A%E4%BF%A1%E7%9A%84%E9%85%8D%E7%BD%AE/" target="_blank" rel="noopener">Linux多个虚拟机SSH免密码通信的配置</a></p>
+<h3 id="设置网络静态IP"><a href="#设置网络静态IP" class="headerlink" title="设置网络静态IP"></a>设置网络静态IP</h3><p><a href="https://hadronw.github.io/2017/12-19/Mac%E4%B8%8B%E9%85%8D%E7%BD%AEVM%E4%B8%ADLinux-CentOS6-5%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%9D%99%E6%80%81IP/" target="_blank" rel="noopener">虚拟机网络静态IP</a></p>
+<h3 id="同步时间NTP"><a href="#同步时间NTP" class="headerlink" title="同步时间NTP"></a>同步时间NTP</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">yum</span> <span class="selector-tag">install</span> <span class="selector-tag">ntpd</span></span><br><span class="line"><span class="selector-tag">systemctl</span> <span class="selector-tag">is-enabled</span> <span class="selector-tag">ntpd</span></span><br><span class="line"><span class="selector-tag">systemctl</span> <span class="selector-tag">enable</span> <span class="selector-tag">ntpd</span></span><br><span class="line"><span class="selector-tag">systemctl</span> <span class="selector-tag">start</span> <span class="selector-tag">ntpd</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">ntpdate</span> <span class="selector-tag">time1</span><span class="selector-class">.aliyun</span><span class="selector-class">.com</span></span><br><span class="line"><span class="selector-tag">crontab</span> <span class="selector-tag">e</span></span><br><span class="line"> 30 02 * * *  <span class="selector-tag">ntpdate</span> <span class="selector-tag">time1</span><span class="selector-class">.aliyun</span><span class="selector-class">.com</span></span><br></pre></td></tr></table></figure>
+<h3 id="关闭transparent-hugepage"><a href="#关闭transparent-hugepage" class="headerlink" title="关闭transparent_hugepage"></a>关闭transparent_hugepage</h3><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">查看transparent_hugepage状态</span><br><span class="line">cat <span class="meta-keyword">/sys/</span>kernel<span class="meta-keyword">/mm/</span>transparent_hugepage/defrag</span><br><span class="line">[always] madvise never  <span class="meta"># 表示开启</span></span><br><span class="line">cat <span class="meta-keyword">/sys/</span>kernel<span class="meta-keyword">/mm/</span>transparent_hugepage/enabled</span><br><span class="line">[always] madvise never  <span class="meta"># 表示开启</span></span><br><span class="line"></span><br><span class="line">vi <span class="meta-keyword">/etc/</span>rc.d/rc.local  <span class="meta">#在文末添加</span></span><br><span class="line"></span><br><span class="line">if test -f <span class="meta-keyword">/sys/</span>kernel<span class="meta-keyword">/mm/</span>transparent_hugepage/enabled; then</span><br><span class="line"> echo never &gt; <span class="meta-keyword">/sys/</span>kernel<span class="meta-keyword">/mm/</span>transparent_hugepage/enabled</span><br><span class="line"> fi</span><br><span class="line"> if test -f <span class="meta-keyword">/sys/</span>kernel<span class="meta-keyword">/mm/</span>transparent_hugepage/defrag; then</span><br><span class="line"> echo never &gt; <span class="meta-keyword">/sys/</span>kernel<span class="meta-keyword">/mm/</span>transparent_hugepage/defrag</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">保存后退出chmod +x <span class="meta-keyword">/etc/</span>rc.d/rc.local  </span><br><span class="line">赋予chmod +x <span class="meta-keyword">/etc/</span>rc.d/rc.local文件执行权限</span><br><span class="line"></span><br><span class="line">重启系统再查看状态</span><br><span class="line"></span><br><span class="line">cat <span class="meta-keyword">/sys/</span>kernel<span class="meta-keyword">/mm/</span>transparent_hugepage/defrag</span><br><span class="line">always madvise [never]  <span class="meta"># 表示关闭</span></span><br><span class="line">cat <span class="meta-keyword">/sys/</span>kernel<span class="meta-keyword">/mm/</span>transparent_hugepage/enabled</span><br><span class="line">always madvise [never]  <span class="meta"># 表示关闭</span></span><br></pre></td></tr></table></figure>
+<h3 id="设置最大打开文件数ulimit"><a href="#设置最大打开文件数ulimit" class="headerlink" title="设置最大打开文件数ulimit"></a>设置最大打开文件数ulimit</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ulimit</span> -Sn</span><br><span class="line"><span class="built_in">ulimit</span> -Hn <span class="comment"># 如果最大数小于10000 则重设</span></span><br><span class="line"><span class="built_in">ulimit</span> -n 10000</span><br></pre></td></tr></table></figure>
+<h3 id="配置umask"><a href="#配置umask" class="headerlink" title="配置umask"></a>配置umask</h3><p>UMASK (用户掩码或用户文件创建掩码) 设置在 Linux 计算机上创建新文件或文件夹时授予的默认权限或基本权限。大多数 Linux 发行将022设置为默认的 umask 值。umask 值022授予对新文件或文件夹的读取、写入、执行权限755。umask 值027授予对新文件或文件夹的读取、写入、执行权限750<br>umaks # 如果不是0022，则执行以下语句</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="built_in">umask</span> 0022 &gt;&gt; /etc/profile</span><br></pre></td></tr></table></figure>
+<h3 id="主节点安装mysql-mariadb"><a href="#主节点安装mysql-mariadb" class="headerlink" title="主节点安装mysql/mariadb"></a>主节点安装mysql/mariadb</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">yum <span class="keyword">install</span> mariadb-<span class="keyword">server</span></span><br><span class="line"></span><br><span class="line">yum <span class="keyword">install</span> mysql-connector-<span class="keyword">java</span> # 安装jdbc驱动</span><br><span class="line"></span><br><span class="line">systemctl <span class="keyword">start</span> mariadb</span><br><span class="line">systemctl <span class="keyword">enable</span> mariadb  #启动</span><br><span class="line"></span><br><span class="line">mysql_secure_installation  # 数据库初始化设置</span><br><span class="line"></span><br><span class="line">#首先是设置密码，会提示先输入密码</span><br><span class="line">Enter <span class="keyword">current</span> <span class="keyword">password</span> <span class="keyword">for</span> root (enter <span class="keyword">for</span> <span class="keyword">none</span>):&lt;–初次运行直接回车</span><br><span class="line">#设置密码</span><br><span class="line"><span class="keyword">Set</span> root <span class="keyword">password</span>? [Y/n] &lt;– 是否设置root用户密码，输入y并回车或直接回车</span><br><span class="line"><span class="keyword">New</span> <span class="keyword">password</span>: &lt;– 设置root用户的密码</span><br><span class="line">Re-enter <span class="keyword">new</span> <span class="keyword">password</span>: &lt;– 再输入一次你设置的密码</span><br><span class="line">#其他配置</span><br><span class="line">Remove anonymous <span class="keyword">users</span>? [Y/n] &lt;– 是否删除匿名用户，回车</span><br><span class="line"><span class="keyword">Disallow</span> root login remotely? [Y/n] &lt;–是否禁止root远程登录,回车,</span><br><span class="line">Remove <span class="keyword">test</span> <span class="keyword">database</span> <span class="keyword">and</span> <span class="keyword">access</span> <span class="keyword">to</span> it? [Y/n] &lt;– 是否删除<span class="keyword">test</span>数据库，回车</span><br><span class="line">Reload privilege <span class="keyword">tables</span> <span class="keyword">now</span>? [Y/n] &lt;– 是否重新加载权限表，回车</span><br><span class="line">#初始化MariaDB完成，接下来测试登录，输入密码能正常登陆就完成了</span><br></pre></td></tr></table></figure>
+<p>创建ambari数据库，用户</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p  #连接数据库</span><br><span class="line"></span><br><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> create database ambari character <span class="built_in">set</span> utf8 ;  </span></span><br><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> CREATE USER <span class="string">'ambari'</span>@<span class="string">'%'</span>IDENTIFIED BY <span class="string">'123456'</span>;</span></span><br><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> GRANT ALL PRIVILEGES ON *.* TO <span class="string">'ambari'</span>@<span class="string">'%'</span>;</span></span><br><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> FLUSH PRIVILEGES;</span></span><br></pre></td></tr></table></figure>
+<p>如果要安装Hive，再创建Hive数据库和用户 再执行下面的语句：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> create database hive character <span class="built_in">set</span> utf8 ;  </span></span><br><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> CREATE USER <span class="string">'hive'</span>@<span class="string">'%'</span>IDENTIFIED BY <span class="string">'123456'</span>;</span></span><br><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> GRANT ALL PRIVILEGES ON *.* TO <span class="string">'hive'</span>@<span class="string">'%'</span>;</span></span><br><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> FLUSH PRIVILEGES;</span></span><br></pre></td></tr></table></figure>
+<p>至此，Ambari的准备工作就完成了</p>
+<p>注：如果要在云上面搭建，一定要选择相同的地区，地域打击。主从节点在同一个地区！否则会出现IP连接上的错误</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    hadronw
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://hadronw.com/2018/03-25/CentOS-7-安装Ambari-环境准备/" title="CentOS-7-安装Ambari-环境准备">http://hadronw.com/2018/03-25/CentOS-7-安装Ambari-环境准备/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://hadronw.com" rel="external nofollow" target="_blank"></a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03-13/Mosh优化SSH连接卡顿问题/" rel="next" title="Mosh优化SSH连接卡顿问题">
+                <i class="fa fa-chevron-left"></i> Mosh优化SSH连接卡顿问题
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/mylog.png"
+                alt="hadronw" />
+            
+              <p class="site-author-name" itemprop="name">hadronw</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/hadronw" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:hadronw@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ambari-是什么"><span class="nav-number">1.</span> <span class="nav-text">Ambari 是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装前的准备"><span class="nav-number">2.</span> <span class="nav-text">安装前的准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#每个节点上配置jdk"><span class="nav-number">2.1.</span> <span class="nav-text">每个节点上配置jdk</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置主机名，关闭防火墙-关闭SELinux"><span class="nav-number">2.2.</span> <span class="nav-text">设置主机名，关闭防火墙,关闭SELinux</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#相互添加IP地址映射，优化DNS，节点间SSH的无密码登录"><span class="nav-number">2.3.</span> <span class="nav-text">相互添加IP地址映射，优化DNS，节点间SSH的无密码登录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置网络静态IP"><span class="nav-number">2.4.</span> <span class="nav-text">设置网络静态IP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#同步时间NTP"><span class="nav-number">2.5.</span> <span class="nav-text">同步时间NTP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关闭transparent-hugepage"><span class="nav-number">2.6.</span> <span class="nav-text">关闭transparent_hugepage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置最大打开文件数ulimit"><span class="nav-number">2.7.</span> <span class="nav-text">设置最大打开文件数ulimit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置umask"><span class="nav-number">2.8.</span> <span class="nav-text">配置umask</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主节点安装mysql-mariadb"><span class="nav-number">2.9.</span> <span class="nav-text">主节点安装mysql/mariadb</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">hadronw</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">
+  Hosted by
+  <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
+</div>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://authenticated.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://hadronw.com/2018/03-25/CentOS-7-安装Ambari-环境准备/';
+          this.page.identifier = '2018/03-25/CentOS-7-安装Ambari-环境准备/';
+          this.page.title = 'CentOS-7-安装Ambari-环境准备';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://authenticated.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cyt3cnyFD';
+      var conf = '99d2a1f8b71a69a0b0a074f25c6bfb7b';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+          flOptions.iconStyle = "box";
+      
+          flOptions.boxForm = "horizontal";
+      
+          flOptions.position = "middleRight";
+      
+          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
+  
+
+  
+  
+
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/exturl.js?v=5.1.4"></script>
+
+
+</body>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+</html>
