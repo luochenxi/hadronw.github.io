@@ -1,3 +1,4 @@
+http://hadronw.com/2018/03-26/CentOS-7-安装Ambari-在线安装/
 http://hadronw.com/2018/03-25/CentOS-7-安装Ambari-环境准备/
 http://hadronw.com/2018/03-13/Mosh优化SSH连接卡顿问题/
 http://hadronw.com/2018/03-13/CentOS-7设置hostname，关闭防火墙/
@@ -7,4 +8,3 @@ http://hadronw.com/2018/02-07/iterm2配置/
 http://hadronw.com/2018/01-23/Mac中安装nvm/
 http://hadronw.com/2018/01-22/hexo博客绑定域名/
 http://hadronw.com/2017/12-20/Linux中配置环境变量/
-http://hadronw.com/2017/12-20/多个Linux虚拟机SSH免密码通信的配置/
