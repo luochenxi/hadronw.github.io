@@ -1,3 +1,4 @@
+http://hadronw.com/2018/03-28/Mac中使用SSH连接服务器中断问题/
 http://hadronw.com/2018/03-27/删除ambari安装的hadoop集群/
 http://hadronw.com/2018/03-26/CentOS-7-安装Ambari-在线安装/
 http://hadronw.com/2018/03-25/CentOS-7-安装Ambari-环境准备/
@@ -7,4 +8,3 @@ http://hadronw.com/2018/02-08/Anaconda的安装与使用/
 http://hadronw.com/2018/02-07/iterm2卡顿问题/
 http://hadronw.com/2018/02-07/iterm2配置/
 http://hadronw.com/2018/01-23/Mac中安装nvm/
-http://hadronw.com/2018/01-22/hexo博客绑定域名/
