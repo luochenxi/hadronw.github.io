@@ -25,4 +25,4 @@ env:
         # Github Pages
         - GH_REF: github.com/hadronw/hadronw.github.io.git #设置GH_REF，注意更改成自己的仓库地址
         # Coding Pages
-        #- CO_REF: git.coding.net/hadronw/hadronw.git 
+        - CO_REF: git.coding.net/hadronw/hadronw.git 

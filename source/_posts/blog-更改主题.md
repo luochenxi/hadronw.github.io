@@ -55,7 +55,7 @@ comments: true
 
 ## 博客的第三方功能
 
-评论插件——[Disqus](https://disqus.com/)、[畅言](http://changyan.kuaizhan.com/)
+评论插件——[Disqus国外的需要翻墙才能使用](https://disqus.com/)、[畅言国内](http://changyan.kuaizhan.com/)、[来比力](https://livere.com/)
 
 百度站长：[https://zhanzhang.baidu.com/](https://zhanzhang.baidu.com/)
 
@@ -73,7 +73,7 @@ Google 站长: [https://www.google.com/webmasters/verification/home?hl=zh-CN](ht
 
 
 
-## hexo多个标签的使用
+## hexo中多个标签的使用
 
 
 ```
