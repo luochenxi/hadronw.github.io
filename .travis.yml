@@ -10,6 +10,7 @@ before_install:
     - npm install hexo-cli -g
     - chmod +x ./publish-to-gh-pages.sh  # 为shell文件添加可执行权限
 install:
+    - npm rebuild node-sass --force
     - npm install # 安装hexo及插件
 script:
     - hexo clean # 清除
