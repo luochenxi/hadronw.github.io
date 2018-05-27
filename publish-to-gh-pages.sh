@@ -12,6 +12,8 @@ git config user.email "hadronw@qq.com"
 git add .
 git commit -m "Travis CI Auto Builder at `date +"%Y-%m-%d %H:%M"`"
 git push --force --quiet "https://${Travis_gh_token}@${GH_REF}" master:master
+# push coding https://coding用户名:${CO_TOKEN}@${CO_REF}
+# https://git.coding.net/hadronw/hadronw.git
 git push --force --quiet "https://hadronw:${Travis_co_token}@${CO_REF}" master:master
 
 
