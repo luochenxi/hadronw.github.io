@@ -1,5 +1,6 @@
 ---
 title: SQL常用命令(1)
+date: 2017-06-05 15:33:50
 tags: SQL
 categories: SQL
 comments: true
@@ -11,7 +12,7 @@ comments: true
 
 
 SQL操作的类型就几种归纳起来就四个字：增、删、改、查
-
+<!-- more -->
 * 增：添加数据，关键词``insert``
 * 删：删除数据，关键词``delete``
 * 改：修改数据，关键词``update``
@@ -30,7 +31,7 @@ CREATE TABLE celebs(id  INTEGER,name TEXT,age INTEGER);
 ```
 创建一个名人的数据表格，它有着三个字段id，姓名，年龄；其中integer，text是字段类型（integer表示的是数字，text表示是文字）
 
-<!-- more -->
+
 ### 添加数据
 ```
 INSERT INTO celebs(id,name,age) values(1,'Justin Bieber',21);

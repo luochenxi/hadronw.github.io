@@ -20,7 +20,7 @@ permalink_defaults:
 
 
 baidu_url_submit:
-  count: 10 ## 提交最新的一个链接
+  count: 20 ## 提交最新的一个链接
   host: http://hadronw.com ## 在百度站长平台中注册的域名
   token: gEJr2dtceMKdrPYn ## 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!
   path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
@@ -100,3 +100,5 @@ deploy:
 - type: git
   repo: https://git.coding.net/hadronw/hadronw.git
   branch: master
+- type: baidu_url_submitter ## 这是新加的
+  bucket: hadronw.com

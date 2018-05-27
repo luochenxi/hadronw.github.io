@@ -37,13 +37,14 @@ theme:
 copyright:
   enable: true
   # https://creativecommons.org/
-  license: '<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议-转载请注明出处！</a>'
+  # license: '<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议-转载请注明出处！</a>'
+  license: 转载请注明出处！
 
 reward:
   enable: false
   qrCode:
-    wechat:
-    alipay:
+    wechat: /image/wechat-pay.jpg
+    alipay: /image/ali-pay.jpg
 
 # ===========================================
 # Social links Settings
