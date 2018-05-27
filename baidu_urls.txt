@@ -1,4 +1,4 @@
-http://hadronw.com/2018/05-27/SQL常用命令-1/
+http://hadronw.com/2018/05-27/travis-autodeploy-github-with-coding/
 http://hadronw.com/2018/05-27/hexo写作的基本语法/
 http://hadronw.com/2018/05-26/Vimium的使用/
 http://hadronw.com/2018/05-25/blog-更改主题/
@@ -8,3 +8,13 @@ http://hadronw.com/2018/05-04/vi-vim-常用命令/
 http://hadronw.com/2018/04-22/Linux中安装Maven-Ant/
 http://hadronw.com/2018/03-30/Hbase-shell-中命令缺少单引号无法正常使用解决方案/
 http://hadronw.com/2018/03-28/Mac中使用SSH连接服务器中断问题/
+http://hadronw.com/2018/03-27/删除ambari安装的hadoop集群/
+http://hadronw.com/2018/03-26/CentOS-7-安装Ambari-在线安装/
+http://hadronw.com/2018/03-25/CentOS-7-安装Ambari-环境准备/
+http://hadronw.com/2018/03-13/Mosh优化SSH连接卡顿问题/
+http://hadronw.com/2018/03-13/CentOS-7设置hostname，关闭防火墙/
+http://hadronw.com/2018/02-08/Anaconda的安装与使用/
+http://hadronw.com/2018/02-07/iterm2卡顿问题/
+http://hadronw.com/2018/02-07/iterm2配置/
+http://hadronw.com/2018/01-23/Mac中安装nvm/
+http://hadronw.com/2018/01-22/hexo博客绑定域名/
