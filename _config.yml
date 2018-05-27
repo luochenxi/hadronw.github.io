@@ -8,7 +8,7 @@ subtitle:
 description:
 author: hadronw
 language: zh-Hans
-timezone:
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -18,12 +18,6 @@ root: /
 permalink: :year/:month-:day/:title/
 permalink_defaults:
 
-
-baidu_url_submit:
-  count: 20 ## 提交最新的一个链接
-  host: http://hadronw.com ## 在百度站长平台中注册的域名
-  token: gEJr2dtceMKdrPYn ## 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!
-  path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
 
 # Directory
 source_dir: source
@@ -49,7 +43,7 @@ highlight:
   enable: true
   line_number: true
   auto_detect: true
-  tab_replace:
+  tab_replace: true
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -86,13 +80,6 @@ theme: even
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-# https://github.com/hadronw/hadronw.github.io.git
-#deploy:
-#  type: git
-#  repository: https://github.com/hadronw/hadronw.github.io.git
-#  branch: master
-  #type: baidu_url_submitter ## 这是新加的
-
 deploy:
 - type: git
   repo: https://github.com/hadronw/hadronw.github.io.git
@@ -100,5 +87,3 @@ deploy:
 - type: git
   repo: https://git.coding.net/hadronw/hadronw.git
   branch: master
-- type: baidu_url_submitter ## 这是新加的
-  bucket: hadronw.com
