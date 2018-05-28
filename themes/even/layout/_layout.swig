@@ -17,6 +17,8 @@
           <div id="content" class="content">
             {% block content %}{% endblock %}
           </div>
+          {% include '_partial/shares.swig' %}
+
           {% include '_partial/comments.swig' %}
         </div>
       </main>

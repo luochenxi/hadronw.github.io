@@ -110,6 +110,11 @@ changyan:
 #LiveRe 来必力 MTAyMC8zNjg0MS8xMzM3Nw
 livere_datauid: MTAyMC8zNjg0MS8xMzM3Nw
 
+# shares-mob  第三方分享 mob.com
+shares:
+  shares-mob: 1fac126c2836c
+
+
 # ===========================================
 # Version
 # ===========================================
