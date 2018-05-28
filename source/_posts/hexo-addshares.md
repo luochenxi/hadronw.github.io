@@ -1,4 +1,11 @@
-# hexo blog 添加分享功能
+---
+title: hexo blog 添加分享功能
+date: 2018-05-28 19:49:26
+tags: [hexo,blog]
+categories: hexo
+comments: true
+---
+
 
 前几天把hexo博客的主题更换了一下，新换的主题没有集成分享功能，所以手动添加一下。
 
@@ -134,23 +141,37 @@ _layout.swig中的引用代码
 
 支持的分享平台如下所示，本文中的功能并没有完全添加，知道了官方支持的分享平台后，则可以根据实际情况进行调整
 
-| 平台名称 | ID  |
-| --- | --- |
-| 新浪微博 | weibo |
-| 微信 |  weixin|
-|  QQ空间|  qzone|
-|  QQ好友|  qq|
-|  豆瓣网|  douban|
-| Facebook| facebook|
-|Twitter | twitter |
-| Pocket | pocket |
-| Google+ | google |
-| 有道云笔记 | youdao |
-| Tumblr | tumblr |
-| Instapaper| instapaper |
-| Linkedin | linkedin |
+```
+平台名称   		 ID   
+
+新浪微博    ——》 weibo  
+
+微信       ——》 weixin 
+
+QQ空间     ——》 qzone 
+
+QQ好友     ——》 qq 
+
+豆瓣网      ——》 douban 
+
+Faceboo    ——》 facebook 
+
+Twitter    ——》 twitter  
+
+Pocket     ——》 pocket  
+
+Google+    ——》 google  
+
+有道云笔记   ——》 youdao  
+
+Tumblr     ——》 tumblr  
+
+Instapap   ——》 instapaper  
+
+Linkedin   ——》 linkedin 
 
 
+```
 ### 分享功能弹出的效果
 
 ---
