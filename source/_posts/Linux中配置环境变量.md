@@ -58,7 +58,6 @@ JAVA_HOME=/home/hadoop2/app/jdk1.8.0_151
 CLASSPATH=$JAVA_HOME/lib:$CLASSPATH
 
 
-
 PATH=$JAVA_HOME/bin:$PATH
 export JAVA_HOME CLASSPATH PATH
 
@@ -69,8 +68,17 @@ OTHER=/xxx/xxx/xx
 PATH=$JAVA_HOME/bin:$OTHER/bin:$PATH
 export JAVA_HOME OTHER CLASSPATH PATH
 
+```
+
+或者简单一点的如：
 
 ```
+export JAVA_HOME=/opt/module/jdk1.8.0_151
+export PATH=$PATH:$JAVA_HOME/bin
+
+```
+
+
 
 将以上配置添加其中，保存退出
 

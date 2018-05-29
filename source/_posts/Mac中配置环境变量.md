@@ -126,6 +126,18 @@ export PATH=/usr/local/hbase/bin:"$PATH"
 
 ```
 
+或者：
+
+```
+
+export JAVA_HOME=/opt/module/jdk1.8.0_151
+export PATH=$PATH:$JAVA_HOME/bin
+
+```
+
+
+
+
 ### 刷新
 
 ```
