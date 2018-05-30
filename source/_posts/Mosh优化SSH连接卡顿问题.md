@@ -1,7 +1,7 @@
 ---
 title: Mosh优化SSH连接卡顿问题
 date: 2018-03-13 20:55:38
-tags: Mac
+tags: [Mac、Linux、mosh、iterm2、tmux]
 categories: Mac
 comments: Mac
 ---
@@ -61,23 +61,37 @@ mosh root@xxx.xxx.xxx.xxx
 
 ```
 
-以上是简单的使用，还有进阶版的使用，指定端口等。具体看官方文档
+以上是简单的使用，还有进阶版的使用，指定端口等。具体看官方文档，参考如下：
 
-如果连接不成功，可能是防火墙的问题，可以试着从这方面着手
+```
+sudo iptables -I INPUT -p udp --dport 60001 -j ACCEPT
+```
+服务端开启60001端口，提供客服端访问，客服端访问参考如下：
 
+```
+mosh -p 60001 用户名@ip地址
 
-
-## 参考文档
-
-[官方网页 https://mosh.org/](https://mosh.org/)
-
-[https://meiriyitie.com/2015/05/28/mosh/](https://meiriyitie.com/2015/05/28/mosh/)
-
-[https://www.hi-linux.com/posts/23118.html](https://www.hi-linux.com/posts/23118.html)
-
-[http://blog.sciencenet.cn/blog-935970-856971.html](http://blog.sciencenet.cn/blog-935970-856971.html)
+p 参数用于指定 UDP 端口
+```
 
 
+如果连接不成功，可能是防火墙有关端口的问题。
+
+mosh可以结合tmux一起使用，效果会更佳
+
+
+
+参考链接：
+
+官方网站： https://mosh.org/
+
+https://meiriyitie.com/2015/05/28/mosh/
+
+https://www.hi-linux.com/posts/23118.html
+
+http://blog.sciencenet.cn/blog-935970-856971.html
+
+https://linux.cn/article-6262-1.html
 
 
 
