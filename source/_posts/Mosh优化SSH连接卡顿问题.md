@@ -1,7 +1,7 @@
 ---
 title: Mosh优化SSH连接卡顿问题
 date: 2018-03-13 20:55:38
-tags: [Mac、Linux、mosh、iterm2、tmux]
+tags: [Mac,Linux,mosh,iterm2,tmux]
 categories: Mac
 comments: Mac
 ---
