@@ -17,12 +17,12 @@
 
 
 
-  <meta name="description" content="Mosh优化SSH连接卡顿问题"/>
+  <meta name="description" content="Jps无法查看运行程序进程"/>
 
 
 
 
-  <meta name="keywords" content="Linux, Mac, mosh, iterm2, tmux, hadronw's Blog" />
+  <meta name="keywords" content="Linux, Java, hadronw's Blog" />
 
 
 
@@ -46,7 +46,7 @@
 
 
 
-<link rel="canonical" href="http://hadronw.com/2018/03-13/Mosh优化SSH连接卡顿问题/"/>
+<link rel="canonical" href="http://hadronw.com/2018/05-30/jps-question/"/>
 
 
 
@@ -121,7 +121,7 @@
   window.config = {"title":"hadronw's Blog","subtitle":null,"description":null,"author":"hadronw","language":"zh-Hans","timezone":"Asia/Shanghai","url":"http://hadronw.com","root":"/","permalink":":year/:month-:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":null,"new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":true,"relative_link":false,"future":true,"highlight":{"enable":true,"auto_detect":true,"line_number":true,"tab_replace":true,"first_line_number":"always1"},"default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":15,"pagination_dir":"page","theme":{"color":"Default","toc":true,"fancybox":true,"pjax":true},"deploy":[{"type":"git","repo":"https://github.com/hadronw/hadronw.github.io.git","branch":"master"},{"type":"git","repo":"https://git.coding.net/hadronw/hadronw.git","branch":"master"}],"ignore":[],"index_generator":{"per_page":15,"order_by":"-date","path":""},"archive_generator":{"per_page":15,"yearly":true,"monthly":true,"daily":false},"baidusitemap":{"path":"baidusitemap.xml"},"category_generator":{"per_page":15},"feed":{"type":"atom","limit":20,"hub":"","content":true,"content_limit":140,"content_limit_delim":"","path":"atom.xml"},"sitemap":{"path":"sitemap.xml"},"tag_generator":{"per_page":15},"marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"server":{"port":4000,"log":false,"ip":"0.0.0.0","compress":false,"header":true},"since":2017,"favicon":"/mylog.png","rss":"default","menu":{"Home":"/","Archives":"/archives/","Tags":"/tags/","Categories":"/categories/","About":"/about"},"copyright":{"enable":true,"license":"转载请注明出处！"},"reward":{"enable":false,"qrCode":{"wechat":"/image/wechat-pay.jpg","alipay":"/image/ali-pay.jpg"}},"social":{"email":"hadronw@qq.com","stack-overflow":null,"twitter":null,"facebook":null,"linkedin":null,"google":null,"github":"https://github.com/hadronw","weibo":null,"zhihu":null,"douban":null,"pocket":null,"tumblr":null,"instagram":null},"leancloud":{"app_id":"q4mf6h8NnS0MNjTqEsBsKusw-gzGzoHsz","app_key":"7oNyN2nBpEXdSt04snJIsgPn"},"baidu_analytics":"80d9b9996150c7cdf8ba27fb6575a66f","google_analytics":"UA-113179601-1","google_verification":"cXrmNsZjDqC3drL1XY6-CZURO2H7s8X-njVT3_EFO8s","baidu_verification":"jUV4JeBMWP","sogou_verification":"30h62eUCDR","disqus_shortname":null,"changyan":{"appid":null,"appkey":null},"livere_datauid":"MTAyMC8zNjg0MS8xMzM3Nw","shares":{"shares-mob":"1fac126c2836c"},"version":"2.8.0"};
 </script>
 
-    <title> Mosh优化SSH连接卡顿问题 - hadronw's Blog </title>
+    <title> Jps无法查看运行程序进程 - hadronw's Blog </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -255,25 +255,25 @@
     <header class="post-header">
       <h1 class="post-title">
         
-          Mosh优化SSH连接卡顿问题
+          Jps无法查看运行程序进程
         
       </h1>
 
       <div class="post-meta">
         <span class="post-time">
-          2018-03-13
+          2018-05-30
         </span>
         
           <div class="post-category">
             
-              <a href="/categories/Mac/">Mac</a>
+              <a href="/categories/Linux/">Linux</a>
             
           </div>
         
         
         <div class="post-visits"
-             data-url="/2018/03-13/Mosh优化SSH连接卡顿问题/"
-             data-title="Mosh优化SSH连接卡顿问题">
+             data-url="/2018/05-30/jps-question/"
+             data-title="Jps无法查看运行程序进程">
             阅读次数 0
           </div>
         
@@ -285,7 +285,7 @@
   <div class="post-toc" id="post-toc">
     <h2 class="post-toc-title">文章目录</h2>
     <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Mosh是什么"><span class="toc-text">Mosh是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mosh安装"><span class="toc-text">Mosh安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Mac安装"><span class="toc-text">Mac安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux安装"><span class="toc-text">Linux安装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mosh使用"><span class="toc-text">Mosh使用</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#jps简介"><span class="toc-text">jps简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#问题梳理"><span class="toc-text">问题梳理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#问题排查"><span class="toc-text">问题排查</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#启动的某个程序出现了问题"><span class="toc-text">启动的某个程序出现了问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux系统自带的清除机制"><span class="toc-text">Linux系统自带的清除机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tmp中的磁盘满了，无法存储数据"><span class="toc-text">/tmp中的磁盘满了，无法存储数据</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#小结"><span class="toc-text">小结</span></a></li></ol>
     </div>
   </div>
 
@@ -293,33 +293,45 @@
     <div class="post-content">
       
         <blockquote>
-<p>在使用SSH连接远程服务器时，因为网络等原因会产生卡顿，导致使用非常不爽。网上找到一个解决方案Mosh，本文记录一下使用过程。</p>
+<p>出现情况：程序正常运行后,jps使用也正常，间隔一段时间后jps无法查看Java相关进程了</p>
 </blockquote>
-<h2 id="Mosh是什么"><a href="#Mosh是什么" class="headerlink" title="Mosh是什么"></a>Mosh是什么</h2><hr>
-<p><a href="https://mosh.org/" target="_blank" rel="noopener">Mosh</a>官网，是一个替代SSH的免费软件，它最大的特点是支持网络漫游和间歇性连接。<br><a id="more"></a></p>
+<h2 id="jps简介"><a href="#jps简介" class="headerlink" title="jps简介"></a>jps简介</h2><hr>
+<p>先了解一下jps是什么？</p>
+<a id="more"></a>
+<p>jps：Java Virtual Machine Process Status Tool 用于查看本机Java相关进程的pid。</p>
+<p>相关用法：</p>
+<figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">选项 </span><br><span class="line">-<span class="ruby">q 仅输出VM标识符，不包括<span class="class"><span class="keyword">class</span> <span class="title">name</span>,<span class="title">jar</span> <span class="title">name</span>,<span class="title">arguments</span> <span class="title">in</span> <span class="title">main</span> <span class="title">method</span> </span></span></span><br><span class="line"><span class="ruby">-m 输出main method的参数 </span></span><br><span class="line"><span class="ruby">-l 输出完全的包名，应用主类名，jar的完全路径名 </span></span><br><span class="line"><span class="ruby">-v 输出jvm参数 </span></span><br><span class="line"><span class="ruby">-V 输出通过flag文件传递到JVM中的参数(.hotspotrc文件或-<span class="symbol">XX:</span>Flags=所指定的文件 </span></span><br><span class="line"><span class="ruby">-Joption 传递参数到vm,例如<span class="symbol">:-J-Xms48m</span></span></span><br></pre></td></tr></table></figure>
+<p>Linux中配置好Java的环境变量后，即可使用jps命令查看Java相关进程，上文所列举的是配套使用的参数。</p>
+<p>在使用过程中，有可能会出现jps查看不了Java进程的情况。程序在运行，jps命令却看不到相关程序的进程。但用Linux的<code>ps -aux</code>相关命令却可以看到，问题出在哪里呢？</p>
+<p>详细介绍可以看该文：<a href="http://trinea.iteye.com/blog/1196400" target="_blank" rel="noopener">http://trinea.iteye.com/blog/1196400</a></p>
+<h2 id="问题梳理"><a href="#问题梳理" class="headerlink" title="问题梳理"></a>问题梳理</h2><hr>
+<p>其实上述的文章已经指明了，小编在阅读的时候却没有过多的注意，导致在解决这个问题时走了不少弯路。</p>
+<p>原因是：程序启动正常，运行正常，使用jps查看也是正常的。却在间隔了几分钟或者十几分钟之后，jps无法查看进程了。</p>
+<p>发现了上述情况后，小编的第一反应，是不是系统相关的问题，而不是<code>是不是程序配置出现了相关问题</code>。</p>
+<p>因为此次出现的情况发生在新使用的腾讯云服务器中，而程序的配置是与之前阿里云上的配置一样的。同样的配置方式阿里云正常，腾讯云中就出问题了，所以没有怀疑相同的配置情况是否适合腾讯云上。</p>
+<p>首先分析一下jps查看进程的方式：</p>
+<p>Java程序启动后，会默认在系统的根目录下的/tmp文件夹中创建一个含当前用户名的<code>hsperfdata_userName</code>文件夹，同时在该文件夹中会创建以Java相关进程id为为文件名的文件。并在相对应的文件中存储jvm运行的相关信息。</p>
+<p>jps就是读取<code>hsperfdata_userName</code>文件夹中文件的信息，并把读取到的信息输出到控制台展示。</p>
+<p>重点：<strong>如果根目录下的/tmp文件被删除，或者说/tmp中的hsperfdata_userName文件夹被删除</strong>，那jps命令是查看不了Java相关程序的进程的。</p>
+<p>因此，出现jps无法查看已经启动了的相关Java进程的原因就是<code>/tmp</code>文件夹中的<code>hsperfdata_userName</code>被删除，或者无访问权限。 </p>
+<h2 id="问题排查"><a href="#问题排查" class="headerlink" title="问题排查"></a>问题排查</h2><hr>
+<p>如果有遇到相关问题，第一时间查看根目录下<code>/tmp</code>文件夹中的信息。</p>
+<p>原因找到了，那为什么会出现<code>/tmp</code>中的信息被删除呢？</p>
 <ul>
-<li>会话的中断不会导致当前正在前端执行的命令中断，相当于你所有的操作都是在screen命令中一样在后台执行</li>
-<li>会话在中断过后，不会立刻退出，而是启用一个计时器，当网络恢复后会自动重新连接，同时会延续之前的会话，不会重新开启一个</li>
+<li>启动的某个程序出现问题，把<code>/tmp</code>中的信息全部删除</li>
+<li>Linux系统自带的清除机制</li>
+<li><code>/tmp</code>中的磁盘满了，无法存储数据</li>
 </ul>
-<h2 id="Mosh安装"><a href="#Mosh安装" class="headerlink" title="Mosh安装"></a>Mosh安装</h2><hr>
-<p>Mosh使用需要在服务端、客户端分别安装Mosh工具，才能使用</p>
-<h3 id="Mac安装"><a href="#Mac安装" class="headerlink" title="Mac安装"></a>Mac安装</h3><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span><span class="keyword">install </span>mosh</span><br></pre></td></tr></table></figure>
-<h3 id="Linux安装"><a href="#Linux安装" class="headerlink" title="Linux安装"></a>Linux安装</h3><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Debian、Ubuntu 和Mint 类似的系统中，你可以很容易地用apt-get包管理器安装</span></span><br><span class="line"></span><br><span class="line"> apt-get update</span><br><span class="line"> apt-get <span class="keyword">install</span> mosh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在基于RHEL/CentOS/Fedora的系统中，要使用yum包管理器安装mosh，你需要打开第三方的EPEL</span></span><br><span class="line"></span><br><span class="line"> yum update</span><br><span class="line"> yum <span class="keyword">install</span> mosh</span><br><span class="line"> </span><br><span class="line"> <span class="comment"># 在Fedora 22+的版本中，你需要使用dnf包管理器来安装Mosh</span></span><br><span class="line"> dnf <span class="keyword">install</span> mosh</span><br></pre></td></tr></table></figure>
-<h2 id="Mosh使用"><a href="#Mosh使用" class="headerlink" title="Mosh使用"></a>Mosh使用</h2><hr>
-<p>简单的使用，用mosh连接Linux服务器</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mosh root@xxx.xxx.xxx.xxx</span><br><span class="line"></span><br><span class="line">输入密码后就连接成功了,使用之后你会发现卡顿消失了</span><br><span class="line"></span><br><span class="line">输入<span class="keyword">exit</span>则退出连接</span><br></pre></td></tr></table></figure>
-<p>以上是简单的使用，还有进阶版的使用，指定端口等。具体看官方文档，参考如下：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo iptables -I INPUT -<span class="selector-tag">p</span> udp --dport <span class="number">60001</span> -j ACCEPT</span><br></pre></td></tr></table></figure>
-<p>服务端开启60001端口，提供客服端访问，客服端访问参考如下：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mosh -<span class="selector-tag">p</span> <span class="number">60001</span> 用户名@ip地址</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">p</span> 参数用于指定 UDP 端口</span><br></pre></td></tr></table></figure>
-<p>如果连接不成功，可能是防火墙有关端口的问题。</p>
-<p>mosh可以结合tmux一起使用，效果会更佳</p>
-<p>参考链接：</p>
-<p>官方网站： <a href="https://mosh.org/" target="_blank" rel="noopener">https://mosh.org/</a></p>
-<p><a href="https://meiriyitie.com/2015/05/28/mosh/" target="_blank" rel="noopener">https://meiriyitie.com/2015/05/28/mosh/</a></p>
-<p><a href="https://www.hi-linux.com/posts/23118.html" target="_blank" rel="noopener">https://www.hi-linux.com/posts/23118.html</a></p>
-<p><a href="http://blog.sciencenet.cn/blog-935970-856971.html" target="_blank" rel="noopener">http://blog.sciencenet.cn/blog-935970-856971.html</a></p>
-<p><a href="https://linux.cn/article-6262-1.html" target="_blank" rel="noopener">https://linux.cn/article-6262-1.html</a></p>
+<p>针对可能出现的问题一一排查。</p>
+<h3 id="启动的某个程序出现了问题"><a href="#启动的某个程序出现了问题" class="headerlink" title="启动的某个程序出现了问题"></a>启动的某个程序出现了问题</h3><p>将程序关闭，或者重新启动一下Linux机器，在不启动任何程序的情况下，<code>/tmp</code>目录中存放一些文件。隔一段时间再看看是否还存在。</p>
+<h3 id="Linux系统自带的清除机制"><a href="#Linux系统自带的清除机制" class="headerlink" title="Linux系统自带的清除机制"></a>Linux系统自带的清除机制</h3><p>Linux作为服务器，通常来说启动之后是很少会关闭的。根目录下<code>/tmp</code>文件作为临时缓存存放的路径，在长时间的使用过程中是会不断的产生新文件。为了保证Linux的正常运行，同时又避免<code>/tmp</code>文件夹无限的增加导致硬盘无法存放。</p>
+<p>Linux针对这中情况，做了一些定时清理的处理的设置。常用的可能定时删除临时目录的工具为crontab、redhat的tmpwatch、ubuntu的tmpreaper等等。通常会在<code>/etc/</code>目录下，可以看到类似<code>cron.daily,cron.hourly,cron.monthly</code>等文件夹，它们就是用来执行相关定时任务的。说明仅供参考，上文描述情况基于<code>centOS6.5</code>。</p>
+<p>注：不同的Linux版本存放位置会不一样，命名方式也会有差别，管理的入口也会不也一样，设计的原理确实一样的。可以根据详细的系统版本去查找，</p>
+<h3 id="tmp中的磁盘满了，无法存储数据"><a href="#tmp中的磁盘满了，无法存储数据" class="headerlink" title="/tmp中的磁盘满了，无法存储数据"></a><code>/tmp</code>中的磁盘满了，无法存储数据</h3><p>用命令查看磁盘使用情况，<code>free、du -h</code> 等，发现还有很大的磁盘空间，排除了这种情况。</p>
+<p>进过排查，发现是自己程序问题导致的，最后在使用另一种配置方式后，程序成功的运行在了腾讯云上。ps:在面对问题的时候，怀疑自己出错可能也是一种解决方式。</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><hr>
+<p>通常来说，遇到了问题，就是看到了进步的方向。解决问题的过程中，就是在不断的进步。</p>
+<p>经验丰富的对应面就是，遇到了非常多的问题。当你把遇到的问题处理掉了，并且可以好好的终结，你的经验也就丰富起来了。</p>
 
       
     </div>
@@ -335,7 +347,7 @@
     </p>
     <p class="copyright-item">
       <span>原文链接: </span>
-      <a href="http://hadronw.com/2018/03-13/Mosh优化SSH连接卡顿问题/">http://hadronw.com/2018/03-13/Mosh优化SSH连接卡顿问题/</a>
+      <a href="http://hadronw.com/2018/05-30/jps-question/">http://hadronw.com/2018/05-30/jps-question/</a>
     </p>
     <p class="copyright-item">
       <span>许可协议: </span>
@@ -357,13 +369,7 @@
             
               <a href="/tags/Linux/">Linux</a>
             
-              <a href="/tags/Mac/">Mac</a>
-            
-              <a href="/tags/mosh/">mosh</a>
-            
-              <a href="/tags/iterm2/">iterm2</a>
-            
-              <a href="/tags/tmux/">tmux</a>
+              <a href="/tags/Java/">Java</a>
             
           </div>
         
@@ -371,15 +377,9 @@
         
   <nav class="post-nav">
     
-      <a class="prev" href="/2018/03-25/CentOS-7-安装Ambari-环境准备/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">CentOS-7-安装Ambari-环境准备</span>
-        <span class="prev-text nav-mobile">上一篇</span>
-      </a>
     
-    
-      <a class="next" href="/2018/03-13/CentOS-7设置hostname，关闭防火墙/">
-        <span class="next-text nav-default">CentOS 7设置hostname，关闭防火墙</span>
+      <a class="next" href="/2018/05-28/hexo-addshares/">
+        <span class="next-text nav-default">hexo blog 添加分享功能</span>
         <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>
