@@ -41,10 +41,10 @@ copyright:
   license: 转载请注明出处！
 
 reward:
-  enable: false
+  enable: true
   qrCode:
-    wechat: /image/wechat-pay.jpg
-    alipay: /image/ali-pay.jpg
+    wechat: /image/wechat-gh.jpg
+    # alipay: /image/ali-pay.jpg
 
 # ===========================================
 # Social links Settings
@@ -69,9 +69,12 @@ social:
 # ===========================================
 
 # LeanCloud
-leancloud:
-  app_id: q4mf6h8NnS0MNjTqEsBsKusw-gzGzoHsz
-  app_key: 7oNyN2nBpEXdSt04snJIsgPn
+# app_id: q4mf6h8NnS0MNjTqEsBsKusw-gzGzoHsz
+#app_key: 7oNyN2nBpEXdSt04snJIsgPn
+
+# leancloud:
+#   app_id: 
+#   app_key: 
 
 # Baidu Analytics
 baidu_analytics: 80d9b9996150c7cdf8ba27fb6575a66f
