@@ -43,7 +43,7 @@ copyright:
 reward:
   enable: true
   qrCode:
-    wechat: /image/wechat-gh.jpg
+    wechat: /image/wechat-gh1.jpg
     # alipay: /image/ali-pay.jpg
 
 # ===========================================
