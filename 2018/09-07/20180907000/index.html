@@ -17,8 +17,12 @@
 
 
 
+  <meta name="description" content="阿里云服务器踩过的坑"/>
 
 
+
+
+  <meta name="keywords" content="阿里云, hadronw's Blog" />
 
 
 
@@ -42,7 +46,7 @@
 
 
 
-<link rel="canonical" href="http://hadronw.com/archives/2017/12/"/>
+<link rel="canonical" href="http://hadronw.com/2018/09-07/20180907000/"/>
 
 
 
@@ -109,11 +113,7 @@
   window.config = {"title":"hadronw's Blog","subtitle":null,"description":null,"author":"hadronw","language":"zh-Hans","timezone":"Asia/Shanghai","url":"http://hadronw.com","root":"/","permalink":":year/:month-:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":null,"new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":true,"relative_link":false,"future":true,"highlight":{"enable":true,"auto_detect":true,"line_number":true,"tab_replace":true,"first_line_number":"always1"},"default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":15,"pagination_dir":"page","theme":{"color":"Default","toc":true,"fancybox":true,"pjax":true},"deploy":[{"type":"git","repo":"https://github.com/hadronw/hadronw.github.io.git","branch":"master"},{"type":"git","repo":"https://git.coding.net/hadronw/hadronw.git","branch":"master"}],"ignore":[],"index_generator":{"per_page":15,"order_by":"-date","path":""},"archive_generator":{"per_page":15,"yearly":true,"monthly":true,"daily":false},"baidusitemap":{"path":"baidusitemap.xml"},"category_generator":{"per_page":15},"feed":{"type":"atom","limit":20,"hub":"","content":true,"content_limit":140,"content_limit_delim":"","path":"atom.xml"},"sitemap":{"path":"sitemap.xml"},"tag_generator":{"per_page":15},"marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"server":{"port":4000,"log":false,"ip":"0.0.0.0","compress":false,"header":true},"since":2017,"favicon":"/mylog.png","rss":"default","menu":{"Home":"/","Archives":"/archives/","Tags":"/tags/","Categories":"/categories/","About":"/about"},"copyright":{"enable":true,"license":"转载请注明出处！"},"reward":{"enable":true,"qrCode":{"wechat":"/image/wechat-gh1.jpg"}},"social":{"email":"hadronw@qq.com","stack-overflow":null,"twitter":null,"facebook":null,"linkedin":null,"google":null,"github":"https://github.com/hadronw","weibo":null,"zhihu":null,"douban":null,"pocket":null,"tumblr":null,"instagram":null},"baidu_analytics":"80d9b9996150c7cdf8ba27fb6575a66f","google_analytics":"UA-113179601-1","google_verification":"cXrmNsZjDqC3drL1XY6-CZURO2H7s8X-njVT3_EFO8s","baidu_verification":"jUV4JeBMWP","sogou_verification":"30h62eUCDR","disqus_shortname":null,"changyan":{"appid":null,"appkey":null},"livere_datauid":"MTAyMC8zNjg0MS8xMzM3Nw","shares":{"shares-mob":"1fac126c2836c"},"version":"2.8.0"};
 </script>
 
-    <title>
-  
-    归档 - hadronw's Blog
-  
-</title>
+    <title> 阿里云服务器踩过的坑 - hadronw's Blog </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -243,198 +243,144 @@
           <div id="content" class="content">
             
   
-  <section id="archive" class="archive">
-    
-      
-        <div class="archive-title">
-          <span class="archive-post-counter">
-            目前共计 57 篇日志
-          </span>
-        </div>
-      
-    
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          阿里云服务器踩过的坑
+        
+      </h1>
 
-    
-      
+      <div class="post-meta">
+        <span class="post-time">
+          2018-09-07
+        </span>
         
-        
-
-        
-          
-          <div class="collection-title">
-            <h2 class="archive-year">2017</h2>
+          <div class="post-category">
+            
+              <a href="/categories/阿里云/">阿里云</a>
+            
           </div>
         
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            12-20
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2017/12-20/Linux中配置环境变量/" class="archive-post-link">
-            Linux中配置环境变量
-          </a>
-        </span>
+        
       </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        <p>初次购买，一定要好好看相关介绍，相关文档；否则后期会出现不必要的问题，最后找客服都解决不了。最后只能重新购买！</p>
+<p><strong>一、</strong>购买服务器时需要注意几处：网络和安全组中的网络、安全组、公网宽带；系统配置的登陆凭证，密钥对、自定义密码、创建后重置。</p>
+<p>初次购买会有默认的网络、安全组。默认的专有网络，不支持修改私网 IP ，购买时选择默认的网络配置，同一个地区很可能分配到同一个网段。如果你后期需要把自己购买的服务器与他人购买的服务器连接，会发现网段冲突的问题。</p>
+<p>购买的时候尽量选择重新自建专有网络！</p>
+<p>1、新建好专有网络有，安全组也要新建，它们是配套的。新建安全组时，直接按照它的提示新建就可以了。</p>
+<p>2、如果选择了自己新建的专有网络组，一定要注意看公网宽带的选项，记得要勾上。<br><img src="/2018/09-07/20180907000/15362917228167/15362926040606.jpg" alt="-w1242"></p>
+<p>3、系统配置中，如下图：<br><img src="/2018/09-07/20180907000/15362917228167/15362926548127.jpg" alt="-w1240"></p>
+<p>选择密钥对登陆的方式安全性最高，设置的时候也相对复杂。通常都是选择自定义密码的方式登陆，简单快速，安全性也就比密钥对差一些。如果不知道自己怎么选择，可以选择创建后再设置。</p>
+<p><strong>二、</strong>云服务器之间私网可以相互连通很重要。具体验证的办法就是，用 <code>ping</code> 的命令，从一台服务器去 <code>ping</code> 另外一台云服务器中的私网。</p>
+<p>通常来说，同一个账号购买的云服务器，选择的是同一个地区而且还是同一个网络专有组。这种情况下，购买的云服务器的私网都是可以相互通信的。</p>
+<p>不同账号、不同地域的云服务器之间私网是无法通信的，还有一些同一个账户，不同地域下的云服务器私网之间也是无法通信的。这种情况下，可以去看他们的稳定。阿里云有提供相关解决方案。</p>
+<p>解决思路是：设置安全组，或者用 VPC 的方式去解决。</p>
+<p>不同的账户，不同的地域，不同安全组的云服务器内网想要通信，只能够选择 VPC 的解决方案。具体可看下方链接文章：</p>
+<p>阿里云ECS同区域不同账户之间通信配置：<a href="https://blog.csdn.net/caozhanweicaiyuli/article/details/79254276" target="_blank" rel="noopener">https://blog.csdn.net/caozhanweicaiyuli/article/details/79254276</a></p>
+<p>跨账号VPC互连：<a href="https://www.alibabacloud.com/help/zh/doc-detail/44842.htm?spm=a2c63.p38356.b99.15.5d4f28c9EnfNKr" target="_blank" rel="noopener">https://www.alibabacloud.com/help/zh/doc-detail/44842.htm?spm=a2c63.p38356.b99.15.5d4f28c9EnfNKr</a></p>
+<p>高速通道实现多VPC内网互联：<a href="https://yq.aliyun.com/articles/368813#" target="_blank" rel="noopener">https://yq.aliyun.com/articles/368813#</a></p>
+<p>关于阿里云不同vpc下的内网互通：<a href="https://blog.csdn.net/ymybxx/article/details/78324493" target="_blank" rel="noopener">https://blog.csdn.net/ymybxx/article/details/78324493</a></p>
+<p>VPC通信常见问题：<a href="https://help.aliyun.com/knowledge_detail/54486.html?spm=a2c4g.11186623.6.729.29f57d73NEB9F5" target="_blank" rel="noopener">https://help.aliyun.com/knowledge_detail/54486.html?spm=a2c4g.11186623.6.729.29f57d73NEB9F5</a></p>
+<p>注意：不同的账户，不同的地域，不同安全组的云服务器使用 VPC 解决私网 IP 相互通信问题的前提是，他们的专有网络网段不在同一个！不会出现相互冲突的问题，如果有服务器之间的网段在同一个，会导致网段冲突。从而导致 VPC 的方案无法解决。</p>
+<p><strong>三、</strong>网段冲突的问题可以有方法解决的的，可以通过更改私网 IP 网段；前提是该云服务器用的是自己新建的专有网络组。如果你用的是系统默认的专有网络，私网 IP 的网段就无法修改，阿里云的客服是这么回复的。</p>
+<p><strong>四、</strong>购买阿里云服务器之前需要了解的概念，重点！如果不先了解，之后遇到问题就会不知道怎么去排查。需要提前了解：云服务器的操作系统、对应的硬件配置（内存、cpu、硬盘等）、网络宽带计费、网络组（专有网络、经典网络、私有网络区别）、安全组。</p>
+<p>一个程序只需要多台服务器，这种情况下程序出现问题大多数是程序的问题。如果一个程序需要多台云服务器相互配合，且出现连接上的问题时；这种情况下问题多数处在云服务器之间的相互连接上，可以先从云服务器的安全组配置、云服务器网络配置、防火墙这些方面去查找。</p>
+
+      
+    </div>
+
     
       
-        
-        
-
-        
       
 
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            12-20
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2017/12-20/多个Linux虚拟机SSH免密码通信的配置/" class="archive-post-link">
-            Linux多个虚拟机SSH免密码通信的配置
-          </a>
-        </span>
-      </div>
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="http://hadronw.com">hadronw</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="http://hadronw.com/2018/09-07/20180907000/">http://hadronw.com/2018/09-07/20180907000/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span>
+      
+      转载请注明出处！
+    </p>
+  </div>
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">关注支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/wechat-gh1.jpg" title="wechat">
+        </label>
+      
+      
+    </div>
+  </div>
+
     
-      
-        
-        
 
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            12-20
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2017/12-20/安装Linux虚拟机自定义分配磁盘/" class="archive-post-link">
-            安装Linux虚拟机自定义分配磁盘
-          </a>
-        </span>
-      </div>
     
-      
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/阿里云/">阿里云</a>
+            
+          </div>
         
         
-
         
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            12-19
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2017/12-19/Mac下配置VM中Linux-CentOS6-5虚拟机网络静态IP/" class="archive-post-link">
-            Mac下配置VM中Linux-CentOS6.5虚拟机网络静态IP
-          </a>
-        </span>
-      </div>
+  <nav class="post-nav">
     
-      
-        
-        
-
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            12-19
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2017/12-19/Mac中vm安装Linux-Centos6-5/" class="archive-post-link">
-            Mac中vm安装Linux-Centos6.5
-          </a>
-        </span>
-      </div>
     
-      
-        
-        
-
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            12-19
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2017/12-19/Linux创建用户群组-用户/" class="archive-post-link">
-            Linux创建用户群组,用户
-          </a>
-        </span>
-      </div>
-    
-      
-        
-        
-
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            12-14
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2017/12-14/Linux-安装Python3/" class="archive-post-link">
-            Linux 安装Python3
-          </a>
-        </span>
-      </div>
-    
-      
-        
-        
-
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            12-03
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2017/12-03/zookeeper的安装与基本操作/" class="archive-post-link">
-            zookeeper的安装与基本操作
-          </a>
-        </span>
-      </div>
-    
-  </section>
-
-  
-  <nav class="pagination">
-    
+      <a class="next" href="/2018/08-01/20180801-080710/">
+        <span class="next-text nav-default">说说拖延症</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
     
   </nav>
 
+      </footer>
+    
+
+  </article>
 
 
           </div>
           
+<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more">分享到：</a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友">QQ好友</a><a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记">有道云笔记</a><a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记">印象笔记</a><a href="#" class="bds_mail" data-cmd="mail" title="分享到邮件分享">邮件分享</a><a href="#" class="bds_mshare" data-cmd="mshare" title="分享到一键分享">一键分享</a><a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址">复制网址</a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{"tsina":"1690762540","tqq":"1690762540","t163":"1690762540","tsohu":"1690762540"},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16},"image":{"viewList":["qzone","tsina","weixin","tqq","sqq","youdao","evernotecn","mail","mshare","copy"],"viewText":"分享到：","viewSize":"24"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNjg0MS8xMzM3Nw">
+        <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+      </div>  
+    
+  </div>
+
 
         </div>
       </main>
@@ -523,6 +469,25 @@
     </div>
 
     
+  
+  
+
+  
+   <script type="text/javascript">
+	(function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+  </script>
+
+
 
 
     
