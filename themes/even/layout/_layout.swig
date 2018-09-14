@@ -17,12 +17,8 @@
           <div id="content" class="content">
             {% block content %}{% endblock %}
           </div>
-          <!-- 分享功能注释 -->
-          <!-- {% include '_partial/shares_baidu.swig' %} -->
-          <!-- {% include '_partial/comments.swig' %} -->
-          
+          {% include '_partial/comments.swig' %}
         </div>
-        
       </main>
 
       <footer id="footer" class="footer">
