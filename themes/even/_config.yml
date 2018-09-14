@@ -69,8 +69,8 @@ social:
 # ===========================================
 
 # LeanCloud
-# app_id: q4mf6h8NnS0MNjTqEsBsKusw-gzGzoHsz
-#app_key: 7oNyN2nBpEXdSt04snJIsgPn
+app_id: q4mf6h8NnS0MNjTqEsBsKusw-gzGzoHsz
+app_key: 7oNyN2nBpEXdSt04snJIsgPn
 
 # leancloud:
 #   app_id: 
@@ -111,11 +111,22 @@ changyan:
   appkey:
 
 #LiveRe 来必力 MTAyMC8zNjg0MS8xMzM3Nw
-livere_datauid: MTAyMC8zNjg0MS8xMzM3Nw
+#livere_datauid: MTAyMC8zNjg0MS8xMzM3Nw
 
 # shares-mob  第三方分享 mob.com
-shares:
-  shares-mob: 1fac126c2836c
+#shares:
+#  shares-mob: 1fac126c2836c
+
+# valine 评论
+valine:
+  appid: q4mf6h8NnS0MNjTqEsBsKusw-gzGzoHsz # your leancloud appid
+  appkey: 7oNyN2nBpEXdSt04snJIsgPn # your leancloud appkey
+  notify: false # true/false:mail notify !!!Test,Caution. 
+  verify: false # true/false:verify code
+  avatar: mm # avatar style 
+  placeholder: 快来畅所欲言吧！ 
+  guest_info: nick,mail,link
+  pageSize: 10
 
 
 # ===========================================
