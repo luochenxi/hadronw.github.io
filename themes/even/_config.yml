@@ -124,7 +124,7 @@ valine:
   appkey: 07ptzyueBmWB16ShNJuwsUnm # your leancloud application appkey
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
-  placeholder: 说出你的想法…… # comment box placeholder
+  placeholder: 留下你的想法…… # comment box placeholder
   avatar: robohash # gravatar style
   guest_info: nick,mail #,link # custom comment header
   pageSize: 10 # pagination size
