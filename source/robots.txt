@@ -14,5 +14,5 @@ Allow: /fonts/
 Allow: /vendors/
 Allow: /fancybox/
 
-Sitemap: http://hadronw.com/sitemap.xml
-Sitemap: http://hadronw.com/baidusitemap.xml
+Sitemap: https://hadronw.com/sitemap.xml
+Sitemap: https://hadronw.com/baidusitemap.xml
