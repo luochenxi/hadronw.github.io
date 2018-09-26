@@ -13,6 +13,6 @@ git add .
 git commit -m "Travis CI Auto Builder at `date +"%Y-%m-%d %H:%M"`"
 git push --force --quiet "https://${Travis_gh_token}@${GH_REF}" master:master
 git push --force --quiet "https://hadronw:${Travis_co_token}@${CO_REF}" master:master
-git push --fore  --quiet "https://${Travis_gitlab_token}@${GL_REE}" master:master
+git push --force  --quiet "https://${Travis_gitlab_token}@${GL_REE}" master:master
 
 
