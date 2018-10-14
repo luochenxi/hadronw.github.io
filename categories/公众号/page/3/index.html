@@ -42,7 +42,7 @@
 
 
 
-<link rel="canonical" href="http://hadronw.com/archives/2017/11/"/>
+<link rel="canonical" href="http://hadronw.com/categories/公众号/page/3/"/>
 
 
 
@@ -111,7 +111,7 @@
 
     <title>
   
-    归档 - hadronw's blog
+    公众号 · hadronw's blog
   
 </title>
   </head>
@@ -245,57 +245,19 @@
   
   <section id="archive" class="archive">
     
-      
-        <div class="archive-title">
-          <span class="archive-post-counter">
-            目前共计 89 篇日志
-          </span>
-        </div>
-      
-    
 
     
-      
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h2 class="archive-year">2017</h2>
-          </div>
-        
       
 
       <div class="archive-post">
         <span class="archive-post-time">
           
-            11-16
+            2018-09-14
           
         </span>
         <span class="archive-post-title">
-          <a href="/2017/11-16/Python2x——字符串/" class="archive-post-link">
-            Python2x——字符串
-          </a>
-        </span>
-      </div>
-    
-      
-        
-        
-
-        
-      
-
-      <div class="archive-post">
-        <span class="archive-post-time">
-          
-            11-13
-          
-        </span>
-        <span class="archive-post-title">
-          <a href="/2017/11-13/Linux服务器于本地-服务器之间文件上传与下载/" class="archive-post-link">
-            Linux服务器于本地/服务器之间文件上传与下载
+          <a href="/2018/09-14/20180914/" class="archive-post-link">
+            公众号用其他方式实现留言功能
           </a>
         </span>
       </div>
@@ -304,6 +266,11 @@
 
   
   <nav class="pagination">
+    
+      <a class="prev" href="/categories/公众号/page/2/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text">上一页</span>
+      </a>
     
     
   </nav>
@@ -400,6 +367,34 @@
     </div>
 
     
+  
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'tA9fnMOATdYuVDUSkPsbGBfi-gzGzoHsz',
+        appKey: '07ptzyueBmWB16ShNJuwsUnm',
+        placeholder: '留下你的想法……',
+        avatar:'robohash',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: true
+    });
+  </script>
+
+
+
 
 
     
