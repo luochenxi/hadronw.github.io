@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="邱岳的产品实战"/>
+
+
+
+
+  <meta name="keywords" content="极客时间, hadronw's blog" />
+
+
+
+  <meta name="baidu-site-verification" content="jUV4JeBMWP" />
+
+
+
+  <meta name="google-site-verification" content="cXrmNsZjDqC3drL1XY6-CZURO2H7s8X-njVT3_EFO8s" />
+ 
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="hadronw's blog">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/mylog.png?v=2.8.0" />
+
+
+
+<link rel="canonical" href="http://hadronw.com/2018/11-04/201811041943/"/>
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/nprogress/nprogress.min.css" />
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.8.0" />
+
+
+
+  
+  <script id="baidu_analytics">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?80d9b9996150c7cdf8ba27fb6575a66f";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113179601-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113179601-1');
+</script>
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+<script>
+  window.config = {"title":"hadronw's blog","subtitle":null,"description":null,"author":"hadronw","language":"zh-Hans","timezone":"Asia/Shanghai","url":"http://hadronw.com","root":"/","permalink":":year/:month-:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":null,"new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":true,"relative_link":false,"future":true,"highlight":{"enable":true,"auto_detect":true,"line_number":true,"tab_replace":true,"first_line_number":"always1"},"default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":20,"pagination_dir":"page","theme":{"color":"Default","toc":true,"fancybox":true,"pjax":true},"deploy":[{"type":"git","repo":"https://github.com/hadronw/hadronw.github.io.git","branch":"master"},{"type":"git","repo":"https://git.coding.net/hadronw/hadronw.git","branch":"master"}],"ignore":[],"index_generator":{"per_page":20,"order_by":"-date","path":""},"archive_generator":{"per_page":20,"yearly":true,"monthly":true,"daily":false},"baidusitemap":{"path":"baidusitemap.xml"},"category_generator":{"per_page":20},"feed":{"type":"atom","limit":20,"hub":"","content":true,"content_limit":140,"content_limit_delim":"","path":"atom.xml"},"sitemap":{"path":"sitemap.xml"},"tag_generator":{"per_page":20},"marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"server":{"port":4000,"log":false,"ip":"0.0.0.0","compress":false,"header":true},"since":2017,"favicon":"/mylog.png","rss":"default","menu":{"Home":"/","Archives":"/archives/","Tags":"/tags/","Categories":"/categories/","About":"/about"},"copyright":{"enable":true,"license":"转载请注明出处！"},"reward":{"enable":true,"qrCode":{"wechat":"/image/wechat-gh1.jpg"}},"social":{"email":"hadronw@qq.com","stack-overflow":null,"twitter":null,"facebook":null,"linkedin":null,"google":null,"github":"https://github.com/hadronw","weibo":null,"zhihu":null,"douban":null,"pocket":null,"tumblr":null,"instagram":null},"app_id":"q4mf6h8NnS0MNjTqEsBsKusw-gzGzoHsz","app_key":"7oNyN2nBpEXdSt04snJIsgPn","baidu_analytics":"80d9b9996150c7cdf8ba27fb6575a66f","google_analytics":"UA-113179601-1","google_verification":"cXrmNsZjDqC3drL1XY6-CZURO2H7s8X-njVT3_EFO8s","baidu_verification":"jUV4JeBMWP","sogou_verification":"30h62eUCDR","disqus_shortname":null,"changyan":{"appid":null,"appkey":null},"valine":{"enable":true,"appid":"tA9fnMOATdYuVDUSkPsbGBfi-gzGzoHsz","appkey":"07ptzyueBmWB16ShNJuwsUnm","notify":false,"verify":false,"placeholder":"留下你的想法……","avatar":"robohash","guest_info":"nick,mail","pageSize":10,"visitor":true},"version":"2.8.0"};
+</script>
+
+    <title> 邱岳的产品实战 - hadronw's blog </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">hadronw's blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            首页
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags/">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories/">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">hadronw's blog</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              首页
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags/">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories/">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          邱岳的产品实战
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-11-04
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/极客时间/">极客时间</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#开篇词-和自己较劲，一个产品经理的实战历程"><span class="toc-text">开篇词 | 和自己较劲，一个产品经理的实战历程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#01-如何验证你的产品创意？"><span class="toc-text">01 | 如何验证你的产品创意？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#02-如何锤炼你的产品创意"><span class="toc-text">02 | 如何锤炼你的产品创意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#03-要不要相信你的调查问卷"><span class="toc-text">03 | 要不要相信你的调查问卷</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#04-用最少的资源给你的产品试试水"><span class="toc-text">04 | 用最少的资源给你的产品试试水</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#05-如何快速利用-MVP-思想"><span class="toc-text">05 | 如何快速利用 MVP 思想</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#产品会客厅-千万级用户的产品是如何打造的？"><span class="toc-text">产品会客厅 | 千万级用户的产品是如何打造的？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#06-如何做好产品立项"><span class="toc-text">06 | 如何做好产品立项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#07-产品发布的那些坑儿"><span class="toc-text">07 | 产品发布的那些坑儿</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#产品会客厅-极客时间产品规划大揭秘"><span class="toc-text">产品会客厅 | 极客时间产品规划大揭秘</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#08-产品增长越来越难，到底应该怎么办？"><span class="toc-text">08 | 产品增长越来越难，到底应该怎么办？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#09-产品增长的核心，究竟是什么？"><span class="toc-text">09 | 产品增长的核心，究竟是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#产品会客厅-没有项目管理经验，如何推动团队一起完成任务？"><span class="toc-text">产品会客厅 | 没有项目管理经验，如何推动团队一起完成任务？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-你需要组建增长团队吗，应该如何组建呢？"><span class="toc-text">10 | 你需要组建增长团队吗，应该如何组建呢？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-产品增长有哪些业务公式与关键指标？（上）"><span class="toc-text">11 | 产品增长有哪些业务公式与关键指标？（上）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#产品会客厅-需求评审怎么做，如何区分什么是真的用户需求？"><span class="toc-text">产品会客厅 | 需求评审怎么做，如何区分什么是真的用户需求？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-产品增长有哪些业务公式与关键指标？（下）"><span class="toc-text">12 | 产品增长有哪些业务公式与关键指标？（下）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-产品做增长的过程中，有哪些关键套路？"><span class="toc-text">13 | 产品做增长的过程中，有哪些关键套路？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#产品会客厅-一次简洁并有效的产品分析需要怎么做？"><span class="toc-text">产品会客厅 | 一次简洁并有效的产品分析需要怎么做？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-实战增长，我们要知道哪些事儿？"><span class="toc-text">14 | 实战增长，我们要知道哪些事儿？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-增长执行时，需要哪些关键的能力"><span class="toc-text">15 | 增长执行时，需要哪些关键的能力?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#产品会客厅-从“分享有赏”案例讲起，如何做关键决策？"><span class="toc-text">产品会客厅 | 从“分享有赏”案例讲起，如何做关键决策？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-当钩子靠不住时，如何提高用户留存？（上）"><span class="toc-text">16 | 当钩子靠不住时，如何提高用户留存？（上）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-当钩子靠不住时，如何提高用户留存？（下）"><span class="toc-text">17 | 当钩子靠不住时，如何提高用户留存？（下）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#产品会客厅-从案例出发，如何利用数据分析来验证新功能的效果？"><span class="toc-text">产品会客厅 | 从案例出发，如何利用数据分析来验证新功能的效果？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-如何把你的新用户转化为忠实的长期用户？"><span class="toc-text">18 | 如何把你的新用户转化为忠实的长期用户？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19-满眼尽是“病毒”“裂变”，到底什么是传播和获客的正确姿势？（上）"><span class="toc-text">19 | 满眼尽是“病毒”“裂变”，到底什么是传播和获客的正确姿势？（上）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#产品会客厅-产品经理面试究竟考什么？"><span class="toc-text">产品会客厅 | 产品经理面试究竟考什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20-满眼尽是“病毒”“裂变”，到底什么是传播和获客的正确姿势？（下）"><span class="toc-text">20 | 满眼尽是“病毒”“裂变”，到底什么是传播和获客的正确姿势？（下）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#21-增长黑客的阴暗面"><span class="toc-text">21 | 增长黑客的阴暗面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#产品会客厅-产品经理的职业发展，你在哪个阶段？"><span class="toc-text">产品会客厅 | 产品经理的职业发展，你在哪个阶段？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-产品经理需要具备哪些基本的数据能力和意识？"><span class="toc-text">22 | 产品经理需要具备哪些基本的数据能力和意识？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-突发式流量数据暴跌，产品经理应该如何应对？【分析篇】"><span class="toc-text">23 | 突发式流量数据暴跌，产品经理应该如何应对？【分析篇】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#产品会客厅-在产品的获客与传播上，“极客时间”做了些什么？"><span class="toc-text">产品会客厅 | 在产品的获客与传播上，“极客时间”做了些什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#24-突发式流量数据暴跌，产品经理应该如何应对？【拆解篇】"><span class="toc-text">24 | 突发式流量数据暴跌，产品经理应该如何应对？【拆解篇】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#25-突发式流量数据暴跌，产品经理应该如何应对？【处理篇】"><span class="toc-text">25 | 突发式流量数据暴跌，产品经理应该如何应对？【处理篇】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#产品会客厅-从流量型平台转到资源匮乏平台，如何应对业务变化？"><span class="toc-text">产品会客厅 | 从流量型平台转到资源匮乏平台，如何应对业务变化？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#26-当收集数据的前后，我们应该做什么？"><span class="toc-text">26 | 当收集数据的前后，我们应该做什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#27-从具体业务出发，如何利用数据辅助你的决策？"><span class="toc-text">27 | 从具体业务出发，如何利用数据辅助你的决策？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#产品会客厅-面向大众的通用型产品VS受众面少的垂直领域，二者如何博弈？（上）"><span class="toc-text">产品会客厅 | 面向大众的通用型产品VS受众面少的垂直领域，二者如何博弈？（上）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#产品会客厅-面向大众的通用型产品VS受众面少的垂直领域，二者如何博弈？（下）"><span class="toc-text">产品会客厅 | 面向大众的通用型产品VS受众面少的垂直领域，二者如何博弈？（下）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#28-那些数据不能告诉你的事儿：尽信“数”不如无“数”"><span class="toc-text">28 | 那些数据不能告诉你的事儿：尽信“数”不如无“数”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#29-每个产品经理都要掌握的基本商业概念是什么？"><span class="toc-text">29 | 每个产品经理都要掌握的基本商业概念是什么？</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <p>由于极客时间中，专栏的阅读不方便，查找麻烦，于是收集了部分专栏目录，整理如下。可把网址收藏，需要的时候再打开阅读。</p>
+<p><strong>未完待续！</strong></p>
+<a id="more"></a>
+<h2 id="开篇词-和自己较劲，一个产品经理的实战历程"><a href="#开篇词-和自己较劲，一个产品经理的实战历程" class="headerlink" title="开篇词 | 和自己较劲，一个产品经理的实战历程"></a>开篇词 | 和自己较劲，一个产品经理的实战历程</h2><p><a href="https://time.geekbang.org/column/article/11838" target="_blank" rel="noopener">https://time.geekbang.org/column/article/11838</a></p>
+<h2 id="01-如何验证你的产品创意？"><a href="#01-如何验证你的产品创意？" class="headerlink" title="01 | 如何验证你的产品创意？"></a>01 | 如何验证你的产品创意？</h2><p><a href="https://time.geekbang.org/column/article/12104" target="_blank" rel="noopener">https://time.geekbang.org/column/article/12104</a></p>
+<h2 id="02-如何锤炼你的产品创意"><a href="#02-如何锤炼你的产品创意" class="headerlink" title="02 | 如何锤炼你的产品创意"></a>02 | 如何锤炼你的产品创意</h2><p><a href="https://time.geekbang.org/column/article/12140" target="_blank" rel="noopener">https://time.geekbang.org/column/article/12140</a></p>
+<h2 id="03-要不要相信你的调查问卷"><a href="#03-要不要相信你的调查问卷" class="headerlink" title="03 | 要不要相信你的调查问卷"></a>03 | 要不要相信你的调查问卷</h2><p><a href="https://time.geekbang.org/column/article/12445" target="_blank" rel="noopener">https://time.geekbang.org/column/article/12445</a></p>
+<h2 id="04-用最少的资源给你的产品试试水"><a href="#04-用最少的资源给你的产品试试水" class="headerlink" title="04 | 用最少的资源给你的产品试试水"></a>04 | 用最少的资源给你的产品试试水</h2><p><a href="https://time.geekbang.org/column/article/12576" target="_blank" rel="noopener">https://time.geekbang.org/column/article/12576</a></p>
+<h2 id="05-如何快速利用-MVP-思想"><a href="#05-如何快速利用-MVP-思想" class="headerlink" title="05 | 如何快速利用 MVP 思想"></a>05 | 如何快速利用 MVP 思想</h2><p><a href="https://time.geekbang.org/column/article/12581" target="_blank" rel="noopener">https://time.geekbang.org/column/article/12581</a></p>
+<h2 id="产品会客厅-千万级用户的产品是如何打造的？"><a href="#产品会客厅-千万级用户的产品是如何打造的？" class="headerlink" title="产品会客厅 | 千万级用户的产品是如何打造的？"></a>产品会客厅 | 千万级用户的产品是如何打造的？</h2><p><a href="https://time.geekbang.org/column/article/12984" target="_blank" rel="noopener">https://time.geekbang.org/column/article/12984</a></p>
+<h2 id="06-如何做好产品立项"><a href="#06-如何做好产品立项" class="headerlink" title="06 | 如何做好产品立项"></a>06 | 如何做好产品立项</h2><p><a href="https://time.geekbang.org/column/article/13101" target="_blank" rel="noopener">https://time.geekbang.org/column/article/13101</a></p>
+<h2 id="07-产品发布的那些坑儿"><a href="#07-产品发布的那些坑儿" class="headerlink" title="07 | 产品发布的那些坑儿"></a>07 | 产品发布的那些坑儿</h2><p><a href="https://time.geekbang.org/column/article/13170" target="_blank" rel="noopener">https://time.geekbang.org/column/article/13170</a></p>
+<h2 id="产品会客厅-极客时间产品规划大揭秘"><a href="#产品会客厅-极客时间产品规划大揭秘" class="headerlink" title="产品会客厅 | 极客时间产品规划大揭秘"></a>产品会客厅 | 极客时间产品规划大揭秘</h2><p><a href="https://time.geekbang.org/column/article/13440" target="_blank" rel="noopener">https://time.geekbang.org/column/article/13440</a></p>
+<h2 id="08-产品增长越来越难，到底应该怎么办？"><a href="#08-产品增长越来越难，到底应该怎么办？" class="headerlink" title="08 | 产品增长越来越难，到底应该怎么办？"></a>08 | 产品增长越来越难，到底应该怎么办？</h2><p><a href="https://time.geekbang.org/column/article/13612" target="_blank" rel="noopener">https://time.geekbang.org/column/article/13612</a></p>
+<h2 id="09-产品增长的核心，究竟是什么？"><a href="#09-产品增长的核心，究竟是什么？" class="headerlink" title="09 | 产品增长的核心，究竟是什么？"></a>09 | 产品增长的核心，究竟是什么？</h2><p><a href="https://time.geekbang.org/column/article/13615" target="_blank" rel="noopener">https://time.geekbang.org/column/article/13615</a></p>
+<h2 id="产品会客厅-没有项目管理经验，如何推动团队一起完成任务？"><a href="#产品会客厅-没有项目管理经验，如何推动团队一起完成任务？" class="headerlink" title="产品会客厅 | 没有项目管理经验，如何推动团队一起完成任务？"></a>产品会客厅 | 没有项目管理经验，如何推动团队一起完成任务？</h2><p><a href="https://time.geekbang.org/column/article/13985" target="_blank" rel="noopener">https://time.geekbang.org/column/article/13985</a></p>
+<h2 id="10-你需要组建增长团队吗，应该如何组建呢？"><a href="#10-你需要组建增长团队吗，应该如何组建呢？" class="headerlink" title="10 | 你需要组建增长团队吗，应该如何组建呢？"></a>10 | 你需要组建增长团队吗，应该如何组建呢？</h2><p><a href="https://time.geekbang.org/column/article/14080" target="_blank" rel="noopener">https://time.geekbang.org/column/article/14080</a></p>
+<h2 id="11-产品增长有哪些业务公式与关键指标？（上）"><a href="#11-产品增长有哪些业务公式与关键指标？（上）" class="headerlink" title="11 | 产品增长有哪些业务公式与关键指标？（上）"></a>11 | 产品增长有哪些业务公式与关键指标？（上）</h2><p><a href="https://time.geekbang.org/column/article/14101" target="_blank" rel="noopener">https://time.geekbang.org/column/article/14101</a></p>
+<h2 id="产品会客厅-需求评审怎么做，如何区分什么是真的用户需求？"><a href="#产品会客厅-需求评审怎么做，如何区分什么是真的用户需求？" class="headerlink" title="产品会客厅 | 需求评审怎么做，如何区分什么是真的用户需求？"></a>产品会客厅 | 需求评审怎么做，如何区分什么是真的用户需求？</h2><p><a href="https://time.geekbang.org/column/article/14580" target="_blank" rel="noopener">https://time.geekbang.org/column/article/14580</a></p>
+<h2 id="12-产品增长有哪些业务公式与关键指标？（下）"><a href="#12-产品增长有哪些业务公式与关键指标？（下）" class="headerlink" title="12 | 产品增长有哪些业务公式与关键指标？（下）"></a>12 | 产品增长有哪些业务公式与关键指标？（下）</h2><p><a href="https://time.geekbang.org/column/article/14658" target="_blank" rel="noopener">https://time.geekbang.org/column/article/14658</a></p>
+<h2 id="13-产品做增长的过程中，有哪些关键套路？"><a href="#13-产品做增长的过程中，有哪些关键套路？" class="headerlink" title="13 | 产品做增长的过程中，有哪些关键套路？"></a>13 | 产品做增长的过程中，有哪些关键套路？</h2><p><a href="https://time.geekbang.org/column/article/16659" target="_blank" rel="noopener">https://time.geekbang.org/column/article/16659</a></p>
+<h2 id="产品会客厅-一次简洁并有效的产品分析需要怎么做？"><a href="#产品会客厅-一次简洁并有效的产品分析需要怎么做？" class="headerlink" title="产品会客厅 | 一次简洁并有效的产品分析需要怎么做？"></a>产品会客厅 | 一次简洁并有效的产品分析需要怎么做？</h2><p><a href="https://time.geekbang.org/column/article/17863" target="_blank" rel="noopener">https://time.geekbang.org/column/article/17863</a></p>
+<h2 id="14-实战增长，我们要知道哪些事儿？"><a href="#14-实战增长，我们要知道哪些事儿？" class="headerlink" title="14 | 实战增长，我们要知道哪些事儿？"></a>14 | 实战增长，我们要知道哪些事儿？</h2><p><a href="https://time.geekbang.org/column/article/18082" target="_blank" rel="noopener">https://time.geekbang.org/column/article/18082</a></p>
+<h2 id="15-增长执行时，需要哪些关键的能力"><a href="#15-增长执行时，需要哪些关键的能力" class="headerlink" title="15 | 增长执行时，需要哪些关键的能力?"></a>15 | 增长执行时，需要哪些关键的能力?</h2><p><a href="https://time.geekbang.org/column/article/22838" target="_blank" rel="noopener">https://time.geekbang.org/column/article/22838</a></p>
+<h2 id="产品会客厅-从“分享有赏”案例讲起，如何做关键决策？"><a href="#产品会客厅-从“分享有赏”案例讲起，如何做关键决策？" class="headerlink" title="产品会客厅 | 从“分享有赏”案例讲起，如何做关键决策？"></a>产品会客厅 | 从“分享有赏”案例讲起，如何做关键决策？</h2><p><a href="https://time.geekbang.org/column/article/39691" target="_blank" rel="noopener">https://time.geekbang.org/column/article/39691</a></p>
+<h2 id="16-当钩子靠不住时，如何提高用户留存？（上）"><a href="#16-当钩子靠不住时，如何提高用户留存？（上）" class="headerlink" title="16 | 当钩子靠不住时，如何提高用户留存？（上）"></a>16 | 当钩子靠不住时，如何提高用户留存？（上）</h2><p><a href="https://time.geekbang.org/column/article/39800" target="_blank" rel="noopener">https://time.geekbang.org/column/article/39800</a></p>
+<h2 id="17-当钩子靠不住时，如何提高用户留存？（下）"><a href="#17-当钩子靠不住时，如何提高用户留存？（下）" class="headerlink" title="17 | 当钩子靠不住时，如何提高用户留存？（下）"></a>17 | 当钩子靠不住时，如何提高用户留存？（下）</h2><p><a href="https://time.geekbang.org/column/article/39810" target="_blank" rel="noopener">https://time.geekbang.org/column/article/39810</a></p>
+<h2 id="产品会客厅-从案例出发，如何利用数据分析来验证新功能的效果？"><a href="#产品会客厅-从案例出发，如何利用数据分析来验证新功能的效果？" class="headerlink" title="产品会客厅 | 从案例出发，如何利用数据分析来验证新功能的效果？"></a>产品会客厅 | 从案例出发，如何利用数据分析来验证新功能的效果？</h2><p><a href="https://time.geekbang.org/column/article/40184" target="_blank" rel="noopener">https://time.geekbang.org/column/article/40184</a></p>
+<h2 id="18-如何把你的新用户转化为忠实的长期用户？"><a href="#18-如何把你的新用户转化为忠实的长期用户？" class="headerlink" title="18 | 如何把你的新用户转化为忠实的长期用户？"></a>18 | 如何把你的新用户转化为忠实的长期用户？</h2><p><a href="https://time.geekbang.org/column/article/40296" target="_blank" rel="noopener">https://time.geekbang.org/column/article/40296</a></p>
+<h2 id="19-满眼尽是“病毒”“裂变”，到底什么是传播和获客的正确姿势？（上）"><a href="#19-满眼尽是“病毒”“裂变”，到底什么是传播和获客的正确姿势？（上）" class="headerlink" title="19 | 满眼尽是“病毒”“裂变”，到底什么是传播和获客的正确姿势？（上）"></a>19 | 满眼尽是“病毒”“裂变”，到底什么是传播和获客的正确姿势？（上）</h2><p><a href="https://time.geekbang.org/column/article/40309" target="_blank" rel="noopener">https://time.geekbang.org/column/article/40309</a></p>
+<h2 id="产品会客厅-产品经理面试究竟考什么？"><a href="#产品会客厅-产品经理面试究竟考什么？" class="headerlink" title="产品会客厅 | 产品经理面试究竟考什么？"></a>产品会客厅 | 产品经理面试究竟考什么？</h2><p><a href="https://time.geekbang.org/column/article/40590" target="_blank" rel="noopener">https://time.geekbang.org/column/article/40590</a></p>
+<h2 id="20-满眼尽是“病毒”“裂变”，到底什么是传播和获客的正确姿势？（下）"><a href="#20-满眼尽是“病毒”“裂变”，到底什么是传播和获客的正确姿势？（下）" class="headerlink" title="20 | 满眼尽是“病毒”“裂变”，到底什么是传播和获客的正确姿势？（下）"></a>20 | 满眼尽是“病毒”“裂变”，到底什么是传播和获客的正确姿势？（下）</h2><p><a href="https://time.geekbang.org/column/article/40877" target="_blank" rel="noopener">https://time.geekbang.org/column/article/40877</a></p>
+<h2 id="21-增长黑客的阴暗面"><a href="#21-增长黑客的阴暗面" class="headerlink" title="21 | 增长黑客的阴暗面"></a>21 | 增长黑客的阴暗面</h2><p><a href="https://time.geekbang.org/column/article/40880" target="_blank" rel="noopener">https://time.geekbang.org/column/article/40880</a></p>
+<h2 id="产品会客厅-产品经理的职业发展，你在哪个阶段？"><a href="#产品会客厅-产品经理的职业发展，你在哪个阶段？" class="headerlink" title="产品会客厅 | 产品经理的职业发展，你在哪个阶段？"></a>产品会客厅 | 产品经理的职业发展，你在哪个阶段？</h2><p><a href="https://time.geekbang.org/column/article/41180" target="_blank" rel="noopener">https://time.geekbang.org/column/article/41180</a></p>
+<h2 id="22-产品经理需要具备哪些基本的数据能力和意识？"><a href="#22-产品经理需要具备哪些基本的数据能力和意识？" class="headerlink" title="22 | 产品经理需要具备哪些基本的数据能力和意识？"></a>22 | 产品经理需要具备哪些基本的数据能力和意识？</h2><p><a href="https://time.geekbang.org/column/article/41253" target="_blank" rel="noopener">https://time.geekbang.org/column/article/41253</a></p>
+<h2 id="23-突发式流量数据暴跌，产品经理应该如何应对？【分析篇】"><a href="#23-突发式流量数据暴跌，产品经理应该如何应对？【分析篇】" class="headerlink" title="23 | 突发式流量数据暴跌，产品经理应该如何应对？【分析篇】"></a>23 | 突发式流量数据暴跌，产品经理应该如何应对？【分析篇】</h2><p><a href="https://time.geekbang.org/column/article/41338" target="_blank" rel="noopener">https://time.geekbang.org/column/article/41338</a></p>
+<h2 id="产品会客厅-在产品的获客与传播上，“极客时间”做了些什么？"><a href="#产品会客厅-在产品的获客与传播上，“极客时间”做了些什么？" class="headerlink" title="产品会客厅 | 在产品的获客与传播上，“极客时间”做了些什么？"></a>产品会客厅 | 在产品的获客与传播上，“极客时间”做了些什么？</h2><p><a href="https://time.geekbang.org/column/article/41623" target="_blank" rel="noopener">https://time.geekbang.org/column/article/41623</a></p>
+<h2 id="24-突发式流量数据暴跌，产品经理应该如何应对？【拆解篇】"><a href="#24-突发式流量数据暴跌，产品经理应该如何应对？【拆解篇】" class="headerlink" title="24 | 突发式流量数据暴跌，产品经理应该如何应对？【拆解篇】"></a>24 | 突发式流量数据暴跌，产品经理应该如何应对？【拆解篇】</h2><p><a href="https://time.geekbang.org/column/article/41702" target="_blank" rel="noopener">https://time.geekbang.org/column/article/41702</a></p>
+<h2 id="25-突发式流量数据暴跌，产品经理应该如何应对？【处理篇】"><a href="#25-突发式流量数据暴跌，产品经理应该如何应对？【处理篇】" class="headerlink" title="25 | 突发式流量数据暴跌，产品经理应该如何应对？【处理篇】"></a>25 | 突发式流量数据暴跌，产品经理应该如何应对？【处理篇】</h2><p><a href="https://time.geekbang.org/column/article/41709" target="_blank" rel="noopener">https://time.geekbang.org/column/article/41709</a></p>
+<h2 id="产品会客厅-从流量型平台转到资源匮乏平台，如何应对业务变化？"><a href="#产品会客厅-从流量型平台转到资源匮乏平台，如何应对业务变化？" class="headerlink" title="产品会客厅 | 从流量型平台转到资源匮乏平台，如何应对业务变化？"></a>产品会客厅 | 从流量型平台转到资源匮乏平台，如何应对业务变化？</h2><p><a href="https://time.geekbang.org/column/article/42057" target="_blank" rel="noopener">https://time.geekbang.org/column/article/42057</a></p>
+<h2 id="26-当收集数据的前后，我们应该做什么？"><a href="#26-当收集数据的前后，我们应该做什么？" class="headerlink" title="26 | 当收集数据的前后，我们应该做什么？"></a>26 | 当收集数据的前后，我们应该做什么？</h2><p><a href="https://time.geekbang.org/column/article/42162" target="_blank" rel="noopener">https://time.geekbang.org/column/article/42162</a></p>
+<h2 id="27-从具体业务出发，如何利用数据辅助你的决策？"><a href="#27-从具体业务出发，如何利用数据辅助你的决策？" class="headerlink" title="27 | 从具体业务出发，如何利用数据辅助你的决策？"></a>27 | 从具体业务出发，如何利用数据辅助你的决策？</h2><p><a href="https://time.geekbang.org/column/article/42505" target="_blank" rel="noopener">https://time.geekbang.org/column/article/42505</a></p>
+<h2 id="产品会客厅-面向大众的通用型产品VS受众面少的垂直领域，二者如何博弈？（上）"><a href="#产品会客厅-面向大众的通用型产品VS受众面少的垂直领域，二者如何博弈？（上）" class="headerlink" title="产品会客厅 | 面向大众的通用型产品VS受众面少的垂直领域，二者如何博弈？（上）"></a>产品会客厅 | 面向大众的通用型产品VS受众面少的垂直领域，二者如何博弈？（上）</h2><p><a href="https://time.geekbang.org/column/article/42723" target="_blank" rel="noopener">https://time.geekbang.org/column/article/42723</a></p>
+<h2 id="产品会客厅-面向大众的通用型产品VS受众面少的垂直领域，二者如何博弈？（下）"><a href="#产品会客厅-面向大众的通用型产品VS受众面少的垂直领域，二者如何博弈？（下）" class="headerlink" title="产品会客厅 | 面向大众的通用型产品VS受众面少的垂直领域，二者如何博弈？（下）"></a>产品会客厅 | 面向大众的通用型产品VS受众面少的垂直领域，二者如何博弈？（下）</h2><p><a href="https://time.geekbang.org/column/article/42875" target="_blank" rel="noopener">https://time.geekbang.org/column/article/42875</a></p>
+<h2 id="28-那些数据不能告诉你的事儿：尽信“数”不如无“数”"><a href="#28-那些数据不能告诉你的事儿：尽信“数”不如无“数”" class="headerlink" title="28 | 那些数据不能告诉你的事儿：尽信“数”不如无“数”"></a>28 | 那些数据不能告诉你的事儿：尽信“数”不如无“数”</h2><p><a href="https://time.geekbang.org/column/article/44282" target="_blank" rel="noopener">https://time.geekbang.org/column/article/44282</a></p>
+<h2 id="29-每个产品经理都要掌握的基本商业概念是什么？"><a href="#29-每个产品经理都要掌握的基本商业概念是什么？" class="headerlink" title="29 | 每个产品经理都要掌握的基本商业概念是什么？"></a>29 | 每个产品经理都要掌握的基本商业概念是什么？</h2><p><a href="https://time.geekbang.org/column/article/64401" target="_blank" rel="noopener">https://time.geekbang.org/column/article/64401</a></p>
+
+      
+    </div>
+
+    
+      
+      
+
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="http://hadronw.com">hadronw</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="http://hadronw.com/2018/11-04/201811041943/">http://hadronw.com/2018/11-04/201811041943/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span>
+      
+      转载请注明出处！
+    </p>
+  </div>
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">关注支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/wechat-gh1.jpg" title="wechat">
+        </label>
+      
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/极客时间/">极客时间</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2018/11-04/201811041941/">
+        <span class="next-text nav-default">数据结构与算法之美</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+      <div id="vcomments"></div>  
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:hadronw@qq.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/hadronw" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+ <span class="division">|</span>
+  <span>
+    Hosted by - 
+    <a class="theme-link" href="https://pages.coding.me">Coding Pages</a>
+  </<span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2017 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">hadronw</span>
+  </span>
+
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'tA9fnMOATdYuVDUSkPsbGBfi-gzGzoHsz',
+        appKey: '07ptzyueBmWB16ShNJuwsUnm',
+        placeholder: '留下你的想法……',
+        avatar:'robohash',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: true
+    });
+  </script>
+
+
+
+
+
+    
+  
+
+
+
+  
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/pjax/jquery.pjax.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/nprogress/nprogress.min.js"></script>
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.8.0"></script>
+
+  </body>
+</html>
