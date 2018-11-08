@@ -75,15 +75,9 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/ landscape BlueLake
 # theme: next
-# theme: even
+ theme: even
 
-theme: next
 
-# sitemap:
-#   path: sitemap.xml
-
-# baidusitemap:
-#   path: baidusitemap.xml
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
