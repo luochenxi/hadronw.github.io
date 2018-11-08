@@ -1,4 +1,18 @@
+#hexo robots.txt
 User-agent: *
-Disallow: /tags/
-Disallow: /page/
-Disallow: /categories/
+
+Allow: /
+Allow: /archives/
+Allow：/tags/
+Allow：/categories/
+Allow：/page/
+
+#Disallow Allow
+Allow: /js/
+Allow: /css/
+Allow: /fonts/
+Allow: /vendors/
+Allow: /fancybox/
+
+Sitemap: https://hadronw.com/sitemap.xml
+Sitemap: https://hadronw.com/baidusitemap.xml
