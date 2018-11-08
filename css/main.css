@@ -1683,6 +1683,16 @@ pre .javascript .function {
 .rtl.post-title {
   font-family: UKIJ Ekran;
 }
+.reading-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #37c6c0;
+}
 .sidebar {
   position: fixed;
   right: 0;
@@ -1847,7 +1857,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #d954ff;
+  background: #ffa716;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2002,9 +2012,6 @@ pre .javascript .function {
 }
 .footer-inner {
   text-align: center;
-}
-#animate {
-  animation: iconAnimate 1.33s ease-in-out infinite;
 }
 .with-love {
   display: inline-block;
