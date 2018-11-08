@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="Vimium的使用"/>
+
+
+
+
+  <meta name="keywords" content="Mac, Chrome, hadronw's blog" />
+
+
+
+  <meta name="baidu-site-verification" content="jUV4JeBMWP" />
+
+
+
+  <meta name="google-site-verification" content="cXrmNsZjDqC3drL1XY6-CZURO2H7s8X-njVT3_EFO8s" />
+ 
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="hadronw's blog">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/mylog.png?v=2.8.0" />
+
+
+
+<link rel="canonical" href="http://hadronw.com/2018/05-26/Vimium的使用/"/>
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/nprogress/nprogress.min.css" />
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.8.0" />
+
+
+
+  
+  <script id="baidu_analytics">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?80d9b9996150c7cdf8ba27fb6575a66f";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113179601-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113179601-1');
+</script>
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+<script>
+  window.config = {"title":"hadronw's blog","subtitle":null,"description":null,"author":"hadronw","language":"zh-CN","timezone":"Asia/Shanghai","url":"http://hadronw.com","root":"/","permalink":":year/:month-:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":null,"new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":true,"relative_link":false,"future":true,"highlight":{"enable":true,"auto_detect":true,"line_number":true,"tab_replace":true,"first_line_number":"always1"},"default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":20,"pagination_dir":"page","theme":{"color":"Default","toc":true,"fancybox":true,"pjax":true},"deploy":[{"type":"git","repo":"https://github.com/hadronw/hadronw.github.io.git","branch":"master"},{"type":"git","repo":"https://git.coding.net/hadronw/hadronw.git","branch":"master"}],"ignore":[],"index_generator":{"per_page":20,"order_by":"-date","path":""},"archive_generator":{"per_page":20,"yearly":true,"monthly":true,"daily":false},"baidusitemap":{"path":"baidusitemap.xml"},"category_generator":{"per_page":20},"feed":{"type":"atom","limit":20,"hub":"","content":true,"content_limit":140,"content_limit_delim":"","path":"atom.xml"},"sitemap":{"path":"sitemap.xml"},"tag_generator":{"per_page":20},"marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"server":{"port":4000,"log":false,"ip":"0.0.0.0","compress":false,"header":true},"since":2017,"favicon":"/mylog.png","rss":"default","menu":{"Home":"/","Archives":"/archives/","Tags":"/tags/","Categories":"/categories/","About":"/about"},"copyright":{"enable":true,"license":"转载请注明出处！"},"reward":{"enable":true,"qrCode":{"wechat":"/image/wechat-gh1.jpg"}},"social":{"email":"hadronw@qq.com","stack-overflow":null,"twitter":null,"facebook":null,"linkedin":null,"google":null,"github":"https://github.com/hadronw","weibo":null,"zhihu":null,"douban":null,"pocket":null,"tumblr":null,"instagram":null},"app_id":"q4mf6h8NnS0MNjTqEsBsKusw-gzGzoHsz","app_key":"7oNyN2nBpEXdSt04snJIsgPn","baidu_analytics":"80d9b9996150c7cdf8ba27fb6575a66f","google_analytics":"UA-113179601-1","google_verification":"cXrmNsZjDqC3drL1XY6-CZURO2H7s8X-njVT3_EFO8s","baidu_verification":"jUV4JeBMWP","sogou_verification":"30h62eUCDR","disqus_shortname":null,"changyan":{"appid":null,"appkey":null},"valine":{"enable":true,"appid":"tA9fnMOATdYuVDUSkPsbGBfi-gzGzoHsz","appkey":"07ptzyueBmWB16ShNJuwsUnm","notify":false,"verify":false,"placeholder":"留下你的想法……","avatar":"robohash","guest_info":"nick,mail","pageSize":10,"visitor":true},"version":"2.8.0"};
+</script>
+
+    <title> Vimium的使用 - hadronw's blog </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">hadronw's blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            首页
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags/">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories/">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">hadronw's blog</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              首页
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags/">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories/">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Vimium的使用
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-05-26
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Chrome/">Chrome</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#页面滚动"><span class="toc-text">页面滚动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tab——标签页"><span class="toc-text">tab——标签页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#历史记录-书签"><span class="toc-text">历史记录/书签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其它"><span class="toc-text">其它</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <blockquote>
+<p>浏览器中的一款插件，主要用键盘替代鼠标操作浏览器。操作浏览器Chrome</p>
+</blockquote>
+<h2 id="页面滚动"><a href="#页面滚动" class="headerlink" title="页面滚动"></a>页面滚动</h2><p>j   ——》 向下滚动</p>
+<p>k   ——》 向上滚动</p>
+<a id="more"></a>
+<p>h   ——》 向左移动</p>
+<p>i   ——》 向右移动</p>
+<p>gg  ——》 向上滚动到顶端</p>
+<p>G   ——》 向下滚动到末尾</p>
+<p>d   ——》 向下翻一页</p>
+<p>u   ——》 向上翻一页</p>
+<p>r   ——》 刷新页面</p>
+<h2 id="tab——标签页"><a href="#tab——标签页" class="headerlink" title="tab——标签页"></a>tab——标签页</h2><p>K   ——》切换到右一个标签</p>
+<p>J   ——》切换到左一个标签</p>
+<p>g0  ——》去第一个标签</p>
+<p><code>g$</code>  ——》去第<code>$</code>g个标签页</p>
+<p>t   ——》创建一个新标签页（ctrl+t）</p>
+<p>yy  ——》copy当前页面url Copy the current URL to the clipboard</p>
+<p>gs  ——》查看网页源码 View page source</p>
+<p>yf  ——》拷贝当前页面的连接到剪切板 Copy a link URL to the clipboard</p>
+<p>yt  ——》创建当前页面的一个副本(copy当前路径在新Tab中打开)-Duplicate current tab</p>
+<p>YT  ——》罗列出当前所有Tab页(并提供索引)，可任你选择性跳转</p>
+<p>p   ——》在当前标签页中打开剪切板中的链接 Open the clipboard’s URL in the current tab</p>
+<p>P   ——》在新的标签页中打开剪切板中的链接Open the clipboard’s URL in a new tab</p>
+<p>gu  ——》Go up the URL hierarchy 回到当前页的主页</p>
+<p>gU  ——》Go to root of current URL hierarchy 回到当前页面的根页面</p>
+<p>f   ——》 按f键后，当前页面上所有链接上都会出现键盘符号，再按不同的按键，在当前页面打开按键对应的链接</p>
+<p>F   ——》 功能同f键一样，只是在新的标签页打开链接</p>
+<h2 id="历史记录-书签"><a href="#历史记录-书签" class="headerlink" title="历史记录/书签"></a>历史记录/书签</h2><p>o   ——》 在当前页面中打开URL，书签和历史记录 Open URL, bookmark, or history entry</p>
+<p>O   ——》 在新标签页中打开URL，书签和历史记录Open URL, bookmark, history entry, in a new tab</p>
+<p>b   ——》 打开书签 Open a bookmark</p>
+<p>B   ——》 在新标签中打开书签 Open a bookmark in a new tab<br>在命令行模式，按下b(B)，可以对标签进行检索，检索结果通过tab键进行选择，回车即可打开标签</p>
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><p>T   ——》 搜索打开的标签页 Search through your open tabs</p>
+<p>/   ——》查找（ctrl+f）</p>
+<p>i   ——》 进入输入模式 Enter insert mode</p>
+<p>esc ——》 退出</p>
+
+      
+    </div>
+
+    
+      
+      
+
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="http://hadronw.com">hadronw</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="http://hadronw.com/2018/05-26/Vimium的使用/">http://hadronw.com/2018/05-26/Vimium的使用/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span>
+      
+      转载请注明出处！
+    </p>
+  </div>
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">关注支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/wechat-gh1.jpg" title="wechat">
+        </label>
+      
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/Mac/">Mac</a>
+            
+              <a href="/tags/Chrome/">Chrome</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2018/05-27/hexo写作的基本语法/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">hexo写作的基本语法</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/2018/05-25/blog-更改主题/">
+        <span class="next-text nav-default">blog 更改主题</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+      <div id="vcomments"></div>  
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:hadronw@qq.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/hadronw" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+ <span class="division">|</span>
+  <span>
+    Hosted by - 
+    <a class="theme-link" href="https://pages.coding.me">Coding Pages</a>
+  </<span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2017 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">hadronw</span>
+  </span>
+
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'tA9fnMOATdYuVDUSkPsbGBfi-gzGzoHsz',
+        appKey: '07ptzyueBmWB16ShNJuwsUnm',
+        placeholder: '留下你的想法……',
+        avatar:'robohash',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: true
+    });
+  </script>
+
+
+
+
+
+    
+  
+
+
+
+  
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/pjax/jquery.pjax.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/nprogress/nprogress.min.js"></script>
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.8.0"></script>
+
+  </body>
+</html>

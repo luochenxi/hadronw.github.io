@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="Java核心技术36讲 | 专栏目录"/>
+
+
+
+
+  <meta name="keywords" content="极客时间, hadronw's blog" />
+
+
+
+  <meta name="baidu-site-verification" content="jUV4JeBMWP" />
+
+
+
+  <meta name="google-site-verification" content="cXrmNsZjDqC3drL1XY6-CZURO2H7s8X-njVT3_EFO8s" />
+ 
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="hadronw's blog">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/mylog.png?v=2.8.0" />
+
+
+
+<link rel="canonical" href="http://hadronw.com/2018/11-03/201811031759/"/>
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/nprogress/nprogress.min.css" />
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.8.0" />
+
+
+
+  
+  <script id="baidu_analytics">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?80d9b9996150c7cdf8ba27fb6575a66f";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113179601-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113179601-1');
+</script>
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+<script>
+  window.config = {"title":"hadronw's blog","subtitle":null,"description":null,"author":"hadronw","language":"zh-CN","timezone":"Asia/Shanghai","url":"http://hadronw.com","root":"/","permalink":":year/:month-:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":null,"new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":true,"relative_link":false,"future":true,"highlight":{"enable":true,"auto_detect":true,"line_number":true,"tab_replace":true,"first_line_number":"always1"},"default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":20,"pagination_dir":"page","theme":{"color":"Default","toc":true,"fancybox":true,"pjax":true},"deploy":[{"type":"git","repo":"https://github.com/hadronw/hadronw.github.io.git","branch":"master"},{"type":"git","repo":"https://git.coding.net/hadronw/hadronw.git","branch":"master"}],"ignore":[],"index_generator":{"per_page":20,"order_by":"-date","path":""},"archive_generator":{"per_page":20,"yearly":true,"monthly":true,"daily":false},"baidusitemap":{"path":"baidusitemap.xml"},"category_generator":{"per_page":20},"feed":{"type":"atom","limit":20,"hub":"","content":true,"content_limit":140,"content_limit_delim":"","path":"atom.xml"},"sitemap":{"path":"sitemap.xml"},"tag_generator":{"per_page":20},"marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"server":{"port":4000,"log":false,"ip":"0.0.0.0","compress":false,"header":true},"since":2017,"favicon":"/mylog.png","rss":"default","menu":{"Home":"/","Archives":"/archives/","Tags":"/tags/","Categories":"/categories/","About":"/about"},"copyright":{"enable":true,"license":"转载请注明出处！"},"reward":{"enable":true,"qrCode":{"wechat":"/image/wechat-gh1.jpg"}},"social":{"email":"hadronw@qq.com","stack-overflow":null,"twitter":null,"facebook":null,"linkedin":null,"google":null,"github":"https://github.com/hadronw","weibo":null,"zhihu":null,"douban":null,"pocket":null,"tumblr":null,"instagram":null},"app_id":"q4mf6h8NnS0MNjTqEsBsKusw-gzGzoHsz","app_key":"7oNyN2nBpEXdSt04snJIsgPn","baidu_analytics":"80d9b9996150c7cdf8ba27fb6575a66f","google_analytics":"UA-113179601-1","google_verification":"cXrmNsZjDqC3drL1XY6-CZURO2H7s8X-njVT3_EFO8s","baidu_verification":"jUV4JeBMWP","sogou_verification":"30h62eUCDR","disqus_shortname":null,"changyan":{"appid":null,"appkey":null},"valine":{"enable":true,"appid":"tA9fnMOATdYuVDUSkPsbGBfi-gzGzoHsz","appkey":"07ptzyueBmWB16ShNJuwsUnm","notify":false,"verify":false,"placeholder":"留下你的想法……","avatar":"robohash","guest_info":"nick,mail","pageSize":10,"visitor":true},"version":"2.8.0"};
+</script>
+
+    <title> Java核心技术36讲 | 专栏目录 - hadronw's blog </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">hadronw's blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            首页
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags/">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories/">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">hadronw's blog</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              首页
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags/">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories/">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Java核心技术36讲 | 专栏目录
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-11-03
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/极客时间/">极客时间</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#专栏目录"><span class="toc-text">专栏目录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#00-开篇词-以面试题为切入点，有效提升你的Java内功"><span class="toc-text">00 开篇词 | 以面试题为切入点，有效提升你的Java内功</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#01-第1讲-谈谈你对Java平台的理解？"><span class="toc-text">01 第1讲 | 谈谈你对Java平台的理解？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#02-第2讲-Exception和Error有什么区别？"><span class="toc-text">02 第2讲 | Exception和Error有什么区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#03-第3讲-谈谈final、finally、-finalize有什么不同？"><span class="toc-text">03 第3讲 | 谈谈final、finally、 finalize有什么不同？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#04-第4讲-强引用、软引用、弱引用、幻象引用有什么区别？"><span class="toc-text">04 第4讲 | 强引用、软引用、弱引用、幻象引用有什么区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#05-第5讲-String、StringBuffer、StringBuilder有什么区别？"><span class="toc-text">05 第5讲 | String、StringBuffer、StringBuilder有什么区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#06-第6讲-动态代理是基于什么原理？"><span class="toc-text">06 第6讲 | 动态代理是基于什么原理？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#07-第7讲-int和Integer有什么区别？"><span class="toc-text">07 第7讲 | int和Integer有什么区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#08-第8讲-对比Vector、ArrayList、LinkedList有何区别？"><span class="toc-text">08 第8讲 | 对比Vector、ArrayList、LinkedList有何区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#09-第9讲-对比Hashtable、HashMap、TreeMap有什么不同？"><span class="toc-text">09 第9讲 | 对比Hashtable、HashMap、TreeMap有什么不同？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-第10讲-如何保证集合是线程安全的"><span class="toc-text">10 第10讲 | 如何保证集合是线程安全的?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-第11讲-Java提供了哪些IO方式？-NIO如何实现多路复用？"><span class="toc-text">11 第11讲 | Java提供了哪些IO方式？ NIO如何实现多路复用？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-第12讲-Java有几种文件拷贝方式？哪一种最高效？"><span class="toc-text">12 第12讲 | Java有几种文件拷贝方式？哪一种最高效？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-第13讲-谈谈接口和抽象类有什么区别？"><span class="toc-text">13 第13讲 | 谈谈接口和抽象类有什么区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-第14讲-谈谈你知道的设计模式？"><span class="toc-text">14 第14讲 | 谈谈你知道的设计模式？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-第15讲-synchronized和ReentrantLock有什么区别呢？"><span class="toc-text">15 第15讲 | synchronized和ReentrantLock有什么区别呢？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#周末福利-谈谈我对Java学习和面试的看法"><span class="toc-text">周末福利 | 谈谈我对Java学习和面试的看法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-第16讲-synchronized底层如何实现？什么是锁的升级、降级？"><span class="toc-text">16 第16讲 | synchronized底层如何实现？什么是锁的升级、降级？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-第17讲-一个线程两次调用start-方法会出现什么情况？"><span class="toc-text">17 第17讲 | 一个线程两次调用start()方法会出现什么情况？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-第18讲-什么情况下Java程序会产生死锁？如何定位、修复？"><span class="toc-text">18 第18讲 | 什么情况下Java程序会产生死锁？如何定位、修复？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19-第19讲-Java并发包提供了哪些并发工具类？"><span class="toc-text">19 第19讲 | Java并发包提供了哪些并发工具类？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20-第20讲-并发包中的ConcurrentLinkedQueue和LinkedBlockingQueue有什么区别？"><span class="toc-text">20 第20讲 | 并发包中的ConcurrentLinkedQueue和LinkedBlockingQueue有什么区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#21-第21讲-Java并发类库提供的线程池有哪几种？-分别有什么特点？"><span class="toc-text">21 第21讲 | Java并发类库提供的线程池有哪几种？ 分别有什么特点？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-第22讲-AtomicInteger底层实现原理是什么？如何在自己的产品代码中应用CAS操作？"><span class="toc-text">22 第22讲 | AtomicInteger底层实现原理是什么？如何在自己的产品代码中应用CAS操作？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-第23讲-请介绍类加载过程，什么是双亲委派模型？"><span class="toc-text">23 第23讲 | 请介绍类加载过程，什么是双亲委派模型？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#24-第24讲-有哪些方法可以在运行时动态生成一个Java类？"><span class="toc-text">24 第24讲 | 有哪些方法可以在运行时动态生成一个Java类？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#25-第25讲-谈谈JVM内存区域的划分，哪些区域可能发生OutOfMemoryError"><span class="toc-text">25 第25讲 | 谈谈JVM内存区域的划分，哪些区域可能发生OutOfMemoryError?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#26-第26讲-如何监控和诊断JVM堆内和堆外内存使用？"><span class="toc-text">26 第26讲 | 如何监控和诊断JVM堆内和堆外内存使用？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#27-第27讲-Java常见的垃圾收集器有哪些？"><span class="toc-text">27 第27讲 | Java常见的垃圾收集器有哪些？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#28-第28讲-谈谈你的GC调优思路"><span class="toc-text">28 第28讲 | 谈谈你的GC调优思路?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#29-第29讲-Java内存模型中的happen-before是什么？"><span class="toc-text">29 第29讲 | Java内存模型中的happen-before是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#30-第30讲-Java程序运行在Docker等容器环境有哪些新问题？"><span class="toc-text">30 第30讲 | Java程序运行在Docker等容器环境有哪些新问题？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#31-第31讲-你了解Java应用开发中的注入攻击吗？"><span class="toc-text">31 第31讲 | 你了解Java应用开发中的注入攻击吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#32-第32讲-如何写出安全的Java代码？"><span class="toc-text">32 第32讲 | 如何写出安全的Java代码？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#33-第33讲-后台服务出现明显“变慢”，谈谈你的诊断思路？"><span class="toc-text">33 第33讲 | 后台服务出现明显“变慢”，谈谈你的诊断思路？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#34-第34讲-有人说“Lambda能让Java程序慢30倍”，你怎么看？"><span class="toc-text">34 第34讲 | 有人说“Lambda能让Java程序慢30倍”，你怎么看？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#35-第35讲-JVM优化Java代码时都做了什么？"><span class="toc-text">35 第35讲 | JVM优化Java代码时都做了什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#周末福利-一份Java工程师必读书单"><span class="toc-text">周末福利 | 一份Java工程师必读书单</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#36-第36讲-谈谈MySQL支持的事务隔离级别，以及悲观锁和乐观锁的原理和应用场景？"><span class="toc-text">36 第36讲 | 谈谈MySQL支持的事务隔离级别，以及悲观锁和乐观锁的原理和应用场景？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#37-第37讲-谈谈Spring-Bean的生命周期和作用域？"><span class="toc-text">37 第37讲 | 谈谈Spring Bean的生命周期和作用域？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#38-第38讲-对比Java标准NIO类库，你知道Netty是如何实现更高性能的吗？"><span class="toc-text">38 第38讲 | 对比Java标准NIO类库，你知道Netty是如何实现更高性能的吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#39-第39讲-谈谈常用的分布式ID的设计方案？Snowflake是否受冬令时切换影响？"><span class="toc-text">39 第39讲 | 谈谈常用的分布式ID的设计方案？Snowflake是否受冬令时切换影响？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语-技术没有终点"><span class="toc-text">结束语 | 技术没有终点</span></a></li></ol></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <p>专栏详情，用微信扫描下方海报中二维码即可获得！（注：文末有福利）<br><a id="more"></a><br><img src="https://qcloudtest-1255353776.cos.ap-guangzhou.myqcloud.com/%E6%9E%81%E5%AE%A2%E4%B8%93%E6%A0%8F/javahexinjishu36jiang.jpeg" alt=""></p>
+<h1 id="专栏目录"><a href="#专栏目录" class="headerlink" title="专栏目录"></a>专栏目录</h1><h2 id="00-开篇词-以面试题为切入点，有效提升你的Java内功"><a href="#00-开篇词-以面试题为切入点，有效提升你的Java内功" class="headerlink" title="00 开篇词 | 以面试题为切入点，有效提升你的Java内功"></a>00 开篇词 | 以面试题为切入点，有效提升你的Java内功</h2><p><a href="https://time.geekbang.org/column/article/6478" target="_blank" rel="noopener">https://time.geekbang.org/column/article/6478</a></p>
+<h2 id="01-第1讲-谈谈你对Java平台的理解？"><a href="#01-第1讲-谈谈你对Java平台的理解？" class="headerlink" title="01 第1讲 | 谈谈你对Java平台的理解？"></a>01 第1讲 | 谈谈你对Java平台的理解？</h2><p><a href="https://time.geekbang.org/column/article/6845" target="_blank" rel="noopener">https://time.geekbang.org/column/article/6845</a></p>
+<h2 id="02-第2讲-Exception和Error有什么区别？"><a href="#02-第2讲-Exception和Error有什么区别？" class="headerlink" title="02 第2讲 | Exception和Error有什么区别？"></a>02 第2讲 | Exception和Error有什么区别？</h2><p><a href="https://time.geekbang.org/column/article/6849" target="_blank" rel="noopener">https://time.geekbang.org/column/article/6849</a></p>
+<h2 id="03-第3讲-谈谈final、finally、-finalize有什么不同？"><a href="#03-第3讲-谈谈final、finally、-finalize有什么不同？" class="headerlink" title="03 第3讲 | 谈谈final、finally、 finalize有什么不同？"></a>03 第3讲 | 谈谈final、finally、 finalize有什么不同？</h2><p><a href="https://time.geekbang.org/column/article/6906" target="_blank" rel="noopener">https://time.geekbang.org/column/article/6906</a></p>
+<h2 id="04-第4讲-强引用、软引用、弱引用、幻象引用有什么区别？"><a href="#04-第4讲-强引用、软引用、弱引用、幻象引用有什么区别？" class="headerlink" title="04 第4讲 | 强引用、软引用、弱引用、幻象引用有什么区别？"></a>04 第4讲 | 强引用、软引用、弱引用、幻象引用有什么区别？</h2><p><a href="https://time.geekbang.org/column/article/6970" target="_blank" rel="noopener">https://time.geekbang.org/column/article/6970</a></p>
+<h2 id="05-第5讲-String、StringBuffer、StringBuilder有什么区别？"><a href="#05-第5讲-String、StringBuffer、StringBuilder有什么区别？" class="headerlink" title="05 第5讲 | String、StringBuffer、StringBuilder有什么区别？"></a>05 第5讲 | String、StringBuffer、StringBuilder有什么区别？</h2><p><a href="https://time.geekbang.org/column/article/7349" target="_blank" rel="noopener">https://time.geekbang.org/column/article/7349</a></p>
+<h2 id="06-第6讲-动态代理是基于什么原理？"><a href="#06-第6讲-动态代理是基于什么原理？" class="headerlink" title="06 第6讲 | 动态代理是基于什么原理？"></a>06 第6讲 | 动态代理是基于什么原理？</h2><p><a href="https://time.geekbang.org/column/article/7489" target="_blank" rel="noopener">https://time.geekbang.org/column/article/7489</a></p>
+<h2 id="07-第7讲-int和Integer有什么区别？"><a href="#07-第7讲-int和Integer有什么区别？" class="headerlink" title="07 第7讲 | int和Integer有什么区别？"></a>07 第7讲 | int和Integer有什么区别？</h2><p><a href="https://time.geekbang.org/column/article/7514" target="_blank" rel="noopener">https://time.geekbang.org/column/article/7514</a></p>
+<h2 id="08-第8讲-对比Vector、ArrayList、LinkedList有何区别？"><a href="#08-第8讲-对比Vector、ArrayList、LinkedList有何区别？" class="headerlink" title="08 第8讲 | 对比Vector、ArrayList、LinkedList有何区别？"></a>08 第8讲 | 对比Vector、ArrayList、LinkedList有何区别？</h2><p><a href="https://time.geekbang.org/column/article/7810" target="_blank" rel="noopener">https://time.geekbang.org/column/article/7810</a></p>
+<h2 id="09-第9讲-对比Hashtable、HashMap、TreeMap有什么不同？"><a href="#09-第9讲-对比Hashtable、HashMap、TreeMap有什么不同？" class="headerlink" title="09 第9讲 | 对比Hashtable、HashMap、TreeMap有什么不同？"></a>09 第9讲 | 对比Hashtable、HashMap、TreeMap有什么不同？</h2><p><a href="https://time.geekbang.org/column/article/8053" target="_blank" rel="noopener">https://time.geekbang.org/column/article/8053</a></p>
+<h2 id="10-第10讲-如何保证集合是线程安全的"><a href="#10-第10讲-如何保证集合是线程安全的" class="headerlink" title="10 第10讲 | 如何保证集合是线程安全的?"></a>10 第10讲 | 如何保证集合是线程安全的?</h2><p><a href="https://time.geekbang.org/column/article/8137" target="_blank" rel="noopener">https://time.geekbang.org/column/article/8137</a></p>
+<h2 id="11-第11讲-Java提供了哪些IO方式？-NIO如何实现多路复用？"><a href="#11-第11讲-Java提供了哪些IO方式？-NIO如何实现多路复用？" class="headerlink" title="11 第11讲 | Java提供了哪些IO方式？ NIO如何实现多路复用？"></a>11 第11讲 | Java提供了哪些IO方式？ NIO如何实现多路复用？</h2><p><a href="https://time.geekbang.org/column/article/8369" target="_blank" rel="noopener">https://time.geekbang.org/column/article/8369</a></p>
+<h2 id="12-第12讲-Java有几种文件拷贝方式？哪一种最高效？"><a href="#12-第12讲-Java有几种文件拷贝方式？哪一种最高效？" class="headerlink" title="12 第12讲 | Java有几种文件拷贝方式？哪一种最高效？"></a>12 第12讲 | Java有几种文件拷贝方式？哪一种最高效？</h2><p><a href="https://time.geekbang.org/column/article/8393" target="_blank" rel="noopener">https://time.geekbang.org/column/article/8393</a></p>
+<h2 id="13-第13讲-谈谈接口和抽象类有什么区别？"><a href="#13-第13讲-谈谈接口和抽象类有什么区别？" class="headerlink" title="13 第13讲 | 谈谈接口和抽象类有什么区别？"></a>13 第13讲 | 谈谈接口和抽象类有什么区别？</h2><p><a href="https://time.geekbang.org/column/article/8471" target="_blank" rel="noopener">https://time.geekbang.org/column/article/8471</a></p>
+<h2 id="14-第14讲-谈谈你知道的设计模式？"><a href="#14-第14讲-谈谈你知道的设计模式？" class="headerlink" title="14 第14讲 | 谈谈你知道的设计模式？"></a>14 第14讲 | 谈谈你知道的设计模式？</h2><p><a href="https://time.geekbang.org/column/article/8624" target="_blank" rel="noopener">https://time.geekbang.org/column/article/8624</a></p>
+<h2 id="15-第15讲-synchronized和ReentrantLock有什么区别呢？"><a href="#15-第15讲-synchronized和ReentrantLock有什么区别呢？" class="headerlink" title="15 第15讲 | synchronized和ReentrantLock有什么区别呢？"></a>15 第15讲 | synchronized和ReentrantLock有什么区别呢？</h2><p><a href="https://time.geekbang.org/column/article/8799" target="_blank" rel="noopener">https://time.geekbang.org/column/article/8799</a></p>
+<h2 id="周末福利-谈谈我对Java学习和面试的看法"><a href="#周末福利-谈谈我对Java学习和面试的看法" class="headerlink" title="周末福利 | 谈谈我对Java学习和面试的看法"></a>周末福利 | 谈谈我对Java学习和面试的看法</h2><p><a href="https://time.geekbang.org/column/article/9014" target="_blank" rel="noopener">https://time.geekbang.org/column/article/9014</a></p>
+<h2 id="16-第16讲-synchronized底层如何实现？什么是锁的升级、降级？"><a href="#16-第16讲-synchronized底层如何实现？什么是锁的升级、降级？" class="headerlink" title="16 第16讲 | synchronized底层如何实现？什么是锁的升级、降级？"></a>16 第16讲 | synchronized底层如何实现？什么是锁的升级、降级？</h2><p><a href="https://time.geekbang.org/column/article/9042" target="_blank" rel="noopener">https://time.geekbang.org/column/article/9042</a></p>
+<h2 id="17-第17讲-一个线程两次调用start-方法会出现什么情况？"><a href="#17-第17讲-一个线程两次调用start-方法会出现什么情况？" class="headerlink" title="17 第17讲 | 一个线程两次调用start()方法会出现什么情况？"></a>17 第17讲 | 一个线程两次调用start()方法会出现什么情况？</h2><p><a href="https://time.geekbang.org/column/article/9103" target="_blank" rel="noopener">https://time.geekbang.org/column/article/9103</a></p>
+<h2 id="18-第18讲-什么情况下Java程序会产生死锁？如何定位、修复？"><a href="#18-第18讲-什么情况下Java程序会产生死锁？如何定位、修复？" class="headerlink" title="18 第18讲 | 什么情况下Java程序会产生死锁？如何定位、修复？"></a>18 第18讲 | 什么情况下Java程序会产生死锁？如何定位、修复？</h2><p><a href="https://time.geekbang.org/column/article/9266" target="_blank" rel="noopener">https://time.geekbang.org/column/article/9266</a></p>
+<h2 id="19-第19讲-Java并发包提供了哪些并发工具类？"><a href="#19-第19讲-Java并发包提供了哪些并发工具类？" class="headerlink" title="19 第19讲 | Java并发包提供了哪些并发工具类？"></a>19 第19讲 | Java并发包提供了哪些并发工具类？</h2><p><a href="https://time.geekbang.org/column/article/9373" target="_blank" rel="noopener">https://time.geekbang.org/column/article/9373</a></p>
+<h2 id="20-第20讲-并发包中的ConcurrentLinkedQueue和LinkedBlockingQueue有什么区别？"><a href="#20-第20讲-并发包中的ConcurrentLinkedQueue和LinkedBlockingQueue有什么区别？" class="headerlink" title="20 第20讲 | 并发包中的ConcurrentLinkedQueue和LinkedBlockingQueue有什么区别？"></a>20 第20讲 | 并发包中的ConcurrentLinkedQueue和LinkedBlockingQueue有什么区别？</h2><p><a href="https://time.geekbang.org/column/article/9588" target="_blank" rel="noopener">https://time.geekbang.org/column/article/9588</a></p>
+<h2 id="21-第21讲-Java并发类库提供的线程池有哪几种？-分别有什么特点？"><a href="#21-第21讲-Java并发类库提供的线程池有哪几种？-分别有什么特点？" class="headerlink" title="21 第21讲 | Java并发类库提供的线程池有哪几种？ 分别有什么特点？"></a>21 第21讲 | Java并发类库提供的线程池有哪几种？ 分别有什么特点？</h2><p><a href="https://time.geekbang.org/column/article/9712" target="_blank" rel="noopener">https://time.geekbang.org/column/article/9712</a></p>
+<h2 id="22-第22讲-AtomicInteger底层实现原理是什么？如何在自己的产品代码中应用CAS操作？"><a href="#22-第22讲-AtomicInteger底层实现原理是什么？如何在自己的产品代码中应用CAS操作？" class="headerlink" title="22 第22讲 | AtomicInteger底层实现原理是什么？如何在自己的产品代码中应用CAS操作？"></a>22 第22讲 | AtomicInteger底层实现原理是什么？如何在自己的产品代码中应用CAS操作？</h2><p><a href="https://time.geekbang.org/column/article/9788" target="_blank" rel="noopener">https://time.geekbang.org/column/article/9788</a></p>
+<h2 id="23-第23讲-请介绍类加载过程，什么是双亲委派模型？"><a href="#23-第23讲-请介绍类加载过程，什么是双亲委派模型？" class="headerlink" title="23 第23讲 | 请介绍类加载过程，什么是双亲委派模型？"></a>23 第23讲 | 请介绍类加载过程，什么是双亲委派模型？</h2><p><a href="https://time.geekbang.org/column/article/9946" target="_blank" rel="noopener">https://time.geekbang.org/column/article/9946</a></p>
+<h2 id="24-第24讲-有哪些方法可以在运行时动态生成一个Java类？"><a href="#24-第24讲-有哪些方法可以在运行时动态生成一个Java类？" class="headerlink" title="24 第24讲 | 有哪些方法可以在运行时动态生成一个Java类？"></a>24 第24讲 | 有哪些方法可以在运行时动态生成一个Java类？</h2><p><a href="https://time.geekbang.org/column/article/10076" target="_blank" rel="noopener">https://time.geekbang.org/column/article/10076</a></p>
+<h2 id="25-第25讲-谈谈JVM内存区域的划分，哪些区域可能发生OutOfMemoryError"><a href="#25-第25讲-谈谈JVM内存区域的划分，哪些区域可能发生OutOfMemoryError" class="headerlink" title="25 第25讲 | 谈谈JVM内存区域的划分，哪些区域可能发生OutOfMemoryError?"></a>25 第25讲 | 谈谈JVM内存区域的划分，哪些区域可能发生OutOfMemoryError?</h2><p><a href="https://time.geekbang.org/column/article/10192" target="_blank" rel="noopener">https://time.geekbang.org/column/article/10192</a></p>
+<h2 id="26-第26讲-如何监控和诊断JVM堆内和堆外内存使用？"><a href="#26-第26讲-如何监控和诊断JVM堆内和堆外内存使用？" class="headerlink" title="26 第26讲 | 如何监控和诊断JVM堆内和堆外内存使用？"></a>26 第26讲 | 如何监控和诊断JVM堆内和堆外内存使用？</h2><p><a href="https://time.geekbang.org/column/article/10325" target="_blank" rel="noopener">https://time.geekbang.org/column/article/10325</a></p>
+<h2 id="27-第27讲-Java常见的垃圾收集器有哪些？"><a href="#27-第27讲-Java常见的垃圾收集器有哪些？" class="headerlink" title="27 第27讲 | Java常见的垃圾收集器有哪些？"></a>27 第27讲 | Java常见的垃圾收集器有哪些？</h2><p><a href="https://time.geekbang.org/column/article/10513" target="_blank" rel="noopener">https://time.geekbang.org/column/article/10513</a></p>
+<h2 id="28-第28讲-谈谈你的GC调优思路"><a href="#28-第28讲-谈谈你的GC调优思路" class="headerlink" title="28 第28讲 | 谈谈你的GC调优思路?"></a>28 第28讲 | 谈谈你的GC调优思路?</h2><p><a href="https://time.geekbang.org/column/article/10651" target="_blank" rel="noopener">https://time.geekbang.org/column/article/10651</a></p>
+<h2 id="29-第29讲-Java内存模型中的happen-before是什么？"><a href="#29-第29讲-Java内存模型中的happen-before是什么？" class="headerlink" title="29 第29讲 | Java内存模型中的happen-before是什么？"></a>29 第29讲 | Java内存模型中的happen-before是什么？</h2><p><a href="https://time.geekbang.org/column/article/10772" target="_blank" rel="noopener">https://time.geekbang.org/column/article/10772</a></p>
+<h2 id="30-第30讲-Java程序运行在Docker等容器环境有哪些新问题？"><a href="#30-第30讲-Java程序运行在Docker等容器环境有哪些新问题？" class="headerlink" title="30 第30讲 | Java程序运行在Docker等容器环境有哪些新问题？"></a>30 第30讲 | Java程序运行在Docker等容器环境有哪些新问题？</h2><p><a href="https://time.geekbang.org/column/article/10975" target="_blank" rel="noopener">https://time.geekbang.org/column/article/10975</a></p>
+<h2 id="31-第31讲-你了解Java应用开发中的注入攻击吗？"><a href="#31-第31讲-你了解Java应用开发中的注入攻击吗？" class="headerlink" title="31 第31讲 | 你了解Java应用开发中的注入攻击吗？"></a>31 第31讲 | 你了解Java应用开发中的注入攻击吗？</h2><p><a href="https://time.geekbang.org/column/article/11211" target="_blank" rel="noopener">https://time.geekbang.org/column/article/11211</a></p>
+<h2 id="32-第32讲-如何写出安全的Java代码？"><a href="#32-第32讲-如何写出安全的Java代码？" class="headerlink" title="32 第32讲 | 如何写出安全的Java代码？"></a>32 第32讲 | 如何写出安全的Java代码？</h2><p><a href="https://time.geekbang.org/column/article/11355" target="_blank" rel="noopener">https://time.geekbang.org/column/article/11355</a></p>
+<h2 id="33-第33讲-后台服务出现明显“变慢”，谈谈你的诊断思路？"><a href="#33-第33讲-后台服务出现明显“变慢”，谈谈你的诊断思路？" class="headerlink" title="33 第33讲 | 后台服务出现明显“变慢”，谈谈你的诊断思路？"></a>33 第33讲 | 后台服务出现明显“变慢”，谈谈你的诊断思路？</h2><p><a href="https://time.geekbang.org/column/article/11651" target="_blank" rel="noopener">https://time.geekbang.org/column/article/11651</a></p>
+<h2 id="34-第34讲-有人说“Lambda能让Java程序慢30倍”，你怎么看？"><a href="#34-第34讲-有人说“Lambda能让Java程序慢30倍”，你怎么看？" class="headerlink" title="34 第34讲 | 有人说“Lambda能让Java程序慢30倍”，你怎么看？"></a>34 第34讲 | 有人说“Lambda能让Java程序慢30倍”，你怎么看？</h2><p><a href="https://time.geekbang.org/column/article/11824" target="_blank" rel="noopener">https://time.geekbang.org/column/article/11824</a></p>
+<h2 id="35-第35讲-JVM优化Java代码时都做了什么？"><a href="#35-第35讲-JVM优化Java代码时都做了什么？" class="headerlink" title="35 第35讲 | JVM优化Java代码时都做了什么？"></a>35 第35讲 | JVM优化Java代码时都做了什么？</h2><p><a href="https://time.geekbang.org/column/article/12003" target="_blank" rel="noopener">https://time.geekbang.org/column/article/12003</a></p>
+<h2 id="周末福利-一份Java工程师必读书单"><a href="#周末福利-一份Java工程师必读书单" class="headerlink" title="周末福利 | 一份Java工程师必读书单"></a>周末福利 | 一份Java工程师必读书单</h2><p><a href="https://time.geekbang.org/column/article/12188" target="_blank" rel="noopener">https://time.geekbang.org/column/article/12188</a></p>
+<h2 id="36-第36讲-谈谈MySQL支持的事务隔离级别，以及悲观锁和乐观锁的原理和应用场景？"><a href="#36-第36讲-谈谈MySQL支持的事务隔离级别，以及悲观锁和乐观锁的原理和应用场景？" class="headerlink" title="36 第36讲 | 谈谈MySQL支持的事务隔离级别，以及悲观锁和乐观锁的原理和应用场景？"></a>36 第36讲 | 谈谈MySQL支持的事务隔离级别，以及悲观锁和乐观锁的原理和应用场景？</h2><p><a href="https://time.geekbang.org/column/article/12288" target="_blank" rel="noopener">https://time.geekbang.org/column/article/12288</a></p>
+<h2 id="37-第37讲-谈谈Spring-Bean的生命周期和作用域？"><a href="#37-第37讲-谈谈Spring-Bean的生命周期和作用域？" class="headerlink" title="37 第37讲 | 谈谈Spring Bean的生命周期和作用域？"></a>37 第37讲 | 谈谈Spring Bean的生命周期和作用域？</h2><p><a href="https://time.geekbang.org/column/article/12472" target="_blank" rel="noopener">https://time.geekbang.org/column/article/12472</a></p>
+<h2 id="38-第38讲-对比Java标准NIO类库，你知道Netty是如何实现更高性能的吗？"><a href="#38-第38讲-对比Java标准NIO类库，你知道Netty是如何实现更高性能的吗？" class="headerlink" title="38 第38讲 | 对比Java标准NIO类库，你知道Netty是如何实现更高性能的吗？"></a>38 第38讲 | 对比Java标准NIO类库，你知道Netty是如何实现更高性能的吗？</h2><p><a href="https://time.geekbang.org/column/article/12629" target="_blank" rel="noopener">https://time.geekbang.org/column/article/12629</a></p>
+<h2 id="39-第39讲-谈谈常用的分布式ID的设计方案？Snowflake是否受冬令时切换影响？"><a href="#39-第39讲-谈谈常用的分布式ID的设计方案？Snowflake是否受冬令时切换影响？" class="headerlink" title="39 第39讲 | 谈谈常用的分布式ID的设计方案？Snowflake是否受冬令时切换影响？"></a>39 第39讲 | 谈谈常用的分布式ID的设计方案？Snowflake是否受冬令时切换影响？</h2><p><a href="https://time.geekbang.org/column/article/12806" target="_blank" rel="noopener">https://time.geekbang.org/column/article/12806</a></p>
+<h2 id="结束语-技术没有终点"><a href="#结束语-技术没有终点" class="headerlink" title="结束语 | 技术没有终点"></a>结束语 | 技术没有终点</h2><p><a href="https://time.geekbang.org/column/article/12963" target="_blank" rel="noopener">https://time.geekbang.org/column/article/12963</a></p>
+<p>通过下方连接购买的极客专栏，可获得赏金 80% 的现金返现</p>
+<p><a href="https://mp.weixin.qq.com/s/trUFpup8D4NvYwH-ehziwg" target="_blank" rel="noopener">福利 | 购买极客时间课程大返现</a></p>
+
+      
+    </div>
+
+    
+      
+      
+
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="http://hadronw.com">hadronw</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="http://hadronw.com/2018/11-03/201811031759/">http://hadronw.com/2018/11-03/201811031759/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span>
+      
+      转载请注明出处！
+    </p>
+  </div>
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">关注支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/wechat-gh1.jpg" title="wechat">
+        </label>
+      
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/极客时间/">极客时间</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2018/11-03/201811031805/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">推荐系统三十六式 | 专栏目录</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/2018/11-03/201811031718/">
+        <span class="next-text nav-default">技术与商业案例解读 | 专栏目录</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+      <div id="vcomments"></div>  
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:hadronw@qq.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/hadronw" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+ <span class="division">|</span>
+  <span>
+    Hosted by - 
+    <a class="theme-link" href="https://pages.coding.me">Coding Pages</a>
+  </<span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2017 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">hadronw</span>
+  </span>
+
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'tA9fnMOATdYuVDUSkPsbGBfi-gzGzoHsz',
+        appKey: '07ptzyueBmWB16ShNJuwsUnm',
+        placeholder: '留下你的想法……',
+        avatar:'robohash',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: true
+    });
+  </script>
+
+
+
+
+
+    
+  
+
+
+
+  
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/pjax/jquery.pjax.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/nprogress/nprogress.min.js"></script>
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.8.0"></script>
+
+  </body>
+</html>

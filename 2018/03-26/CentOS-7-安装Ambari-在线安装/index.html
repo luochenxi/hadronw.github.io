@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="CentOS-7-安装Ambari-在线安装"/>
+
+
+
+
+  <meta name="keywords" content="Linux, hadronw's blog" />
+
+
+
+  <meta name="baidu-site-verification" content="jUV4JeBMWP" />
+
+
+
+  <meta name="google-site-verification" content="cXrmNsZjDqC3drL1XY6-CZURO2H7s8X-njVT3_EFO8s" />
+ 
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="hadronw's blog">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/mylog.png?v=2.8.0" />
+
+
+
+<link rel="canonical" href="http://hadronw.com/2018/03-26/CentOS-7-安装Ambari-在线安装/"/>
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/nprogress/nprogress.min.css" />
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.8.0" />
+
+
+
+  
+  <script id="baidu_analytics">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?80d9b9996150c7cdf8ba27fb6575a66f";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113179601-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113179601-1');
+</script>
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+<script>
+  window.config = {"title":"hadronw's blog","subtitle":null,"description":null,"author":"hadronw","language":"zh-CN","timezone":"Asia/Shanghai","url":"http://hadronw.com","root":"/","permalink":":year/:month-:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":null,"new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":true,"relative_link":false,"future":true,"highlight":{"enable":true,"auto_detect":true,"line_number":true,"tab_replace":true,"first_line_number":"always1"},"default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":20,"pagination_dir":"page","theme":{"color":"Default","toc":true,"fancybox":true,"pjax":true},"deploy":[{"type":"git","repo":"https://github.com/hadronw/hadronw.github.io.git","branch":"master"},{"type":"git","repo":"https://git.coding.net/hadronw/hadronw.git","branch":"master"}],"ignore":[],"index_generator":{"per_page":20,"order_by":"-date","path":""},"archive_generator":{"per_page":20,"yearly":true,"monthly":true,"daily":false},"baidusitemap":{"path":"baidusitemap.xml"},"category_generator":{"per_page":20},"feed":{"type":"atom","limit":20,"hub":"","content":true,"content_limit":140,"content_limit_delim":"","path":"atom.xml"},"sitemap":{"path":"sitemap.xml"},"tag_generator":{"per_page":20},"marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"server":{"port":4000,"log":false,"ip":"0.0.0.0","compress":false,"header":true},"since":2017,"favicon":"/mylog.png","rss":"default","menu":{"Home":"/","Archives":"/archives/","Tags":"/tags/","Categories":"/categories/","About":"/about"},"copyright":{"enable":true,"license":"转载请注明出处！"},"reward":{"enable":true,"qrCode":{"wechat":"/image/wechat-gh1.jpg"}},"social":{"email":"hadronw@qq.com","stack-overflow":null,"twitter":null,"facebook":null,"linkedin":null,"google":null,"github":"https://github.com/hadronw","weibo":null,"zhihu":null,"douban":null,"pocket":null,"tumblr":null,"instagram":null},"app_id":"q4mf6h8NnS0MNjTqEsBsKusw-gzGzoHsz","app_key":"7oNyN2nBpEXdSt04snJIsgPn","baidu_analytics":"80d9b9996150c7cdf8ba27fb6575a66f","google_analytics":"UA-113179601-1","google_verification":"cXrmNsZjDqC3drL1XY6-CZURO2H7s8X-njVT3_EFO8s","baidu_verification":"jUV4JeBMWP","sogou_verification":"30h62eUCDR","disqus_shortname":null,"changyan":{"appid":null,"appkey":null},"valine":{"enable":true,"appid":"tA9fnMOATdYuVDUSkPsbGBfi-gzGzoHsz","appkey":"07ptzyueBmWB16ShNJuwsUnm","notify":false,"verify":false,"placeholder":"留下你的想法……","avatar":"robohash","guest_info":"nick,mail","pageSize":10,"visitor":true},"version":"2.8.0"};
+</script>
+
+    <title> CentOS-7-安装Ambari-在线安装 - hadronw's blog </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">hadronw's blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            首页
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags/">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories/">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">hadronw's blog</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              首页
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags/">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories/">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          CentOS-7-安装Ambari-在线安装
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-03-26
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#下载ambari-repo文件"><span class="toc-text">下载ambari.repo文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重新加载检查yum源"><span class="toc-text">重新加载检查yum源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Ambari"><span class="toc-text">安装Ambari</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置Ambari"><span class="toc-text">配置Ambari</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#检查SELinux是否关闭，如果关闭不用操作"><span class="toc-text">检查SELinux是否关闭，如果关闭不用操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#提示是否自定义设置-输入：y"><span class="toc-text">提示是否自定义设置 输入：y</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ambari-server-账号-输入：ambari"><span class="toc-text">ambari-server 账号 输入：ambari</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#检查防火墙，如果关闭则不用操作"><span class="toc-text">检查防火墙，如果关闭则不用操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置JDK-输入：3"><span class="toc-text">设置JDK 输入：3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如果上面选择3自定义JDK-则需要设置JAVA-HOME"><span class="toc-text">如果上面选择3自定义JDK,则需要设置JAVA_HOME</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据库配置-选择：y"><span class="toc-text">数据库配置  选择：y</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选择数据库类型-输入：3"><span class="toc-text">选择数据库类型 输入：3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置数据库的具体配置信息，根据实际情况输入，如果和括号内相同，则可以直接回车"><span class="toc-text">设置数据库的具体配置信息，根据实际情况输入，如果和括号内相同，则可以直接回车</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#提示必须安装MySQL-JDBC，回车结束ambari配置"><span class="toc-text">提示必须安装MySQL JDBC，回车结束ambari配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#将Ambari数据库脚本导入到数据库-如果使用自己定义的数据库，必须在启动Ambari服务之前导入Ambari的sql脚本"><span class="toc-text">将Ambari数据库脚本导入到数据库,如果使用自己定义的数据库，必须在启动Ambari服务之前导入Ambari的sql脚本</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#启动ambari"><span class="toc-text">启动ambari</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ambari配置集群"><span class="toc-text">Ambari配置集群</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <p>在线安装Ambari-2.6.00，安装前的准备可以看上一篇文章。本文安装的是Hortonworks版的</p>
+<p><a href="http://hadronw.github.io/2018/03-25/CentOS-7-%E5%AE%89%E8%A3%85Ambari-%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/" target="_blank" rel="noopener">CentOS-7-安装Ambari-环境准备</a><br><a id="more"></a></p>
+<p><a href="https://docs.hortonworks.com/HDPDocuments/Ambari/Ambari-2.6.0.0/index.html" target="_blank" rel="noopener">Hortonworks官方安装文档</a></p>
+<h2 id="下载ambari-repo文件"><a href="#下载ambari-repo文件" class="headerlink" title="下载ambari.repo文件"></a>下载ambari.repo文件</h2><hr>
+<p>进入到官方文档，查找到<a href="https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.0.0/bk_ambari-installation/content/ambari_repositories.html" target="_blank" rel="noopener">在线安装的仓库文件链接列表</a>，选择对应的系统版本</p>
+<p>CentOS7—— <a href="http://public-repo-1.hortonworks.com/ambari/centos7/2.x/updates/2.6.0.0/ambari.repo" target="_blank" rel="noopener">http://public-repo-1.hortonworks.com/ambari/centos7/2.x/updates/2.6.0.0/ambari.repo</a> </p>
+<p>打开主节点a0</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">wget http:<span class="comment">//public-repo-1.hortonworks.com/ambari/centos7/2.x/updates/2.6.0.0/ambari.repo</span></span><br><span class="line"></span><br><span class="line">cp ambari<span class="selector-class">.repo</span> /etc/yum<span class="selector-class">.repo</span><span class="selector-class">.d</span>/ 将ambari<span class="selector-class">.repo</span> 放入yum源根目录中用于安装</span><br><span class="line"></span><br><span class="line">或者</span><br><span class="line"></span><br><span class="line">wget -nv http:<span class="comment">//public-repo-1.hortonworks.com/ambari/centos7/2.x/updates/2.6.0.0/ambari.repo -O /etc/yum.repos.d/ambari.repo</span></span><br></pre></td></tr></table></figure>
+<h2 id="重新加载检查yum源"><a href="#重新加载检查yum源" class="headerlink" title="重新加载检查yum源"></a>重新加载检查yum源</h2><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">yum repolist</span></span><br></pre></td></tr></table></figure>
+<h2 id="安装Ambari"><a href="#安装Ambari" class="headerlink" title="安装Ambari"></a>安装Ambari</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum <span class="keyword">install</span> ambari-<span class="keyword">server</span></span><br></pre></td></tr></table></figure>
+<h2 id="配置Ambari"><a href="#配置Ambari" class="headerlink" title="配置Ambari"></a>配置Ambari</h2><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ambari-server <span class="built_in">setup</span></span><br></pre></td></tr></table></figure>
+<p>以下为流程：</p>
+<h3 id="检查SELinux是否关闭，如果关闭不用操作"><a href="#检查SELinux是否关闭，如果关闭不用操作" class="headerlink" title="检查SELinux是否关闭，如果关闭不用操作"></a>检查SELinux是否关闭，如果关闭不用操作</h3><figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Using</span> python  /usr/bin/python</span><br><span class="line">Setup ambari-server</span><br><span class="line"><span class="function"><span class="title">Checking</span></span> SELinux...</span><br><span class="line">SELinux status is <span class="string">'disabled'</span></span><br></pre></td></tr></table></figure>
+<h3 id="提示是否自定义设置-输入：y"><a href="#提示是否自定义设置-输入：y" class="headerlink" title="提示是否自定义设置 输入：y"></a>提示是否自定义设置 输入：y</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Customize<span class="built_in"> user </span>account <span class="keyword">for</span> ambari-server daemon [y/n] (n)? y</span><br></pre></td></tr></table></figure>
+<h3 id="ambari-server-账号-输入：ambari"><a href="#ambari-server-账号-输入：ambari" class="headerlink" title="ambari-server 账号 输入：ambari"></a>ambari-server 账号 输入：ambari</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter<span class="built_in"> user </span>account <span class="keyword">for</span> ambari-server daemon (root):ambari</span><br><span class="line">Adjusting ambari-server permissions <span class="keyword">and</span> ownership<span class="built_in">..</span>.</span><br></pre></td></tr></table></figure>
+<p>亦可不输入</p>
+<h3 id="检查防火墙，如果关闭则不用操作"><a href="#检查防火墙，如果关闭则不用操作" class="headerlink" title="检查防火墙，如果关闭则不用操作"></a>检查防火墙，如果关闭则不用操作</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Checking<span class="built_in"> firewall </span>status<span class="built_in">..</span>.</span><br><span class="line">Redirecting <span class="keyword">to</span> /bin/systemctl status  iptables.service</span><br></pre></td></tr></table></figure>
+<h3 id="设置JDK-输入：3"><a href="#设置JDK-输入：3" class="headerlink" title="设置JDK 输入：3"></a>设置JDK 输入：3</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Checking JDK<span class="built_in">..</span>.</span><br><span class="line"><span class="keyword">Do</span> you want <span class="keyword">to</span> change Oracle JDK [y/n] (n)? y</span><br><span class="line">[1] Oracle JDK 1.8 + Java Cryptography Extension (JCE)<span class="built_in"> Policy </span>Files 8</span><br><span class="line">[2] Oracle JDK 1.7 + Java Cryptography Extension (JCE)<span class="built_in"> Policy </span>Files 7</span><br><span class="line">[3] Custom JDK</span><br><span class="line">==============================================================================</span><br><span class="line">Enter choice (1): 3</span><br></pre></td></tr></table></figure>
+<p>此前环境准备中已经配置过jdk，此处选自定义，</p>
+<h3 id="如果上面选择3自定义JDK-则需要设置JAVA-HOME"><a href="#如果上面选择3自定义JDK-则需要设置JAVA-HOME" class="headerlink" title="如果上面选择3自定义JDK,则需要设置JAVA_HOME"></a>如果上面选择3自定义JDK,则需要设置JAVA_HOME</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">WARNING: JDK must be installed on all hosts <span class="keyword">and</span> JAVA_HOME must be valid on all hosts.</span><br><span class="line">WARNING: JCE<span class="built_in"> Policy </span>files are required <span class="keyword">for</span> configuring Kerberos security. <span class="keyword">If</span> you plan <span class="keyword">to</span> use Kerberos,please make sure JCE Unlimited Strength Jurisdiction<span class="built_in"> Policy </span>Files are valid on all hosts.</span><br><span class="line">Path <span class="keyword">to</span> JAVA_HOME: /xxx/xxx/jdk1.8.0_152</span><br><span class="line">Validating JDK on Ambari Server<span class="built_in">..</span>.done.</span><br><span class="line">Completing setup<span class="built_in">..</span>.</span><br></pre></td></tr></table></figure>
+<p>查看机器中配置的JAVA_HOME，</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo <span class="variable">$JAVA_HOME</span></span><br><span class="line"><span class="regexp">/xxx/</span>xxx<span class="regexp">/jdk1.8.0_152</span></span><br></pre></td></tr></table></figure>
+<p>注：如果不选择自定义，注意选择1，安装1.8的jdk</p>
+<h3 id="数据库配置-选择：y"><a href="#数据库配置-选择：y" class="headerlink" title="数据库配置  选择：y"></a>数据库配置  选择：y</h3><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Configuring database...</span><br><span class="line">Enter advanced database configuration [y/<span class="built_in">n</span>] (<span class="built_in">n</span>)? y</span><br></pre></td></tr></table></figure>
+<h3 id="选择数据库类型-输入：3"><a href="#选择数据库类型-输入：3" class="headerlink" title="选择数据库类型 输入：3"></a>选择数据库类型 输入：3</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Configuring database<span class="built_in">..</span>.</span><br><span class="line">==============================================================================</span><br><span class="line">Choose one of the following options:</span><br><span class="line">[1] - PostgreSQL (Embedded)</span><br><span class="line">[2] - Oracle</span><br><span class="line">[3] - MySQL</span><br><span class="line">[4] - PostgreSQL</span><br><span class="line">[5] - Microsoft SQL<span class="built_in"> Server </span>(Tech Preview)</span><br><span class="line">[6] - SQL Anywhere</span><br><span class="line">==============================================================================</span><br><span class="line">Enter choice (3): 3</span><br></pre></td></tr></table></figure>
+<p>此前，以及安装好了mysql数据库，故选择3</p>
+<h3 id="设置数据库的具体配置信息，根据实际情况输入，如果和括号内相同，则可以直接回车"><a href="#设置数据库的具体配置信息，根据实际情况输入，如果和括号内相同，则可以直接回车" class="headerlink" title="设置数据库的具体配置信息，根据实际情况输入，如果和括号内相同，则可以直接回车"></a>设置数据库的具体配置信息，根据实际情况输入，如果和括号内相同，则可以直接回车</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Hostname (localhost): </span><br><span class="line">Port (3306): </span><br><span class="line">Database name (ambari): </span><br><span class="line">Username (ambari): </span><br><span class="line">Enter Database Password (123456):</span><br></pre></td></tr></table></figure>
+<p>数据库名，用户名，密码可根据自己设置的填入</p>
+<h3 id="提示必须安装MySQL-JDBC，回车结束ambari配置"><a href="#提示必须安装MySQL-JDBC，回车结束ambari配置" class="headerlink" title="提示必须安装MySQL JDBC，回车结束ambari配置"></a>提示必须安装MySQL JDBC，回车结束ambari配置</h3><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">WARNING: </span>Before starting Ambari Server, you must copy the MySQL JDBC driver JAR file to /usr/share/java.</span><br><span class="line">Press &lt;enter&gt; to continue.</span><br></pre></td></tr></table></figure>
+<h3 id="将Ambari数据库脚本导入到数据库-如果使用自己定义的数据库，必须在启动Ambari服务之前导入Ambari的sql脚本"><a href="#将Ambari数据库脚本导入到数据库-如果使用自己定义的数据库，必须在启动Ambari服务之前导入Ambari的sql脚本" class="headerlink" title="将Ambari数据库脚本导入到数据库,如果使用自己定义的数据库，必须在启动Ambari服务之前导入Ambari的sql脚本"></a>将Ambari数据库脚本导入到数据库,如果使用自己定义的数据库，必须在启动Ambari服务之前导入Ambari的sql脚本</h3><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#用Ambari用户（上面设置的用户）登录mysql</span></span><br><span class="line">mysql -u ambari -p</span><br><span class="line">use ambari；</span><br><span class="line">source /var/<span class="class"><span class="keyword">lib</span>/<span class="title">ambari</span>-<span class="title">server</span>/<span class="title">resources</span>/<span class="title">Ambari</span>-<span class="title">DDL</span>-<span class="title">MySQL</span>-<span class="title">CREATE</span>.<span class="title">sql</span></span></span><br></pre></td></tr></table></figure>
+<p>至此Ambari配置完毕，下面则是启动Ambari服务</p>
+<h2 id="启动ambari"><a href="#启动ambari" class="headerlink" title="启动ambari"></a>启动ambari</h2><p>启动Amabri<br>执行启动命令，启动Ambari服务</p>
+<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ambari-<span class="keyword">server</span> start</span><br></pre></td></tr></table></figure>
+<p>启动成功后，在浏览器中输入主机点ip：xxx.xxx.xxx.xxx:8080进入Ambari管理页面，默认管理用户名：admin，密码：admin</p>
+<img src="/2018/03-26/CentOS-7-安装Ambari-在线安装/001.jpg" title="上图则表明Ambari安装成功">
+<h2 id="Ambari配置集群"><a href="#Ambari配置集群" class="headerlink" title="Ambari配置集群"></a>Ambari配置集群</h2><p>登陆进去后界面如下，点击安装</p>
+<img src="/2018/03-26/CentOS-7-安装Ambari-在线安装/002.jpg" title="初始化页面">
+<img src="/2018/03-26/CentOS-7-安装Ambari-在线安装/00.jpg" title="设置集群名">
+<img src="/2018/03-26/CentOS-7-安装Ambari-在线安装/01.jpg" title="选择安装HDP版本">
+<img src="/2018/03-26/CentOS-7-安装Ambari-在线安装/02.jpg" title="选择安装仓库本地/线上公共">
+<img src="/2018/03-26/CentOS-7-安装Ambari-在线安装/03.jpg" title="配置hosts节点信息">
+<img src="/2018/03-26/CentOS-7-安装Ambari-在线安装/04.jpg" title="确认">
+<img src="/2018/03-26/CentOS-7-安装Ambari-在线安装/05.jpg" title="检测节点有问题则需要解决才能正常安装">
+<img src="/2018/03-26/CentOS-7-安装Ambari-在线安装/003.jpg" title="选择要安装的服务">
+<img src="/2018/03-26/CentOS-7-安装Ambari-在线安装/004.jpg" title="服务Master配置">
+<img src="/2018/03-26/CentOS-7-安装Ambari-在线安装/005.jpg" title="服务的Slaves 和 Clients节配置">
+<img src="/2018/03-26/CentOS-7-安装Ambari-在线安装/006.jpg" title="服务的客制化配置">
+<img src="/2018/03-26/CentOS-7-安装Ambari-在线安装/007.jpg" title="显示配置信息">
+<img src="/2018/03-26/CentOS-7-安装Ambari-在线安装/07.jpg" title="开始安装集群">
+<img src="/2018/03-26/CentOS-7-安装Ambari-在线安装/08.jpg" title="安装完成">
+<img src="/2018/03-26/CentOS-7-安装Ambari-在线安装/09.jpg" title="集群管理页面">
+<p>注：线上安装不需要修改本地源，离线安装则需要新建xxx/xxx目录，需要修改本地源</p>
+
+      
+    </div>
+
+    
+      
+      
+
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="http://hadronw.com">hadronw</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="http://hadronw.com/2018/03-26/CentOS-7-安装Ambari-在线安装/">http://hadronw.com/2018/03-26/CentOS-7-安装Ambari-在线安装/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span>
+      
+      转载请注明出处！
+    </p>
+  </div>
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">关注支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/wechat-gh1.jpg" title="wechat">
+        </label>
+      
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2018/03-27/删除ambari安装的hadoop集群/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">删除ambari安装的hadoop集群</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/2018/03-25/CentOS-7-安装Ambari-环境准备/">
+        <span class="next-text nav-default">CentOS-7-安装Ambari-环境准备</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+      <div id="vcomments"></div>  
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:hadronw@qq.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/hadronw" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+ <span class="division">|</span>
+  <span>
+    Hosted by - 
+    <a class="theme-link" href="https://pages.coding.me">Coding Pages</a>
+  </<span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2017 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">hadronw</span>
+  </span>
+
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'tA9fnMOATdYuVDUSkPsbGBfi-gzGzoHsz',
+        appKey: '07ptzyueBmWB16ShNJuwsUnm',
+        placeholder: '留下你的想法……',
+        avatar:'robohash',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: true
+    });
+  </script>
+
+
+
+
+
+    
+  
+
+
+
+  
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/pjax/jquery.pjax.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/nprogress/nprogress.min.js"></script>
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.8.0"></script>
+
+  </body>
+</html>
