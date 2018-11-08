@@ -3,5 +3,9 @@ title: {{ title }}
 date: {{ date }}
 tags:
 categories:
-comments: 
+comments: true
 ---
+
+
+
+<!--more-->
