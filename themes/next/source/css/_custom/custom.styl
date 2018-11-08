@@ -1,0 +1,74 @@
+// Custom styles.
+.posts-expand .post-meta {
+	margin: 10px 0 10px 0;
+}
+.post-body h1 {
+  margin: 0 0 15px 0;
+}
+
+.post-body p {
+  margin-bottom: 0.8em;
+}
+
+// 块引用 样式； 首行不缩进
+blockquote {
+  margin-bottom: 0.8em;
+  line-height: $line-height-code-block;
+  font-size: 14px;
+  font-family: "Microsoft YaHei", Menlo, "PingFang SC", monospace;
+  border-left: 4px solid #42B983;
+ p {
+//  text-indent: -2em;
+  display: inline;
+ }}
+
+ // 代码块 加圆角
+.highlight { border-radius: 5px;}
+pre { border-radius: 5px;}
+
+code { color: #ec7f00; }
+
+.post-body p a {
+  color: #0593d3;
+  border-bottom: none;
+  &:hover {
+    //color: #0477ab;
+    text-decoration: underline;
+  }
+}
+
+// 文章超链接样式
+.post-body a {
+    color: rgb(80, 115, 184);
+    border-bottom: none;
+    text-decoration: underline;
+}
+// 菜单超链接字体大小
+.menu .menu-item a {
+    font-size: 15px;
+}
+// 菜单超链接样式
+.menu .menu-item a:hover {
+    border-bottom-color: rgba(161, 102, 171, 0);
+}
+// 超链接样式
+a {
+    color: rgb(80, 115, 184);
+    border-bottom-color: rgb(80, 115, 184);
+}
+a:hover {
+    color: rgb(161, 102, 171);
+    border-bottom-color: rgb(161, 102, 171);
+}
+// 侧栏超链接样式（友链的样式）
+.sidebar a {
+    color: #ccc;
+    border-bottom: none;
+}
+
+$font-size-base = 16px; // 默认是 16px 大小
+$font-family-headings = Georgia, sans // 标题，修改成你期望的字体族
+$font-family-base = "Microsoft YaHei", Verdana, sans-serif // 修改成你期望的字体族
+
+// Global link color.
+$link-color = #4078c0
