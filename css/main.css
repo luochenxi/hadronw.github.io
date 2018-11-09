@@ -1707,11 +1707,6 @@ pre .javascript .function {
   display: inline-block;
   margin: 0.8em 2em 0 2em;
 }
-#QR > div:hover p {
-  animation: roll 0.1s infinite linear;
-  -webkit-animation: roll 0.1s infinite linear;
-  -moz-animation: roll 0.1s infinite linear;
-}
 @-moz-keyframes roll {
   from {
     -webkit-transform: rotateZ(30deg);
@@ -1967,7 +1962,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #9ff2ff;
+  background: #fff;
 }
 .links-of-blogroll {
   font-size: 13px;
