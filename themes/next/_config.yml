@@ -495,13 +495,13 @@ han: false
 # Pangu Support
 # Dependencies: https://github.com/theme-next/theme-next-pangu
 # For more information: https://github.com/vinta/pangu.js
-pangu: false
+pangu: true
 
 # Swiftype Search API Key
 #swiftype_key:
 
 # Baidu Analytics ID
-#baidu_analytics:
+baidu_analytics: cae23eb810d95bd84236dceb47cef74f
 
 # Growingio Analytics ID
 # Copyright 2015-2018 GrowingIO, Inc. More info available at http://www.growingio.com
@@ -692,10 +692,10 @@ busuanzi_count:
 
 
 # Tencent analytics ID
-# tencent_analytics:
+tencent_analytics: 66104543
 
 # Tencent MTA ID
-# tencent_mta:
+#tencent_mta: 66104543
 
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
@@ -853,7 +853,7 @@ pace: true
 pace_theme: pace-theme-minimal
 
 # Canvas-nest
-# Dependencies: https://github.com/theme-next/theme-next-canvas-nest
+# Dependencies: https://github.com/theme-nexxft/theme-next-canvas-nest
 canvas_nest:
   enable: false
   onmobile: true # display on mobile or not
