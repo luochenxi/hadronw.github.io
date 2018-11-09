@@ -326,11 +326,12 @@ wechat_subscriber:
 # If true, reward would be displayed in every article by default.
 # And you can show or hide one article specially through add page variable `reward: true/false`.
 reward:
-  enable: false
-  #comment: Donate comment here
-  #wechatpay: /images/wechatpay.jpg
+  enable: true 
+  comment: 点关注免走丢，欢迎留言互动哦！
+  wechatpay: https://qcloudtest-1255353776.cos.ap-guangzhou.myqcloud.com/qrcode_for_gh_daba269c7385_344.jpg
   #alipay: /images/alipay.jpg
-  #bitcoin: /images/bitcoin.png
+  #bitcoin: /images/mylog.png
+
 
 # Related popular posts
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts
