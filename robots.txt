@@ -3,16 +3,16 @@ User-agent: *
 
 Allow: /
 Allow: /archives/
-Allow：/tags/
-Allow：/categories/
-Allow：/page/
+Disallow：/tags/
+Disallow：/categories/
+Disallow：/page/
 
 #Disallow Allow
-Allow: /js/
-Allow: /css/
-Allow: /fonts/
-Allow: /vendors/
-Allow: /fancybox/
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /vendors/
+Disallow: /fancybox/
 
 Sitemap: https://hadronw.com/sitemap.xml
 Sitemap: https://hadronw.com/baidusitemap.xml
