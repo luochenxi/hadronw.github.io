@@ -77,6 +77,17 @@ pagination_dir: page
 # theme: next
 theme: next
 
+sitemap:
+  path: sitemap.xml
+
+baidusitemap:
+  path: baidusitemap.xml
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
 
 
 # Deployment

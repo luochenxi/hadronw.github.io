@@ -318,9 +318,9 @@ codeblock:
 
 # Wechat Subscriber
 wechat_subscriber:
-  enabled: false
+  enabled: false 
   qcode: https://qcloudtest-1255353776.cos.ap-guangzhou.myqcloud.com/qrcode_for_gh_daba269c7385_344.jpg #/path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
-  description: 欢迎您扫一扫上面的微信公众号，订阅我的博客！
+  description: 扫描二维码关注@胖子的猜想
 
 # Reward
 # If true, reward would be displayed in every article by default.
@@ -331,7 +331,6 @@ reward:
   wechatpay: https://qcloudtest-1255353776.cos.ap-guangzhou.myqcloud.com/qrcode_for_gh_daba269c7385_344.jpg
   #alipay: /images/alipay.jpg
   #bitcoin: /images/mylog.png
-
 
 # Related popular posts
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts
@@ -683,7 +682,7 @@ firestore:
 # Show Views/Visitors of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi
 busuanzi_count:
-  enable: false
+  enable: true 
   total_visitors: true
   total_visitors_icon: user
   total_views: true
@@ -737,14 +736,14 @@ algolia_search:
 # Local search
 # Dependencies: https://github.com/theme-next/hexo-generator-searchdb
 local_search:
-  enable: false 
+  enable: true 
   # if auto, trigger search by changing input
   # if manual, trigger search by pressing enter key or search button
   trigger: auto
   # show top n results per article, show all results by setting to -1
   top_n_per_article: 1
   # unescape html strings to the readable one
-  unescape: false
+  unescape: true
 
 # Bookmark Support
 # Dependencies: https://github.com/theme-next/theme-next-bookmark
@@ -834,7 +833,7 @@ lazyload: false
 
 # Progress bar in the top during page loading.
 # Dependencies: https://github.com/theme-next/theme-next-pace
-pace: false
+pace: true
 # Themes list:
 #pace-theme-big-counter
 #pace-theme-bounce
