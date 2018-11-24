@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="cXrmNsZjDqC3drL1XY6-CZURO2H7s8X-njVT3_EFO8s" />
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="JxVosc0Pyv" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/mylog.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/mylog.png?v=6.5.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.5.0',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="专栏详情，用微信扫描下方海报中二维码即可获得！（注：文末有福利）">
+<meta name="keywords" content="极客时间">
+<meta property="og:type" content="article">
+<meta property="og:title" content="技术管理实战 36 讲 | 极客专栏">
+<meta property="og:url" content="http://hadronw.com/2018/11-24/201811241648/index.html">
+<meta property="og:site_name" content="hadronw&#39;s blog">
+<meta property="og:description" content="专栏详情，用微信扫描下方海报中二维码即可获得！（注：文末有福利）">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://qcloudtest-1255353776.cos.ap-guangzhou.myqcloud.com/%E6%9E%81%E5%AE%A2%E4%B8%93%E6%A0%8F/guanlijishushizhan36jiang.jpeg">
+<meta property="og:updated_time" content="2018-11-24T09:17:20.617Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="技术管理实战 36 讲 | 极客专栏">
+<meta name="twitter:description" content="专栏详情，用微信扫描下方海报中二维码即可获得！（注：文末有福利）">
+<meta name="twitter:image" content="https://qcloudtest-1255353776.cos.ap-guangzhou.myqcloud.com/%E6%9E%81%E5%AE%A2%E4%B8%93%E6%A0%8F/guanlijishushizhan36jiang.jpeg">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="hadronw's blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="http://hadronw.com/2018/11-24/201811241648/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>技术管理实战 36 讲 | 极客专栏 | hadronw's blog</title>
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113179601-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113179601-1');
+</script>
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?cae23eb810d95bd84236dceb47cef74f";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">hadronw's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档<span class="badge">124</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类<span class="badge">21</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签<span class="badge">29</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hadronw.com/2018/11-24/201811241648/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hadronw">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mylog.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hadronw's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">技术管理实战 36 讲 | 极客专栏
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-24 16:48:00 / 修改时间：17:17:20" itemprop="dateCreated datePublished" datetime="2018-11-24T16:48:00+08:00">2018-11-24</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/极客时间/" itemprop="url" rel="index"><span itemprop="name">极客时间</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11-24/201811241648/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/11-24/201811241648/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/11-24/201811241648/" class="leancloud_visitors" data-flag-title="技术管理实战 36 讲 | 极客专栏">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>专栏详情，用微信扫描下方海报中二维码即可获得！（注：文末有福利）<br><a id="more"></a><br><img src="https://qcloudtest-1255353776.cos.ap-guangzhou.myqcloud.com/%E6%9E%81%E5%AE%A2%E4%B8%93%E6%A0%8F/guanlijishushizhan36jiang.jpeg" alt=""></p>
+<h1 id="专栏目录"><a href="#专栏目录" class="headerlink" title="专栏目录"></a>专栏目录</h1><h2 id="开篇词-你为什么需要学管理？"><a href="#开篇词-你为什么需要学管理？" class="headerlink" title="开篇词 | 你为什么需要学管理？"></a>开篇词 | 你为什么需要学管理？</h2><p><a href="https://time.geekbang.org/column/article/13156" target="_blank" rel="noopener">https://time.geekbang.org/column/article/13156</a>    </p>
+<h2 id="01-多年前的那些工程师都去哪了？"><a href="#01-多年前的那些工程师都去哪了？" class="headerlink" title="01 | 多年前的那些工程师都去哪了？"></a>01 | 多年前的那些工程师都去哪了？</h2><p><a href="https://time.geekbang.org/column/article/13387" target="_blank" rel="noopener">https://time.geekbang.org/column/article/13387</a>    </p>
+<h2 id="02-我要不要做管理呢？内心好纠结！"><a href="#02-我要不要做管理呢？内心好纠结！" class="headerlink" title="02 | 我要不要做管理呢？内心好纠结！"></a>02 | 我要不要做管理呢？内心好纠结！</h2><p><a href="https://time.geekbang.org/column/article/13618" target="_blank" rel="noopener">https://time.geekbang.org/column/article/13618</a>    </p>
+<h2 id="03-哪些人比较容易走上管理岗位？"><a href="#03-哪些人比较容易走上管理岗位？" class="headerlink" title="03 | 哪些人比较容易走上管理岗位？"></a>03 | 哪些人比较容易走上管理岗位？</h2><p><a href="https://time.geekbang.org/column/article/13687" target="_blank" rel="noopener">https://time.geekbang.org/column/article/13687</a>    </p>
+<h2 id="04-我要不要转回去做技术呢？"><a href="#04-我要不要转回去做技术呢？" class="headerlink" title="04 | 我要不要转回去做技术呢？"></a>04 | 我要不要转回去做技术呢？</h2><p><a href="https://time.geekbang.org/column/article/13897" target="_blank" rel="noopener">https://time.geekbang.org/column/article/13897</a>    </p>
+<h2 id="05-作为技术管理者，我如何保持技术判断力？"><a href="#05-作为技术管理者，我如何保持技术判断力？" class="headerlink" title="05 | 作为技术管理者，我如何保持技术判断力？"></a>05 | 作为技术管理者，我如何保持技术判断力？</h2><p><a href="https://time.geekbang.org/column/article/14053" target="_blank" rel="noopener">https://time.geekbang.org/column/article/14053</a>    </p>
+<h2 id="06-我这样的风格能做管理吗？"><a href="#06-我这样的风格能做管理吗？" class="headerlink" title="06 | 我这样的风格能做管理吗？"></a>06 | 我这样的风格能做管理吗？</h2><p><a href="https://time.geekbang.org/column/article/14235" target="_blank" rel="noopener">https://time.geekbang.org/column/article/14235</a>    </p>
+<h2 id="07-我能做好管理吗，大家服我吗？"><a href="#07-我能做好管理吗，大家服我吗？" class="headerlink" title="07 | 我能做好管理吗，大家服我吗？"></a>07 | 我能做好管理吗，大家服我吗？</h2><p><a href="https://time.geekbang.org/column/article/14422" target="_blank" rel="noopener">https://time.geekbang.org/column/article/14422</a>    </p>
+<h2 id="08-管理到底都做哪些事儿？"><a href="#08-管理到底都做哪些事儿？" class="headerlink" title="08 | 管理到底都做哪些事儿？"></a>08 | 管理到底都做哪些事儿？</h2><p><a href="https://time.geekbang.org/column/article/14534" target="_blank" rel="noopener">https://time.geekbang.org/column/article/14534</a>    </p>
+<h2 id="09-从工程师到管理者，角色都发生了哪些变化？"><a href="#09-从工程师到管理者，角色都发生了哪些变化？" class="headerlink" title="09 | 从工程师到管理者，角色都发生了哪些变化？"></a>09 | 从工程师到管理者，角色都发生了哪些变化？</h2><p><a href="https://time.geekbang.org/column/article/14762" target="_blank" rel="noopener">https://time.geekbang.org/column/article/14762</a>    </p>
+<h2 id="10-新经理常踩的坑儿有哪些？"><a href="#10-新经理常踩的坑儿有哪些？" class="headerlink" title="10 | 新经理常踩的坑儿有哪些？"></a>10 | 新经理常踩的坑儿有哪些？</h2><p><a href="https://time.geekbang.org/column/article/17830" target="_blank" rel="noopener">https://time.geekbang.org/column/article/17830</a>    </p>
+<h2 id="11-我刚开始带团队，从哪里着手呢？"><a href="#11-我刚开始带团队，从哪里着手呢？" class="headerlink" title="11 | 我刚开始带团队，从哪里着手呢？"></a>11 | 我刚开始带团队，从哪里着手呢？</h2><p><a href="https://time.geekbang.org/column/article/18029" target="_blank" rel="noopener">https://time.geekbang.org/column/article/18029</a>    </p>
+<h2 id="12-如何界定我团队是干什么的呢？"><a href="#12-如何界定我团队是干什么的呢？" class="headerlink" title="12 | 如何界定我团队是干什么的呢？"></a>12 | 如何界定我团队是干什么的呢？</h2><p><a href="https://time.geekbang.org/column/article/18040" target="_blank" rel="noopener">https://time.geekbang.org/column/article/18040</a>    </p>
+<h2 id="13-如何为团队设定合理的目标呢？"><a href="#13-如何为团队设定合理的目标呢？" class="headerlink" title="13 | 如何为团队设定合理的目标呢？"></a>13 | 如何为团队设定合理的目标呢？</h2><p><a href="https://time.geekbang.org/column/article/20712" target="_blank" rel="noopener">https://time.geekbang.org/column/article/20712</a>    </p>
+<h2 id="14-如何来规划团队的组织结构呢？"><a href="#14-如何来规划团队的组织结构呢？" class="headerlink" title="14 | 如何来规划团队的组织结构呢？"></a>14 | 如何来规划团队的组织结构呢？</h2><p><a href="https://time.geekbang.org/column/article/39779" target="_blank" rel="noopener">https://time.geekbang.org/column/article/39779</a>    </p>
+<h2 id="15-我都要申请哪些资源呢？"><a href="#15-我都要申请哪些资源呢？" class="headerlink" title="15 | 我都要申请哪些资源呢？"></a>15 | 我都要申请哪些资源呢？</h2><p><a href="https://time.geekbang.org/column/article/39973" target="_blank" rel="noopener">https://time.geekbang.org/column/article/39973</a>    </p>
+<h2 id="16-团队建设该从哪里入手？"><a href="#16-团队建设该从哪里入手？" class="headerlink" title="16 | 团队建设该从哪里入手？"></a>16 | 团队建设该从哪里入手？</h2><p><a href="https://time.geekbang.org/column/article/40043" target="_blank" rel="noopener">https://time.geekbang.org/column/article/40043</a>    </p>
+<h2 id="17-如何提升员工的个人能力？"><a href="#17-如何提升员工的个人能力？" class="headerlink" title="17 | 如何提升员工的个人能力？"></a>17 | 如何提升员工的个人能力？</h2><p><a href="https://time.geekbang.org/column/article/40277" target="_blank" rel="noopener">https://time.geekbang.org/column/article/40277</a>    </p>
+<h2 id="18-如何提升员工的工作意愿和积极性？"><a href="#18-如何提升员工的工作意愿和积极性？" class="headerlink" title="18 | 如何提升员工的工作意愿和积极性？"></a>18 | 如何提升员工的工作意愿和积极性？</h2><p><a href="https://time.geekbang.org/column/article/40313" target="_blank" rel="noopener">https://time.geekbang.org/column/article/40313</a>    </p>
+<h2 id="19-如何兼顾团队分工的稳定性和灵活性？"><a href="#19-如何兼顾团队分工的稳定性和灵活性？" class="headerlink" title="19 | 如何兼顾团队分工的稳定性和灵活性？"></a>19 | 如何兼顾团队分工的稳定性和灵活性？</h2><p><a href="https://time.geekbang.org/column/article/40513" target="_blank" rel="noopener">https://time.geekbang.org/column/article/40513</a>    </p>
+<h2 id="20-有什么方法可以有效提升团队凝聚力吗？"><a href="#20-有什么方法可以有效提升团队凝聚力吗？" class="headerlink" title="20 | 有什么方法可以有效提升团队凝聚力吗？"></a>20 | 有什么方法可以有效提升团队凝聚力吗？</h2><p><a href="https://time.geekbang.org/column/article/40516" target="_blank" rel="noopener">https://time.geekbang.org/column/article/40516</a>    </p>
+<h2 id="21-如何物色和培养核心人才？"><a href="#21-如何物色和培养核心人才？" class="headerlink" title="21 | 如何物色和培养核心人才？"></a>21 | 如何物色和培养核心人才？</h2><p><a href="https://time.geekbang.org/column/article/40771" target="_blank" rel="noopener">https://time.geekbang.org/column/article/40771</a>    </p>
+<h2 id="22-如何建设团队文化，营造团队氛围？"><a href="#22-如何建设团队文化，营造团队氛围？" class="headerlink" title="22 | 如何建设团队文化，营造团队氛围？"></a>22 | 如何建设团队文化，营造团队氛围？</h2><p><a href="https://time.geekbang.org/column/article/40772" target="_blank" rel="noopener">https://time.geekbang.org/column/article/40772</a>    </p>
+<h2 id="23-如何和低绩效员工谈绩效？"><a href="#23-如何和低绩效员工谈绩效？" class="headerlink" title="23 | 如何和低绩效员工谈绩效？"></a>23 | 如何和低绩效员工谈绩效？</h2><p><a href="https://time.geekbang.org/column/article/40776" target="_blank" rel="noopener">https://time.geekbang.org/column/article/40776</a>    </p>
+<h2 id="24-如何让团建活动不再“收效甚微”？"><a href="#24-如何让团建活动不再“收效甚微”？" class="headerlink" title="24 | 如何让团建活动不再“收效甚微”？"></a>24 | 如何让团建活动不再“收效甚微”？</h2><p><a href="https://time.geekbang.org/column/article/40780" target="_blank" rel="noopener">https://time.geekbang.org/column/article/40780</a>    </p>
+<h2 id="25-多任务并行该如何应对？"><a href="#25-多任务并行该如何应对？" class="headerlink" title="25 | 多任务并行该如何应对？"></a>25 | 多任务并行该如何应对？</h2><p><a href="https://time.geekbang.org/column/article/41448" target="_blank" rel="noopener">https://time.geekbang.org/column/article/41448</a>    </p>
+<h2 id="26-如何确保项目的有效执行？"><a href="#26-如何确保项目的有效执行？" class="headerlink" title="26 | 如何确保项目的有效执行？"></a>26 | 如何确保项目的有效执行？</h2><p><a href="https://time.geekbang.org/column/article/41653" target="_blank" rel="noopener">https://time.geekbang.org/column/article/41653</a>    </p>
+<h2 id="27-如何让流程机制得到有效的执行？"><a href="#27-如何让流程机制得到有效的执行？" class="headerlink" title="27 | 如何让流程机制得到有效的执行？"></a>27 | 如何让流程机制得到有效的执行？</h2><p><a href="https://time.geekbang.org/column/article/41830" target="_blank" rel="noopener">https://time.geekbang.org/column/article/41830</a>    </p>
+<h2 id="28-管理沟通那些事儿"><a href="#28-管理沟通那些事儿" class="headerlink" title="28 | 管理沟通那些事儿"></a>28 | 管理沟通那些事儿</h2><p><a href="https://time.geekbang.org/column/article/41968" target="_blank" rel="noopener">https://time.geekbang.org/column/article/41968</a>    </p>
+<h2 id="29-沟通经常鸡同鸭讲，说不到一块怎么办？"><a href="#29-沟通经常鸡同鸭讲，说不到一块怎么办？" class="headerlink" title="29 | 沟通经常鸡同鸭讲，说不到一块怎么办？"></a>29 | 沟通经常鸡同鸭讲，说不到一块怎么办？</h2><p><a href="https://time.geekbang.org/column/article/42064" target="_blank" rel="noopener">https://time.geekbang.org/column/article/42064</a>    </p>
+<h2 id="30-如何掌控自己的情绪，以及如何管理情绪化的员工？"><a href="#30-如何掌控自己的情绪，以及如何管理情绪化的员工？" class="headerlink" title="30 | 如何掌控自己的情绪，以及如何管理情绪化的员工？"></a>30 | 如何掌控自己的情绪，以及如何管理情绪化的员工？</h2><p><a href="https://time.geekbang.org/column/article/42393" target="_blank" rel="noopener">https://time.geekbang.org/column/article/42393</a>    </p>
+<h2 id="31-我各方面做得都很好，就是做不好向上沟通"><a href="#31-我各方面做得都很好，就是做不好向上沟通" class="headerlink" title="31 | 我各方面做得都很好，就是做不好向上沟通"></a>31 | 我各方面做得都很好，就是做不好向上沟通</h2><p><a href="https://time.geekbang.org/column/article/42582" target="_blank" rel="noopener">https://time.geekbang.org/column/article/42582</a>    </p>
+<h2 id="32-横向沟通和非职权影响力"><a href="#32-横向沟通和非职权影响力" class="headerlink" title="32 | 横向沟通和非职权影响力"></a>32 | 横向沟通和非职权影响力</h2><p><a href="https://time.geekbang.org/column/article/42770" target="_blank" rel="noopener">https://time.geekbang.org/column/article/42770</a>    </p>
+<h2 id="33-向下沟通的常见实例解析"><a href="#33-向下沟通的常见实例解析" class="headerlink" title="33 | 向下沟通的常见实例解析"></a>33 | 向下沟通的常见实例解析</h2><p><a href="https://time.geekbang.org/column/article/42904" target="_blank" rel="noopener">https://time.geekbang.org/column/article/42904</a>    </p>
+<h2 id="34-管理沟通上有哪些常见的坑儿呢？"><a href="#34-管理沟通上有哪些常见的坑儿呢？" class="headerlink" title="34 | 管理沟通上有哪些常见的坑儿呢？"></a>34 | 管理沟通上有哪些常见的坑儿呢？</h2><p><a href="https://time.geekbang.org/column/article/64371" target="_blank" rel="noopener">https://time.geekbang.org/column/article/64371</a>    </p>
+<h2 id="35-从空降谈管理方法论的积累"><a href="#35-从空降谈管理方法论的积累" class="headerlink" title="35 | 从空降谈管理方法论的积累"></a>35 | 从空降谈管理方法论的积累</h2><p><a href="https://time.geekbang.org/column/article/64689" target="_blank" rel="noopener">https://time.geekbang.org/column/article/64689</a>    </p>
+<h2 id="36-走出自己的管理之路"><a href="#36-走出自己的管理之路" class="headerlink" title="36 | 走出自己的管理之路"></a>36 | 走出自己的管理之路</h2><p><a href="https://time.geekbang.org/column/article/65140" target="_blank" rel="noopener">https://time.geekbang.org/column/article/65140</a>    </p>
+<h2 id="复习课（一）-管理方法论和角色认知"><a href="#复习课（一）-管理方法论和角色认知" class="headerlink" title="复习课（一） | 管理方法论和角色认知"></a>复习课（一） | 管理方法论和角色认知</h2><p><a href="https://time.geekbang.org/column/article/67186" target="_blank" rel="noopener">https://time.geekbang.org/column/article/67186</a>    </p>
+<h2 id="复习课（二）-管理规划"><a href="#复习课（二）-管理规划" class="headerlink" title="复习课（二） | 管理规划"></a>复习课（二） | 管理规划</h2><p><a href="https://time.geekbang.org/column/article/67690" target="_blank" rel="noopener">https://time.geekbang.org/column/article/67690</a>    </p>
+<h2 id="复习课（三）-团队建设"><a href="#复习课（三）-团队建设" class="headerlink" title="复习课（三） | 团队建设"></a>复习课（三） | 团队建设</h2><p><a href="https://time.geekbang.org/column/article/68046" target="_blank" rel="noopener">https://time.geekbang.org/column/article/68046</a>    </p>
+<h2 id="复习课（四）-任务管理"><a href="#复习课（四）-任务管理" class="headerlink" title="复习课（四） | 任务管理"></a>复习课（四） | 任务管理</h2><p><a href="https://time.geekbang.org/column/article/68509" target="_blank" rel="noopener">https://time.geekbang.org/column/article/68509</a>    </p>
+<h2 id="复习课（五）-管理沟通"><a href="#复习课（五）-管理沟通" class="headerlink" title="复习课（五） | 管理沟通"></a>复习课（五） | 管理沟通</h2><p><a href="https://time.geekbang.org/column/article/68785" target="_blank" rel="noopener">https://time.geekbang.org/column/article/68785</a>                        </p>
+<hr>
+<p>通过下方连接购买的极客专栏，可获得赏金 80% 的现金返现</p>
+<p><a href="https://mp.weixin.qq.com/s/trUFpup8D4NvYwH-ehziwg" target="_blank" rel="noopener">福利 | 购买极客时间课程大返现</a></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+       
+    
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>点关注免走丢，欢迎留言互动哦！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>关注</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="https://qcloudtest-1255353776.cos.ap-guangzhou.myqcloud.com/qrcode_for_gh_daba269c7385_344.jpg" alt="hadronw 微信公众号"/>
+        <p>微信公众号</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/极客时间/" <i class="fa fa-tag"></i> 极客时间</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11-24/201811241650/" rel="prev" title="程序员进阶攻略 | 极客专栏">
+                <i class="fa fa-chevron-left"></i> 程序员进阶攻略 | 极客专栏
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11-24/201811241647/" rel="next" title="技术领导力 300 讲 | 极客专栏">
+                技术领导力 300 讲 | 极客专栏 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/mylog.png"
+                alt="hadronw" />
+            
+              <p class="site-author-name" itemprop="name">hadronw</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">124</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">21</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#专栏目录"><span class="nav-number">1.</span> <span class="nav-text">专栏目录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#开篇词-你为什么需要学管理？"><span class="nav-number">1.1.</span> <span class="nav-text">开篇词 | 你为什么需要学管理？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#01-多年前的那些工程师都去哪了？"><span class="nav-number">1.2.</span> <span class="nav-text">01 | 多年前的那些工程师都去哪了？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#02-我要不要做管理呢？内心好纠结！"><span class="nav-number">1.3.</span> <span class="nav-text">02 | 我要不要做管理呢？内心好纠结！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#03-哪些人比较容易走上管理岗位？"><span class="nav-number">1.4.</span> <span class="nav-text">03 | 哪些人比较容易走上管理岗位？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#04-我要不要转回去做技术呢？"><span class="nav-number">1.5.</span> <span class="nav-text">04 | 我要不要转回去做技术呢？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#05-作为技术管理者，我如何保持技术判断力？"><span class="nav-number">1.6.</span> <span class="nav-text">05 | 作为技术管理者，我如何保持技术判断力？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#06-我这样的风格能做管理吗？"><span class="nav-number">1.7.</span> <span class="nav-text">06 | 我这样的风格能做管理吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#07-我能做好管理吗，大家服我吗？"><span class="nav-number">1.8.</span> <span class="nav-text">07 | 我能做好管理吗，大家服我吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#08-管理到底都做哪些事儿？"><span class="nav-number">1.9.</span> <span class="nav-text">08 | 管理到底都做哪些事儿？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#09-从工程师到管理者，角色都发生了哪些变化？"><span class="nav-number">1.10.</span> <span class="nav-text">09 | 从工程师到管理者，角色都发生了哪些变化？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-新经理常踩的坑儿有哪些？"><span class="nav-number">1.11.</span> <span class="nav-text">10 | 新经理常踩的坑儿有哪些？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-我刚开始带团队，从哪里着手呢？"><span class="nav-number">1.12.</span> <span class="nav-text">11 | 我刚开始带团队，从哪里着手呢？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-如何界定我团队是干什么的呢？"><span class="nav-number">1.13.</span> <span class="nav-text">12 | 如何界定我团队是干什么的呢？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-如何为团队设定合理的目标呢？"><span class="nav-number">1.14.</span> <span class="nav-text">13 | 如何为团队设定合理的目标呢？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14-如何来规划团队的组织结构呢？"><span class="nav-number">1.15.</span> <span class="nav-text">14 | 如何来规划团队的组织结构呢？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15-我都要申请哪些资源呢？"><span class="nav-number">1.16.</span> <span class="nav-text">15 | 我都要申请哪些资源呢？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-团队建设该从哪里入手？"><span class="nav-number">1.17.</span> <span class="nav-text">16 | 团队建设该从哪里入手？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-如何提升员工的个人能力？"><span class="nav-number">1.18.</span> <span class="nav-text">17 | 如何提升员工的个人能力？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#18-如何提升员工的工作意愿和积极性？"><span class="nav-number">1.19.</span> <span class="nav-text">18 | 如何提升员工的工作意愿和积极性？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#19-如何兼顾团队分工的稳定性和灵活性？"><span class="nav-number">1.20.</span> <span class="nav-text">19 | 如何兼顾团队分工的稳定性和灵活性？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20-有什么方法可以有效提升团队凝聚力吗？"><span class="nav-number">1.21.</span> <span class="nav-text">20 | 有什么方法可以有效提升团队凝聚力吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#21-如何物色和培养核心人才？"><span class="nav-number">1.22.</span> <span class="nav-text">21 | 如何物色和培养核心人才？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-如何建设团队文化，营造团队氛围？"><span class="nav-number">1.23.</span> <span class="nav-text">22 | 如何建设团队文化，营造团队氛围？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#23-如何和低绩效员工谈绩效？"><span class="nav-number">1.24.</span> <span class="nav-text">23 | 如何和低绩效员工谈绩效？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#24-如何让团建活动不再“收效甚微”？"><span class="nav-number">1.25.</span> <span class="nav-text">24 | 如何让团建活动不再“收效甚微”？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#25-多任务并行该如何应对？"><span class="nav-number">1.26.</span> <span class="nav-text">25 | 多任务并行该如何应对？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#26-如何确保项目的有效执行？"><span class="nav-number">1.27.</span> <span class="nav-text">26 | 如何确保项目的有效执行？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#27-如何让流程机制得到有效的执行？"><span class="nav-number">1.28.</span> <span class="nav-text">27 | 如何让流程机制得到有效的执行？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#28-管理沟通那些事儿"><span class="nav-number">1.29.</span> <span class="nav-text">28 | 管理沟通那些事儿</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#29-沟通经常鸡同鸭讲，说不到一块怎么办？"><span class="nav-number">1.30.</span> <span class="nav-text">29 | 沟通经常鸡同鸭讲，说不到一块怎么办？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#30-如何掌控自己的情绪，以及如何管理情绪化的员工？"><span class="nav-number">1.31.</span> <span class="nav-text">30 | 如何掌控自己的情绪，以及如何管理情绪化的员工？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#31-我各方面做得都很好，就是做不好向上沟通"><span class="nav-number">1.32.</span> <span class="nav-text">31 | 我各方面做得都很好，就是做不好向上沟通</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#32-横向沟通和非职权影响力"><span class="nav-number">1.33.</span> <span class="nav-text">32 | 横向沟通和非职权影响力</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#33-向下沟通的常见实例解析"><span class="nav-number">1.34.</span> <span class="nav-text">33 | 向下沟通的常见实例解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#34-管理沟通上有哪些常见的坑儿呢？"><span class="nav-number">1.35.</span> <span class="nav-text">34 | 管理沟通上有哪些常见的坑儿呢？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#35-从空降谈管理方法论的积累"><span class="nav-number">1.36.</span> <span class="nav-text">35 | 从空降谈管理方法论的积累</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#36-走出自己的管理之路"><span class="nav-number">1.37.</span> <span class="nav-text">36 | 走出自己的管理之路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复习课（一）-管理方法论和角色认知"><span class="nav-number">1.38.</span> <span class="nav-text">复习课（一） | 管理方法论和角色认知</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复习课（二）-管理规划"><span class="nav-number">1.39.</span> <span class="nav-text">复习课（二） | 管理规划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复习课（三）-团队建设"><span class="nav-number">1.40.</span> <span class="nav-text">复习课（三） | 团队建设</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复习课（四）-任务管理"><span class="nav-number">1.41.</span> <span class="nav-text">复习课（四） | 任务管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复习课（五）-管理沟通"><span class="nav-number">1.42.</span> <span class="nav-text">复习课（五） | 管理沟通</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">hadronw</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.4.4</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v6.5.0</div>
+
+
+
+
+<div class="weixin-box">
+  <div class="weixin-menu">
+    <div class="weixin-hover">
+      <div class="weixin-description">微信扫一扫，订阅本博客</div>
+    </div>
+  </div>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66104543";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/reading_progress/reading_progress.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'tA9fnMOATdYuVDUSkPsbGBfi-gzGzoHsz',
+        appKey: '07ptzyueBmWB16ShNJuwsUnm',
+        placeholder: '留下你的想法，一起来碰撞点💥出来吧！',
+        avatar:'robohash',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: true
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
+  <script type="text/javascript">pangu.spacingPage();</script>
+
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap')
+      $(e).after($wrap)
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text()
+        }).toArray().join('\n')
+        var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+          if(result)$(this).text('复制成功')
+          else $(this).text('复制失败')
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('复制')
+        }, 300)
+      }).append(e)
+    })
+  </script>
+
+
+  
+
+</body>
+</html>

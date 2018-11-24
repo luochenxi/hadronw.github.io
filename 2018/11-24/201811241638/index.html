@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="cXrmNsZjDqC3drL1XY6-CZURO2H7s8X-njVT3_EFO8s" />
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="JxVosc0Pyv" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/mylog.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/mylog.png?v=6.5.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.5.0',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="专栏详情，用微信扫描下方海报中二维码即可获得！（注：文末有福利）">
+<meta name="keywords" content="极客时间">
+<meta property="og:type" content="article">
+<meta property="og:title" content="趣谈网络协议 | 极客专栏">
+<meta property="og:url" content="http://hadronw.com/2018/11-24/201811241638/index.html">
+<meta property="og:site_name" content="hadronw&#39;s blog">
+<meta property="og:description" content="专栏详情，用微信扫描下方海报中二维码即可获得！（注：文末有福利）">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://qcloudtest-1255353776.cos.ap-guangzhou.myqcloud.com/%E6%9E%81%E5%AE%A2%E4%B8%93%E6%A0%8F/qutanwangluoxieyi.jpeg">
+<meta property="og:updated_time" content="2018-11-24T09:17:20.617Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="趣谈网络协议 | 极客专栏">
+<meta name="twitter:description" content="专栏详情，用微信扫描下方海报中二维码即可获得！（注：文末有福利）">
+<meta name="twitter:image" content="https://qcloudtest-1255353776.cos.ap-guangzhou.myqcloud.com/%E6%9E%81%E5%AE%A2%E4%B8%93%E6%A0%8F/qutanwangluoxieyi.jpeg">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="hadronw's blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="http://hadronw.com/2018/11-24/201811241638/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>趣谈网络协议 | 极客专栏 | hadronw's blog</title>
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113179601-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113179601-1');
+</script>
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?cae23eb810d95bd84236dceb47cef74f";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">hadronw's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档<span class="badge">124</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类<span class="badge">21</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签<span class="badge">29</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hadronw.com/2018/11-24/201811241638/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hadronw">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mylog.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hadronw's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">趣谈网络协议 | 极客专栏
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-24 16:38:00 / 修改时间：17:17:20" itemprop="dateCreated datePublished" datetime="2018-11-24T16:38:00+08:00">2018-11-24</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/极客时间/" itemprop="url" rel="index"><span itemprop="name">极客时间</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11-24/201811241638/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/11-24/201811241638/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/11-24/201811241638/" class="leancloud_visitors" data-flag-title="趣谈网络协议 | 极客专栏">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>专栏详情，用微信扫描下方海报中二维码即可获得！（注：文末有福利）<br><a id="more"></a><br><img src="https://qcloudtest-1255353776.cos.ap-guangzhou.myqcloud.com/%E6%9E%81%E5%AE%A2%E4%B8%93%E6%A0%8F/qutanwangluoxieyi.jpeg" alt=""></p>
+<h1 id="专栏目录"><a href="#专栏目录" class="headerlink" title="专栏目录"></a>专栏目录</h1><h2 id="开篇词-想成为技术牛人？先搞定网络协议！"><a href="#开篇词-想成为技术牛人？先搞定网络协议！" class="headerlink" title="开篇词 | 想成为技术牛人？先搞定网络协议！"></a>开篇词 | 想成为技术牛人？先搞定网络协议！</h2><p><a href="https://time.geekbang.org/column/article/7398" target="_blank" rel="noopener">https://time.geekbang.org/column/article/7398</a>    </p>
+<h2 id="第1讲-为什么要学习网络协议？"><a href="#第1讲-为什么要学习网络协议？" class="headerlink" title="第1讲 | 为什么要学习网络协议？"></a>第1讲 | 为什么要学习网络协议？</h2><p><a href="https://time.geekbang.org/column/article/7581" target="_blank" rel="noopener">https://time.geekbang.org/column/article/7581</a>    </p>
+<h2 id="第2讲-网络分层的真实含义是什么？"><a href="#第2讲-网络分层的真实含义是什么？" class="headerlink" title="第2讲 | 网络分层的真实含义是什么？"></a>第2讲 | 网络分层的真实含义是什么？</h2><p><a href="https://time.geekbang.org/column/article/7724" target="_blank" rel="noopener">https://time.geekbang.org/column/article/7724</a>    </p>
+<h2 id="第3讲-ifconfig：最熟悉又陌生的命令行"><a href="#第3讲-ifconfig：最熟悉又陌生的命令行" class="headerlink" title="第3讲 | ifconfig：最熟悉又陌生的命令行"></a>第3讲 | ifconfig：最熟悉又陌生的命令行</h2><p><a href="https://time.geekbang.org/column/article/7772" target="_blank" rel="noopener">https://time.geekbang.org/column/article/7772</a>    </p>
+<h2 id="第4讲-DHCP与PXE：IP是怎么来的，又是怎么没的？"><a href="#第4讲-DHCP与PXE：IP是怎么来的，又是怎么没的？" class="headerlink" title="第4讲 | DHCP与PXE：IP是怎么来的，又是怎么没的？"></a>第4讲 | DHCP与PXE：IP是怎么来的，又是怎么没的？</h2><p><a href="https://time.geekbang.org/column/article/8015" target="_blank" rel="noopener">https://time.geekbang.org/column/article/8015</a>    </p>
+<h2 id="第5讲-从物理层到MAC层：如何在宿舍里自己组网玩联机游戏？"><a href="#第5讲-从物理层到MAC层：如何在宿舍里自己组网玩联机游戏？" class="headerlink" title="第5讲 | 从物理层到MAC层：如何在宿舍里自己组网玩联机游戏？"></a>第5讲 | 从物理层到MAC层：如何在宿舍里自己组网玩联机游戏？</h2><p><a href="https://time.geekbang.org/column/article/8094" target="_blank" rel="noopener">https://time.geekbang.org/column/article/8094</a>    </p>
+<h2 id="第6讲-交换机与VLAN：办公室太复杂，我要回学校"><a href="#第6讲-交换机与VLAN：办公室太复杂，我要回学校" class="headerlink" title="第6讲 | 交换机与VLAN：办公室太复杂，我要回学校"></a>第6讲 | 交换机与VLAN：办公室太复杂，我要回学校</h2><p><a href="https://time.geekbang.org/column/article/8386" target="_blank" rel="noopener">https://time.geekbang.org/column/article/8386</a>    </p>
+<h2 id="第7讲-ICMP与ping：投石问路的侦察兵"><a href="#第7讲-ICMP与ping：投石问路的侦察兵" class="headerlink" title="第7讲 | ICMP与ping：投石问路的侦察兵"></a>第7讲 | ICMP与ping：投石问路的侦察兵</h2><p><a href="https://time.geekbang.org/column/article/8445" target="_blank" rel="noopener">https://time.geekbang.org/column/article/8445</a>    </p>
+<h2 id="第8讲-世界这么大，我想出网关：欧洲十国游与玄奘西行"><a href="#第8讲-世界这么大，我想出网关：欧洲十国游与玄奘西行" class="headerlink" title="第8讲 | 世界这么大，我想出网关：欧洲十国游与玄奘西行"></a>第8讲 | 世界这么大，我想出网关：欧洲十国游与玄奘西行</h2><p><a href="https://time.geekbang.org/column/article/8590" target="_blank" rel="noopener">https://time.geekbang.org/column/article/8590</a>    </p>
+<h2 id="第9讲-路由协议：西出网关无故人，敢问路在何方"><a href="#第9讲-路由协议：西出网关无故人，敢问路在何方" class="headerlink" title="第9讲 | 路由协议：西出网关无故人，敢问路在何方"></a>第9讲 | 路由协议：西出网关无故人，敢问路在何方</h2><p><a href="https://time.geekbang.org/column/article/8729" target="_blank" rel="noopener">https://time.geekbang.org/column/article/8729</a>    </p>
+<h2 id="第10讲-UDP协议：因性善而简单，难免碰到“城会玩”"><a href="#第10讲-UDP协议：因性善而简单，难免碰到“城会玩”" class="headerlink" title="第10讲 | UDP协议：因性善而简单，难免碰到“城会玩”"></a>第10讲 | UDP协议：因性善而简单，难免碰到“城会玩”</h2><p><a href="https://time.geekbang.org/column/article/8924" target="_blank" rel="noopener">https://time.geekbang.org/column/article/8924</a>    </p>
+<h2 id="第11讲-TCP协议（上）：因性恶而复杂，先恶后善反轻松"><a href="#第11讲-TCP协议（上）：因性恶而复杂，先恶后善反轻松" class="headerlink" title="第11讲 | TCP协议（上）：因性恶而复杂，先恶后善反轻松"></a>第11讲 | TCP协议（上）：因性恶而复杂，先恶后善反轻松</h2><p><a href="https://time.geekbang.org/column/article/8975" target="_blank" rel="noopener">https://time.geekbang.org/column/article/8975</a>    </p>
+<h2 id="第12讲-TCP协议（下）：西行必定多妖孽，恒心智慧消磨难"><a href="#第12讲-TCP协议（下）：西行必定多妖孽，恒心智慧消磨难" class="headerlink" title="第12讲 | TCP协议（下）：西行必定多妖孽，恒心智慧消磨难"></a>第12讲 | TCP协议（下）：西行必定多妖孽，恒心智慧消磨难</h2><p><a href="https://time.geekbang.org/column/article/9141" target="_blank" rel="noopener">https://time.geekbang.org/column/article/9141</a>    </p>
+<h2 id="第13讲-套接字Socket：Talk-is-cheap-show-me-the-code"><a href="#第13讲-套接字Socket：Talk-is-cheap-show-me-the-code" class="headerlink" title="第13讲 | 套接字Socket：Talk is cheap, show me the code"></a>第13讲 | 套接字Socket：Talk is cheap, show me the code</h2><p><a href="https://time.geekbang.org/column/article/9293" target="_blank" rel="noopener">https://time.geekbang.org/column/article/9293</a>    </p>
+<h2 id="第14讲-HTTP协议：看个新闻原来这么麻烦"><a href="#第14讲-HTTP协议：看个新闻原来这么麻烦" class="headerlink" title="第14讲 | HTTP协议：看个新闻原来这么麻烦"></a>第14讲 | HTTP协议：看个新闻原来这么麻烦</h2><p><a href="https://time.geekbang.org/column/article/9410" target="_blank" rel="noopener">https://time.geekbang.org/column/article/9410</a>    </p>
+<h2 id="第15讲-HTTPS协议：点外卖的过程原来这么复杂"><a href="#第15讲-HTTPS协议：点外卖的过程原来这么复杂" class="headerlink" title="第15讲 | HTTPS协议：点外卖的过程原来这么复杂"></a>第15讲 | HTTPS协议：点外卖的过程原来这么复杂</h2><p><a href="https://time.geekbang.org/column/article/9492" target="_blank" rel="noopener">https://time.geekbang.org/column/article/9492</a>    </p>
+<h2 id="第16讲-流媒体协议：如何在直播里看到美女帅哥？"><a href="#第16讲-流媒体协议：如何在直播里看到美女帅哥？" class="headerlink" title="第16讲 | 流媒体协议：如何在直播里看到美女帅哥？"></a>第16讲 | 流媒体协议：如何在直播里看到美女帅哥？</h2><p><a href="https://time.geekbang.org/column/article/9688" target="_blank" rel="noopener">https://time.geekbang.org/column/article/9688</a>    </p>
+<h2 id="第17讲-P2P协议：我下小电影，99-急死你"><a href="#第17讲-P2P协议：我下小电影，99-急死你" class="headerlink" title="第17讲 | P2P协议：我下小电影，99%急死你"></a>第17讲 | P2P协议：我下小电影，99%急死你</h2><p><a href="https://time.geekbang.org/column/article/9707" target="_blank" rel="noopener">https://time.geekbang.org/column/article/9707</a>    </p>
+<h2 id="第18讲-DNS协议：网络世界的地址簿"><a href="#第18讲-DNS协议：网络世界的地址簿" class="headerlink" title="第18讲 | DNS协议：网络世界的地址簿"></a>第18讲 | DNS协议：网络世界的地址簿</h2><p><a href="https://time.geekbang.org/column/article/9895" target="_blank" rel="noopener">https://time.geekbang.org/column/article/9895</a>    </p>
+<h2 id="第19讲-HTTPDNS：网络世界的地址簿也会指错路"><a href="#第19讲-HTTPDNS：网络世界的地址簿也会指错路" class="headerlink" title="第19讲 | HTTPDNS：网络世界的地址簿也会指错路"></a>第19讲 | HTTPDNS：网络世界的地址簿也会指错路</h2><p><a href="https://time.geekbang.org/column/article/9938" target="_blank" rel="noopener">https://time.geekbang.org/column/article/9938</a>    </p>
+<h2 id="第20讲-CDN：你去小卖部取过快递么？"><a href="#第20讲-CDN：你去小卖部取过快递么？" class="headerlink" title="第20讲 | CDN：你去小卖部取过快递么？"></a>第20讲 | CDN：你去小卖部取过快递么？</h2><p><a href="https://time.geekbang.org/column/article/10085" target="_blank" rel="noopener">https://time.geekbang.org/column/article/10085</a>    </p>
+<h2 id="第21讲-数据中心：我是开发商，自己拿地盖别墅"><a href="#第21讲-数据中心：我是开发商，自己拿地盖别墅" class="headerlink" title="第21讲 | 数据中心：我是开发商，自己拿地盖别墅"></a>第21讲 | 数据中心：我是开发商，自己拿地盖别墅</h2><p><a href="https://time.geekbang.org/column/article/10098" target="_blank" rel="noopener">https://time.geekbang.org/column/article/10098</a>    </p>
+<h2 id="第22讲-VPN：朝中有人好做官"><a href="#第22讲-VPN：朝中有人好做官" class="headerlink" title="第22讲 | VPN：朝中有人好做官"></a>第22讲 | VPN：朝中有人好做官</h2><p><a href="https://time.geekbang.org/column/article/10386" target="_blank" rel="noopener">https://time.geekbang.org/column/article/10386</a>    </p>
+<h2 id="第23讲-移动网络：去巴塞罗那，手机也上不了脸书"><a href="#第23讲-移动网络：去巴塞罗那，手机也上不了脸书" class="headerlink" title="第23讲 | 移动网络：去巴塞罗那，手机也上不了脸书"></a>第23讲 | 移动网络：去巴塞罗那，手机也上不了脸书</h2><p><a href="https://time.geekbang.org/column/article/10534" target="_blank" rel="noopener">https://time.geekbang.org/column/article/10534</a>    </p>
+<h2 id="第24讲-云中网络：自己拿地成本高，购买公寓更灵活"><a href="#第24讲-云中网络：自己拿地成本高，购买公寓更灵活" class="headerlink" title="第24讲 | 云中网络：自己拿地成本高，购买公寓更灵活"></a>第24讲 | 云中网络：自己拿地成本高，购买公寓更灵活</h2><p><a href="https://time.geekbang.org/column/article/10742" target="_blank" rel="noopener">https://time.geekbang.org/column/article/10742</a>    </p>
+<h2 id="第25讲-软件定义网络：共享基础设施的小区物业管理办法"><a href="#第25讲-软件定义网络：共享基础设施的小区物业管理办法" class="headerlink" title="第25讲 | 软件定义网络：共享基础设施的小区物业管理办法"></a>第25讲 | 软件定义网络：共享基础设施的小区物业管理办法</h2><p><a href="https://time.geekbang.org/column/article/10755" target="_blank" rel="noopener">https://time.geekbang.org/column/article/10755</a>    </p>
+<h2 id="第26讲-云中的网络安全：虽然不是土豪，也需要基本安全和保障"><a href="#第26讲-云中的网络安全：虽然不是土豪，也需要基本安全和保障" class="headerlink" title="第26讲 | 云中的网络安全：虽然不是土豪，也需要基本安全和保障"></a>第26讲 | 云中的网络安全：虽然不是土豪，也需要基本安全和保障</h2><p><a href="https://time.geekbang.org/column/article/10978" target="_blank" rel="noopener">https://time.geekbang.org/column/article/10978</a>    </p>
+<h2 id="第27讲-云中的网络QoS：邻居疯狂下电影，我该怎么办？"><a href="#第27讲-云中的网络QoS：邻居疯狂下电影，我该怎么办？" class="headerlink" title="第27讲 | 云中的网络QoS：邻居疯狂下电影，我该怎么办？"></a>第27讲 | 云中的网络QoS：邻居疯狂下电影，我该怎么办？</h2><p><a href="https://time.geekbang.org/column/article/10994" target="_blank" rel="noopener">https://time.geekbang.org/column/article/10994</a>    </p>
+<h2 id="第28讲-云中网络的隔离GRE、VXLAN：虽然住一个小区，也要保护隐私"><a href="#第28讲-云中网络的隔离GRE、VXLAN：虽然住一个小区，也要保护隐私" class="headerlink" title="第28讲 | 云中网络的隔离GRE、VXLAN：虽然住一个小区，也要保护隐私"></a>第28讲 | 云中网络的隔离GRE、VXLAN：虽然住一个小区，也要保护隐私</h2><p><a href="https://time.geekbang.org/column/article/11324" target="_blank" rel="noopener">https://time.geekbang.org/column/article/11324</a>    </p>
+<h2 id="第29讲-容器网络：来去自由的日子，不买公寓去合租"><a href="#第29讲-容器网络：来去自由的日子，不买公寓去合租" class="headerlink" title="第29讲 | 容器网络：来去自由的日子，不买公寓去合租"></a>第29讲 | 容器网络：来去自由的日子，不买公寓去合租</h2><p><a href="https://time.geekbang.org/column/article/11465" target="_blank" rel="noopener">https://time.geekbang.org/column/article/11465</a>    </p>
+<h2 id="第30讲-容器网络之Flannel：每人一亩三分地"><a href="#第30讲-容器网络之Flannel：每人一亩三分地" class="headerlink" title="第30讲 | 容器网络之Flannel：每人一亩三分地"></a>第30讲 | 容器网络之Flannel：每人一亩三分地</h2><p><a href="https://time.geekbang.org/column/article/11643" target="_blank" rel="noopener">https://time.geekbang.org/column/article/11643</a>    </p>
+<h2 id="第31讲-容器网络之Calico：为高效说出善意的谎言"><a href="#第31讲-容器网络之Calico：为高效说出善意的谎言" class="headerlink" title="第31讲 | 容器网络之Calico：为高效说出善意的谎言"></a>第31讲 | 容器网络之Calico：为高效说出善意的谎言</h2><p><a href="https://time.geekbang.org/column/article/11940" target="_blank" rel="noopener">https://time.geekbang.org/column/article/11940</a>    </p>
+<h2 id="第32讲-RPC协议综述：远在天边，近在眼前"><a href="#第32讲-RPC协议综述：远在天边，近在眼前" class="headerlink" title="第32讲 | RPC协议综述：远在天边，近在眼前"></a>第32讲 | RPC协议综述：远在天边，近在眼前</h2><p><a href="https://time.geekbang.org/column/article/12230" target="_blank" rel="noopener">https://time.geekbang.org/column/article/12230</a>    </p>
+<h2 id="第33讲-基于XML的SOAP协议：不要说NBA，请说美国职业篮球联赛"><a href="#第33讲-基于XML的SOAP协议：不要说NBA，请说美国职业篮球联赛" class="headerlink" title="第33讲 | 基于XML的SOAP协议：不要说NBA，请说美国职业篮球联赛"></a>第33讲 | 基于XML的SOAP协议：不要说NBA，请说美国职业篮球联赛</h2><p><a href="https://time.geekbang.org/column/article/12388" target="_blank" rel="noopener">https://time.geekbang.org/column/article/12388</a>    </p>
+<h2 id="第34讲-基于JSON的RESTful接口协议：我不关心过程，请给我结果"><a href="#第34讲-基于JSON的RESTful接口协议：我不关心过程，请给我结果" class="headerlink" title="第34讲 | 基于JSON的RESTful接口协议：我不关心过程，请给我结果"></a>第34讲 | 基于JSON的RESTful接口协议：我不关心过程，请给我结果</h2><p><a href="https://time.geekbang.org/column/article/12512" target="_blank" rel="noopener">https://time.geekbang.org/column/article/12512</a>    </p>
+<h2 id="第35讲-二进制类RPC协议：还是叫NBA吧，总说全称多费劲"><a href="#第35讲-二进制类RPC协议：还是叫NBA吧，总说全称多费劲" class="headerlink" title="第35讲 | 二进制类RPC协议：还是叫NBA吧，总说全称多费劲"></a>第35讲 | 二进制类RPC协议：还是叫NBA吧，总说全称多费劲</h2><p><a href="https://time.geekbang.org/column/article/12521" target="_blank" rel="noopener">https://time.geekbang.org/column/article/12521</a>    </p>
+<h2 id="第36讲-跨语言类RPC协议：交流之前，双方先来个专业术语表"><a href="#第36讲-跨语言类RPC协议：交流之前，双方先来个专业术语表" class="headerlink" title="第36讲 | 跨语言类RPC协议：交流之前，双方先来个专业术语表"></a>第36讲 | 跨语言类RPC协议：交流之前，双方先来个专业术语表</h2><p><a href="https://time.geekbang.org/column/article/12819" target="_blank" rel="noopener">https://time.geekbang.org/column/article/12819</a>    </p>
+<h2 id="第37讲-知识串讲：用双十一的故事串起碎片的网络协议（上）"><a href="#第37讲-知识串讲：用双十一的故事串起碎片的网络协议（上）" class="headerlink" title="第37讲 | 知识串讲：用双十一的故事串起碎片的网络协议（上）"></a>第37讲 | 知识串讲：用双十一的故事串起碎片的网络协议（上）</h2><p><a href="https://time.geekbang.org/column/article/12991" target="_blank" rel="noopener">https://time.geekbang.org/column/article/12991</a>    </p>
+<h2 id="第38讲-知识串讲：用双十一的故事串起碎片的网络协议（中）"><a href="#第38讲-知识串讲：用双十一的故事串起碎片的网络协议（中）" class="headerlink" title="第38讲 | 知识串讲：用双十一的故事串起碎片的网络协议（中）"></a>第38讲 | 知识串讲：用双十一的故事串起碎片的网络协议（中）</h2><p><a href="https://time.geekbang.org/column/article/12996" target="_blank" rel="noopener">https://time.geekbang.org/column/article/12996</a>    </p>
+<h2 id="第39讲-知识串讲：用双十一的故事串起碎片的网络协议（下）"><a href="#第39讲-知识串讲：用双十一的故事串起碎片的网络协议（下）" class="headerlink" title="第39讲 | 知识串讲：用双十一的故事串起碎片的网络协议（下）"></a>第39讲 | 知识串讲：用双十一的故事串起碎片的网络协议（下）</h2><p><a href="https://time.geekbang.org/column/article/13099" target="_blank" rel="noopener">https://time.geekbang.org/column/article/13099</a>    </p>
+<h2 id="第40讲-搭建一个网络实验环境：授人以鱼不如授人以渔"><a href="#第40讲-搭建一个网络实验环境：授人以鱼不如授人以渔" class="headerlink" title="第40讲 | 搭建一个网络实验环境：授人以鱼不如授人以渔"></a>第40讲 | 搭建一个网络实验环境：授人以鱼不如授人以渔</h2><p><a href="https://time.geekbang.org/column/article/13124" target="_blank" rel="noopener">https://time.geekbang.org/column/article/13124</a>    </p>
+<h2 id="协议专栏特别福利-答疑解惑第一期"><a href="#协议专栏特别福利-答疑解惑第一期" class="headerlink" title="协议专栏特别福利 | 答疑解惑第一期"></a>协议专栏特别福利 | 答疑解惑第一期</h2><p><a href="https://time.geekbang.org/column/article/13520" target="_blank" rel="noopener">https://time.geekbang.org/column/article/13520</a>    </p>
+<h2 id="协议专栏特别福利-答疑解惑第二期"><a href="#协议专栏特别福利-答疑解惑第二期" class="headerlink" title="协议专栏特别福利 | 答疑解惑第二期"></a>协议专栏特别福利 | 答疑解惑第二期</h2><p><a href="https://time.geekbang.org/column/article/13847" target="_blank" rel="noopener">https://time.geekbang.org/column/article/13847</a>    </p>
+<h2 id="协议专栏特别福利-答疑解惑第三期"><a href="#协议专栏特别福利-答疑解惑第三期" class="headerlink" title="协议专栏特别福利 | 答疑解惑第三期"></a>协议专栏特别福利 | 答疑解惑第三期</h2><p><a href="https://time.geekbang.org/column/article/14028" target="_blank" rel="noopener">https://time.geekbang.org/column/article/14028</a>    </p>
+<h2 id="协议专栏特别福利-答疑解惑第四期"><a href="#协议专栏特别福利-答疑解惑第四期" class="headerlink" title="协议专栏特别福利 | 答疑解惑第四期"></a>协议专栏特别福利 | 答疑解惑第四期</h2><p><a href="https://time.geekbang.org/column/article/14194" target="_blank" rel="noopener">https://time.geekbang.org/column/article/14194</a>    </p>
+<h2 id="协议专栏特别福利-答疑解惑第五期"><a href="#协议专栏特别福利-答疑解惑第五期" class="headerlink" title="协议专栏特别福利 | 答疑解惑第五期"></a>协议专栏特别福利 | 答疑解惑第五期</h2><p><a href="https://time.geekbang.org/column/article/14381" target="_blank" rel="noopener">https://time.geekbang.org/column/article/14381</a>    </p>
+<h2 id="测一测-这些网络协议你都掌握了吗？"><a href="#测一测-这些网络协议你都掌握了吗？" class="headerlink" title="测一测 | 这些网络协议你都掌握了吗？"></a>测一测 | 这些网络协议你都掌握了吗？</h2><p><a href="https://time.geekbang.org/column/article/14384" target="_blank" rel="noopener">https://time.geekbang.org/column/article/14384</a>    </p>
+<h2 id="结束语-放弃完美主义，执行力就是限时限量认真完成"><a href="#结束语-放弃完美主义，执行力就是限时限量认真完成" class="headerlink" title="结束语 | 放弃完美主义，执行力就是限时限量认真完成"></a>结束语 | 放弃完美主义，执行力就是限时限量认真完成</h2><p><a href="https://time.geekbang.org/column/article/14553" target="_blank" rel="noopener">https://time.geekbang.org/column/article/14553</a>    </p>
+<h2 id="我是如何创作“趣谈网络协议”专栏的？"><a href="#我是如何创作“趣谈网络协议”专栏的？" class="headerlink" title="我是如何创作“趣谈网络协议”专栏的？"></a>我是如何创作“趣谈网络协议”专栏的？</h2><p><a href="https://time.geekbang.org/column/article/17846" target="_blank" rel="noopener">https://time.geekbang.org/column/article/17846</a></p>
+<h2 id="“趣谈网络协议”专栏「食用指南」"><a href="#“趣谈网络协议”专栏「食用指南」" class="headerlink" title="“趣谈网络协议”专栏「食用指南」"></a>“趣谈网络协议”专栏「食用指南」</h2><p><a href="https://time.geekbang.org/column/article/17862" target="_blank" rel="noopener">https://time.geekbang.org/column/article/17862</a></p>
+<hr>
+<p>通过下方连接购买的极客专栏，可获得赏金 80% 的现金返现</p>
+<p><a href="https://mp.weixin.qq.com/s/trUFpup8D4NvYwH-ehziwg" target="_blank" rel="noopener">福利 | 购买极客时间课程大返现</a></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+       
+    
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>点关注免走丢，欢迎留言互动哦！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>关注</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="https://qcloudtest-1255353776.cos.ap-guangzhou.myqcloud.com/qrcode_for_gh_daba269c7385_344.jpg" alt="hadronw 微信公众号"/>
+        <p>微信公众号</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/极客时间/" <i class="fa fa-tag"></i> 极客时间</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11-24/201811241645/" rel="prev" title="MySQL 实战 45 讲 | 极客专栏">
+                <i class="fa fa-chevron-left"></i> MySQL 实战 45 讲 | 极客专栏
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11-24/201811241633/" rel="next" title="从 0 开始学大数据 | 极客专栏">
+                从 0 开始学大数据 | 极客专栏 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/mylog.png"
+                alt="hadronw" />
+            
+              <p class="site-author-name" itemprop="name">hadronw</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">124</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">21</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#专栏目录"><span class="nav-number">1.</span> <span class="nav-text">专栏目录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#开篇词-想成为技术牛人？先搞定网络协议！"><span class="nav-number">1.1.</span> <span class="nav-text">开篇词 | 想成为技术牛人？先搞定网络协议！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第1讲-为什么要学习网络协议？"><span class="nav-number">1.2.</span> <span class="nav-text">第1讲 | 为什么要学习网络协议？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第2讲-网络分层的真实含义是什么？"><span class="nav-number">1.3.</span> <span class="nav-text">第2讲 | 网络分层的真实含义是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第3讲-ifconfig：最熟悉又陌生的命令行"><span class="nav-number">1.4.</span> <span class="nav-text">第3讲 | ifconfig：最熟悉又陌生的命令行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第4讲-DHCP与PXE：IP是怎么来的，又是怎么没的？"><span class="nav-number">1.5.</span> <span class="nav-text">第4讲 | DHCP与PXE：IP是怎么来的，又是怎么没的？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第5讲-从物理层到MAC层：如何在宿舍里自己组网玩联机游戏？"><span class="nav-number">1.6.</span> <span class="nav-text">第5讲 | 从物理层到MAC层：如何在宿舍里自己组网玩联机游戏？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第6讲-交换机与VLAN：办公室太复杂，我要回学校"><span class="nav-number">1.7.</span> <span class="nav-text">第6讲 | 交换机与VLAN：办公室太复杂，我要回学校</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第7讲-ICMP与ping：投石问路的侦察兵"><span class="nav-number">1.8.</span> <span class="nav-text">第7讲 | ICMP与ping：投石问路的侦察兵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第8讲-世界这么大，我想出网关：欧洲十国游与玄奘西行"><span class="nav-number">1.9.</span> <span class="nav-text">第8讲 | 世界这么大，我想出网关：欧洲十国游与玄奘西行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第9讲-路由协议：西出网关无故人，敢问路在何方"><span class="nav-number">1.10.</span> <span class="nav-text">第9讲 | 路由协议：西出网关无故人，敢问路在何方</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第10讲-UDP协议：因性善而简单，难免碰到“城会玩”"><span class="nav-number">1.11.</span> <span class="nav-text">第10讲 | UDP协议：因性善而简单，难免碰到“城会玩”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第11讲-TCP协议（上）：因性恶而复杂，先恶后善反轻松"><span class="nav-number">1.12.</span> <span class="nav-text">第11讲 | TCP协议（上）：因性恶而复杂，先恶后善反轻松</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第12讲-TCP协议（下）：西行必定多妖孽，恒心智慧消磨难"><span class="nav-number">1.13.</span> <span class="nav-text">第12讲 | TCP协议（下）：西行必定多妖孽，恒心智慧消磨难</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第13讲-套接字Socket：Talk-is-cheap-show-me-the-code"><span class="nav-number">1.14.</span> <span class="nav-text">第13讲 | 套接字Socket：Talk is cheap, show me the code</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第14讲-HTTP协议：看个新闻原来这么麻烦"><span class="nav-number">1.15.</span> <span class="nav-text">第14讲 | HTTP协议：看个新闻原来这么麻烦</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第15讲-HTTPS协议：点外卖的过程原来这么复杂"><span class="nav-number">1.16.</span> <span class="nav-text">第15讲 | HTTPS协议：点外卖的过程原来这么复杂</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第16讲-流媒体协议：如何在直播里看到美女帅哥？"><span class="nav-number">1.17.</span> <span class="nav-text">第16讲 | 流媒体协议：如何在直播里看到美女帅哥？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第17讲-P2P协议：我下小电影，99-急死你"><span class="nav-number">1.18.</span> <span class="nav-text">第17讲 | P2P协议：我下小电影，99%急死你</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第18讲-DNS协议：网络世界的地址簿"><span class="nav-number">1.19.</span> <span class="nav-text">第18讲 | DNS协议：网络世界的地址簿</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第19讲-HTTPDNS：网络世界的地址簿也会指错路"><span class="nav-number">1.20.</span> <span class="nav-text">第19讲 | HTTPDNS：网络世界的地址簿也会指错路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第20讲-CDN：你去小卖部取过快递么？"><span class="nav-number">1.21.</span> <span class="nav-text">第20讲 | CDN：你去小卖部取过快递么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第21讲-数据中心：我是开发商，自己拿地盖别墅"><span class="nav-number">1.22.</span> <span class="nav-text">第21讲 | 数据中心：我是开发商，自己拿地盖别墅</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第22讲-VPN：朝中有人好做官"><span class="nav-number">1.23.</span> <span class="nav-text">第22讲 | VPN：朝中有人好做官</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第23讲-移动网络：去巴塞罗那，手机也上不了脸书"><span class="nav-number">1.24.</span> <span class="nav-text">第23讲 | 移动网络：去巴塞罗那，手机也上不了脸书</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第24讲-云中网络：自己拿地成本高，购买公寓更灵活"><span class="nav-number">1.25.</span> <span class="nav-text">第24讲 | 云中网络：自己拿地成本高，购买公寓更灵活</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第25讲-软件定义网络：共享基础设施的小区物业管理办法"><span class="nav-number">1.26.</span> <span class="nav-text">第25讲 | 软件定义网络：共享基础设施的小区物业管理办法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第26讲-云中的网络安全：虽然不是土豪，也需要基本安全和保障"><span class="nav-number">1.27.</span> <span class="nav-text">第26讲 | 云中的网络安全：虽然不是土豪，也需要基本安全和保障</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第27讲-云中的网络QoS：邻居疯狂下电影，我该怎么办？"><span class="nav-number">1.28.</span> <span class="nav-text">第27讲 | 云中的网络QoS：邻居疯狂下电影，我该怎么办？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第28讲-云中网络的隔离GRE、VXLAN：虽然住一个小区，也要保护隐私"><span class="nav-number">1.29.</span> <span class="nav-text">第28讲 | 云中网络的隔离GRE、VXLAN：虽然住一个小区，也要保护隐私</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第29讲-容器网络：来去自由的日子，不买公寓去合租"><span class="nav-number">1.30.</span> <span class="nav-text">第29讲 | 容器网络：来去自由的日子，不买公寓去合租</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第30讲-容器网络之Flannel：每人一亩三分地"><span class="nav-number">1.31.</span> <span class="nav-text">第30讲 | 容器网络之Flannel：每人一亩三分地</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第31讲-容器网络之Calico：为高效说出善意的谎言"><span class="nav-number">1.32.</span> <span class="nav-text">第31讲 | 容器网络之Calico：为高效说出善意的谎言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第32讲-RPC协议综述：远在天边，近在眼前"><span class="nav-number">1.33.</span> <span class="nav-text">第32讲 | RPC协议综述：远在天边，近在眼前</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第33讲-基于XML的SOAP协议：不要说NBA，请说美国职业篮球联赛"><span class="nav-number">1.34.</span> <span class="nav-text">第33讲 | 基于XML的SOAP协议：不要说NBA，请说美国职业篮球联赛</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第34讲-基于JSON的RESTful接口协议：我不关心过程，请给我结果"><span class="nav-number">1.35.</span> <span class="nav-text">第34讲 | 基于JSON的RESTful接口协议：我不关心过程，请给我结果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第35讲-二进制类RPC协议：还是叫NBA吧，总说全称多费劲"><span class="nav-number">1.36.</span> <span class="nav-text">第35讲 | 二进制类RPC协议：还是叫NBA吧，总说全称多费劲</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第36讲-跨语言类RPC协议：交流之前，双方先来个专业术语表"><span class="nav-number">1.37.</span> <span class="nav-text">第36讲 | 跨语言类RPC协议：交流之前，双方先来个专业术语表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第37讲-知识串讲：用双十一的故事串起碎片的网络协议（上）"><span class="nav-number">1.38.</span> <span class="nav-text">第37讲 | 知识串讲：用双十一的故事串起碎片的网络协议（上）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第38讲-知识串讲：用双十一的故事串起碎片的网络协议（中）"><span class="nav-number">1.39.</span> <span class="nav-text">第38讲 | 知识串讲：用双十一的故事串起碎片的网络协议（中）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第39讲-知识串讲：用双十一的故事串起碎片的网络协议（下）"><span class="nav-number">1.40.</span> <span class="nav-text">第39讲 | 知识串讲：用双十一的故事串起碎片的网络协议（下）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第40讲-搭建一个网络实验环境：授人以鱼不如授人以渔"><span class="nav-number">1.41.</span> <span class="nav-text">第40讲 | 搭建一个网络实验环境：授人以鱼不如授人以渔</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#协议专栏特别福利-答疑解惑第一期"><span class="nav-number">1.42.</span> <span class="nav-text">协议专栏特别福利 | 答疑解惑第一期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#协议专栏特别福利-答疑解惑第二期"><span class="nav-number">1.43.</span> <span class="nav-text">协议专栏特别福利 | 答疑解惑第二期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#协议专栏特别福利-答疑解惑第三期"><span class="nav-number">1.44.</span> <span class="nav-text">协议专栏特别福利 | 答疑解惑第三期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#协议专栏特别福利-答疑解惑第四期"><span class="nav-number">1.45.</span> <span class="nav-text">协议专栏特别福利 | 答疑解惑第四期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#协议专栏特别福利-答疑解惑第五期"><span class="nav-number">1.46.</span> <span class="nav-text">协议专栏特别福利 | 答疑解惑第五期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测一测-这些网络协议你都掌握了吗？"><span class="nav-number">1.47.</span> <span class="nav-text">测一测 | 这些网络协议你都掌握了吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结束语-放弃完美主义，执行力就是限时限量认真完成"><span class="nav-number">1.48.</span> <span class="nav-text">结束语 | 放弃完美主义，执行力就是限时限量认真完成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#我是如何创作“趣谈网络协议”专栏的？"><span class="nav-number">1.49.</span> <span class="nav-text">我是如何创作“趣谈网络协议”专栏的？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#“趣谈网络协议”专栏「食用指南」"><span class="nav-number">1.50.</span> <span class="nav-text">“趣谈网络协议”专栏「食用指南」</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">hadronw</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.4.4</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v6.5.0</div>
+
+
+
+
+<div class="weixin-box">
+  <div class="weixin-menu">
+    <div class="weixin-hover">
+      <div class="weixin-description">微信扫一扫，订阅本博客</div>
+    </div>
+  </div>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66104543";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/reading_progress/reading_progress.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'tA9fnMOATdYuVDUSkPsbGBfi-gzGzoHsz',
+        appKey: '07ptzyueBmWB16ShNJuwsUnm',
+        placeholder: '留下你的想法，一起来碰撞点💥出来吧！',
+        avatar:'robohash',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: true
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
+  <script type="text/javascript">pangu.spacingPage();</script>
+
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap')
+      $(e).after($wrap)
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text()
+        }).toArray().join('\n')
+        var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+          if(result)$(this).text('复制成功')
+          else $(this).text('复制失败')
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('复制')
+        }, 300)
+      }).append(e)
+    })
+  </script>
+
+
+  
+
+</body>
+</html>
