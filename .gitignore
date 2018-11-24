@@ -1,0 +1,6 @@
+# 忽略 MarkEditor 生成的文件
+
+source/_posts/.Archive/
+source/_posts/.markeditor/
+source/_posts/configs/
+
