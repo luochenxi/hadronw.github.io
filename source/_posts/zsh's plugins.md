@@ -6,6 +6,8 @@ categories: Mac
 comments: true
 ---
 
+> 如果安装 zsh 后，`~/.bash_profile` 的环境变量配置无法生效，请在`～/.zshrc` 文件中添加一行`source ~/.bash_profile`，之后每次打开终端都会刷新`～/.bash_profile` 的配置。 
+
 zsh 全称是 oh-my-zsh ，它在 Mac 中与iTerm2 搭配起来用非常的爽。本文将介绍 zsh 使用的插件。
 <!--more-->
 
