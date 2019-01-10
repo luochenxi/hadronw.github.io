@@ -119,18 +119,18 @@
 
 
 
-  <meta name="description" content="zsh 全称是 oh-my-zsh ，它在 Mac 中与iTerm2 搭配起来用非常的爽。本文将介绍 zsh 使用的插件。">
+  <meta name="description" content="如果安装 zsh 后，~/.bash_profile 的环境变量配置无法生效，请在～/.zshrc 文件中添加一行source ~/.bash_profile，之后每次打开终端都会刷新～/.bash_profile 的配置。   zsh 全称是 oh-my-zsh ，它在 Mac 中与iTerm2 搭配起来用非常的爽。本文将介绍 zsh 使用的插件。">
 <meta name="keywords" content="Mac">
 <meta property="og:type" content="article">
 <meta property="og:title" content="zsh 常用的插件">
 <meta property="og:url" content="http://hadronw.com/2019/01-07/zsh's plugins/index.html">
 <meta property="og:site_name" content="hadronw&#39;s blog">
-<meta property="og:description" content="zsh 全称是 oh-my-zsh ，它在 Mac 中与iTerm2 搭配起来用非常的爽。本文将介绍 zsh 使用的插件。">
+<meta property="og:description" content="如果安装 zsh 后，~/.bash_profile 的环境变量配置无法生效，请在～/.zshrc 文件中添加一行source ~/.bash_profile，之后每次打开终端都会刷新～/.bash_profile 的配置。   zsh 全称是 oh-my-zsh ，它在 Mac 中与iTerm2 搭配起来用非常的爽。本文将介绍 zsh 使用的插件。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-07T13:15:46.993Z">
+<meta property="og:updated_time" content="2019-01-10T09:07:38.418Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="zsh 常用的插件">
-<meta name="twitter:description" content="zsh 全称是 oh-my-zsh ，它在 Mac 中与iTerm2 搭配起来用非常的爽。本文将介绍 zsh 使用的插件。">
+<meta name="twitter:description" content="如果安装 zsh 后，~/.bash_profile 的环境变量配置无法生效，请在～/.zshrc 文件中添加一行source ~/.bash_profile，之后每次打开终端都会刷新～/.bash_profile 的配置。   zsh 全称是 oh-my-zsh ，它在 Mac 中与iTerm2 搭配起来用非常的爽。本文将介绍 zsh 使用的插件。">
 
 
 
@@ -438,12 +438,24 @@
                 
               
 
-              <time title="创建时间：2019-01-07 20:12:00 / 修改时间：21:15:46" itemprop="dateCreated datePublished" datetime="2019-01-07T20:12:00+08:00">2019-01-07</time>
+              <time title="创建时间：2019-01-07 20:12:00" itemprop="dateCreated datePublished" datetime="2019-01-07T20:12:00+08:00">2019-01-07</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-01-10 17:07:38" itemprop="dateModified" datetime="2019-01-10T17:07:38+08:00">2019-01-10</time>
               
             
           </span>
@@ -515,7 +527,10 @@
       
 
       
-        <p>zsh 全称是 oh-my-zsh ，它在 Mac 中与iTerm2 搭配起来用非常的爽。本文将介绍 zsh 使用的插件。<br><a id="more"></a></p>
+        <blockquote>
+<p>如果安装 zsh 后，<code>~/.bash_profile</code> 的环境变量配置无法生效，请在<code>～/.zshrc</code> 文件中添加一行<code>source ~/.bash_profile</code>，之后每次打开终端都会刷新<code>～/.bash_profile</code> 的配置。 </p>
+</blockquote>
+<p>zsh 全称是 oh-my-zsh ，它在 Mac 中与iTerm2 搭配起来用非常的爽。本文将介绍 zsh 使用的插件。<br><a id="more"></a></p>
 <p>zsh 的安装以及 brew 的安装可以看这篇文章：<a href="https://hadronw.com/2018/02-07/iterm2%E9%85%8D%E7%BD%AE/">iterm2配置</a></p>
 <h1 id="zsh-添加插件的方式，以及部分配置的修改"><a href="#zsh-添加插件的方式，以及部分配置的修改" class="headerlink" title="zsh 添加插件的方式，以及部分配置的修改"></a>zsh 添加插件的方式，以及部分配置的修改</h1><p>打开终端 <code>vi ~/.zshrc</code> 在 <code>~/.zshrc</code> 中配置<br><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 配置 zsh 插件的地方，git 是默认的，其他的插件都是新添加的</span></span><br><span class="line">plugins=(</span><br><span class="line">  git zsh-autosuggestions zsh-completions git-open autojump zsh-syntax-highlighting</span><br><span class="line">)</span><br></pre></td></tr></table></figure></p>
 <p>一般的插件安装之后，在 <code>~/.zshrc</code> 中的 <code>plugins</code> 中添加插件名后，保存退出，再刷新一下 <code>~/.zshrc</code> 环境配置，即可使用。有的插件则需要在 <code>~/.zshrc</code> 添加其他配置</p>
